@@ -1,0 +1,62 @@
+$cl_neutral_1: #000000;
+$cl_neutral_2: #333333;
+$cl_neutral_3: #666666;
+$cl_neutral_4: #999999;
+$cl_neutral_5: #CCCCCC;
+$cl_neutral_6: #FFFFFF;
+$cl_neutral_7: #E0E0E0;
+
+$cl_data_1: #002878;
+$cl_data_2: #5088B4;
+$cl_data_3: #C8ECFA;
+$cl_data_4: #008C3C;
+$cl_data_5: #93C2E4;
+
+$cl_alaram_1: #FA3232;
+$cl_alaram_2: #FEF546;
+$cl_alaram_3: #FE9600;
+$cl_alaram_4: #FD66C8;
+$cl_alaram_5: #4EFD70;
+
+$imgPath: '../assets/';
+
+$height: 1080px;
+$width: 1920px;
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+// 제자리 회전 예제
+// .hloader {
+//   --hloader-color: #e96900;
+//   --hloader-size: 80px;
+//   --hloader-weight: 8px;
+//   --hloader-duration: 1s; 한번 도는데 걸리는 시간
+//   width: var(--hloader-size);
+//   height: var(--hloader-size);
+//   color: var(--hloader-color);
+//   border: var(--hloader-weight) solid;
+//   border-top-color: transparent;
+//   border-radius: 50%;
+//   animation: hloader var(--hloader-duration) infinite linear;
+// }
+// @keyframes hloader {
+//   0% { transform: rotate(0deg); }
+//   100% { transform: rotate(360deg); }
+// }
