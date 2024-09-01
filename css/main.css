@@ -262,9 +262,20 @@
 .wrapper header .menu-wrap > li:hover > ul.submenu-wrap {
   display: flex;
 }
+.wrapper header .menu-wrap > li.sel {
+  background: #FFFFFF;
+  box-shadow: none;
+  font-weight: 700;
+  color: #000000;
+}
 .wrapper main {
   flex: 1;
   background: #E0E0E0;
+}
+.wrapper main .main-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .wrapper footer {
   height: 80px;

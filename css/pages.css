@@ -1,0 +1,109 @@
+@import url("reset.css");
+@import url("common.css");
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.line-trk-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.line-trk-wrapper .bg-line-wrap {
+  top: 87px;
+  left: 0;
+}
+.line-trk-wrapper .bg-line2-wrap {
+  top: 87px;
+  left: 0;
+}
+.line-trk-wrapper .gd-reflow {
+  top: 440px;
+  left: 1190px;
+  width: 130px;
+}
+.line-trk-wrapper .gd-reflow .list-data .data-title {
+  width: 70px;
+}
+.line-trk-wrapper .gd-quenching {
+  top: 374px;
+  left: 1334px;
+  width: 157px;
+}
+.line-trk-wrapper .gd-quenching .list-data .data-title {
+  width: 97px;
+}
+.line-trk-wrapper .gd-bottom-plating {
+  top: 10px;
+  left: 1002px;
+  width: 130px;
+}
+.line-trk-wrapper .gd-bottom-plating .list-data .data-title {
+  width: 38px;
+}
+.line-trk-wrapper .gd-top-plating {
+  top: 10px;
+  left: 1142px;
+  width: 120px;
+}
+.line-trk-wrapper .gd-top-plating .list-data .data-title {
+  width: 38px;
+}
+.line-trk-wrapper .gd-loop-position {
+  top: 10px;
+  left: 318px;
+  width: 120px;
+}
+.line-trk-wrapper .gd-loop-position .list-data .data-title {
+  width: 38px;
+}
+.line-trk-wrapper .gd-bridle-roll {
+  width: 243px;
+}
+.line-trk-wrapper .gd-bridle-roll.num3 {
+  width: 313px;
+}
+.line-trk-wrapper .gd-bridle-roll .list-data .data-title {
+  width: 103px;
+}
+.line-trk-wrapper .gd-cleaning {
+  width: 197px;
+  top: 10px;
+  left: 541px;
+}
+.line-trk-wrapper .gd-cleaning .list-data .data-title {
+  width: 103px;
+}
+.line-trk-wrapper .gd-por {
+  top: 440px;
+  left: 12px;
+  width: 430px;
+}
+.line-trk-wrapper .gd-por .list-data .data-title {
+  width: 130px;
+}
+.line-trk-wrapper .gd-line-mcc {
+  top: 440px;
+  left: 851px;
+  width: 200px;
+}
+.line-trk-wrapper .gd-chemical {
+  width: 157px;
+  top: 440px;
+  left: 1334px;
+}
+.line-trk-wrapper .gd-chemical .list-data .data-title {
+  width: 38px;
+}
+.line-trk-wrapper .gd-tr {
+  top: 440px;
+  left: 1502px;
+  width: 408px;
+}
+.line-trk-wrapper .gd-tr .list-data .data-title {
+  width: 130px;
+}

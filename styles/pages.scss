@@ -1,0 +1,103 @@
+@import "func";
+@import url("reset.css");
+@import url("common.css");
+
+.line-trk-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .bg-line-wrap {
+    top: 87px;
+    left: 0;
+  }  
+  .bg-line2-wrap {
+    top: 87px;
+    left: 0;    
+  }  
+  .gd-reflow {
+    top: 440px;
+    left: 1190px;
+    width: 130px;
+    .list-data .data-title {
+      width: 70px;
+    }    
+  }
+  .gd-quenching {
+    top: 374px;
+    left: 1334px;
+    width: 157px;
+    .list-data .data-title {
+      width: 97px;
+    }    
+  }
+  .gd-bottom-plating {
+    top: 10px;
+    left: 1002px;
+    width: 130px;
+    .list-data .data-title {
+      width: 38px;
+    }    
+  }
+  .gd-top-plating {
+    top: 10px;
+    left: 1142px;
+    width: 120px;
+    .list-data .data-title {
+      width: 38px;
+    }    
+  }
+  .gd-loop-position {
+    top: 10px;
+    left: 318px;
+    width: 120px;
+    .list-data .data-title {
+      width: 38px;
+    }    
+  }
+  .gd-bridle-roll {
+    width: 243px;
+    &.num3 {
+      width: 313px;
+    }
+    .list-data .data-title {
+      width: 103px;
+    }    
+  }
+  .gd-cleaning {
+    width: 197px;
+    top:10px; 
+    left:541px;
+    .list-data .data-title {
+      width: 103px;
+    }   
+  }
+  .gd-por {
+    top: 440px;
+    left: 12px;
+    width: 430px;
+    .list-data .data-title {
+      width: 130px;
+    } 
+  }
+  .gd-line-mcc {
+    top: 440px;
+    left: 851px;
+    width: 200px;
+  }
+  .gd-chemical {
+    width: 157px;
+    top: 440px;
+    left: 1334px;
+    .list-data .data-title {
+      width: 38px;
+    } 
+  }
+  .gd-tr {
+    top: 440px;
+    left: 1502px;
+    width: 408px;
+    .list-data .data-title {
+      width: 130px;
+    } 
+  }
+}
