@@ -1,5 +1,7 @@
 @import "func";
+@import url("reset.css");
 
+body {position: relative;}
 .wrapper {
   width: $width;
   height: $height;
@@ -179,7 +181,7 @@
     }
 
     .menu-wrap {
-      z-index: 99999;
+      z-index: 999;
       height: 48px;
       display: flex;
       
@@ -196,7 +198,7 @@
         color: $cl_neutral_6;        
 
         ul.submenu-wrap {
-          z-index: 99999;
+          z-index: 999;
           position: absolute;
           top: 100%;
           width: 100%;
@@ -408,6 +410,7 @@
   }
 
 }
+
 // 기본 밑그림
 .bg-line-wrap {
   position: absolute;  
@@ -427,7 +430,7 @@
     line-height: 14px;
   }
 }
-// list-grid -------------------------
+// list-grid -   ------------------------
 // list-grid와 data-title 의 width 는 직접 적용해야 함.
 .list-grid {
   position: absolute;
@@ -468,15 +471,40 @@
           color: $cl_neutral_1;
         }
         &:first-child:nth-last-child(1) {height: 100%;}
+        &.on {
+          background: $cl_neutral_6;
+        }
+      }
+      &:first-child {
+        p.on {
+          border-left: 1px solid $cl_neutral_4;
+        }
       }
       &.data {
         flex: 1;
         color: $cl_data_1;
-        border-left: 1px solid $cl_neutral_4;
+        &:not(:first-child) {
+          border-left: 1px solid $cl_neutral_4;
+        }
         p {justify-content: flex-end;}
-      }      
+      }    
+      .btn-cooling {
+        @include flex_center;
+        width: 100%;
+        height: 24px;
+        border-radius: 4px;
+        border: 1px solid $cl_neutral_4;
+        box-shadow: 0px -4px 4px 0px #00000040 inset;
+        background: $cl_neutral_5;
+        font-size: 14px;
+        font-weight: 700;
+        color: $cl_data_1;
+        &.on {
+          background: $cl_neutral_6;
+        }
+      }
     }
-  }  
+  }    
 }
 
 .bd-dot {
@@ -523,7 +551,261 @@
   }
 }
 
+// gauge
+.gauge-wrap {
+  width: 190px;
+  background: $cl_neutral_5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .gauge-top-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    .gauge-title {
+      @include flex_center;
+      width: 100%;
+      height: 32px;
+      background: $cl_neutral_3;
+      font-size: 14px;
+      font-weight: 700;
+      color: $cl_neutral_6;
+    }
+
+    .grp-button {
+      padding: 10px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+
+      button {
+        // cursor: pointer;
+        @include flex_center;
+        width: 82px;
+        height: 28px;
+        border-radius: 3.12px;
+        box-shadow: 0px -3.12px 3.12px 0px #00000040 inset;
+        border: 0.78px solid $cl_neutral_4;
+        background: $cl_neutral_5;
+        font-size: 14px;
+        font-weight: 700;
+        color: $cl_data_1;
+
+        &.on {
+          background: $cl_neutral_6;
+        }
+      }
+    }
+  }
+  .gauge-box-wrap {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .gauge-box {
+      position: relative;
+      width: 160px;
+      height: 92px;
+      .img-graduation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 160px;
+        height: 80px;
+        background: url(#{$imgPath}graduation_2x.png);
+        background-size: contain;
+      }
+      .unit-txt {
+        position: absolute;    
+        font-size: 14px;
+        font-weight: 900;
+        color: $cl_neutral_1;    
+        line-height: 20.27px;
+      }
+      .grd-txt {
+        position: absolute;
+        font-size: 11px;
+        font-weight: 700;
+        color: $cl_neutral_1;
+        line-height: 15.93px;
+      }
+      .ct-needle {
+        @include flex_center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: $cl_neutral_1;
+        .inside {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background: radial-gradient(50% 50% at 50% 50%, #EB3338 0%, #A81117 100%);
+        }
+      }
+      .img-needle {
+        position: absolute;
+        bottom: 12px;
+        left: 76px;
+        width: 8px;
+        height: 80px;
+        background: url(#{$imgPath}needle_3x.png);
+        background-size: cover;        
+        transform-origin: bottom center ;
+
+        // test
+        &.on {
+          animation: rotate2 10s infinite linear;
+        }
+      }
+    }
+    .gauge-value {
+      @include flex_center;
+      width: 170px;
+      height: 28px;
+      background: $cl_neutral_6;
+      font-size: 14px;
+      font-weight: 700;
+      color: $cl_data_1;
+    }
+  }
+  .gauge-bottom-wrap {
+    padding: 6px 10px 10px 10px;
+    .grp-btn-text {
+      display: flex;
+      gap: 6px;
+      button {
+        @include flex_center;
+        width: 82px;
+        height: 28px;
+        border-radius: 3.12px;
+        box-shadow: 0px -3.12px 3.12px 0px #00000040 inset;
+        border: 0.78px solid $cl_neutral_4;
+        background: $cl_neutral_5;
+        font-size: 14px;
+        font-weight: 700;
+        color: $cl_neutral_1;
+
+        &.on {
+          background: $cl_neutral_6;
+        }
+      }
+      .txt {
+        @include flex_center;
+        width: 82px;
+        height: 28px;
+        border-radius: 4px;
+        border: 1px solid $cl_neutral_3;
+        font-size: 14px;
+        font-weight: 700;
+        color: $cl_data_1;
+      }
+    }
+  }
+}
+
+#bg-popup {
+  width: 100vw;
+  height: 100vh;
+  background-color:rgba(0,0,0,.3); 
+  position:absolute;         // 포지션 픽스, 화면이 스크롤되더라도 고정되기 위함
+  top:0;
+  left:0;
+  right:0;
+  bottom:0; 
+  display:block;
+  z-index: -1;
+  opacity: 0;
+  &.off {
+    animation: fadeout 2s; 
+  }
+  &.on {
+    z-index: 1000;
+    opacity: 1;
+    animation: fadein 2s; 
+  }
+}
+
+.popup-wrap {  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 180px;
+  min-height: 180px;
+  box-shadow: 0px 4px 30px 0px #00000026;
+  background: $cl_neutral_6;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+  opacity: 0;
+
+  &.off {
+    animation: fadeout 2s; 
+  }
+  &.on {
+    z-index: 1001;
+    opacity: 1;
+    animation: fadein 2s; 
+  }
+
+  .popup-header {
+    padding: 11px;
+    width: 100%;
+    height: 28px;
+    background: $cl_neutral_1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    .btn-min {
+      width: 8px;
+      height: 2px;
+      background-image: url(#{$imgPath}ic_popup_min.svg);
+    }
+    .btn-max {
+      width: 8px;
+      height: 8px;
+      background-image: url(#{$imgPath}ic_popup_max.svg);
+    }
+    .btn-close {
+      width: 8px;
+      height: 8px;
+      background-image: url(#{$imgPath}ic_popup_close.svg);
+    }
+  }
+  .popup-body {
+    padding: 20px;
+    .list-grid {
+      position: relative;
+      width: 100%;
+    }
+  }
+  .popup-footer {
+    padding: 0 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    button {
+      flex: 1;
+      font-weight: 700;
+      font-size: 14px;
+      color: $cl_neutral_1;
+      height: 28px;
+      border-radius: 4px;
+      background: $cl_neutral_6;
+      border: 1px solid $cl_neutral_4;
+      box-shadow: 0px -4px 4px 0px #00000040 inset;
+      @include flex_center;
+    }
+  }
+}
 //----- image -------------------------
 .ic-onoff-24 {
   content: url(#{$imgPath}ic_onoff_24.svg);
@@ -570,4 +852,16 @@
 @keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate2 {
+  0% { transform: rotate(-90deg); }
+  50% { transform: rotate(90deg); }
+  100% { transform: rotate(-90deg); }
+}
+
+
+
+.ctrl-wrap {
+  padding: 34px;
 }

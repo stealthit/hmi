@@ -1,0 +1,58 @@
+@import url("reset.css");
+@import url("common.css");
+.pop-pump {
+  width: 240px;
+  height: 201px;
+}
+.pop-pump .list-grid ul li {
+  flex: 1;
+}
+.pop-pump .popup-footer button {
+  width: 66px;
+  flex: none;
+}
+
+.pop-fluxing {
+  width: 340px;
+  height: 256px;
+}
+.pop-fluxing .list-grid ul li {
+  flex: 1;
+}
+.pop-fluxing .popup-footer button {
+  width: 66px;
+  flex: none;
+}
+
+.pop-quenching {
+  width: 189px;
+  height: 228px;
+}
+.pop-quenching .list-grid .list-data .data-title {
+  width: 89px;
+}
+
+.pop-airdryer {
+  width: 189px;
+  height: 200px;
+}
+.pop-airdryer .list-grid .list-data .data-title {
+  width: 89px;
+}
+
+.pop-snipshear {
+  width: 574px;
+  height: 228px;
+}
+.pop-snipshear .list-grid .list-data .data-title {
+  width: 134px;
+}
+.pop-snipshear .popup-footer button {
+  width: 66px;
+  flex: none;
+}
+
+.pop-gauge1 {
+  width: 230px;
+  height: 326px;
+}
