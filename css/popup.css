@@ -1,5 +1,29 @@
 @import url("reset.css");
 @import url("common.css");
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .pop-pump {
   width: 240px;
   height: 201px;
@@ -24,6 +48,21 @@
   flex: none;
 }
 
+.pop-plating-rinse {
+  width: 340px;
+  height: 312px;
+}
+.pop-plating-rinse .list-grid ul.data1 li {
+  flex: 1;
+}
+.pop-plating-rinse .list-grid ul.data2 .data-title {
+  width: 100px;
+}
+.pop-plating-rinse .popup-footer button {
+  width: 66px;
+  flex: none;
+}
+
 .pop-quenching {
   width: 189px;
   height: 228px;
@@ -32,27 +71,302 @@
   width: 89px;
 }
 
-.pop-airdryer {
+.pop-TP31CTS040 {
   width: 189px;
   height: 200px;
 }
-.pop-airdryer .list-grid .list-data .data-title {
+.pop-TP31CTS040 .list-grid .list-data .data-title {
   width: 89px;
 }
 
-.pop-snipshear {
+.pop-TP31EXS060 {
   width: 574px;
   height: 228px;
 }
-.pop-snipshear .list-grid .list-data .data-title {
+.pop-TP31EXS060 .list-grid .list-data .data-title {
   width: 134px;
 }
-.pop-snipshear .popup-footer button {
+.pop-TP31EXS060 .popup-footer button {
   width: 66px;
   flex: none;
+}
+
+.pop-buchag {
+  width: 886px;
+  height: 212px;
+}
+
+.pop-keypad {
+  width: 419px;
+  height: 750px;
+}
+.pop-keypad .calc-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.pop-keypad .calc-wrap .calc-value-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.pop-keypad .calc-wrap .calc-value-wrap .value-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+.pop-keypad .calc-wrap .final-value {
+  margin-top: 11px;
+  margin-bottom: 20px;
+  padding-right: 6px;
+  height: 40px;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  background: #CCCCCC;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #002878;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap {
+  width: 379px;
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(5, 80px);
+  grid-gap: 20px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #666666;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  font-weight: 700;
+  font-size: 60px;
+  color: #000000;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .item.small {
+  font-size: 20px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .dot {
+  background: url(../assets/ic_calc_dot_24.svg) no-repeat center/24px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .divide {
+  background: url(../assets/ic_divide_24.svg) no-repeat center/24px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .mul {
+  background: url(../assets/ic_mul_24.svg) no-repeat center/24px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .minus {
+  background: url(../assets/ic_minus_24.svg) no-repeat center/24px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .plus {
+  grid-column: 4/5;
+  grid-row: 2/4;
+  background: url(../assets/ic_plus_24.svg) no-repeat center/24px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .enter {
+  grid-column: 4/5;
+  grid-row: 4/6;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .zero {
+  grid-column: 1/3;
+  grid-row: 5/6;
+}
+.pop-keypad .popup-footer {
+  justify-content: center;
+}
+.pop-keypad .popup-footer button {
+  flex: none;
+  width: 66px;
 }
 
 .pop-gauge1 {
   width: 230px;
   height: 326px;
+}
+
+.pop-TP31ENS020 {
+  width: 289px;
+  height: 232px;
+}
+.pop-TP31ENS020 .popup-footer button {
+  width: 80px;
+  flex: none;
+}
+
+.pop-TP31ENS030 {
+  width: 210px;
+  height: 182px;
+}
+.pop-TP31ENS030 .tuning-box {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.pop-TP31ENS030 .tuning-box .vaule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #666666;
+  font-size: 14px;
+  font-weight: 700;
+  color: #002878;
+  text-decoration: underline;
+}
+
+.pop-TP31CTS020 {
+  width: 1183px;
+  height: 340px;
+}
+.pop-TP31CTS020 .popup-body .flex-row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.pop-TP31CTS020 .popup-body .flex-row .button-box {
+  padding: 0 15px;
+  background: #E0E0E0;
+  width: 284px;
+  align-items: center;
+  gap: 10px;
+}
+.pop-TP31CTS020 .popup-body .flex-row .list-grid.grid1 {
+  flex: 1;
+}
+.pop-TP31CTS030 {
+  width: 450px;
+  height: 231px;
+}
+.pop-TP31CTS030 .flex-row {
+  margin-bottom: 0 !important;
+}
+.pop-TP31CTS030 .subCon {
+  flex: 1;
+}
+.pop-TP31CTS030 .popup-footer button {
+  width: 66px;
+  flex: none;
+}
+
+.pop-TP31CTS050 {
+  width: 625px;
+  height: 445px;
+}
+.pop-TP31CTS050 .flex-row {
+  margin: 0;
+}
+.pop-TP31CTS050 .flex-row .subCon {
+  flex: 1;
+}
+.pop-TP31CTS050 .grid1 .list-data .data-title {
+  width: 136px;
+}
+.pop-TP31CTS050 .grid2 .list-data .data-title {
+  width: 199px;
+}
+.pop-TP31CTS050 .grid3 .list-data .data-title {
+  width: 497px;
+}
+.pop-TP31CTS050 .popup-footer button {
+  width: 66px;
+  flex: none;
+}
+
+.pop-TP31CTS060 {
+  width: 327px;
+  height: 378px;
+}
+.pop-TP31CTS060 .list-grid .list-data .data-title {
+  width: 140px;
+}
+.pop-TP31CTS060 .popup-footer button {
+  width: 66px;
+  flex: none;
+}
+
+.pop-TP31CTS070 {
+  width: 210px;
+  height: 211px;
+}
+.pop-TP31CTS070 .tuning-box {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.pop-TP31CTS070 .tuning-box .vaule {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #666666;
+  font-size: 14px;
+  font-weight: 700;
+  color: #002878;
+  text-decoration: underline;
+}
+
+.pop-TP31EXS020 {
+  width: 327px;
+  height: 480px;
+}
+.pop-TP31EXS020 .list-data .list-data .data-title {
+  width: 136px;
+}
+.pop-TP31EXS020 .subCon:has(.label) {
+  margin-bottom: 10px;
+}
+.pop-TP31EXS020 .popup-footer button {
+  width: 80px;
+  flex: none;
+}
+
+.pop-TP31EXS040 {
+  width: 287px;
+  height: 172px;
+}
+.pop-TP31EXS040 .list-data .list-data .data-title {
+  width: 71px;
+}
+.pop-TP31EXS040 .popup-footer button {
+  width: 80px;
+  flex: none;
+}
+
+.pop-TP31EXS050 {
+  width: 287px;
+  height: 203px;
+}
+.pop-TP31EXS050 .list-data .list-data .data-title {
+  width: 71px;
+}
+.pop-TP31EXS050 .popup-footer button {
+  width: 80px;
+  flex: none;
+}
+
+.flex-row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
