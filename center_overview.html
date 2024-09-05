@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">CENTER OVERVIEW</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li class="sel">
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>HYDRAULIC</li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper center-o-wrapper">
+        <div class="bg-line-wrap">
+          <img alt="" class="img-center-o">
+        </div>            
+        <!-- 기본 이미지에 대한 텍스트라벨 -->
+        <div class="img-label" style="top:427px;left:7px">#2 BRIDLE ROLL</div>
+        <div class="img-label" style="top:336px;left:113px">#1 CLEANING</div>
+        <div class="img-label" style="top:336px;left:231px">#2 CLEANING</div>
+        <div class="img-label" style="top:336px;left:347px">CLEANING RINSE</div>
+        <div class="img-label" style="top:336px;left:494px">PICKLING</div>
+        <div class="img-label" style="top:336px;left:596px">PICKLING RINSE</div>
+        <div class="img-label" style="top:182px;left:667px">#2 CPC</div>
+        <div class="img-label" style="top:89px;left:745px">#2 ENCLOSURE</div>
+        <div class="img-label" style="top:89px;left:873px">PLATING RINSE</div>
+        <div class="img-label" style="top:89px;left:1056px">FLUXING</div>
+        <div class="img-label" style="top:89px;left:1147px">#1 AIR DRYER</div>
+        <div class="img-label" style="top:243px;left:1009px">TOP PLATING</div>
+        <div class="img-label" style="top:429px;left:929px">BOTTOM PLATING</div>
+        <div class="img-label" style="top:404px;left:1169px">#1 ENCLOSURE</div>
+        <div class="img-label" style="top:404px;left:810px">B1</div>
+        <div class="img-label" style="top:404px;left:846px">B2</div>
+        <div class="img-label" style="top:404px;left:882px">B3</div>
+        <div class="img-label" style="top:404px;left:918px">B4</div>
+        <div class="img-label" style="top:404px;left:954px">B5</div>
+        <div class="img-label" style="top:404px;left:990px">B6</div>
+        <div class="img-label" style="top:404px;left:1026px">B7</div>
+        <div class="img-label" style="top:404px;left:1062px">B8</div>
+        <div class="img-label" style="top:404px;left:1098px">B9</div>
+        <div class="img-label" style="top:404px;left:1130px">B10</div>
+        <div class="img-label" style="top:304px;left:918px">T7</div>
+        <div class="img-label" style="top:304px;left:954px">T6</div>
+        <div class="img-label" style="top:304px;left:988px">T5</div>
+        <div class="img-label" style="top:304px;left:1026px">T4</div>
+        <div class="img-label" style="top:304px;left:1061px">T3</div>
+        <div class="img-label" style="top:304px;left:1098px">T2</div>
+        <div class="img-label" style="top:304px;left:1134px">T1</div>
+        <div class="img-label" style="top:118px;left:1241px">전면마카</div>
+        <div class="img-label" style="top:350px;left:1227px">전면마카</div>
+        <div class="img-label" style="top:96px;left:1319px">REFLOW</div>
+        <div class="img-label" style="top:441px;left:1334px">QUENCHING</div>
+        <div class="img-label" style="top:198px;left:1480px">WPD</div>
+        <div class="img-label" style="top:403px;left:1522px">CHEMICAL</div>
+        <div class="img-label" style="top:138px;left:1669px">SDD</div>
+        <div class="img-label" style="top:396px;left:1591px">SDD</div>
+        <div class="img-label" style="top:346px;left:1756px">T.G</div>
+        <div class="img-label" style="top:346px;left:1787px">C.W.G</div>
+        <div class="img-label" style="top:419px;left:1805px">#3 BRIDLE ROLL</div>
+
+        <div class="img-label line-2" style="top:161px;left:1537px">#2 AIR<br> DRYER</div> 
+        <div class="img-label line-2" style="top:160px;left:1660px">#3 AIR<br> DRYER</div> 
+        <div class="img-label line-2" style="top:264px;left:1649px">E.S<br> OILER</div> 
+        <div class="img-label line-2" style="top:408px;left:1637px">PIN HOLE<br> DETECTOR</div> 
+
+<!-- 그리드 배치 ------------------------------------------------------->
+        <!-- #2 ENCLOSURE -->
+        <div class="list-grid gd-enc" style="top:5px;left:757px;">
+          <div class="list-title">#2 ENCLOSURE</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>농도</p>
+              <p>온도</p>
+            </li>
+            <li class="data">
+              <p>0 mg/kg</p>
+              <p>53 °C</p>
+            </li>
+          </ul>
+        </div>
+        <!-- PLATING RINSE -->
+        <div class="list-grid gd-enc" style="top:5px;left:887px;">
+          <div class="list-title">PLATING RINSE</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>농도</p>
+              <p>온도</p>
+            </li>
+            <li class="data">
+              <p>0 mg/kg</p>
+              <p>53 °C</p>
+            </li>
+          </ul>
+        </div>       
+        <!-- FLUXING -->
+        <div class="list-grid gd-enc" style="top:5px;left:1017px;">
+          <div class="list-title underline">FLUXING</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>온도</p>
+            </li>
+            <li class="data">
+              <p>53 °C</p>
+            </li>
+          </ul>
+        </div>    
+        <!-- #1 AIR DRYER -->
+        <div class="list-grid gd-enc" style="top:5px;left:1147px;">
+          <div class="list-title underline">#1 AIR DRYER</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>온도</p>
+            </li>
+            <li class="data">
+              <p>53 °C</p>
+            </li>
+          </ul>
+        </div>   
+        <!-- #2 AIR DRYER -->
+        <div class="list-grid gd-enc" style="top:5px;left:1557px;">
+          <div class="list-title underline">#2 AIR DRYER</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>온도</p>
+            </li>
+            <li class="data">
+              <p>51 °C</p>
+            </li>
+          </ul>
+        </div>   
+        <!-- #3 AIR DRYER -->
+        <div class="list-grid gd-enc" style="top:66px;left:1557px;">
+          <div class="list-title underline">#3 AIR DRYER</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>온도</p>
+            </li>
+            <li class="data">
+              <p>47 °C</p>
+            </li>
+          </ul>
+        </div>   
+        <!-- #2 ENCLOSURE -->
+        <div class="list-grid gd-enc" style="top:463px;left:1456px;">
+          <div class="list-title">#1 ENCLOSURE</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>농도</p>
+              <p>온도</p>
+            </li>
+            <li class="data">
+              <p>0 mg/kg</p>
+              <p>53 °C</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #2 BRIDLE ROLL -->
+        <div class="list-grid gd-bridle-roll" style="top:463px; left:10px;">
+          <div class="list-title">#2 BRIDLE ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 BR</p>
+              <p>20.6</p>
+              <p>0</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 BR</p>
+              <p class="bd-dot top left right clbk">0</p>
+              <p class="bd-dot bottom left right clbk">0</p>
+            </li>
+          </ul>
+        </div>
+        <!-- QUENCHING -->
+        <div class="list-grid gd-quenching">
+          <div class="list-title">QUENCHING</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>현재온도 (°C)</p>
+              <p>온도제어</p>
+            </li>
+            <li class="data">
+              <p>3.00</p>
+              <p class="button"><button class="btn-normal on">냉각</button></p>
+            </li>
+          </ul>
+        </div>
+        <!-- REFLOW -->
+        <div class="list-grid type1 gd-reflow">
+          <div class="list-title underline">REFLOW</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>전압 (V)</p>
+              <p>전류 (KA)</p>
+            </li>
+            <li class="data">
+              <p>3.00</p>
+              <p>0.00</p>
+            </li>
+          </ul>
+        </div>
+        <!-- E.S OILER -->
+        <div class="list-grid type1 gd-oiler">
+          <div class="list-title underline">E.S OILER</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>도유랑 (㎎/㎡)</p>
+              <p>현재값 (㎎/㎡)</p>
+              <p>다음값 (㎎/㎡)</p>
+            </li>
+            <li class="data">
+              <p>3.00</p>
+              <p>0.00</p>
+              <p>3.00</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #3 BRIDLE ROLL -->
+        <div class="list-grid gd-bridle-roll num3" style="top:463px; left:1597px;">
+          <div class="list-title">#3 BRIDLE ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 BR</p>
+              <p>20.6</p>
+              <p>0</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 BR</p>
+              <p class="bd-dot top left clbk">0</p>
+              <p class="bd-dot bottom left clbk">0</p>
+            </li>
+            <li class="data">
+              <p class="title">#3 BR</p>
+              <p class="bd-dot top right clbk">0</p>
+              <p class="bd-dot bottom right clbk">0</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- #2 CLEANING #1 정류기 -->
+        <div class="cleaning-wrap" style="top: 182px;left: 20px;">
+          <div class="title-box">#2 CLEANING #1 정류기</div>
+          <div class="cleaning-box">
+            <button class="btn-normal">정지</button>
+            <button class="btn-normal">수동</button>
+            <button class="btn-normal">역</button>
+            <button class="btn-normal on">정</button>
+            <div class="value-box">2.4 KA</div>
+            <button class="btn-normal on clbk">설정</button>
+            <div class="value-box2">2500</div>
+          </div>
+        </div>
+        <!-- #2 CLEANING #1 정류기 -->
+        <div class="cleaning-wrap" style="top: 182px;left: 220px;">
+          <div class="title-box">#2 CLEANING #2 정류기</div>
+          <div class="cleaning-box">
+            <button class="btn-normal">정지</button>
+            <button class="btn-normal">수동</button>
+            <button class="btn-normal">역</button>
+            <button class="btn-normal on">정</button>
+            <div class="value-box">2.4 KA</div>
+            <button class="btn-normal on clbk">설정</button>
+            <div class="value-box2">2500</div>
+          </div>
+        </div>
+        <!-- TOP PLATING -->
+        <div class="tuning-wrap" style="top: 463px;left: 447px;">
+          <div class="title-box">TOP PLATING</div>
+          <div class="inner-box">
+            <div class="value-box">10.1 KA</div>
+            <div class="title-box">미세조정 [%]</div>
+            <div class="inner-tuning-box">
+              <button class="btn-tuning-arrow-20 down"></button>
+              <div class="inner-value">100</div>
+              <button class="btn-tuning-arrow-20 up"></button>
+            </div>
+          </div>
+        </div>
+        <!-- BOTTOM PLATING -->
+        <div class="tuning-wrap" style="top: 463px;left: 589px;">
+         <div class="title-box">BOTTOM PLATING</div>
+         <div class="inner-box">
+           <div class="value-box">9.1 KA</div>
+           <div class="title-box">미세조정 [%]</div>
+           <div class="inner-tuning-box">
+             <button class="btn-tuning-arrow-20 down"></button>
+             <div class="inner-value">100</div>
+             <button class="btn-tuning-arrow-20 up"></button>
+           </div>
+         </div>
+        </div>
+        <div class="main-button-box" style="top: 463px;left: 741px;">
+          <button class="btn-large">N-STOP</button>
+          <ul class="grid-mini-box">
+            <li>
+              <p class="title">LINE & MCC</p>
+              <p class="data">정상</p>
+            </li>
+            <li>
+              <p class="title">도금액</p>
+              <p class="data">정상</p>
+            </li>
+          </ul>
+          <button class="btn-large">수동 트래킹</button>
+          <button class="btn-large">부착량 변환</button>
+        </div>
+        <!-- CHEMICAL (DOWN) -->
+        <div class="chemical-wrap" style="top: 586px;left: 1650px;">
+          <div class="title-box">CHEMICAL (DOWN)</div>
+          <div class="inner-box">
+            <div class="left-box">
+              <button class="btn-normal">정지</button>
+              <button class="btn-normal">수동</button>
+              <div class="value-box">2.4 KA</div>
+            </div>
+            <div class="right-box">
+              <div class="title-box">미세조정 [%]</div>
+              <div class="tuning-box">
+                <button class="btn-tuning-arrow down"></button>
+                <div class="inner-value">100</div>
+                <button class="btn-tuning-arrow up"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CHEMICAL (UP) -->
+        <div class="chemical-wrap" style="top: 703px;left: 1650px;">
+          <div class="title-box">CHEMICAL (DOWN)</div>
+          <div class="inner-box">
+            <div class="left-box">
+              <button class="btn-normal">정지</button>
+              <button class="btn-normal">수동</button>
+              <div class="value-box">2.4 KA</div>
+            </div>
+            <div class="right-box">
+              <div class="title-box">미세조정 [%]</div>
+              <div class="tuning-box">
+                <button class="btn-tuning-arrow down"></button>
+                <div class="inner-value">100</div>
+                <button class="btn-tuning-arrow up"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gauge-wrap gauge2">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">LINE SPEED</div>      
+          </div>
+          <div class="flex-row">
+            <div class="gauge-box-wrap">
+              <div class="gauge-box">
+                <!-- 눈금자 -->
+                <div class="img-graduation"></div>
+                <!-- 단위Text -->
+                <div class="unit-txt" style="top:39px;left:56px;">m/min</div>
+                <!-- 눈금자 숫자 Text -------------------->
+                <div class="grd-txt" style="top:71px;left:12px;">0</div>
+                <div class="grd-txt" style="top:55px;left:14px;">40</div>
+                <div class="grd-txt" style="top:38px;left:23px;">80</div>
+                <div class="grd-txt" style="top:25px;left:34px;">120</div>
+                <div class="grd-txt" style="top:13px;left:52px;">160</div>
+                <div class="grd-txt" style="top:4px;left:71px;">200</div>
+                <div class="grd-txt" style="top:13px;left:93px;">240</div>
+                <div class="grd-txt" style="top:25px;left:108px;">280</div>
+                <div class="grd-txt" style="top:38px;left:122px;">320</div>
+                <div class="grd-txt" style="top:55px;left:129px;">360</div>
+                <div class="grd-txt" style="top:71px;left:131px;">400</div>
+        
+        
+                <!-- 바늘 중심원 -->
+                <div class="ct-needle">
+                  <div class="inside"></div>
+                </div>
+                <!-- 바늘 -->
+                <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+                <div class="img-needle" style="transform: rotate(0deg);"></div>
+        
+              </div>
+              <div class="gauge-value">170 m/min</div>
+            </div>          
+            <ul class="gauge-right">
+              <li>
+                <div class="value-wrap">
+                  <p class="mark">H</p>
+                  <p class="value">230</p>
+                </div>
+              </li>
+              <li>
+                <div class="value-wrap">
+                  <p class="mark on">M</p>
+                  <p class="value">205</p>
+                </div>
+              </li>
+              <li>
+                <div class="value-wrap">
+                  <p class="mark">L</p>
+                  <p class="value">155</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+              
+        <div class="gauge-wrap gauge1">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">#2 BRIDLE ROLL TENSION</div>      
+          </div>
+          <div class="gauge-box-wrap">
+            <div class="gauge-box">
+              <!-- 눈금자 -->
+              <div class="img-graduation"></div>
+              <!-- 단위Text -->
+              <div class="unit-txt" style="top:39px;left:75px;">A</div>
+              <!-- 눈금자 숫자 Text -------------------->
+              <div class="grd-txt" style="top:71px;left:12px;">-300</div>
+              <div class="grd-txt" style="top:55px;left:16px;">-240</div>
+              <div class="grd-txt" style="top:38px;left:25px;">-180</div>
+              <div class="grd-txt" style="top:25px;left:35px;">-120</div>
+              <div class="grd-txt" style="top:13px;left:52px;">-60</div>
+              <div class="grd-txt" style="top:4px;left:77px;">0</div>
+              <div class="grd-txt" style="top:13px;left:95px;">60</div>
+              <div class="grd-txt" style="top:25px;left:107px;">120</div>
+              <div class="grd-txt" style="top:38px;left:120px;">180</div>
+              <div class="grd-txt" style="top:55px;left:129px;">240</div>
+              <div class="grd-txt" style="top:71px;left:131px;">300</div>
+          
+              <!-- 바늘 중심원 -->
+              <div class="ct-needle">
+                <div class="inside"></div>
+              </div>
+              <!-- 바늘 -->
+              <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+              <div class="img-needle" style="transform: rotate(0deg);"></div>
+      
+            </div>
+            <div class="gauge-value">145 A</div>
+          </div>          
+        </div>
+        
+        <div class="table-box" style="top: 586px;left: 10px;">
+          <ul class="row-title">
+            <li>구분</li>
+            <li>전류밀도 (A)</li>
+            <li>현재값 전압 (V)</li>
+            <li>현재값 전류 (A)</li>
+            <li>설정값 (A)</li>
+            <li>운전모드</li>
+            <li>운전상태</li>
+          </ul>
+          <div class="table-wrap">
+<!-- 컬럼 선택영역은 left값으로 이동 가능 col*80px 씩 이동 가능(** TOP 정류기 테이블은 802px+col*80px) 로 계산 -->
+ <!-- ex) BOTTOM 정류기 3번 컬럼 선택시 left:240px; -->
+            <div class="sel-col" style="left: 240px;"></div>
+
+            <table>
+              <colgroup>
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="11">BOTTOM 정류기 (RECTIFIER)</th>
+                </tr>
+                <tr>
+                  <th>합계 (KA)</th>
+                  <th>#1</th>
+                  <th>#2</th>
+                  <th>#3</th>
+                  <th>#4</th>
+                  <th>#5</th>
+                  <th>#6</th>
+                  <th>#7</th>
+                  <th>#8</th>
+                  <th>#9</th>
+                  <th>#10</th>                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>8,000</td>
+                  <td>7,950</td>    
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>              
+                </tr>    
+                <tr class="sel">
+                  <td rowspan="2" class="clbold">10.1</td>
+                  <td>0.0</td>
+                  <td>0.0</td>
+                  <td>7.9</td>
+                  <td>8.2</td>
+                  <td>7.8</td>
+                  <td>0.0</td>
+                  <td>0.0</td>
+                  <td>0.0</td>
+                  <td>0.0</td>
+                  <td>0.0</td>
+                </tr>              
+                <tr class="sel">
+                  <td>0</td>
+                  <td>0</td>
+                  <td>3,352</td>
+                  <td>3,348</td>
+                  <td>3,404</td>
+                  <td>0</td>
+                  <td>0.0</td>
+                  <td>0.0</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr> 
+                <tr>
+                  <td>10.1</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                </tr>   
+                <tr>
+                  <td></td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td>자동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                </tr>   
+                <tr>
+                  <td></td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                  <td>운전</td>
+                  <td>운전</td>
+                  <td>운전</td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                </tr>    
+              </tbody>
+            </table>            
+          </div>
+          <div class="table-wrap">
+            <table>
+              <colgroup>
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+                <col width="80px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th colspan="11">TOP 정류기 (RECTIFIER)</th>
+                </tr>
+                <tr>
+                  <th>합계 (KA)</th>
+                  <th>#1</th>
+                  <th>#2</th>
+                  <th>#3</th>
+                  <th>#4</th>
+                  <th>#5</th>
+                  <th>#6</th>
+                  <th>#7</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td>7,950</td>
+                  <td>7,950</td>    
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                  <td>7,950</td>  
+                </tr>    
+                <tr class="sel">
+                  <td rowspan="2" class="clbold">9.1</td>
+                  <td>0.1</td>
+                  <td>0.2</td>
+                  <td>7.2</td>
+                  <td>7.4</td>
+                  <td>7.8</td>
+                  <td>0.5</td>
+                  <td>0.4</td>
+                </tr>              
+                <tr class="sel">
+                  <td>2</td>
+                  <td>8</td>
+                  <td>3,016</td>
+                  <td>3,118</td>
+                  <td>2,952</td>
+                  <td>12</td>
+                  <td></td>
+                </tr> 
+                <tr>
+                  <td>9.1</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>1,000</td>
+                  <td>500</td>
+                  <td>500</td>
+                  <td>500</td>
+                  <td>500</td>
+                </tr>   
+                <tr>
+                  <td></td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                  <td>자동</td>
+                  <td class="off">수동</td>
+                  <td class="off">수동</td>
+                </tr>   
+                <tr>
+                  <td></td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                  <td>운전</td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                  <td class="off">정지</td>
+                </tr>    
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">EXIT</p>
+          <p class="on">CENTER</p>
+          <p class="on">ENTRY</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

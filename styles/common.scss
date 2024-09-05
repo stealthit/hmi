@@ -429,6 +429,10 @@ body {position: relative;}
     height: 28px;
     line-height: 14px;
   }
+
+}
+.cl-data1 {
+  color: $cl_data_1;
 }
 // list-grid -   ------------------------
 // list-grid와 data-title 의 width 는 직접 적용해야 함.
@@ -447,7 +451,9 @@ body {position: relative;}
     background: $cl_neutral_5;
 
     @include flex_center;
+
   }  
+  .underline {text-decoration: underline;}
   .t-center {
     justify-content: center !important;
   }
@@ -481,7 +487,7 @@ body {position: relative;}
         }
         &.bg-wh {
           background: $cl_neutral_6;
-          &:last-child {border-bottom: none;}
+          &:last-child:not(.bottom) {border-bottom: none;}
         }
       }
       &:first-child {
@@ -559,7 +565,7 @@ body {position: relative;}
           color: $cl_data_1;
           text-decoration: underline;
         }
-      }
+      }      
     }
     .bd-left-none {
       border-left: none !important;
@@ -577,6 +583,321 @@ body {position: relative;}
       border-top: 1px solid $cl_neutral_4 !important;
     }
   }    
+  .blank-m {
+    height: 11px;
+  }
+  .blank-s {
+    height: 2px;
+  }
+
+  &.gd-position {
+    top: 273px;
+    left: 1449px;
+    width: 225px;
+    .list-data .data-title {
+      width: 165px;
+    }
+    border: 1px dashed $cl_data_1;
+
+    .position-wrap {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .gauge-box {
+        position: relative;
+        height: 28px;
+        background: $cl_neutral_5;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+        color: $cl_neutral_1;
+        border: 1px solid $cl_neutral_1;
+        .value-line {
+          position: absolute;
+          height: 100%;
+          width: 1px;
+          background: $cl_alaram_1;
+          top: 0;          
+        }
+        .grad {
+          top: 100%;
+          left: -1px;
+          position: absolute;
+          width: 224px;
+          display: flex;
+          justify-content: space-between;
+          li {
+            height: 6px;
+            width: 1px;
+            background: $cl_neutral_1;
+          }
+        }
+      }
+      .value-box {
+        width: 100%;
+        margin-top: 6px;
+        height: 17px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: 12px;
+        font-weight: 600;
+        color: $cl_neutral_1;
+      }
+    }
+  }
+}
+// grid list type
+.gd-bridle-roll {
+  width: 243px;
+  &.num3 {
+    width: 313px;
+  }
+  .list-data .data-title {
+    width: 103px;
+  }    
+}
+
+// main list
+.cleaning-wrap {
+  position: absolute;
+  width: 190px;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  background: $cl_neutral_5;
+  .title-box {
+    @include flex_center;
+    width: 100%;
+    height: 25px;
+    background: $cl_neutral_3;
+    color: $cl_neutral_6;
+  }
+  .cleaning-box {
+    width: 100%;
+    padding: 6px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    .btn-normal {width: 86px;height: 20px;color: $cl_data_1;}
+    .value-box {
+      width: 100%;
+      height: 20px;
+      background: $cl_neutral_6;
+      color: $cl_data_1;
+      @include flex_center;
+    }
+    .value-box2 {
+      width: 86px;
+      height: 20px;
+      color: $cl_data_1;
+      text-decoration: underline;
+      @include flex_center;
+      border-radius: 3.12px;
+      border: 1px solid $cl_neutral_3;
+    }
+  }
+}
+.tuning-wrap {
+  width: 132px;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700;
+  background: $cl_neutral_5;
+  .title-box {
+    width: 100%;
+    @include flex_center;
+    height: 25px;
+    background: $cl_neutral_3;
+    color: $cl_neutral_6;
+  }
+  .inner-box {
+    padding: 10px 6px;
+    width: 100%;
+    .value-box {
+      @include flex_center;
+      height: 20px;
+      background: $cl_neutral_6;
+      color: $cl_data_1;
+    }
+    .title-box {
+      height: 20px;
+      margin-top: 6px;
+      margin-bottom: 4px;
+    }
+    .inner-tuning-box {
+      display: flex;
+      gap: 6px;
+      .inner-value {
+        @include flex_center;
+        height: 20px;
+        width: 68px;
+        border-radius: 4px;
+        border: 1px solid $cl_neutral_3;
+        text-decoration: underline;
+        color: $cl_data_1;
+      }
+    }
+
+  }  
+
+}
+.main-button-box {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+
+  button.btn-large {
+    @include flex_center;
+    width: 102px;
+    height: 68px;
+    border-radius: 3.12px;
+    background: $cl_neutral_5;
+    border: 0.78px solid $cl_neutral_4;
+    box-shadow: 0px -3.12px 3.12px 0px #00000040 inset;
+    color: $cl_data_1;
+  }
+  .grid-mini-box {
+    display: flex;
+    border: 1px solid $cl_neutral_4;
+    li {
+      width: 100px;
+      display: flex;
+      flex-direction: column;
+      &:first-child {border-right: 1px solid $cl_neutral_4;}
+      .title {
+        @include flex_center;
+        height: 28px;
+        background: $cl_neutral_5;
+        color: $cl_neutral_1;
+        border-bottom: 1px solid $cl_neutral_4;
+      }
+      .data {
+        @include flex_center;
+        height: 40px;
+        background: $cl_neutral_6;
+        color: $cl_data_1;
+      }
+    }
+  }
+}
+.chemical-wrap {
+  position: absolute;
+  width: 260px;
+  font-size: 14px;
+  font-weight: 700;
+  .title-box {
+    width: 100%;
+    @include flex_center;
+    height: 32px;
+    background: $cl_neutral_3;
+    color: $cl_neutral_6;
+  }
+  .inner-box {
+    display: flex;
+    gap: 6px;
+    padding: 10px;
+    background: $cl_neutral_5;
+    .left-box {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      width: 106px;
+      .btn-normal {width: 50px;height: 28px;}
+      .value-box {
+        @include flex_center;
+        height: 28px;
+        width: 100%;
+        background: $cl_neutral_6;
+        color: $cl_data_1;
+      }
+    }
+    .right-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      .title-box {height: 28px;}
+      .tuning-box {
+        display: flex;
+        gap: 6px;
+        .inner-value {
+          @include flex_center;
+          height: 28px;
+          width: 60px;
+          border: 1px solid $cl_neutral_3;
+          border-radius: 4px;
+          color: $cl_data_1;
+        }
+      }
+    }
+  }
+}
+.table-box {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700; 
+  display: flex; 
+  .row-title {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    color: $cl_neutral_1;
+    border-right: 1px solid $cl_neutral_3;
+    li {
+      padding: 0 6px;
+      display: flex;
+      align-items: center;
+      height: 28px;
+      background: $cl_neutral_5;
+      border-bottom: 1px solid $cl_neutral_4;
+      &:first-child {
+        justify-content: center;
+        height: 56px;
+        border-top: 1px solid $cl_neutral_4;
+      }
+    }
+  }
+  .table-wrap {
+    position: relative;
+    border-left: 1px solid $cl_neutral_3;
+    border-right: 1px solid $cl_neutral_3;
+    &:last-child {border-right: 0;}
+
+    td:last-child,th:last-child {border-right: none;}
+
+    table {
+      thead th {
+        &:first-child {text-decoration: underline;}
+      }
+      tbody {
+        color: $cl_data_1;
+        tr {
+          td {padding: 0 6px;}
+          td.clbold {font-weight: 700;}
+          &:nth-child(-n+4) td{
+            text-align: right;
+          }
+          &:nth-child(n+5) td{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    .sel-col {
+      position: absolute;
+      z-index: 1;
+      top: 28px;
+      width: 80px;
+      height: 196px;
+      border: 2px solid $cl_alaram_2;
+    }
+  }
 }
 
 .bd-dot {
@@ -585,13 +906,10 @@ body {position: relative;}
   &.left {border-left: 2px dotted $cl_data_1 !important;}
   &.right {border-right: 2px dotted $cl_data_1 !important;}
 }
-.clbk {color: $cl_neutral_1;}
+.clbk {color: $cl_neutral_1 !important;}
 
 // table -------------------------------
 .table-wrap {
-  position: absolute;
-  width: 1896px;
-
   table {
     font-size: 14px;
     color: $cl_neutral_1;
@@ -617,7 +935,60 @@ body {position: relative;}
           vertical-align: middle;
           text-align: center;
           border: 1px solid $cl_neutral_4;
+          &.off {
+            background: $cl_neutral_5;
+          }
         }
+      }
+    }
+  }
+}
+
+.inter-table-wrap {
+  .table-title {
+    @include flex_center;
+    width: 100%;
+    height: 28px;
+    background: $cl_neutral_3;
+    border-top: 1px solid $cl_neutral_4;
+    border-bottom: 1px solid $cl_neutral_4;
+    font-size: 14px;
+    font-weight: 700;
+    color: $cl_neutral_6;
+  }
+  table {
+    font-weight: 700;
+    font-size: 14px;
+    color: $cl_neutral_1;
+    thead {
+      tr th {
+        height: 28px;
+        background: $cl_neutral_5;
+        // border-top: 1px solid $cl_neutral_4;
+        vertical-align: middle;
+        text-align: center;
+        border-left: 1px solid $cl_neutral_4;
+        &:first-child {border-left: none;}
+      }
+    }
+    tbody {
+      tr {
+        height: 28px;
+        td {
+          padding: 0 10px;
+          background: $cl_neutral_5;
+          vertical-align: middle;
+          text-align: center;
+          border-top: 1px solid $cl_neutral_4;
+          border-left: 1px solid $cl_neutral_4;
+          &.on {
+            background: $cl_neutral_6;
+          }
+          &:not(:first-child,:last-child) {text-align: left;}
+          &:first-child {border-left: none;}
+          &:last-child {color: $cl_data_1;}
+        }
+        &:last-child td {border-bottom: 1px solid $cl_neutral_4;}
       }
     }
   }
@@ -644,6 +1015,8 @@ body {position: relative;}
       font-size: 14px;
       font-weight: 700;
       color: $cl_neutral_6;
+      line-height: 1;
+      text-align: center;
     }
 
     .grp-button {
@@ -782,6 +1155,78 @@ body {position: relative;}
         }
       }
     }
+  }
+
+  &.gauge1 {
+    .gauge-box-wrap {
+      margin-top: 0;
+      padding-top: 4px;
+      padding-bottom: 10px;
+      gap: 5px;
+      .gauge-value {
+        width: 128px;
+      }
+    }
+  }
+  &.gauge2 {    
+    width: 285px;
+    .flex-row {
+      width: 100%;
+      display: flex;   
+      gap: 13px;   
+      .gauge-box-wrap {
+        margin-left: 17px;
+        margin-top: 0;
+        padding-top: 4px;
+        padding-bottom: 10px;
+        gap: 5px;
+        .gauge-value {
+          width: 128px;
+        }
+      }
+      .gauge-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid $cl_neutral_4;
+        li {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:not(:last-child) {
+            border-bottom: 1px solid $cl_neutral_4;
+          }
+          .value-wrap {
+            width: 82px;
+            height: 32px;
+            border-radius: 4px;
+            border: 1px solid $cl_neutral_4;
+            display: flex;
+            p {
+              @include flex_center;
+              font-size: 16px;
+              font-weight: 700;
+              color: $cl_data_1;
+              &.mark {
+                width: 32px;
+                border-right: 1px solid $cl_neutral_4;
+              }
+              &.value {
+                flex: 1;
+              }
+              &.on {
+                background: $cl_neutral_6;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+              }
+            }
+
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -945,20 +1390,7 @@ body {position: relative;}
           border-right: none;
         }
       }
-    }
-    button.btn-normal{
-      @include flex_center;
-      width: 100%;
-      height: 24px;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 700;
-      box-shadow: 0px -4px 4px 0px #00000040 inset;
-      color: $cl_data_1;
-      background: $cl_neutral_5;
-      border: 1px solid $cl_neutral_4;
-      &.on {background: $cl_neutral_6;}
-    }
+    }    
   }
   .popup-footer {
     padding: 0 20px;
@@ -980,6 +1412,20 @@ body {position: relative;}
   }  
 }
 
+button.btn-normal{
+  @include flex_center;
+  width: 100%;
+  height: 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0px -4px 4px 0px #00000040 inset;
+  color: $cl_data_1;
+  background: $cl_neutral_5;
+  border: 1px solid $cl_neutral_4;
+  &.on {background: $cl_neutral_6;}
+}
+
 .btn-tuning-arrow {
   width: 28px;
   height: 28px;
@@ -988,6 +1434,17 @@ body {position: relative;}
   }
   &.up {
     background: url(#{$imgPath}ic_tuning_arrow_up_28.svg);
+  }
+}
+
+.btn-tuning-arrow-20 {
+  width: 20px;
+  height: 20px;
+  &.down {
+    background: url(#{$imgPath}ic_tuning_arrow_down_20.svg);
+  }
+  &.up {
+    background: url(#{$imgPath}ic_tuning_arrow_up_20.svg);
   }
 }
 //----- image -------------------------
@@ -1017,8 +1474,18 @@ body {position: relative;}
   height: 314px;
   object-fit: none;
 }
-
-
+.img-entry-o {
+  content: url(#{$imgPath}img_ENTRY_o.png);
+  width: 1920px;
+  height: 601px;
+  object-fit: none;
+}
+.img-center-o {
+  content: url(#{$imgPath}img_CENTER_o.png);
+  width: 1920px;
+  height: 333px;
+  object-fit: none;
+}
 // 제자리 회전 예제
 .test-rotate {
   z-index: 99;
@@ -1033,15 +1500,16 @@ body {position: relative;}
     animation: rotate 2s infinite linear;
   }
 }
+
+
 @keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
 @keyframes rotate2 {
-  0% { transform: rotate(-90deg); }
-  50% { transform: rotate(90deg); }
-  100% { transform: rotate(-90deg); }
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
 }
 
 

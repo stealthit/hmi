@@ -24,10 +24,15 @@
     opacity: 0;
   }
 }
-.line-trk-wrapper {
+.main-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.line-trk-wrapper .table-wrap {
+  position: absolute;
+  width: 1896px;
 }
 .line-trk-wrapper .bg-line-wrap {
   top: 87px;
@@ -122,4 +127,121 @@
 }
 .line-trk-wrapper .gd-tr .list-data .data-title {
   width: 130px;
+}
+
+.entry-o-wrapper .bg-line-wrap {
+  top: 180px;
+  left: 0;
+}
+.entry-o-wrapper .gd-pinchroll {
+  width: 191px;
+}
+.entry-o-wrapper .gd-pinchroll .list-data .data-title {
+  width: 107px;
+}
+.entry-o-wrapper .gd-por {
+  top: 523px;
+  left: 20px;
+  width: 450px;
+}
+.entry-o-wrapper .gd-por .list-data .data-title {
+  width: 150px;
+}
+.entry-o-wrapper .gd-bridleroll {
+  top: 523px;
+  left: 577px;
+  width: 252px;
+}
+.entry-o-wrapper .gd-bridleroll .list-data .data-title {
+  width: 107px;
+}
+.entry-o-wrapper .gd-bridleroll .list-data.list2 li p {
+  border-top: none;
+}
+.entry-o-wrapper .gd-tensionloop {
+  width: 254px;
+  top: 540px;
+  left: 1384px;
+}
+.entry-o-wrapper .gd-tensionloop .list-data .data-title {
+  width: 184px;
+}
+.entry-o-wrapper .gauge1 {
+  position: absolute;
+}
+.entry-o-wrapper .gauge2 {
+  position: absolute;
+  top: 6px;
+  left: 829px;
+}
+
+.entry-i-wrapper {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 38px;
+  flex-wrap: wrap;
+  padding: 40px 60px;
+}
+.entry-i-wrapper .inter-table-wrap {
+  width: 570px;
+  height: 336px;
+}
+
+.center-o-wrapper .bg-line-wrap {
+  top: 108px;
+  left: 0;
+}
+.center-o-wrapper .gauge1 {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+.center-o-wrapper .gauge1 .gauge-title {
+  text-decoration: underline;
+}
+.center-o-wrapper .gauge2 {
+  position: absolute;
+  top: 5px;
+  left: 220px;
+}
+.center-o-wrapper .gd-enc {
+  width: 120px;
+}
+.center-o-wrapper .gd-enc .list-data .data-title {
+  width: 38px;
+}
+.center-o-wrapper .gd-quenching {
+  top: 463px;
+  left: 1297px;
+  width: 149px;
+}
+.center-o-wrapper .gd-quenching .list-data .data-title {
+  width: 89px;
+}
+.center-o-wrapper .gd-reflow {
+  top: 5px;
+  left: 1388px;
+  width: 130px;
+}
+.center-o-wrapper .gd-reflow .list-data .data-title {
+  width: 70px;
+}
+.center-o-wrapper .gd-oiler {
+  top: 5px;
+  left: 1750px;
+  width: 158px;
+}
+.center-o-wrapper .gd-oiler .list-data .data-title {
+  width: 98px;
+}
+
+.center-i-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+}
+.center-i-wrapper .inter-table-wrap {
+  width: 880px;
+  height: 700px;
 }

@@ -2,10 +2,17 @@
 @import url("reset.css");
 @import url("common.css");
 
-.line-trk-wrapper {
+.main-wrapper {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.line-trk-wrapper {
+  .table-wrap {
+    position: absolute;
+    width: 1896px;
+  }
   .bg-line-wrap {
     top: 87px;
     left: 0;
@@ -102,4 +109,131 @@
   }
 }
 
+.entry-o-wrapper {
+  .bg-line-wrap {
+    top: 180px;
+    left: 0;
+  }
 
+  .gd-pinchroll {    
+    width: 191px;
+    .list-data .data-title {
+      width: 107px;
+    } 
+  }
+  
+  .gd-por {  
+    top: 523px;
+    left: 20px;  
+    width: 450px;
+    .list-data .data-title {
+      width: 150px;
+    } 
+  }
+
+  .gd-bridleroll {    
+    top: 523px;
+    left: 577px;
+    width: 252px;
+    .list-data .data-title {
+      width: 107px;
+    } 
+
+    .list-data.list2 {
+      li p {border-top: none;}
+    }
+  }
+
+  .gd-tensionloop {
+    width: 254px;
+    top: 540px;
+    left: 1384px;
+    .list-data .data-title {
+      width: 184px;
+    }
+  }
+
+  .gauge1 {
+    position: absolute;         
+  }
+
+  .gauge2 {
+    position: absolute; 
+    top:6px;
+    left:829px;
+    
+  }
+}
+
+.entry-i-wrapper {
+  display: flex;
+  column-gap: 40px;
+  row-gap: 38px;
+  flex-wrap: wrap;
+  padding: 40px 60px;
+  .inter-table-wrap {
+    width: 570px;
+    height: 336px;
+
+  }
+}
+
+.center-o-wrapper {
+  .bg-line-wrap {
+    top: 108px;
+    left: 0;
+  }
+  
+  .gauge1 {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    .gauge-title {text-decoration: underline;}
+  }
+  .gauge2 {
+    position: absolute;
+    top: 5px;
+    left: 220px;
+  }
+
+  .gd-enc {
+    width: 120px;
+    .list-data .data-title {width: 38px;}
+  }
+
+  .gd-quenching {
+    top: 463px;
+    left: 1297px;
+    width: 149px;
+    .list-data .data-title {width: 89px;}
+  }
+
+  .gd-reflow {
+    top: 5px;
+    left: 1388px;
+    width: 130px;
+    .list-data .data-title {
+      width: 70px;
+    }    
+  }
+
+  .gd-oiler {
+    top: 5px;
+    left: 1750px;
+    width: 158px;
+    .list-data .data-title {
+      width: 98px;
+    }   
+  }
+}
+
+
+.center-i-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 60px;
+  .inter-table-wrap {
+    width: 880px;
+    height: 700px;
+  }
+}

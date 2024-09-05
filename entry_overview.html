@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">LINE TRACKING OVERVIEW</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li class="sel">
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>HYDRAULIC</li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper entry-o-wrapper">
+        <div class="bg-line-wrap">
+          <img alt="" class="img-entry-o">
+        </div>            
+        <!-- 기본 이미지에 대한 텍스트라벨 -->
+        <div class="img-label cl-data1" style="top:483px;left:38px">LOTNO0000104</div>
+        <div class="img-label cl-data1" style="top:483px;left:273px">LOTNO0000105</div>
+        <div class="img-label" style="top:454px;left:148px">#1 POR</div>
+        <div class="img-label" style="top:464px;left:376px">#2 POR</div>
+        <div class="img-label" style="top:433px;left:453px">#2 PINCH ROLL</div>
+        <div class="img-label" style="top:316px;left:594px">WELDER</div>
+        <div class="img-label" style="top:464px;left:685px">#1 BRIDLE ROLL</div>
+        <div class="img-label" style="top:245px;left:870px">E-STOP</div>
+        <div class="img-label" style="top:264px;left:870px">ALARM</div>
+        <div class="img-label" style="top:637px;left:862px">ALARM1</div>
+        <div class="img-label" style="top:656px;left:862px">ALARM2</div>
+        <div class="img-label" style="top:676px;left:862px">E-STOP</div>
+        <div class="img-label" style="top:791px;left:1122px">TENSION LOOP</div>
+        <div class="img-label" style="top:263px;left:1372px">WPD</div>
+        <div class="img-label" style="top:337px;left:1376px">#1 CPC</div> 
+        <div class="img-label" style="top:512px;left:1712px">#2 BRIDLE ROLL</div>
+
+        <div class="img-label line-2" style="top:239px;left:120px">#1<br> PINCH ROLL</div> 
+
+<!-- 그리드 배치 ------------------------------------------------------->
+        <!-- REFLOW -->
+        <div class="list-grid gd-pinchroll" style="top:90px;left:20px;">
+          <div class="list-title">#1 PINCH ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+              <p>SENSOR</p>
+            </li>
+            <li class="data">
+              <p class="bd-dot top right left clbk">0</p>
+              <p class="bd-dot right left clbk">0</p>
+              <p class="bd-dot bottom right left bg-wh t-center">UP</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-grid gd-pinchroll" style="top:90px;left:221px;">
+          <div class="list-title">#2 PINCH ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+              <p>SENSOR</p>
+            </li>
+            <li class="data">
+              <p class="bd-dot top right left clbk">0</p>
+              <p class="bd-dot right left clbk">0</p>
+              <p class="bd-dot bottom right left t-center">DOWN</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-grid gd-pinchroll" style="top:90px;left:422px;">
+          <div class="list-title">WELDER</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>CURRENT (A)</p>
+              <p>SPEED (mpm)</p>
+              <p>PRESS (bar)</p>
+              <p>온도 (°C)</p>
+            </li>
+            <li class="data">
+              <p class="bd-dot top right left clbk">0</p>
+              <p class="bd-dot right left clbk">0</p>
+              <p class="bd-dot right left clbk">0</p>
+              <p class="bd-dot bottom right left clbk">0</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-grid gd-por">
+          <ul class="list-data">
+            <li class="data-title">
+              <p></p>
+              <p>투입원판번호</p>
+              <p>ACTUAL DIA (mm)</p>
+              <p>INITIAL DIA (mm)</p>
+              <p>MIN DIA (mm)</p>
+              <p>감속시작길이 (m)</p>
+              <p>TENSION (%)</p>
+              <p>운전상태</p>              
+            </li>
+            <li class="data">
+              <p class="title">#1 POR</p>
+              <p class="t-center">LOTNO0000104</p>
+              <p>560</p>
+              <p class="underline">568</p>
+              <p class="underline">102.43</p>
+              <p class="underline">506</p>
+              <p class="underline">100</p>
+              <p class="t-center bg-wh bottom">운전</p>              
+            </li>
+            <li class="data">
+              <p class="title">#1 POR</p>
+              <p class="t-center">LOTNO0000105</p>
+              <p>560</p>
+              <p class="underline">568</p>
+              <p class="underline">102.43</p>
+              <p class="underline">506</p>
+              <p class="underline">100</p>
+              <p class="t-center">정지</p>              
+            </li>
+          </ul>
+          <div class="blank-m"></div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>MANDREL EXPAND</p>
+            </li>
+            <li class="data">
+              <p class="t-center bg-wh bottom">EXPAND</p>
+            </li>
+            <li class="data">
+              <p class="t-center">COLLAPSE</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-grid gd-bridleroll" style="top:523px;left:577px;">
+          <div class="list-title">#1 BRIDLE ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>              
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+              <p>진동값 (m/sec2)</p>
+              <p>온도 (°C)</p>
+              <p>SENSOR</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 BR</p>
+              <p>20.6</p>
+              <p>0</p>
+              <p>0</p>
+              <p>0</p>
+              <p class="bg-wh t-center bottom">UP</p>
+            </li>
+            <li class="data">
+              <p class="title">#3 BR</p>
+              <p class="bd-dot top right left clbk">0</p>
+              <p class="bd-dot bottom right left clbk">0</p>
+              <p>0</p>
+              <p>0</p>
+              <p class="t-center">DOWN</p>
+            </li>
+          </ul>
+          <ul class="list-data list2">
+            <li class="data-title">
+              <p>운전상태</p>
+            </li>
+            <li class="data">
+              <p class="bg-wh bottom t-center">운전</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-grid gd-bridleroll" style="top:540px;left:1648px;">
+          <div class="list-title">#2 BRIDLE ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>              
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+              <p>진동값 (m/sec2)</p>
+              <p>온도 (°C)</p>
+              <p>SENSOR</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 BR</p>
+              <p>20.6</p>
+              <p>0</p>
+              <p>0</p>
+              <p>0</p>
+              <p class="bg-wh t-center bottom">UP</p>
+            </li>
+            <li class="data">
+              <p class="title">#3 BR</p>
+              <p class="bd-dot top right left clbk">0</p>
+              <p class="bd-dot bottom right left clbk">0</p>
+              <p>0</p>
+              <p>0</p>
+              <p class="t-center">DOWN</p>
+            </li>
+          </ul>
+          <ul class="list-data list2">
+            <li class="data-title">
+              <p>운전상태</p>
+            </li>
+            <li class="data">
+              <p class="bg-wh bottom t-center">운전</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-grid gd-tensionloop">
+          <div class="list-title">TENSION LOOP</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>LOOP LENGTH (m)</p>
+              <p>LOOP POSITION (%)</p>              
+              <p>LOOP FINE ADJ. (%)</p>              
+            </li>
+            <li class="data">
+              <p>102.43</p>
+              <p>25.3</p>
+              <p class="underline">100</p>                     
+            </li>            
+          </ul>
+          <div class="blank-m"></div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>LOOP CONTROL</p>
+            </li>
+            <li class="data">
+              <p class="t-center underline">MAINT</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-grid gd-position">
+          <div class="list-title">#1 CPC</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>STRIP POSITION (mm)</p>
+            </li>
+            <li class="data">
+              <p>0</p>
+            </li>
+          </ul>
+          <div class="blank-s"></div>
+          <div class="position-wrap">
+            <div class="gauge-box">
+              <p>D.S</p>
+              <p>W.S</p>
+              <!-- left 값으로 수치라인 표현 -50:0%, 0:50%, 50:100% -->
+              <div class="value-line" style="left:50%"></div>
+              <ul class="grad">
+                <li></li>
+                <li></li> 
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div class="value-box">
+              <p>-50</p>
+              <p>0</p>
+              <p>50</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="gauge-wrap gauge1" style="top:6px;left:627px;">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">ENTRY SPEED</div>      
+          </div>
+          <div class="gauge-box-wrap">
+            <div class="gauge-box">
+              <!-- 눈금자 -->
+              <div class="img-graduation"></div>
+              <!-- 단위Text -->
+              <div class="unit-txt" style="top:39px;left:56px;">m/min</div>
+              <!-- 눈금자 숫자 Text -------------------->
+              <div class="grd-txt" style="top:71px;left:12px;">0</div>
+              <div class="grd-txt" style="top:55px;left:14px;">40</div>
+              <div class="grd-txt" style="top:38px;left:23px;">80</div>
+              <div class="grd-txt" style="top:25px;left:34px;">120</div>
+              <div class="grd-txt" style="top:13px;left:52px;">160</div>
+              <div class="grd-txt" style="top:4px;left:71px;">200</div>
+              <div class="grd-txt" style="top:13px;left:93px;">240</div>
+              <div class="grd-txt" style="top:25px;left:108px;">280</div>
+              <div class="grd-txt" style="top:38px;left:122px;">320</div>
+              <div class="grd-txt" style="top:55px;left:129px;">360</div>
+              <div class="grd-txt" style="top:71px;left:131px;">400</div>
+      
+      
+              <!-- 바늘 중심원 -->
+              <div class="ct-needle">
+                <div class="inside"></div>
+              </div>
+              <!-- 바늘 -->
+              <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+              <div class="img-needle" style="transform: rotate(0deg);"></div>
+      
+            </div>
+            <div class="gauge-value">230 m/min</div>
+          </div>          
+        </div>
+
+        <div class="gauge-wrap gauge2">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">ENTRY SPEED</div>      
+          </div>
+          <div class="flex-row">
+            <div class="gauge-box-wrap">
+              <div class="gauge-box">
+                <!-- 눈금자 -->
+                <div class="img-graduation"></div>
+                <!-- 단위Text -->
+                <div class="unit-txt" style="top:39px;left:56px;">m/min</div>
+                <!-- 눈금자 숫자 Text -------------------->
+                <div class="grd-txt" style="top:71px;left:12px;">0</div>
+                <div class="grd-txt" style="top:55px;left:14px;">40</div>
+                <div class="grd-txt" style="top:38px;left:23px;">80</div>
+                <div class="grd-txt" style="top:25px;left:34px;">120</div>
+                <div class="grd-txt" style="top:13px;left:52px;">160</div>
+                <div class="grd-txt" style="top:4px;left:71px;">200</div>
+                <div class="grd-txt" style="top:13px;left:93px;">240</div>
+                <div class="grd-txt" style="top:25px;left:108px;">280</div>
+                <div class="grd-txt" style="top:38px;left:122px;">320</div>
+                <div class="grd-txt" style="top:55px;left:129px;">360</div>
+                <div class="grd-txt" style="top:71px;left:131px;">400</div>
+        
+        
+                <!-- 바늘 중심원 -->
+                <div class="ct-needle">
+                  <div class="inside"></div>
+                </div>
+                <!-- 바늘 -->
+                <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+                <div class="img-needle" style="transform: rotate(0deg);"></div>
+        
+              </div>
+              <div class="gauge-value">170 m/min</div>
+            </div>          
+            <ul class="gauge-right">
+              <li>
+                <div class="value-wrap">
+                  <p class="mark">H</p>
+                  <p class="value">230</p>
+                </div>
+              </li>
+              <li>
+                <div class="value-wrap">
+                  <p class="mark on">M</p>
+                  <p class="value">205</p>
+                </div>
+              </li>
+              <li>
+                <div class="value-wrap">
+                  <p class="mark">L</p>
+                  <p class="value">155</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="gauge-wrap gauge1" style="top:6px;left:1122px;">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">#1 POR TENSION</div>      
+          </div>
+          <div class="gauge-box-wrap">
+            <div class="gauge-box">
+              <!-- 눈금자 -->
+              <div class="img-graduation"></div>
+              <!-- 단위Text -->
+              <div class="unit-txt" style="top:39px;left:75px;">A</div>
+              <!-- 눈금자 숫자 Text -------------------->
+              <div class="grd-txt" style="top:71px;left:12px;">-200</div>
+              <div class="grd-txt" style="top:55px;left:14px;">-160</div>
+              <div class="grd-txt" style="top:38px;left:23px;">-120</div>
+              <div class="grd-txt" style="top:25px;left:33px;">-80</div>
+              <div class="grd-txt" style="top:13px;left:52px;">-40</div>
+              <div class="grd-txt" style="top:4px;left:77px;">0</div>
+              <div class="grd-txt" style="top:13px;left:95px;">40</div>
+              <div class="grd-txt" style="top:25px;left:111px;">80</div>
+              <div class="grd-txt" style="top:38px;left:120px;">120</div>
+              <div class="grd-txt" style="top:55px;left:129px;">160</div>
+              <div class="grd-txt" style="top:71px;left:131px;">200</div>
+      
+      
+              <!-- 바늘 중심원 -->
+              <div class="ct-needle">
+                <div class="inside"></div>
+              </div>
+              <!-- 바늘 -->
+              <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+              <div class="img-needle" style="transform: rotate(0deg);"></div>
+      
+            </div>
+            <div class="gauge-value">5 A</div>
+          </div>          
+        </div>
+
+        <div class="gauge-wrap gauge1" style="top:6px;left:1322px;">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">#2 POR TENSION</div>      
+          </div>
+          <div class="gauge-box-wrap">
+            <div class="gauge-box">
+              <!-- 눈금자 -->
+              <div class="img-graduation"></div>
+              <!-- 단위Text -->
+              <div class="unit-txt" style="top:39px;left:75px;">A</div>
+              <!-- 눈금자 숫자 Text -------------------->
+              <div class="grd-txt" style="top:71px;left:12px;">-200</div>
+              <div class="grd-txt" style="top:55px;left:14px;">-160</div>
+              <div class="grd-txt" style="top:38px;left:23px;">-120</div>
+              <div class="grd-txt" style="top:25px;left:33px;">-80</div>
+              <div class="grd-txt" style="top:13px;left:52px;">-40</div>
+              <div class="grd-txt" style="top:4px;left:77px;">0</div>
+              <div class="grd-txt" style="top:13px;left:95px;">40</div>
+              <div class="grd-txt" style="top:25px;left:111px;">80</div>
+              <div class="grd-txt" style="top:38px;left:120px;">120</div>
+              <div class="grd-txt" style="top:55px;left:129px;">160</div>
+              <div class="grd-txt" style="top:71px;left:131px;">200</div>
+      
+      
+              <!-- 바늘 중심원 -->
+              <div class="ct-needle">
+                <div class="inside"></div>
+              </div>
+              <!-- 바늘 -->
+              <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+              <div class="img-needle" style="transform: rotate(0deg);"></div>
+      
+            </div>
+            <div class="gauge-value">190 A</div>
+          </div>          
+        </div>
+
+        <div class="gauge-wrap gauge1" style="top:6px;left:1522px;">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">#1 BRIDLE ROLL(TOTAL)<br> TENSION</div>      
+          </div>
+          <div class="gauge-box-wrap">
+            <div class="gauge-box">
+              <!-- 눈금자 -->
+              <div class="img-graduation"></div>
+              <!-- 단위Text -->
+              <div class="unit-txt" style="top:39px;left:75px;">A</div>
+              <!-- 눈금자 숫자 Text -------------------->
+              <div class="grd-txt" style="top:71px;left:12px;">-300</div>
+              <div class="grd-txt" style="top:55px;left:16px;">-240</div>
+              <div class="grd-txt" style="top:38px;left:25px;">-180</div>
+              <div class="grd-txt" style="top:25px;left:35px;">-120</div>
+              <div class="grd-txt" style="top:13px;left:52px;">-60</div>
+              <div class="grd-txt" style="top:4px;left:77px;">0</div>
+              <div class="grd-txt" style="top:13px;left:95px;">60</div>
+              <div class="grd-txt" style="top:25px;left:107px;">120</div>
+              <div class="grd-txt" style="top:38px;left:120px;">180</div>
+              <div class="grd-txt" style="top:55px;left:129px;">240</div>
+              <div class="grd-txt" style="top:71px;left:131px;">300</div>
+          
+              <!-- 바늘 중심원 -->
+              <div class="ct-needle">
+                <div class="inside"></div>
+              </div>
+              <!-- 바늘 -->
+              <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+              <div class="img-needle" style="transform: rotate(0deg);"></div>
+      
+            </div>
+            <div class="gauge-value">190 A</div>
+          </div>          
+        </div>
+
+        <div class="gauge-wrap gauge1" style="top:6px;left:1721px;">
+          <div class="gauge-top-wrap">
+            <div class="gauge-title">ENTRY LOOP TENSION</div>      
+          </div>
+          <div class="gauge-box-wrap">
+            <div class="gauge-box">
+              <!-- 눈금자 -->
+              <div class="img-graduation"></div>
+              <!-- 단위Text -->
+              <div class="unit-txt" style="top:39px;left:75px;">A</div>
+              <!-- 눈금자 숫자 Text -------------------->
+              <div class="grd-txt" style="top:71px;left:12px;">-300</div>
+              <div class="grd-txt" style="top:55px;left:16px;">-240</div>
+              <div class="grd-txt" style="top:38px;left:25px;">-180</div>
+              <div class="grd-txt" style="top:25px;left:35px;">-120</div>
+              <div class="grd-txt" style="top:13px;left:52px;">-60</div>
+              <div class="grd-txt" style="top:4px;left:77px;">0</div>
+              <div class="grd-txt" style="top:13px;left:95px;">60</div>
+              <div class="grd-txt" style="top:25px;left:107px;">120</div>
+              <div class="grd-txt" style="top:38px;left:120px;">180</div>
+              <div class="grd-txt" style="top:55px;left:129px;">240</div>
+              <div class="grd-txt" style="top:71px;left:131px;">300</div>
+          
+              <!-- 바늘 중심원 -->
+              <div class="ct-needle">
+                <div class="inside"></div>
+              </div>
+              <!-- 바늘 -->
+              <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+              <div class="img-needle" style="transform: rotate(0deg);"></div>
+      
+            </div>
+            <div class="gauge-value">0.0 A</div>
+          </div>          
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">EXIT</p>
+          <p class="on">CENTER</p>
+          <p class="on">ENTRY</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
