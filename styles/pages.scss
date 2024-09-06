@@ -237,3 +237,98 @@
     height: 700px;
   }
 }
+
+.exit-o-wrapper {
+  .bg-line-wrap {
+    top: 160px;
+    left: 0;
+  }
+  
+  .gd-pinchroll {
+    width: 191px;
+    .list-data .data-title {width: 107px;}
+  }
+
+  .gd-cam {width: 147px;}
+
+  .gd-tr {
+    top: 523px;
+    left: 1174px;  
+    width: 450px;
+    .list-data .data-title {
+      width: 150px;
+    } 
+  }
+
+  .gd-bridleroll {    
+    width: 322px;
+    .list-data .data-title {
+      width: 112px;
+    } 
+
+    .list-data.list2 {
+      li p {border-top: none;}
+    }
+  }
+
+  .gd-chemical {
+    width: 294px;
+    top: 374px;
+    left: 70px;
+    .list-data .data-title {
+      width: 234px;
+    } 
+  }
+
+  .gd-snip {
+    top: 374px;
+    left: 700px;
+    width: 149px;
+    .list-data .data-title {
+      width: 89px;
+    }
+  }
+
+  .gd-apron {
+    width: 148px;
+    .list-data .data-title {
+      width: 88px;
+    }
+  }
+
+  .gd-epc {
+    width: 148px;
+    .list-data .data-title {
+      width: 76px;
+    }
+  }
+
+  .gd-belt {
+    width: 237px;
+    top: 523px;
+    left: 1634px;
+    .list-data li{
+      flex: none;
+      &:first-child {width: 108px;}
+      &:nth-child(2) {width: 59px;}
+      &:last-child {width: 70px;}
+    }
+  }
+  
+  .gd-simple {
+    width: 528px;
+    .list-data li {
+      p:last-child {height: 40px;}
+    }
+  }
+
+  .gauge1 {
+    position: absolute;    
+  }
+
+  .gauge2 {
+    position: absolute;
+    top: 10px;
+    left: 270px;
+  }
+}

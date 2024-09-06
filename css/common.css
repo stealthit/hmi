@@ -546,6 +546,9 @@ body {
 .list-grid ul.list-data li p.bg-wh:last-child:not(.bottom) {
   border-bottom: none;
 }
+.list-grid ul.list-data li p.span2 {
+  height: 56px;
+}
 .list-grid ul.list-data li:first-child p.on {
   border-left: 1px solid #999999;
 }
@@ -1582,19 +1585,73 @@ button.btn-normal.on {
 }
 
 .img-entry-o {
-  content: url(../assets/img_ENTRY_o.png);
+  content: url(../assets/img_ENTRY_o_3.png);
   width: 1920px;
-  height: 601px;
+  height: 602px;
   -o-object-fit: none;
      object-fit: none;
 }
 
 .img-center-o {
-  content: url(../assets/img_CENTER_o.png);
+  content: url(../assets/img_CENTER_o_line.png);
   width: 1920px;
   height: 333px;
   -o-object-fit: none;
      object-fit: none;
+}
+
+.img-exit-o {
+  content: url(../assets/img_exit_line.png);
+  width: 1920px;
+  height: 353px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.ic-roll-120 {
+  z-index: 99;
+  position: absolute;
+  width: 122px;
+  height: 122px;
+  background: url(../assets/ic_COIL_none_120.svg);
+}
+.ic-roll-120.run-r {
+  background: url(../assets/ic_COIL_run_120.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-120.run-l {
+  background: url(../assets/ic_COIL_run_120.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-120.stop {
+  background: url(../assets/ic_COIL_stop_120.svg);
+}
+.ic-roll-120.fault {
+  background: url(../assets/ic_COIL_fault_120.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-54 {
+  z-index: 99;
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  background: url(../assets/ic_COIL_none_54.svg);
+}
+.ic-roll-54.run-r {
+  background: url(../assets/ic_COIL_run_54.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-54.run-l {
+  background: url(../assets/ic_COIL_run_54.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-54.stop {
+  background: url(../assets/ic_COIL_stop_54.svg);
+}
+.ic-roll-54.fault {
+  background: url(../assets/ic_COIL_fault_54.svg);
+  animation: blink-effect 1s step-end infinite;
 }
 
 .ic-roll-40 {
@@ -1620,6 +1677,144 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-roll-30 {
+  z-index: 99;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url(../assets/ic_COIL_none_30.svg);
+}
+.ic-roll-30.run-r {
+  background: url(../assets/ic_COIL_run_30.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-30.run-l {
+  background: url(../assets/ic_COIL_run_30.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-30.stop {
+  background: url(../assets/ic_COIL_stop_30.svg);
+}
+.ic-roll-30.fault {
+  background: url(../assets/ic_COIL_fault_30.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-28 {
+  z-index: 99;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url(../assets/ic_COIL_none_28.svg);
+}
+.ic-roll-28.run-r {
+  background: url(../assets/ic_COIL_run_28.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-28.run-l {
+  background: url(../assets/ic_COIL_run_28.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-28.stop {
+  background: url(../assets/ic_COIL_stop_28.svg);
+}
+.ic-roll-28.fault {
+  background: url(../assets/ic_COIL_fault_28.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-26 {
+  z-index: 99;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: url(../assets/ic_COIL_none_26.svg);
+}
+.ic-roll-26.run-r {
+  background: url(../assets/ic_COIL_run_26.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-26.run-l {
+  background: url(../assets/ic_COIL_run_26.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-26.stop {
+  background: url(../assets/ic_COIL_stop_26.svg);
+}
+.ic-roll-26.fault {
+  background: url(../assets/ic_COIL_fault_26.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-24 {
+  z-index: 99;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url(../assets/ic_COIL_none_24.svg);
+}
+.ic-roll-24.run-r {
+  background: url(../assets/ic_COIL_run_24.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-24.run-l {
+  background: url(../assets/ic_COIL_run_24.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-24.stop {
+  background: url(../assets/ic_COIL_stop_24.svg);
+}
+.ic-roll-24.fault {
+  background: url(../assets/ic_COIL_fault_24.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-22 {
+  z-index: 99;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url(../assets/ic_COIL_none_22.svg);
+}
+.ic-roll-22.run-r {
+  background: url(../assets/ic_COIL_run_22.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-22.run-l {
+  background: url(../assets/ic_COIL_run_22.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-22.stop {
+  background: url(../assets/ic_COIL_stop_22.svg);
+}
+.ic-roll-22.fault {
+  background: url(../assets/ic_COIL_fault_22.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-20 {
+  z-index: 99;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url(../assets/ic_COIL_none_20.svg);
+}
+.ic-roll-20.run-r {
+  background: url(../assets/ic_COIL_run_20.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-20.run-l {
+  background: url(../assets/ic_COIL_run_20.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-20.stop {
+  background: url(../assets/ic_COIL_stop_20.svg);
+}
+.ic-roll-20.fault {
+  background: url(../assets/ic_COIL_fault_20.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-roll-18 {
   z-index: 99;
   position: absolute;
@@ -1640,6 +1835,29 @@ button.btn-normal.on {
 }
 .ic-roll-18.fault {
   background: url(../assets/ic_COIL_fault_18.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-16 {
+  z-index: 99;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url(../assets/ic_COIL_none_16.svg);
+}
+.ic-roll-16.run-r {
+  background: url(../assets/ic_COIL_run_16.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-16.run-l {
+  background: url(../assets/ic_COIL_run_16.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-16.stop {
+  background: url(../assets/ic_COIL_stop_16.svg);
+}
+.ic-roll-16.fault {
+  background: url(../assets/ic_COIL_fault_16.svg);
   animation: blink-effect 1s step-end infinite;
 }
 
@@ -1846,6 +2064,25 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-cpc2-2 {
+  position: absolute;
+  width: 19px;
+  height: 10px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-cpc2-2.stop {
+  background: #999999;
+}
+.ic-cpc2-2.run {
+  background: #FFFFFF;
+}
+.ic-cpc2-2.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-air-dryer {
   position: absolute;
   width: 37px;
@@ -1882,6 +2119,42 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-air-dryer-2 {
+  position: absolute;
+  width: 63px;
+  height: 30px;
+  background: url(../assets/ic_AIRDRYER3_none.svg);
+  z-index: 99;
+}
+.ic-air-dryer-2.stop {
+  background: url(../assets/ic_AIRDRYER3_stop.svg);
+}
+.ic-air-dryer-2.run {
+  background: url(../assets/ic_AIRDRYER3_run.svg);
+}
+.ic-air-dryer-2.fault {
+  background: url(../assets/ic_AIRDRYER3_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-air-dryer2-2 {
+  position: absolute;
+  width: 30px;
+  height: 63px;
+  background: url(../assets/ic_AIRDRYER4_none.svg);
+  z-index: 99;
+}
+.ic-air-dryer2-2.stop {
+  background: url(../assets/ic_AIRDRYER4_stop.svg);
+}
+.ic-air-dryer2-2.run {
+  background: url(../assets/ic_AIRDRYER4_run.svg);
+}
+.ic-air-dryer2-2.fault {
+  background: url(../assets/ic_AIRDRYER4_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-plating {
   position: absolute;
   width: 7px;
@@ -1897,6 +2170,25 @@ button.btn-normal.on {
   background: #FFFFFF;
 }
 .ic-plating.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-plating-2 {
+  position: absolute;
+  width: 10px;
+  height: 29px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-plating-2.stop {
+  background: #999999;
+}
+.ic-plating-2.run {
+  background: #FFFFFF;
+}
+.ic-plating-2.fault {
   background: #FEF546;
   animation: blink-effect 1s step-end infinite;
 }
@@ -1935,6 +2227,25 @@ button.btn-normal.on {
   background: #FFFFFF;
 }
 .ic-pinhole.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pinhole-2 {
+  position: absolute;
+  width: 13px;
+  height: 14px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-pinhole-2.stop {
+  background: #999999;
+}
+.ic-pinhole-2.run {
+  background: #FFFFFF;
+}
+.ic-pinhole-2.fault {
   background: #FEF546;
   animation: blink-effect 1s step-end infinite;
 }
@@ -1993,6 +2304,24 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-esoiler2 {
+  position: absolute;
+  width: 12px;
+  height: 82px;
+  background: url(../assets/ic_esoiler2_none.svg);
+  z-index: 99;
+}
+.ic-esoiler2.stop {
+  background: url(../assets/ic_esoiler2_stop.svg);
+}
+.ic-esoiler2.run {
+  background: url(../assets/ic_esoiler2_run.svg);
+}
+.ic-esoiler2.fault {
+  background: url(../assets/ic_esoiler2_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-snip {
   position: absolute;
   width: 15px;
@@ -2009,6 +2338,187 @@ button.btn-normal.on {
 .ic-snip.fault {
   background: url(../assets/ic_snip_fault.svg);
   animation: blink-effect 1s step-end infinite;
+}
+
+.ic-snip3 {
+  position: absolute;
+  width: 40px;
+  height: 85px;
+  background: url(../assets/ic_snip3_none.svg);
+  z-index: 99;
+}
+.ic-snip3.stop {
+  background: url(../assets/ic_snip3_stop.svg);
+}
+.ic-snip3.run {
+  background: url(../assets/ic_snip3_run.svg);
+}
+.ic-snip3.fault {
+  background: url(../assets/ic_snip3_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-sensor {
+  position: absolute;
+  width: 16px;
+  height: 34px;
+  background: url(../assets/SENSOR_IN_OUT_none.svg);
+  z-index: 99;
+}
+.ic-sensor.stop {
+  background: url(../assets/SENSOR_IN_OUT_stop.svg);
+}
+.ic-sensor.run {
+  background: url(../assets/SENSOR_IN_OUT_run.svg);
+}
+.ic-sensor.fault {
+  background: url(../assets/SENSOR_IN_OUT_FAULT.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-sensor3 {
+  position: absolute;
+  width: 16px;
+  height: 34px;
+  background: url(../assets/ic_sensor3_none.svg);
+  z-index: 99;
+}
+.ic-sensor3.stop {
+  background: url(../assets/ic_sensor3_stop.svg);
+}
+.ic-sensor3.run {
+  background: url(../assets/ic_sensor3_run.svg);
+}
+.ic-sensor3.fault {
+  background: url(../assets/ic_sensor3_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-sensor2 {
+  position: absolute;
+  width: 12px;
+  height: 26px;
+  background: url(../assets/SENSOR2_IN_OUT_none.svg);
+  z-index: 99;
+}
+.ic-sensor2.stop {
+  background: url(../assets/SENSOR2_IN_OUT_stop.svg);
+}
+.ic-sensor2.run {
+  background: url(../assets/SENSOR2_IN_OUT_run.svg);
+}
+.ic-sensor2.fault {
+  background: url(../assets/SENSOR2_IN_OUT_FAULT.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-welder2 {
+  position: absolute;
+  width: 26px;
+  height: 106px;
+  background: url(../assets/ic_welder2_none.svg);
+  z-index: 99;
+}
+.ic-welder2.stop {
+  background: url(../assets/ic_welder2_stop.svg);
+}
+.ic-welder2.run {
+  background: url(../assets/ic_welder2_run.svg);
+}
+.ic-welder2.fault {
+  background: url(../assets/ic_welder2_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-cpc3 {
+  position: absolute;
+  width: 41px;
+  height: 21px;
+  background: url(../assets/ic_cpc3_none.svg);
+  z-index: 99;
+}
+.ic-cpc3.stop {
+  background: url(../assets/ic_cpc3_stop.svg);
+}
+.ic-cpc3.run {
+  background: url(../assets/ic_cpc3_run.svg);
+}
+.ic-cpc3.fault {
+  background: url(../assets/ic_cpc3_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-snip2 {
+  position: absolute;
+  width: 26px;
+  height: 54px;
+  background: url(../assets/ic_snip2_none.svg);
+  z-index: 99;
+}
+.ic-snip2.stop {
+  background: url(../assets/ic_snip2_stop.svg);
+}
+.ic-snip2.run {
+  background: url(../assets/ic_snip2_run.svg);
+}
+.ic-snip2.fault {
+  background: url(../assets/ic_snip2_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-mark-m {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: url(../assets/ic_mark_m_none.svg);
+  z-index: 99;
+}
+.ic-mark-m.stop {
+  background: url(../assets/ic_mark_m_stop.svg);
+}
+.ic-mark-m.run {
+  background: url(../assets/ic_mark_m_run.svg);
+}
+.ic-mark-m.fault {
+  background: url(../assets/ic_mark_m_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-wheel {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  background: url(../assets/ic_wheel.svg);
+  z-index: 99;
+}
+.ic-wheel.run {
+  animation: rotate 2s infinite linear;
+}
+
+.ic-epc {
+  position: absolute;
+  width: 31px;
+  height: 62px;
+  background: url(../assets/ic_epc_none.svg);
+  z-index: 99;
+}
+.ic-epc.stop {
+  background: url(../assets/ic_epc_stop.svg);
+}
+.ic-epc.run {
+  background: url(../assets/ic_epc_run.svg);
+}
+.ic-epc.fault {
+  background: url(../assets/ic_epc_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-wpd {
+  position: absolute;
+  width: 28px;
+  height: 15px;
+  background: url(../assets/ic_wpd.svg);
+  z-index: 99;
 }
 
 @keyframes rotate {

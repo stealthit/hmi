@@ -251,3 +251,93 @@
   width: 880px;
   height: 700px;
 }
+
+.exit-o-wrapper .bg-line-wrap {
+  top: 160px;
+  left: 0;
+}
+.exit-o-wrapper .gd-pinchroll {
+  width: 191px;
+}
+.exit-o-wrapper .gd-pinchroll .list-data .data-title {
+  width: 107px;
+}
+.exit-o-wrapper .gd-cam {
+  width: 147px;
+}
+.exit-o-wrapper .gd-tr {
+  top: 523px;
+  left: 1174px;
+  width: 450px;
+}
+.exit-o-wrapper .gd-tr .list-data .data-title {
+  width: 150px;
+}
+.exit-o-wrapper .gd-bridleroll {
+  width: 322px;
+}
+.exit-o-wrapper .gd-bridleroll .list-data .data-title {
+  width: 112px;
+}
+.exit-o-wrapper .gd-bridleroll .list-data.list2 li p {
+  border-top: none;
+}
+.exit-o-wrapper .gd-chemical {
+  width: 294px;
+  top: 374px;
+  left: 70px;
+}
+.exit-o-wrapper .gd-chemical .list-data .data-title {
+  width: 234px;
+}
+.exit-o-wrapper .gd-snip {
+  top: 374px;
+  left: 700px;
+  width: 149px;
+}
+.exit-o-wrapper .gd-snip .list-data .data-title {
+  width: 89px;
+}
+.exit-o-wrapper .gd-apron {
+  width: 148px;
+}
+.exit-o-wrapper .gd-apron .list-data .data-title {
+  width: 88px;
+}
+.exit-o-wrapper .gd-epc {
+  width: 148px;
+}
+.exit-o-wrapper .gd-epc .list-data .data-title {
+  width: 76px;
+}
+.exit-o-wrapper .gd-belt {
+  width: 237px;
+  top: 523px;
+  left: 1634px;
+}
+.exit-o-wrapper .gd-belt .list-data li {
+  flex: none;
+}
+.exit-o-wrapper .gd-belt .list-data li:first-child {
+  width: 108px;
+}
+.exit-o-wrapper .gd-belt .list-data li:nth-child(2) {
+  width: 59px;
+}
+.exit-o-wrapper .gd-belt .list-data li:last-child {
+  width: 70px;
+}
+.exit-o-wrapper .gd-simple {
+  width: 528px;
+}
+.exit-o-wrapper .gd-simple .list-data li p:last-child {
+  height: 40px;
+}
+.exit-o-wrapper .gauge1 {
+  position: absolute;
+}
+.exit-o-wrapper .gauge2 {
+  position: absolute;
+  top: 10px;
+  left: 270px;
+}

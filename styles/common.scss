@@ -489,6 +489,7 @@ body {position: relative;}
           background: $cl_neutral_6;
           &:last-child:not(.bottom) {border-bottom: none;}
         }
+        &.span2 {height: 56px;}
       }
       &:first-child {
         p.on {
@@ -1481,25 +1482,57 @@ button.btn-normal{
   object-fit: none;
 }
 .img-entry-o {
-  content: url(#{$imgPath}img_ENTRY_o.png);
+  content: url(#{$imgPath}img_ENTRY_o_3.png);
   width: 1920px;
-  height: 601px;
+  height: 602px;
   object-fit: none;
 }
 .img-center-o {
-  content: url(#{$imgPath}img_CENTER_o.png);
+  content: url(#{$imgPath}img_CENTER_o_line.png);
   width: 1920px;
   height: 333px;
   object-fit: none;
 }
-
+.img-exit-o {
+  content: url(#{$imgPath}img_exit_line.png);
+  width: 1920px;
+  height: 353px;
+  object-fit: none;
+}
 
 // -- page Icon -----------------------------
+.ic-roll-120 {
+  @include create_ic_roll(120); 
+}
+.ic-roll-54 {
+  @include create_ic_roll(54); 
+}
 .ic-roll-40 {
   @include create_ic_roll(40); 
 }
+.ic-roll-30 {
+  @include create_ic_roll(30); 
+}
+.ic-roll-28 {
+  @include create_ic_roll(28); 
+}
+.ic-roll-26 {
+  @include create_ic_roll(26); 
+}
+.ic-roll-24 {
+  @include create_ic_roll(24); 
+}
+.ic-roll-22 {
+  @include create_ic_roll(22); 
+}
+.ic-roll-20 {
+  @include create_ic_roll(20); 
+}
 .ic-roll-18 {
   @include create_ic_roll(18); 
+}
+.ic-roll-16 {
+  @include create_ic_roll(16); 
 }
 .ic-roll-15 {
   @include create_ic_roll(15); 
@@ -1525,10 +1558,29 @@ button.btn-normal{
 .ic-roll-4 {
   @include create_ic_roll(4); 
 }
+// line tracking
 .ic-cpc2 {
   position: absolute;
   width: 13px;
   height: 6px;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_4;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_alaram_2;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-cpc2-2 {
+  position: absolute;
+  width: 19px;
+  height: 10px;
   border: 1px solid #000;
   background: $cl_neutral_7;
   z-index: 99;
@@ -1579,11 +1631,64 @@ button.btn-normal{
     animation: blink-effect 1s step-end infinite;    
   }
 }
-
+.ic-air-dryer-2 {
+  position: absolute;
+  width: 63px;
+  height: 30px;
+  background: url(#{$imgPath}ic_AIRDRYER3_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_AIRDRYER3_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_AIRDRYER3_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_AIRDRYER3_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-air-dryer2-2 {
+  position: absolute;
+  width: 30px;
+  height: 63px;
+  background: url(#{$imgPath}ic_AIRDRYER4_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_AIRDRYER4_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_AIRDRYER4_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_AIRDRYER4_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
 .ic-plating {
   position: absolute;
   width: 7px;
   height: 18px;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_4;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_alaram_2;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-plating-2 {
+  position: absolute;
+  width: 10px;
+  height: 29px;
   border: 1px solid #000;
   background: $cl_neutral_7;
   z-index: 99;
@@ -1620,6 +1725,24 @@ button.btn-normal{
   position: absolute;
   width: 6px;
   height: 7px;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_4;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_alaram_2;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-pinhole-2 {
+  position: absolute;
+  width: 13px;
+  height: 14px;
   border: 1px solid #000;
   background: $cl_neutral_7;
   z-index: 99;
@@ -1688,6 +1811,24 @@ button.btn-normal{
     animation: blink-effect 1s step-end infinite;    
   }
 }
+.ic-esoiler2 {
+  position: absolute;
+  width: 12px;
+  height: 82px;
+  background: url(#{$imgPath}ic_esoiler2_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_esoiler2_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_esoiler2_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_esoiler2_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
 .ic-snip {
   position: absolute;
   width: 15px;
@@ -1705,6 +1846,186 @@ button.btn-normal{
     background: url(#{$imgPath}ic_snip_fault.svg);
     animation: blink-effect 1s step-end infinite;    
   }
+}
+.ic-snip3 {
+  position: absolute;
+  width: 40px;
+  height: 85px;
+  background: url(#{$imgPath}ic_snip3_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_snip3_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_snip3_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_snip3_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+// entry overview
+.ic-sensor {
+  position: absolute;
+  width: 16px;
+  height: 34px;
+  background: url(#{$imgPath}SENSOR_IN_OUT_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}SENSOR_IN_OUT_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}SENSOR_IN_OUT_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}SENSOR_IN_OUT_FAULT.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-sensor3 {
+  position: absolute;
+  width: 16px;
+  height: 34px;
+  background: url(#{$imgPath}ic_sensor3_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_sensor3_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_sensor3_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_sensor3_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-sensor2 {
+  position: absolute;
+  width: 12px;
+  height: 26px;
+  background: url(#{$imgPath}SENSOR2_IN_OUT_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}SENSOR2_IN_OUT_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}SENSOR2_IN_OUT_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}SENSOR2_IN_OUT_FAULT.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-welder2 {
+  position: absolute;
+  width: 26px;
+  height: 106px;
+  background: url(#{$imgPath}ic_welder2_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_welder2_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_welder2_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_welder2_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-cpc3 {
+  position: absolute;
+  width: 41px;
+  height: 21px;
+  background: url(#{$imgPath}ic_cpc3_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_cpc3_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_cpc3_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_cpc3_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-snip2 {
+  position: absolute;
+  width: 26px;
+  height: 54px;
+  background: url(#{$imgPath}ic_snip2_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_snip2_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_snip2_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_snip2_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-mark-m {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: url(#{$imgPath}ic_mark_m_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_mark_m_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_mark_m_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_mark_m_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-wheel {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  background: url(#{$imgPath}ic_wheel.svg);
+  z-index: 99;  
+  &.run {
+    animation: rotate 2s infinite linear;
+  }
+}
+.ic-epc {
+  position: absolute;
+  width: 31px;
+  height: 62px;
+  background: url(#{$imgPath}ic_epc_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_epc_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_epc_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_epc_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-wpd {
+  position: absolute;
+  width: 28px;
+  height: 15px;
+  background: url(#{$imgPath}ic_wpd.svg);
+  z-index: 99;
 }
 // -------------------------------------------
 
