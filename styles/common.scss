@@ -1458,15 +1458,21 @@ button.btn-normal{
   width: 16px;
   height: 16px;  
 }
+
 .img-err404 {
   content: url(#{$imgPath}img_404.png);
   width: 160px;
   height: 160px;
 }
+// .img-linetracking-o {
+//   content: url(#{$imgPath}img_LINETRACKING_o.png);
+//   width: 1920px;
+//   height: 314px;
+// }
 .img-linetracking-o {
-  content: url(#{$imgPath}img_LINETRACKING_o.png);
-  width: 1920px;
-  height: 314px;
+  content: url(#{$imgPath}img_LINETRACKING_o_line.png);
+  width: 1829px;
+  height: 252px;
 }
 .img-linetracking-2 {
   content: url(#{$imgPath}img_LINETRACKING_data2.png);
@@ -1486,32 +1492,238 @@ button.btn-normal{
   height: 333px;
   object-fit: none;
 }
-// 제자리 회전 예제
-.test-rotate {
-  z-index: 99;
+
+
+// -- page Icon -----------------------------
+.ic-roll-40 {
+  @include create_ic_roll(40); 
+}
+.ic-roll-18 {
+  @include create_ic_roll(18); 
+}
+.ic-roll-15 {
+  @include create_ic_roll(15); 
+}
+.ic-roll-14 {
+  @include create_ic_roll(14); 
+}
+.ic-roll-12 {
+  @include create_ic_roll(12); 
+}
+.ic-roll-11 {
+  @include create_ic_roll(11); 
+}
+.ic-roll-10 {
+  @include create_ic_roll(10); 
+}
+.ic-roll-8 {
+  @include create_ic_roll(8); 
+}
+.ic-roll-6 {
+  @include create_ic_roll(6); 
+}
+.ic-roll-4 {
+  @include create_ic_roll(4); 
+}
+.ic-cpc2 {
   position: absolute;
-  top: 297px;
-  left: 25px;
-  width: 40px;
-  height: 40px;
-  background: url(#{$imgPath}ic_test_rotate_40.svg);
-  background-size: cover;
-  &.on {
-    animation: rotate 2s infinite linear;
+  width: 13px;
+  height: 6px;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_4;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_alaram_2;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-air-dryer {
+  position: absolute;
+  width: 37px;
+  height: 18px;
+  background: url(#{$imgPath}ic_AIRDRYER_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_AIRDRYER_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_AIRDRYER_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_AIRDRYER_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-air-dryer2 {
+  position: absolute;
+  width: 18px;
+  height: 37px;
+  background: url(#{$imgPath}ic_AIRDRYER2_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_AIRDRYER2_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_AIRDRYER2_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_AIRDRYER2_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
   }
 }
 
+.ic-plating {
+  position: absolute;
+  width: 7px;
+  height: 18px;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_4;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_alaram_2;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-tgcwg {
+  position: absolute;
+  width: 4px;
+  height: 14px;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_4;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_alaram_2;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-pinhole {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_4;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_alaram_2;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-welder {
+  position: absolute;
+  width: 10px;
+  height: 37px;
+  background: url(#{$imgPath}ic_welder_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_welder_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_welder_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_welder_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-cpc {
+  position: absolute;
+  width: 22px;
+  height: 11px;
+  background: url(#{$imgPath}ic_cpc_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_cpc_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_cpc_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_cpc_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-esoiler {
+  position: absolute;
+  width: 8px;
+  height: 50px;
+  background: url(#{$imgPath}ic_esoiler_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_esoiler_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_esoiler_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_esoiler_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+.ic-snip {
+  position: absolute;
+  width: 15px;
+  height: 29px;
+  background: url(#{$imgPath}ic_snip_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_snip_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_snip_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_snip_fault.svg);
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+// -------------------------------------------
 
+// 시계방향
 @keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
+// 반시계방향
 @keyframes rotate2 {
   0% { transform: rotate(360deg); }
   100% { transform: rotate(0deg); }
 }
-
+// 깜빡임
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
+  }
+}
 
 
 .ctrl-wrap {

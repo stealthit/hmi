@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/*
+  animation-name: blink-effect;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+  animation-timing-function:step-end;
+*/
 @import url("reset.css");
 @keyframes rotate {
   from {
@@ -1562,9 +1568,9 @@ button.btn-normal.on {
 }
 
 .img-linetracking-o {
-  content: url(../assets/img_LINETRACKING_o.png);
-  width: 1920px;
-  height: 314px;
+  content: url(../assets/img_LINETRACKING_o_line.png);
+  width: 1829px;
+  height: 252px;
 }
 
 .img-linetracking-2 {
@@ -1591,18 +1597,418 @@ button.btn-normal.on {
      object-fit: none;
 }
 
-.test-rotate {
+.ic-roll-40 {
   z-index: 99;
   position: absolute;
-  top: 297px;
-  left: 25px;
-  width: 40px;
-  height: 40px;
-  background: url(../assets/ic_test_rotate_40.svg);
-  background-size: cover;
+  width: 42px;
+  height: 42px;
+  background: url(../assets/ic_COIL_none_40.svg);
 }
-.test-rotate.on {
+.ic-roll-40.run-r {
+  background: url(../assets/ic_COIL_run_40.svg);
   animation: rotate 2s infinite linear;
+}
+.ic-roll-40.run-l {
+  background: url(../assets/ic_COIL_run_40.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-40.stop {
+  background: url(../assets/ic_COIL_stop_40.svg);
+}
+.ic-roll-40.fault {
+  background: url(../assets/ic_COIL_fault_40.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-18 {
+  z-index: 99;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/ic_COIL_none_18.svg);
+}
+.ic-roll-18.run-r {
+  background: url(../assets/ic_COIL_run_18.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-18.run-l {
+  background: url(../assets/ic_COIL_run_18.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-18.stop {
+  background: url(../assets/ic_COIL_stop_18.svg);
+}
+.ic-roll-18.fault {
+  background: url(../assets/ic_COIL_fault_18.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-15 {
+  z-index: 99;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background: url(../assets/ic_COIL_none_15.svg);
+}
+.ic-roll-15.run-r {
+  background: url(../assets/ic_COIL_run_15.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-15.run-l {
+  background: url(../assets/ic_COIL_run_15.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-15.stop {
+  background: url(../assets/ic_COIL_stop_15.svg);
+}
+.ic-roll-15.fault {
+  background: url(../assets/ic_COIL_fault_15.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-14 {
+  z-index: 99;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: url(../assets/ic_COIL_none_14.svg);
+}
+.ic-roll-14.run-r {
+  background: url(../assets/ic_COIL_run_14.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-14.run-l {
+  background: url(../assets/ic_COIL_run_14.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-14.stop {
+  background: url(../assets/ic_COIL_stop_14.svg);
+}
+.ic-roll-14.fault {
+  background: url(../assets/ic_COIL_fault_14.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-12 {
+  z-index: 99;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: url(../assets/ic_COIL_none_12.svg);
+}
+.ic-roll-12.run-r {
+  background: url(../assets/ic_COIL_run_12.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-12.run-l {
+  background: url(../assets/ic_COIL_run_12.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-12.stop {
+  background: url(../assets/ic_COIL_stop_12.svg);
+}
+.ic-roll-12.fault {
+  background: url(../assets/ic_COIL_fault_12.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-11 {
+  z-index: 99;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: url(../assets/ic_COIL_none_11.svg);
+}
+.ic-roll-11.run-r {
+  background: url(../assets/ic_COIL_run_11.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-11.run-l {
+  background: url(../assets/ic_COIL_run_11.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-11.stop {
+  background: url(../assets/ic_COIL_stop_11.svg);
+}
+.ic-roll-11.fault {
+  background: url(../assets/ic_COIL_fault_11.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-10 {
+  z-index: 99;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: url(../assets/ic_COIL_none_10.svg);
+}
+.ic-roll-10.run-r {
+  background: url(../assets/ic_COIL_run_10.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-10.run-l {
+  background: url(../assets/ic_COIL_run_10.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-10.stop {
+  background: url(../assets/ic_COIL_stop_10.svg);
+}
+.ic-roll-10.fault {
+  background: url(../assets/ic_COIL_fault_10.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-8 {
+  z-index: 99;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: url(../assets/ic_COIL_none_8.svg);
+}
+.ic-roll-8.run-r {
+  background: url(../assets/ic_COIL_run_8.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-8.run-l {
+  background: url(../assets/ic_COIL_run_8.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-8.stop {
+  background: url(../assets/ic_COIL_stop_8.svg);
+}
+.ic-roll-8.fault {
+  background: url(../assets/ic_COIL_fault_8.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-6 {
+  z-index: 99;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: url(../assets/ic_COIL_none_6.svg);
+}
+.ic-roll-6.run-r {
+  background: url(../assets/ic_COIL_run_6.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-6.run-l {
+  background: url(../assets/ic_COIL_run_6.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-6.stop {
+  background: url(../assets/ic_COIL_stop_6.svg);
+}
+.ic-roll-6.fault {
+  background: url(../assets/ic_COIL_fault_6.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-4 {
+  z-index: 99;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: url(../assets/ic_COIL_none_4.svg);
+}
+.ic-roll-4.run-r {
+  background: url(../assets/ic_COIL_run_4.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-4.run-l {
+  background: url(../assets/ic_COIL_run_4.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-4.stop {
+  background: url(../assets/ic_COIL_stop_4.svg);
+}
+.ic-roll-4.fault {
+  background: url(../assets/ic_COIL_fault_4.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-cpc2 {
+  position: absolute;
+  width: 13px;
+  height: 6px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-cpc2.stop {
+  background: #999999;
+}
+.ic-cpc2.run {
+  background: #FFFFFF;
+}
+.ic-cpc2.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-air-dryer {
+  position: absolute;
+  width: 37px;
+  height: 18px;
+  background: url(../assets/ic_AIRDRYER_none.svg);
+  z-index: 99;
+}
+.ic-air-dryer.stop {
+  background: url(../assets/ic_AIRDRYER_stop.svg);
+}
+.ic-air-dryer.run {
+  background: url(../assets/ic_AIRDRYER_run.svg);
+}
+.ic-air-dryer.fault {
+  background: url(../assets/ic_AIRDRYER_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-air-dryer2 {
+  position: absolute;
+  width: 18px;
+  height: 37px;
+  background: url(../assets/ic_AIRDRYER2_none.svg);
+  z-index: 99;
+}
+.ic-air-dryer2.stop {
+  background: url(../assets/ic_AIRDRYER2_stop.svg);
+}
+.ic-air-dryer2.run {
+  background: url(../assets/ic_AIRDRYER2_run.svg);
+}
+.ic-air-dryer2.fault {
+  background: url(../assets/ic_AIRDRYER2_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-plating {
+  position: absolute;
+  width: 7px;
+  height: 18px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-plating.stop {
+  background: #999999;
+}
+.ic-plating.run {
+  background: #FFFFFF;
+}
+.ic-plating.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-tgcwg {
+  position: absolute;
+  width: 4px;
+  height: 14px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-tgcwg.stop {
+  background: #999999;
+}
+.ic-tgcwg.run {
+  background: #FFFFFF;
+}
+.ic-tgcwg.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pinhole {
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-pinhole.stop {
+  background: #999999;
+}
+.ic-pinhole.run {
+  background: #FFFFFF;
+}
+.ic-pinhole.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-welder {
+  position: absolute;
+  width: 10px;
+  height: 37px;
+  background: url(../assets/ic_welder_none.svg);
+  z-index: 99;
+}
+.ic-welder.stop {
+  background: url(../assets/ic_welder_stop.svg);
+}
+.ic-welder.run {
+  background: url(../assets/ic_welder_run.svg);
+}
+.ic-welder.fault {
+  background: url(../assets/ic_welder_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-cpc {
+  position: absolute;
+  width: 22px;
+  height: 11px;
+  background: url(../assets/ic_cpc_none.svg);
+  z-index: 99;
+}
+.ic-cpc.stop {
+  background: url(../assets/ic_cpc_stop.svg);
+}
+.ic-cpc.run {
+  background: url(../assets/ic_cpc_run.svg);
+}
+.ic-cpc.fault {
+  background: url(../assets/ic_cpc_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-esoiler {
+  position: absolute;
+  width: 8px;
+  height: 50px;
+  background: url(../assets/ic_esoiler_none.svg);
+  z-index: 99;
+}
+.ic-esoiler.stop {
+  background: url(../assets/ic_esoiler_stop.svg);
+}
+.ic-esoiler.run {
+  background: url(../assets/ic_esoiler_run.svg);
+}
+.ic-esoiler.fault {
+  background: url(../assets/ic_esoiler_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-snip {
+  position: absolute;
+  width: 15px;
+  height: 29px;
+  background: url(../assets/ic_snip_none.svg);
+  z-index: 99;
+}
+.ic-snip.stop {
+  background: url(../assets/ic_snip_stop.svg);
+}
+.ic-snip.run {
+  background: url(../assets/ic_snip_run.svg);
+}
+.ic-snip.fault {
+  background: url(../assets/ic_snip_fault.svg);
+  animation: blink-effect 1s step-end infinite;
 }
 
 @keyframes rotate {
@@ -1619,6 +2025,11 @@ button.btn-normal.on {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes blink-effect {
+  50% {
+    opacity: 0;
   }
 }
 .ctrl-wrap {

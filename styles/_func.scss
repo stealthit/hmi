@@ -29,6 +29,40 @@ $width: 1920px;
   align-items: center;
 }
 
+@mixin create_ic_roll($size) {
+  z-index: 99;
+  position: absolute;
+  width: #{$size+2}px;
+  height: #{$size+2}px;
+  background: url(#{$imgPath}ic_COIL_none_#{$size}.svg);
+  // background-size: cover;
+  &.run-r {
+    background: url(#{$imgPath}ic_COIL_run_#{$size}.svg);
+    // background-size: cover;
+    animation: rotate 2s infinite linear;
+  }
+  &.run-l {
+    background: url(#{$imgPath}ic_COIL_run_#{$size}.svg);
+    // background-size: cover;
+    animation: rotate2 2s infinite linear;
+  }
+  &.stop {
+    background: url(#{$imgPath}ic_COIL_stop_#{$size}.svg);
+    // background-size: cover;
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_COIL_fault_#{$size}.svg);
+    // background-size: cover;
+    animation: blink-effect 1s step-end infinite;    
+  }
+}
+     /*
+      animation-name: blink-effect;
+      animation-duration: 1s;
+      animation-iteration-count:infinite;
+      animation-timing-function:step-end;
+    */
+
 @keyframes rotate {
   from {
     -webkit-transform: rotate(0deg);
