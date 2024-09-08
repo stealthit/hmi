@@ -306,6 +306,12 @@
   width: 210px;
   height: 211px;
 }
+.pop-TP31CTS070 .flex-col .pop-title:last-child {
+  background: #CCCCCC;
+  color: #000000;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+}
 .pop-TP31CTS070 .tuning-box {
   margin-top: 10px;
   display: flex;

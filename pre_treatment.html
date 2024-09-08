@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">PRE-TREATMENT</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li class="sel">
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>HYDRAULIC</li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper pre-treatment-wrapper">
+        <div class="bg-line-wrap" style="top: 43px;left: 0;">
+          <img alt="" class="img-pre-treatment">
+        </div>            
+        <!-- 기본 이미지에 대한 텍스트라벨 -->
+        
+        <div class="img-label" style="top:431px;left:292px">#1 CLEANING</div>
+        <div class="img-label" style="top:431px;left:641px">#2 CLEANING</div>
+        <div class="img-label" style="top:431px;left:966px">CLEANING RINSE</div>
+        <div class="img-label" style="top:431px;left:1298px">PICKLING</div>
+        <div class="img-label" style="top:431px;left:1574px">PLATING RINSE</div>
+        
+<!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
+        <!-- #1 CLEANING -->
+        <div class="ic-roll-34 stop" style="top:310px;left:261px;"></div>
+        <div class="ic-roll-34 stop" style="top:346px;left:363px;"></div>
+        <div class="ic-roll-34 stop" style="top:346px;left:465px;"></div>
+        <div class="ic-roll-20 stop" style="top:323px;left:370px;"></div>
+        <div class="ic-roll-20 stop" style="top:323px;left:472px;"></div>
+        <div class="ic-roll-20 stop" style="top:347px;left:268px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:185px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:211px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:237px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:313px;"></div> 
+        <div class="ic-circle-10 stop" style="top:330px;left:339px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:415px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:441px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:185px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:211px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:237px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:313px;"></div> 
+        <div class="ic-circle-10 stop" style="top:352px;left:339px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:441px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:415px;"></div>
+        <!-- #2 CLEANING -->
+        <div class="ic-roll-46 stop" style="top:348px;left:535px;"></div>
+        <div class="ic-roll-46 stop" style="top:348px;left:723px;"></div>
+        <div class="ic-roll-30 stop" style="top:347px;left:794px;"></div>
+        <div class="ic-roll-20 stop" style="top:324px;left:799px;"></div>
+        <div class="ic-square stop" style="top:384px;left:591px;"></div>
+        <div class="ic-square stop" style="top:384px;left:607px;"></div>
+        <div class="ic-square stop" style="top:384px;left:623px;"></div>
+        <div class="ic-square stop" style="top:384px;left:639px;"></div>
+        <div class="ic-square stop" style="top:384px;left:655px;"></div>
+        <div class="ic-square stop" style="top:384px;left:671px;"></div>
+        <div class="ic-square stop" style="top:384px;left:687px;"></div>
+        <div class="ic-square stop" style="top:384px;left:703px;"></div>
+        <div class="ic-square stop" style="top:403px;left:591px;"></div>
+        <div class="ic-square stop" style="top:403px;left:607px;"></div>
+        <div class="ic-square stop" style="top:403px;left:623px;"></div>
+        <div class="ic-square stop" style="top:403px;left:639px;"></div>
+        <div class="ic-square stop" style="top:403px;left:655px;"></div>
+        <div class="ic-square stop" style="top:403px;left:671px;"></div>
+        <div class="ic-square stop" style="top:403px;left:687px;"></div>
+        <div class="ic-square stop" style="top:403px;left:703px;"></div>
+        <!-- CLEANING RINSE -->
+        <div class="ic-roll-20 stop" style="top:323px;left:916px;"></div>
+        <div class="ic-roll-34 stop" style="top:310px;left:979px;"></div>
+        <div class="ic-roll-20 stop" style="top:323px;left:1062px;"></div>
+        <div class="ic-roll-20 stop" style="top:323px;left:1136px;"></div>
+        <div class="ic-roll-20 stop" style="top:346px;left:916px;"></div>
+        <div class="ic-roll-20 stop" style="top:346px;left:986px;"></div>
+        <div class="ic-roll-34 stop" style="top:346px;left:1055px;"></div>
+        <div class="ic-roll-34 stop" style="top:346px;left:1129px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:865px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:891px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:954px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:1030px;"></div>
+        <div class="ic-circle-10 stop" style="top:330px;left:1106px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:865px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:891px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:954px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:1030px;"></div>
+        <div class="ic-circle-10 stop" style="top:352px;left:1106px;"></div>
+        <!-- PICKLING -->
+        <div class="ic-roll-46 stop" style="top:348px;left:1215px;"></div>
+        <div class="ic-roll-46 stop" style="top:348px;left:1352px;"></div>
+        <div class="ic-roll-20 stop" style="top:329px;left:1425px;"></div>
+        <div class="ic-roll-30 stop" style="top:352px;left:1420px;"></div>
+        <!-- PLATING RINSE -->
+        <div class="ic-roll-46 stop" style="top:348px;left:1503px;"></div>
+        <div class="ic-roll-46 stop" style="top:348px;left:1692px;"></div>
+        <div class="ic-roll-10 stop" style="top:240px;left:1721px;"></div>
+        <div class="ic-roll-10 stop" style="top:240px;left:1748px;"></div>
+        <div class="ic-roll-20 stop" style="top:59px;left:1717px;"></div>
+        <div class="ic-roll-20 stop" style="top:59px;left:1742px;"></div>
+        <div class="ic-roll-16 stop" style="top:115px;left:1720px;"></div>
+        <div class="ic-roll-16 stop" style="top:115px;left:1744px;"></div>
+        <div class="ic-roll-16 stop" style="top:135px;left:1720px;"></div>
+        <div class="ic-roll-16 stop" style="top:135px;left:1744px;"></div>
+
+
+ <!-- End 아이콘 배치 -->
+<!-- 그리드 배치 ------------------------------------------------------->
+        <!-- #1 CLEANING -->
+        <div class="list-grid" style="top:119px;left:151px;width: 160px;">
+          <div class="list-title">#1 CLEANING</div>
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">Pump A</p>
+              <p class="t-center bg-wh bottom">운전</p>
+            </li>
+            <li class="data">
+              <p class="title">Pump B</p>
+              <p class="t-center">정지</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #2 CLEANING -->
+        <div class="list-grid" style="top:119px;left:600px;width: 160px;">
+          <div class="list-title">#2 CLEANING</div>
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">Pump A</p>
+              <p class="t-center bg-wh bottom">운전</p>
+            </li>
+            <li class="data">
+              <p class="title">Pump B</p>
+              <p class="t-center">정지</p>
+            </li>
+          </ul>
+        </div>
+        <!-- CLEANING RINSE -->
+        <div class="list-grid" style="top:119px;left:936px;width: 160px;">
+          <div class="list-title">CLEANING RINSE</div>
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">Pump A</p>
+              <p class="t-center bg-wh bottom">운전</p>
+            </li>
+            <li class="data">
+              <p class="title">Pump B</p>
+              <p class="t-center">정지</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #1 BRUSH ROLL -->
+        <div class="list-grid" style="top:223px;left:151px;width: 141px;">
+          <ul class="list-data">
+            <li class="data">
+              <p class="title bd-dot top left right">#1 BRUSH ROLL</p>
+              <p class="bd-dot right left clbk bottom">0 A</p>
+            </li>            
+          </ul>
+        </div>
+        <!-- #2 BRUSH ROLL -->
+        <div class="list-grid" style="top:223px;left:311px;width: 141px;">
+          <ul class="list-data">
+            <li class="data">
+              <p class="title bd-dot top left right">#2 BRUSH ROLL</p>
+              <p class="bd-dot right left clbk bottom">0 A</p>
+            </li>            
+          </ul>
+        </div>
+        <!-- PICKLING -->
+        <div class="list-grid" style="top:499px;left:1200px;width: 275px;">
+          <ul class="list-data">
+            <li class="data-title" style="width: 135px;">
+              <p class="title bd-dot top left">구분</p>
+              <p class="bd-dot left">약품농도 (mg/kg)</p>
+              <p class="bd-dot left bottom">약품탁도 (mg/kg)</p>
+            </li>
+            <li class="data">
+              <p class="title bd-dot top right">PICKLING</p>
+              <p class="bd-dot right clbk">0</p>
+              <p class="bd-dot right clbk bottom">0</p>
+            </li>            
+          </ul>
+        </div>
+        <!-- PICKLING RINSE -->
+        <div class="list-grid" style="top:499px;left:1515px;width: 275px;">
+          <ul class="list-data">
+            <li class="data-title" style="width: 135px;">
+              <p class="title bd-dot top left">구분</p>
+              <p class="bd-dot left">약품농도 (mg/kg)</p>
+              <p class="bd-dot left bottom">약품탁도 (mg/kg)</p>
+            </li>
+            <li class="data">
+              <p class="title bd-dot top right">PICKLING RINSE</p>
+              <p class="bd-dot right clbk">0</p>
+              <p class="bd-dot right clbk bottom">0</p>
+            </li>            
+          </ul>
+        </div>
+        <!-- Cleaning Circulation -->
+        <div class="list-grid" style="top:613px;left:1200px;width: 440px;">
+          <ul class="list-data">
+            <li class="data-title" style="width: 200px;">
+              <p class="title">구분</p>
+              <p>#1 Cleaning Circulation (°C)</p>
+              <p>#2 Cleaning Circulation (°C)</p>
+            </li>
+            <li class="data">
+              <p class="title">온도값</p>
+              <p class="bg-wh">49</p>
+              <p class="bg-a2">51</p>
+            </li>
+            <li class="data">
+              <p class="title">설정값</p>
+              <p class="bg-wh">50</p>
+              <p class="bg-d5">50</p>
+            </li>
+            <li class="data">
+              <p class="title">하한값</p>
+              <p class="bg-wh">10</p>
+              <p class="bg-d5">10</p>
+            </li>
+            <li class="data">
+              <p class="title">상한값</p>
+              <p class="bg-wh">70</p>
+              <p class="bg-d5">70</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #1 CLEANING -->
+        <div class="list-grid gd-cleaning" style="top:481px;left:205px;">
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>
+              <p>현재값 전압 (V)</p>
+              <p>현재값 전류 (A)</p>
+              <p>출력 (KW)</p>
+              <p class="clbk bd-dot left top">약품농도 (mg/kg)</p>
+              <p class="clbk bd-dot left bottom">약품탁도 (mg/kg)</p>
+              <p>운전모드</p>
+              <p>운전상태</p>
+              <p>RECTIFIER 방향</p>
+              <p>RECTIFIER 설정 (A)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 CLEANING</p>
+              <p class="bg-wh">25.7</p>
+              <p class="bg-wh">1987</p>
+              <p>12</p>
+              <p class="clbk bd-dot right top">0</p>
+              <p class="clbk bd-dot right bottom">0</p>
+              <p class="t-center">수동</p>
+              <p class="t-center bg-wh">운전</p>
+              <div class="way-box">
+                <div class="way">
+                  <button class="btn-tuning-arrow left"></button>
+                  <p>역</p>
+                </div>
+                <div class="way">
+                  <p class="clbk">정</p>
+                  <button class="btn-tuning-arrow right"></button>
+                </div>
+              </div>
+              <p>1000</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #2 CLEANING -->
+        <div class="list-grid gd-cleaning" style="top:481px;left:709px;">
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>
+              <p>현재값 전압 (V)</p>
+              <p>현재값 전류 (A)</p>
+              <p>출력 (KW)</p>
+              <p>운전모드</p>
+              <p>운전상태</p>
+              <p>RECTIFIER 방향</p>
+              <p>RECTIFIER 설정 (A)</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 CLEANING</p>
+              <p class="bg-wh">25.7</p>
+              <p class="bg-wh">1987</p>
+              <p>12</p>
+              <p class="t-center">수동</p>
+              <p class="t-center bg-wh">운전</p>
+              <div class="way-box">
+                <div class="way">
+                  <button class="btn-tuning-arrow left"></button>
+                  <p>역</p>
+                </div>
+                <div class="way">
+                  <p class="clbk">정</p>
+                  <button class="btn-tuning-arrow right"></button>
+                </div>
+              </div>
+              <p>1000</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">EXIT</p>
+          <p class="on">CENTER</p>
+          <p class="on">ENTRY</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

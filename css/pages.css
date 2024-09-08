@@ -341,3 +341,110 @@
   top: 10px;
   left: 270px;
 }
+
+.pre-treatment-wrapper .gd-cleaning {
+  width: 275px;
+}
+.pre-treatment-wrapper .gd-cleaning .list-data .data-title {
+  width: 135px;
+}
+.pre-treatment-wrapper .gd-cleaning .way-box {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #999999;
+}
+.pre-treatment-wrapper .gd-cleaning .way-box .way {
+  display: flex;
+  gap: 4px;
+}
+.pre-treatment-wrapper .gd-cleaning .way-box .way p {
+  border: none;
+}
+
+.post-treatment-wrapper .gauge-wrap {
+  position: absolute;
+}
+.post-treatment-wrapper .tuning-box {
+  margin: 0 2px;
+  gap: 4px;
+}
+.post-treatment-wrapper .tuning-box .vaule {
+  flex: 1;
+  height: 100%;
+  border-radius: 4px;
+  border: 1px solid #666666;
+  background: transparent;
+  text-decoration: none !important;
+}
+.post-treatment-wrapper .gauge-wrap .gauge-box-wrap {
+  gap: 6px;
+  margin-top: 6px;
+}
+.post-treatment-wrapper .gauge-wrap .box {
+  width: 100%;
+  padding: 6px 10px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.post-treatment-wrapper .gauge-wrap .box .title-box {
+  height: 28px;
+}
+.post-treatment-wrapper .gauge-wrap .box .tuning-box {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6px;
+}
+.post-treatment-wrapper .gauge-wrap .box .tuning-box .value {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #666666;
+  color: #002878;
+}
+
+.center-helper-wrapper {
+  padding: 20px 20px 10px;
+}
+.center-helper-wrapper .bg-box {
+  width: 1880px;
+  height: 284px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  margin-bottom: 20px;
+}
+.center-helper-wrapper .table-box {
+  display: flex;
+}
+.center-helper-wrapper .table-box .table-wrap {
+  flex: 1;
+}
+.center-helper-wrapper .table-box .table-wrap table {
+  font-size: 12px;
+}
+.center-helper-wrapper .table-box .table-wrap table thead tr th {
+  font-weight: 700;
+  height: 46px;
+  line-height: 14px;
+  background: #666666;
+  border: 1px solid #999999;
+  vertical-align: middle;
+  text-align: center;
+  color: #FFFFFF;
+}
+.center-helper-wrapper .table-box .table-wrap table tbody tr {
+  height: 20px;
+  font-weight: 700;
+  background: #CCCCCC;
+}
+.center-helper-wrapper .table-box .table-wrap table tbody tr td {
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid #999999;
+}

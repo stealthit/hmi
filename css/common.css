@@ -476,9 +476,23 @@ body {
   height: 28px;
   line-height: 14px;
 }
+.img-label.line-3 {
+  height: 53px;
+  line-height: 17.38px;
+}
+
+.img-num {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 400;
+  color: #000000;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+}
 
 .cl-data1 {
-  color: #002878;
+  color: #002878 !important;
 }
 
 .list-grid {
@@ -545,6 +559,12 @@ body {
 }
 .list-grid ul.list-data li p.bg-wh:last-child:not(.bottom) {
   border-bottom: none;
+}
+.list-grid ul.list-data li p.bg-d5 {
+  background: #93C2E4;
+}
+.list-grid ul.list-data li p.bg-a2 {
+  background: #FEF546;
 }
 .list-grid ul.list-data li p.span2 {
   height: 56px;
@@ -613,6 +633,7 @@ body {
   background: #FFFFFF;
 }
 .list-grid ul.list-data li .tuning-box {
+  height: 28px;
   border-top: 1px solid #999999;
   width: 100%;
   background: #CCCCCC;
@@ -730,13 +751,7 @@ body {
   background: #CCCCCC;
 }
 .cleaning-wrap .title-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   height: 25px;
-  background: #666666;
-  color: #FFFFFF;
 }
 .cleaning-wrap .cleaning-box {
   width: 100%;
@@ -779,13 +794,7 @@ body {
   background: #CCCCCC;
 }
 .tuning-wrap .title-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 25px;
-  background: #666666;
-  color: #FFFFFF;
 }
 .tuning-wrap .inner-box {
   padding: 10px 6px;
@@ -869,6 +878,15 @@ body {
   color: #002878;
 }
 
+.title-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #666666;
+  color: #FFFFFF;
+}
+
 .chemical-wrap {
   position: absolute;
   width: 260px;
@@ -876,13 +894,7 @@ body {
   font-weight: 700;
 }
 .chemical-wrap .title-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 32px;
-  background: #666666;
-  color: #FFFFFF;
 }
 .chemical-wrap .inner-box {
   display: flex;
@@ -1033,6 +1045,9 @@ body {
 .table-wrap table tbody tr.sel {
   background: #93C2E4;
 }
+.table-wrap table tbody tr.alarm {
+  background: #FEF546 !important;
+}
 .table-wrap table tbody tr td {
   vertical-align: middle;
   text-align: center;
@@ -1124,7 +1139,7 @@ body {
   text-align: center;
 }
 .gauge-wrap .gauge-top-wrap .grp-button {
-  padding: 10px;
+  padding: 10px 10px 0;
   display: flex;
   gap: 6px;
   flex-wrap: wrap;
@@ -1334,6 +1349,50 @@ body {
   border-bottom-left-radius: 4px;
 }
 
+.info-box-wrap {
+  z-index: -1;
+  opacity: 0;
+  z-index: 10000;
+  position: absolute;
+  width: 200px;
+  height: 132px;
+  border-radius: 4px;
+  background: #FFFFFF;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.info-box-wrap.off {
+  animation: fadeout 2s;
+}
+.info-box-wrap.on {
+  z-index: 1000;
+  opacity: 1;
+  animation: fadein 2s;
+}
+.info-box-wrap .info-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.info-box-wrap .info-box .btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 20px;
+  height: 20px;
+  z-index: 10001;
+  border-radius: 50%;
+  background-color: #000;
+  background-image: url(../assets/ic_infobox_close.svg);
+  background-position: center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+}
+
 #bg-popup1 {
   width: 100vw;
   height: 100vh;
@@ -1540,6 +1599,12 @@ button.btn-normal.on {
 .btn-tuning-arrow.up {
   background: url(../assets/ic_tuning_arrow_up_28.svg);
 }
+.btn-tuning-arrow.left {
+  background: url(../assets/ic_tuning_arrow_left_28.svg);
+}
+.btn-tuning-arrow.right {
+  background: url(../assets/ic_tuning_arrow_right_28.svg);
+}
 
 .btn-tuning-arrow-20 {
   width: 20px;
@@ -1608,6 +1673,30 @@ button.btn-normal.on {
      object-fit: none;
 }
 
+.img-pre-treatment {
+  content: url(../assets/img_PRE-TREATMENT_line.png);
+  width: 1920px;
+  height: 379px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.img-post-treatment {
+  content: url(../assets/img_POST-TREATMENT_line.png);
+  width: 1920px;
+  height: 466px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
+.img-center-helper {
+  content: url(../assets/img_CENTER_HELPER.png);
+  width: 1920px;
+  height: 190px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+
 .ic-roll-120 {
   z-index: 99;
   position: absolute;
@@ -1654,6 +1743,52 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-roll-50 {
+  z-index: 99;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  background: url(../assets/ic_COIL_none_50.svg);
+}
+.ic-roll-50.run-r {
+  background: url(../assets/ic_COIL_run_50.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-50.run-l {
+  background: url(../assets/ic_COIL_run_50.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-50.stop {
+  background: url(../assets/ic_COIL_stop_50.svg);
+}
+.ic-roll-50.fault {
+  background: url(../assets/ic_COIL_fault_50.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-46 {
+  z-index: 99;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: url(../assets/ic_COIL_none_46.svg);
+}
+.ic-roll-46.run-r {
+  background: url(../assets/ic_COIL_run_46.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-46.run-l {
+  background: url(../assets/ic_COIL_run_46.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-46.stop {
+  background: url(../assets/ic_COIL_stop_46.svg);
+}
+.ic-roll-46.fault {
+  background: url(../assets/ic_COIL_fault_46.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-roll-40 {
   z-index: 99;
   position: absolute;
@@ -1674,6 +1809,29 @@ button.btn-normal.on {
 }
 .ic-roll-40.fault {
   background: url(../assets/ic_COIL_fault_40.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-roll-34 {
+  z-index: 99;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: url(../assets/ic_COIL_none_34.svg);
+}
+.ic-roll-34.run-r {
+  background: url(../assets/ic_COIL_run_34.svg);
+  animation: rotate 2s infinite linear;
+}
+.ic-roll-34.run-l {
+  background: url(../assets/ic_COIL_run_34.svg);
+  animation: rotate2 2s infinite linear;
+}
+.ic-roll-34.stop {
+  background: url(../assets/ic_COIL_stop_34.svg);
+}
+.ic-roll-34.fault {
+  background: url(../assets/ic_COIL_fault_34.svg);
   animation: blink-effect 1s step-end infinite;
 }
 
@@ -2064,6 +2222,10 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.fault {
+  cursor: pointer;
+}
+
 .ic-cpc2-2 {
   position: absolute;
   width: 19px;
@@ -2152,6 +2314,24 @@ button.btn-normal.on {
 }
 .ic-air-dryer2-2.fault {
   background: url(../assets/ic_AIRDRYER4_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-air-dryer2-3 {
+  position: absolute;
+  width: 48px;
+  height: 102px;
+  background: url(../assets/ic_AIRDRYER5_none.svg);
+  z-index: 99;
+}
+.ic-air-dryer2-3.stop {
+  background: url(../assets/ic_AIRDRYER5_stop.svg);
+}
+.ic-air-dryer2-3.run {
+  background: url(../assets/ic_AIRDRYER5_run.svg);
+}
+.ic-air-dryer2-3.fault {
+  background: url(../assets/ic_AIRDRYER5_fault.svg);
   animation: blink-effect 1s step-end infinite;
 }
 
@@ -2250,6 +2430,53 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-circle-10 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-circle-10.stop {
+  background: #000000;
+}
+.ic-circle-10.run {
+  background: #FFFFFF;
+}
+.ic-circle-10.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-square {
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-square.equil-20 {
+  width: 20px;
+  height: 20px;
+}
+.ic-square.s16x42 {
+  width: 16px;
+  height: 42px;
+}
+.ic-square.stop {
+  background: #999999;
+}
+.ic-square.run {
+  background: #FFFFFF;
+}
+.ic-square.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-welder {
   position: absolute;
   width: 10px;
@@ -2322,6 +2549,35 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-esoiler3 {
+  position: absolute;
+  width: 16px;
+  height: 128px;
+  background: #E0E0E0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.ic-esoiler3 .area {
+  height: 53px;
+  width: 100%;
+  background: #CCCCCC;
+  border-radius: 3px;
+}
+.ic-esoiler3.stop {
+  background: #999999;
+}
+.ic-esoiler3.run {
+  background: #FFFFFF;
+}
+.ic-esoiler3.fault {
+  background: #FEF546;
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-snip {
   position: absolute;
   width: 15px;
@@ -2391,6 +2647,24 @@ button.btn-normal.on {
 }
 .ic-sensor3.fault {
   background: url(../assets/ic_sensor3_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-sensor4 {
+  position: absolute;
+  width: 20px;
+  height: 43px;
+  background: url(../assets/ic_sensor4_none.svg);
+  z-index: 99;
+}
+.ic-sensor4.stop {
+  background: url(../assets/ic_sensor4_stop.svg);
+}
+.ic-sensor4.run {
+  background: url(../assets/ic_sensor4_run.svg);
+}
+.ic-sensor4.fault {
+  background: url(../assets/ic_sensor4_fault.svg);
   animation: blink-effect 1s step-end infinite;
 }
 

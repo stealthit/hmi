@@ -302,6 +302,16 @@
   width: 210px;
   height: 211px;
 
+  .flex-col {
+    .pop-title {
+      &:last-child {
+        background: $cl_neutral_5;
+        color: $cl_neutral_1;
+        border-top: 1px solid $cl_neutral_4;
+        border-bottom: 1px solid $cl_neutral_4;
+      }
+    }
+  }
   .tuning-box {
     margin-top: 10px;
     display: flex;
