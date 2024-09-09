@@ -134,6 +134,25 @@
 .line-trk-wrapper .gd-tr .list-data .data-title {
   width: 130px;
 }
+.line-trk-wrapper .loop-box-wrapper {
+  position: absolute;
+  left: 322px;
+  top: 134px;
+  height: 260px;
+}
+.line-trk-wrapper .loop-box-wrapper .loop-box {
+  width: 111px;
+  max-height: 260px;
+  position: relative;
+  background: url(../assets/img_trk_loop_line.png);
+  background-size: cover;
+}
+.line-trk-wrapper .loop-box-wrapper .loop-box .roll-base-bar {
+  position: absolute;
+  width: 111px;
+  bottom: 5px;
+  left: 0;
+}
 
 .entry-o-wrapper .bg-line-wrap {
   top: 180px;
@@ -179,6 +198,37 @@
   position: absolute;
   top: 6px;
   left: 829px;
+}
+.entry-o-wrapper .loop-box-wrapper {
+  position: absolute;
+}
+.entry-o-wrapper .loop-box-wrapper .loop-box {
+  width: 419px;
+  height: 516px;
+  position: relative;
+}
+.entry-o-wrapper .loop-box-wrapper .loop-box .roll-base-bar {
+  position: absolute;
+  width: 419px;
+  height: 13px;
+  border: 1px solid #000;
+  background: #CCCCCC;
+}
+.entry-o-wrapper .loop-box-wrapper .loop-box .roll-base-bar.bottom {
+  width: 380px;
+}
+.entry-o-wrapper .loop-box-wrapper .loop-box .loop-line {
+  position: absolute;
+  top: 4.5px;
+  left: 35px;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+}
+.entry-o-wrapper .loop-box-wrapper .loop-box .img-entry-loop-b-line {
+  position: absolute;
+  bottom: 0;
+  left: 42px;
 }
 
 .entry-i-wrapper {
@@ -447,4 +497,101 @@
   vertical-align: middle;
   text-align: center;
   border: 1px solid #999999;
+}
+
+.rectifier-preset-wrapper {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.rectifier-preset-wrapper .list-grid {
+  position: relative;
+}
+.rectifier-preset-wrapper .flex-row {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+.rectifier-preset-wrapper .flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rectifier-preset-wrapper .title-box {
+  height: 28px;
+}
+.rectifier-preset-wrapper .gd-plating {
+  width: 1360px;
+}
+.rectifier-preset-wrapper .gd-plating .list-data .data-title {
+  width: 140px;
+}
+.rectifier-preset-wrapper .gd-chemical {
+  width: 400px;
+}
+.rectifier-preset-wrapper .gd-chemical .list-data .data-title {
+  width: 200px;
+}
+.rectifier-preset-wrapper .setting-box {
+  display: flex;
+  gap: 10px;
+}
+.rectifier-preset-wrapper .setting-box .gd-setting {
+  width: 384px;
+  display: flex;
+  flex-direction: column;
+}
+.rectifier-preset-wrapper .setting-box .gd-setting .title-wrap {
+  height: 28px;
+  display: flex;
+}
+.rectifier-preset-wrapper .setting-box .gd-setting .title-wrap .title-box {
+  border: 1px solid #999999;
+  border-bottom: none;
+}
+.rectifier-preset-wrapper .setting-box .gd-setting .title-wrap .title-box:first-child {
+  width: 140px;
+}
+.rectifier-preset-wrapper .setting-box .gd-setting .title-wrap .title-box:last-child {
+  flex: 1;
+}
+.rectifier-preset-wrapper .setting-box .gd-setting .list-data .data-title {
+  width: 140px;
+}
+.rectifier-preset-wrapper .setting-box .explan-text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20.27px;
+  color: #000000;
+  padding-top: 16px;
+}
+.rectifier-preset-wrapper .setting-box2 {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.rectifier-preset-wrapper .setting-box2 .button-line {
+  display: flex;
+}
+.rectifier-preset-wrapper .setting-box2 .button-line .box {
+  height: 56px;
+  flex: 1;
+  background: #CCCCCC;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  padding: 2px;
+}
+.rectifier-preset-wrapper .setting-box2 .button-line .box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
 }

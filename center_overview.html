@@ -104,7 +104,7 @@
             </ul>
           </li>
           <li><a href="./line_tracking.html">LINE TRACKING</a></li>
-          <li class="sel">
+          <li>
             <p class="mainmenu-title">ENTRY</p>
             <ul class="submenu-wrap">
               <li><p>ENTRY OVERVIEW</p></li>
@@ -112,7 +112,7 @@
               <li><p>ENTRY INTERLOCK</p></li>
             </ul>
           </li>
-          <li>
+          <li class="sel">
             <p class="mainmenu-title">CENTER</p>
             <ul class="submenu-wrap">
               <li><p>CENTER OVERVIEW</p></li>
@@ -210,17 +210,24 @@
 
 <!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
         <!-- #2 BRIDLE ROLL -->
-        <div class="ic-sensor2" style="top:354px;left:13px;"></div>
+        <div class="sensor-box" style="top:354px;left:13px;">
+          <div class="ic-center-sensor-up run"></div>
+          <div class="ic-center-sensor-down run"></div>
+        </div>
         <div class="ic-roll-18 stop" style="top:402px;left:1px;"></div>
         <div class="ic-roll-10 run-l" style="top:369px;left:30px;"></div>
         <div class="ic-roll-30 run-r" style="top:380px;left:20px;"></div>
-        <div class="ic-roll-30 fault" style="top:390px;left:55px;"></div>
+        <div class="ic-roll-30 fault" style="top:390px;left:55px;">
+          <div class="fault-img"></div>
+        </div>
         <div class="ic-roll-18" style="top:362px;left:74px;"></div>
         <!-- #1 CLEANING -->
         <div class="ic-roll-16 stop" style="top:364px;left:114px;"></div>
         <div class="ic-roll-16 run-l" style="top:382px;left:146px;"></div>
         <div class="ic-roll-16 run-r" style="top:382px;left:174px;"></div>
-        <div class="ic-roll-10 fault" style="top:383px;left:117px;"></div>
+        <div class="ic-roll-10 fault" style="top:383px;left:117px;">
+          <div class="fault-img"></div>
+        </div>
         <div class="ic-roll-10 stop" style="top:369px;left:149px;"></div>
         <div class="ic-roll-10" style="top:369px;left:177px;"></div>
         <!-- #2 CLEANING -->
@@ -237,7 +244,9 @@
         <div class="ic-roll-24" style="top:384px;left:463px;"></div>
         <div class="ic-roll-24" style="top:384px;left:532px;"></div>
         <div class="ic-roll-16 run-r" style="top:382px;left:569px;"></div>
-        <div class="ic-roll-10 fault" style="top:370px;left:572px;"></div>
+        <div class="ic-roll-10 fault" style="top:370px;left:572px;">
+          <div class="fault-img"></div>
+        </div>
         <!-- PICKLING RINSE -->
         <div class="ic-roll-24" style="top:384px;left:614px;"></div>
         <div class="ic-roll-24" style="top:383px;left:694px;"></div>
@@ -250,7 +259,9 @@
         <!-- #2 ENCLOSURE -->
         <div class="ic-roll-18 stop" style="top:135px;left:788px;"></div>
         <div class="ic-roll-18 stop" style="top:261px;left:789px;"></div>
-        <div class="ic-roll-10 fault" style="top:139px;left:777px;"></div>
+        <div class="ic-roll-10 fault" style="top:139px;left:777px;">
+          <div class="fault-img"></div>
+        </div>
         <!-- PLATING RINSE -->
         <div class="ic-roll-24 stop" style="top:139px;left:823px;"></div>
         <div class="ic-roll-24 stop" style="top:139px;left:886px;"></div>
@@ -385,8 +396,14 @@
         <div class="ic-roll-10 stop" style="top:370px;left:1838px;"></div>
         <div class="ic-roll-10 stop" style="top:374px;left:1893px;"></div>
         <div class="ic-roll-18 stop" style="top:388px;left:1863px;"></div>
-        <div class="ic-sensor2 stop" style="top:354px;left:1853px;"></div>
-        <div class="ic-sensor2 stop" style="top:354px;left:1905px;"></div>
+        <div class="sensor-box" style="top:354px;left:1853px;">
+          <div class="ic-center-sensor-up run"></div>
+          <div class="ic-center-sensor-down run"></div>
+        </div>
+        <div class="sensor-box" style="top:354px;left:1905px;">
+          <div class="ic-center-sensor-up run"></div>
+          <div class="ic-center-sensor-down run"></div>
+        </div>
 
 <!-- 그리드 배치 ------------------------------------------------------->
         <!-- #2 ENCLOSURE -->
@@ -598,7 +615,7 @@
           </div>
         </div>
         <!-- TOP PLATING -->
-        <div class="tuning-wrap" style="top: 463px;left: 447px;">
+        <div class="tuning-wrap" style="top: 463px;left: 424px;">
           <div class="title-box">TOP PLATING</div>
           <div class="inner-box">
             <div class="value-box">10.1 KA</div>
@@ -611,7 +628,7 @@
           </div>
         </div>
         <!-- BOTTOM PLATING -->
-        <div class="tuning-wrap" style="top: 463px;left: 589px;">
+        <div class="tuning-wrap" style="top: 463px;left: 566px;">
          <div class="title-box">BOTTOM PLATING</div>
          <div class="inner-box">
            <div class="value-box">9.1 KA</div>
@@ -623,8 +640,9 @@
            </div>
          </div>
         </div>
-        <div class="main-button-box" style="top: 463px;left: 741px;">
+        <div class="main-button-box" style="top: 463px;left: 708px;">
           <button class="btn-large">N-STOP</button>
+          <button class="btn-large">라인 수동</button>
           <ul class="grid-mini-box">
             <li>
               <p class="title">LINE & MCC</p>

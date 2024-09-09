@@ -185,19 +185,22 @@
 }
 
 .pop-TP31ENS020 {
-  width: 289px;
-  height: 232px;
+  width: 500px;
+  height: 374px;
   .popup-footer {
     button {
-      width: 80px;
+      width: 105px;
       flex: none;
     }
    }
 }
 
 .pop-TP31ENS030 {
-  width: 210px;
-  height: 182px;
+  width: 400px;
+  height: 276px;
+  .popup-body {
+    padding-bottom: 10px;
+  }
   .tuning-box {
     margin-top: 10px;
     display: flex;
@@ -206,10 +209,10 @@
     .vaule {
       @include flex_center;
       flex: 1;
-      height: 28px;
+      height: 60px;
       border-radius: 4px;
       border: 1px solid $cl_neutral_3;
-      font-size: 14px;
+      font-size: 24px;
       font-weight: 700;
       color: $cl_data_1;
       text-decoration: underline;

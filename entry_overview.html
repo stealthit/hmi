@@ -167,11 +167,11 @@
         <div class="img-label" style="top:433px;left:453px">#2 PINCH ROLL</div>
         <div class="img-label" style="top:316px;left:594px">WELDER</div>
         <div class="img-label" style="top:464px;left:685px">#1 BRIDLE ROLL</div>
-        <div class="img-label" style="top:245px;left:870px">E-STOP</div>
-        <div class="img-label" style="top:264px;left:870px">ALARM</div>
-        <div class="img-label" style="top:637px;left:862px">ALARM1</div>
-        <div class="img-label" style="top:656px;left:862px">ALARM2</div>
-        <div class="img-label" style="top:676px;left:862px">E-STOP</div>
+        <div class="img-label arrow" style="top:245px;left:865px">E-STOP <img alt="" class="ic-wh-arrow"></div>
+        <div class="img-label arrow" style="top:264px;left:865px">ALARM<img alt="" class="ic-wh-arrow"></div>
+        <div class="img-label arrow" style="top:637px;left:862px">ALARM1<img alt="" class="ic-wh-arrow"></div>
+        <div class="img-label arrow" style="top:656px;left:862px">ALARM2<img alt="" class="ic-wh-arrow"></div>
+        <div class="img-label arrow" style="top:676px;left:862px">E-STOP<img alt="" class="ic-wh-arrow"></div>
         <div class="img-label" style="top:791px;left:1122px">TENSION LOOP</div>
         <div class="img-label" style="top:263px;left:1372px">WPD</div>
         <div class="img-label" style="top:337px;left:1376px">#1 CPC</div> 
@@ -184,7 +184,9 @@
         <div class="ic-roll-120 run-r" style="top:356px;left:259px;"></div>
         <!-- #1 PINCH ROLL -->
         <div class="ic-roll-18 run-r" style="top:292px;left:155px;"></div>
-        <div class="ic-roll-18 fault" style="top:311px;left:155px;"></div>
+        <div class="ic-roll-18 fault" style="top:311px;left:155px;">
+          <div class="fault-img"></div>
+        </div>
         <div class="ic-roll-18 stop" style="top:289px;left:444px;"></div>
         <div class="ic-roll-18" style="top:308px;left:444px;"></div>
         <!-- #2 PINCH ROLL -->
@@ -209,14 +211,70 @@
         <!-- #1 BRIDLE ROLL -->
         <div class="ic-roll-18" style="top:410px;left:1723.64px;"></div>
         <div class="ic-roll-54 stop" style="top:428px;left:1705.64px;"></div>
-        <div class="ic-roll-54 fault" style="top:445px;left:1768.64px;"></div>
+        <div class="ic-roll-54 fault" style="top:445px;left:1768.64px;">
+          <div class="fault-img"></div>
+        </div>
 
-        <div class="ic-sensor run" style="top:285px;left:119px;"></div>
-        <div class="ic-sensor stop" style="top:373px;left:437px;"></div>
-        <div class="ic-sensor" style="top:356px;left:707px;"></div>
-        <div class="ic-sensor" style="top:392px;left:1703.64px;"></div>
+        <div class="sensor-box" style="top:285px;left:119px;">
+          <div class="ic-sensor-up run"></div>
+          <div class="ic-sensor-down run"></div>
+        </div>
+        <div class="sensor-box" style="top:373px;left:437px;">
+          <div class="ic-sensor-up stop"></div>
+          <div class="ic-sensor-down stop"></div>
+        </div>        
+        <div class="sensor-box" style="top:356px;left:707px;">
+          <div class="ic-sensor-up"></div>
+          <div class="ic-sensor-down"></div> 
+        </div>
+        <div class="sensor-box" style="top:392px;left:1703.64px;">
+          <div class="ic-sensor-up falut"></div>
+          <div class="ic-sensor-down falut"></div> 
+        </div>
 
         <div class="ic-welder2" style="top:341px;left:607px;"></div>
+
+        <div class="loop-box-wrapper" style="top: 204px;left: 956px;">
+          <div class="loop-box">
+            <div class="roll-base-bar top" style="top: 0;left: 0;">
+              <div class="ic-roll-14" style="top:-24px;left:21px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:13px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:49px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:85px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:121px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:157px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:193px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:229px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:265px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:301px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:335px;"></div>
+              <div class="ic-roll-30" style="top:-10px;left:371px;"></div>              
+            </div>
+            <div class="loop-line">
+              <!-- 눈금자 0:30px, 100:464px 0~100 높이가 430px -->
+              <!-- 0- img-entry-loop-line:36px, roll-base-bar bottom:30px -->
+              <!-- 100-img-entry-loop-line:466px, roll-base-bar bottom:464px-->
+              <!-- 예제 눈금자 값이 90일때 -->
+              <!-- 초기값에서 1눈금자마다 4.3px 씩 빼면 됩니다. -->
+              <div class="img-entry-loop-line" style="height: calc(466px - 43px);"></div>              
+              <div class="roll-base-bar bottom" style="top: calc(464px - 43px);left: -16px;">
+                <div class="ic-roll-30" style="top:-9px;left:13px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:49px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:84px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:120px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:156px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:192px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:228px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:264px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:300px;"></div>
+                <div class="ic-roll-30" style="top:-9px;left:335px;"></div>
+              </div>
+            </div>
+            <!-- 초기값에서 1눈금자마다 img-entry-loop-b-line의 height 에 4.3px 씩 더하면 됩니다. -->
+            <div class="img-entry-loop-b-line" style="height: calc(38px + 43px);"></div>
+            <div class="img-entry-loop-bottom"></div>
+          </div>
+        </div>
  <!-- End 아이콘 배치 -->
 <!-- 그리드 배치 ------------------------------------------------------->
         <!-- REFLOW -->
@@ -229,8 +287,8 @@
               <p>SENSOR</p>
             </li>
             <li class="data">
+              <p>0</p>
               <p class="bd-dot top right left clbk">0</p>
-              <p class="bd-dot right left clbk">0</p>
               <p class="bd-dot bottom right left bg-wh t-center">UP</p>
             </li>
           </ul>
@@ -245,8 +303,8 @@
               <p>SENSOR</p>
             </li>
             <li class="data">
+              <p>0</p>
               <p class="bd-dot top right left clbk">0</p>
-              <p class="bd-dot right left clbk">0</p>
               <p class="bd-dot bottom right left t-center">DOWN</p>
             </li>
           </ul>
