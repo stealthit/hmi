@@ -418,6 +418,7 @@ body {position: relative;}
 }
 
 .img-label {
+  z-index: 2;
   position: absolute;
   font-size: 12px;
   font-weight: 700;
@@ -441,6 +442,7 @@ body {position: relative;}
   }
 }
 .img-num {
+  z-index: 2;
   position: absolute;
   font-size: 12px;
   font-weight: 400;
@@ -455,6 +457,7 @@ body {position: relative;}
 // list-grid -   ------------------------
 // list-grid와 data-title 의 width 는 직접 적용해야 함.
 .list-grid {
+  z-index: 2;
   position: absolute;
   display: flex;
   flex-direction:  column;
@@ -506,6 +509,7 @@ body {position: relative;}
         &.bg-wh {
           background: $cl_neutral_6;
           &:last-child:not(.bottom) {border-bottom: none;}
+          &.right {border-right: 1px solid $cl_neutral_4;}
         }
         &.bg-d5 {background: $cl_data_5;}
         &.bg-a2 {background: $cl_alaram_2;}
@@ -578,7 +582,7 @@ body {position: relative;}
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .vaule {
+        .value {
           @include flex_center;
           flex: 1;
           height: 28px;
@@ -684,6 +688,7 @@ body {position: relative;}
 
 // main list
 .cleaning-wrap {
+  z-index: 2;
   position: absolute;
   width: 190px;
   font-size: 14px;
@@ -720,6 +725,7 @@ body {position: relative;}
   }
 }
 .tuning-wrap {
+  z-index: 2;
   width: 132px;
   position: absolute;
   font-size: 14px;
@@ -760,6 +766,7 @@ body {position: relative;}
 
 }
 .main-button-box {
+  z-index: 2;
   position: absolute;
   display: flex;
   gap: 10px;
@@ -807,6 +814,7 @@ body {position: relative;}
   color: $cl_neutral_6;
 }
 .chemical-wrap {
+  z-index: 2;
   position: absolute;
   width: 260px;
   font-size: 14px;
@@ -854,6 +862,7 @@ body {position: relative;}
   }
 }
 .table-box {
+  z-index: 2;
   position: absolute;
   font-size: 14px;
   font-weight: 700; 
@@ -926,6 +935,17 @@ body {position: relative;}
 
 // table -------------------------------
 .table-wrap {
+  .table-title {
+    @include flex_center;
+    width: 100%;
+    height: 28px;
+    background: $cl_neutral_3;
+    // border-top: 1px solid $cl_neutral_4;
+    // border-bottom: 1px solid $cl_neutral_4;
+    font-size: 14px;
+    font-weight: 700;
+    color: $cl_neutral_6;
+  }
   table {
     font-size: 14px;
     color: $cl_neutral_1;
@@ -1386,18 +1406,20 @@ body {position: relative;}
       background-image: url(#{$imgPath}ic_x_24.svg);
     }
   }
-  .btn-normal {height: 60px;}
+  .btn-normal.h60 {height: 60px;}
   .popup-body {
     padding: 20px;
     .list-grid {
       position: relative;
       width: 100%;
+      font-size: 24px;
+      .list-title {height: 60px;}
       .list-data {
         li {
           button {
             // @include flex_center;
             // width: 100%;
-            // height: 24px;
+            // height: 100%;
             // border-radius: 4px;
             // font-size: 14px;
             // font-weight: 700;
@@ -1407,8 +1429,27 @@ body {position: relative;}
             // border: 1px solid $cl_neutral_4;
             &.on {background: $cl_neutral_6;}
           }
+          p {
+            padding: 0 6px;
+            height: 60px;
+            &.button {
+              padding: 10px;
+              button {
+                font-size: 24px;
+                height: 100%;
+                width: 100%;
+              }
+            }
+          }
           p.on {background: $cl_data_5;}
-          p.wh {background: $cl_neutral_6;}
+          p.wh {background: $cl_neutral_6;}       
+          .tuning-box {
+            height: 60px;
+            padding: 10px;
+            .value {
+              font-size: 24px;
+            }
+          } 
         }
       }
     }
@@ -1434,23 +1475,29 @@ body {position: relative;}
         font-size: 24px;
         font-weight: 700;
         color: $cl_neutral_1;
-        top: -11px;
+        top: -17px;
         left: 10px;
       }
-      &:has(.label) {padding: 20px 10px 10px;margin-top: 20px;}
+      &:has(.label) {padding: 30px 10px 10px;margin-top: 30px;}
     }
     .button-box {
       width: 100%;
       display: flex;
+      font-size: 24px;
       li {
         flex: 1;
-        padding: 0 10px;
+        padding: 10px;
         @include flex_center;
         height: 80px;
         background: $cl_neutral_5;
         border: 1px solid $cl_neutral_3;   
         &:first-child {
           border-right: none;
+        }
+        .btn-normal {
+          font-size: 24px;
+          width: 100%;
+          height: 100%;
         }
       }
     }    
@@ -1465,7 +1512,7 @@ body {position: relative;}
       font-weight: 700;
       font-size: 24px;
       color: $cl_neutral_1;
-      height: 60pxpx;
+      height: 60px;
       border-radius: 4px;
       background: $cl_neutral_6;
       border: 1px solid $cl_neutral_4;
@@ -1524,16 +1571,39 @@ button.btn-normal{
   border: 1px solid $cl_neutral_4;
   box-shadow: 0px -4px 4px 0px #00000040 inset;
   border-radius: 4px;
-
+  
   &.down {
     background: url(#{$imgPath}ic_tuning_arrow_down_60.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-color: $cl_neutral_6;
   }
   &.up {
     background: url(#{$imgPath}ic_tuning_arrow_up_60.svg);
     background-position: center;
     background-repeat: no-repeat;
+    background-color: $cl_neutral_6;
+  }
+}
+.btn-tuning-arrow-40 {
+  @include flex_center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid $cl_neutral_4;
+  box-shadow: 0px -4px 4px 0px #00000040 inset;
+  border-radius: 4px;
+  
+  &.down {
+    background: url(#{$imgPath}ic_tuning_arrow_down_60.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $cl_neutral_6;
+  }
+  &.up {
+    background: url(#{$imgPath}ic_tuning_arrow_up_60.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $cl_neutral_6;
   }
 }
 //----- image -------------------------
@@ -1623,6 +1693,7 @@ button.btn-normal{
   object-fit: cover;  
 }
 .img-entry-loop-bottom {
+  z-index: 2;
   position: absolute;
   content: url(#{$imgPath}img_TENSION_LOOP_1.png);
   width: 377px;
@@ -2456,6 +2527,7 @@ button.btn-normal{
   }
 }
 .ic-wpd {
+  z-index: 2;
   position: absolute;
   width: 28px;
   height: 15px;

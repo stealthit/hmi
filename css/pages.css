@@ -37,6 +37,7 @@
 }
 
 .line-trk-wrapper .table-wrap {
+  z-index: 2;
   position: absolute;
   width: 1896px;
 }
@@ -135,6 +136,7 @@
   width: 130px;
 }
 .line-trk-wrapper .loop-box-wrapper {
+  z-index: 2;
   position: absolute;
   left: 322px;
   top: 134px;
@@ -192,14 +194,17 @@
   width: 184px;
 }
 .entry-o-wrapper .gauge1 {
+  z-index: 2;
   position: absolute;
 }
 .entry-o-wrapper .gauge2 {
+  z-index: 2;
   position: absolute;
   top: 6px;
   left: 829px;
 }
 .entry-o-wrapper .loop-box-wrapper {
+  z-index: 2;
   position: absolute;
 }
 .entry-o-wrapper .loop-box-wrapper .loop-box {
@@ -249,6 +254,7 @@
   left: 0;
 }
 .center-o-wrapper .gauge1 {
+  z-index: 2;
   position: absolute;
   top: 5px;
   left: 20px;
@@ -257,6 +263,7 @@
   text-decoration: underline;
 }
 .center-o-wrapper .gauge2 {
+  z-index: 2;
   position: absolute;
   top: 5px;
   left: 220px;
@@ -384,9 +391,11 @@
   height: 40px;
 }
 .exit-o-wrapper .gauge1 {
+  z-index: 2;
   position: absolute;
 }
 .exit-o-wrapper .gauge2 {
+  z-index: 2;
   position: absolute;
   top: 10px;
   left: 270px;
@@ -412,13 +421,14 @@
 }
 
 .post-treatment-wrapper .gauge-wrap {
+  z-index: 2;
   position: absolute;
 }
 .post-treatment-wrapper .tuning-box {
   margin: 0 2px;
   gap: 4px;
 }
-.post-treatment-wrapper .tuning-box .vaule {
+.post-treatment-wrapper .tuning-box .value {
   flex: 1;
   height: 100%;
   border-radius: 4px;
@@ -594,4 +604,36 @@
   font-weight: 700;
   color: #000000;
   box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
+}
+
+.chemical-dentemp-wrapper {
+  padding: 60px;
+  display: flex;
+  gap: 40px;
+}
+.chemical-dentemp-wrapper .flex-col {
+  width: 660px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.chemical-dentemp-wrapper table tr td, .chemical-dentemp-wrapper table tr th {
+  font-weight: 700;
+  background: #CCCCCC;
+}
+.chemical-dentemp-wrapper table tr td.on, .chemical-dentemp-wrapper table tr th.on {
+  background: #FFFFFF;
+  color: #002878;
+}
+.chemical-dentemp-wrapper table tr td:first-child, .chemical-dentemp-wrapper table tr th:first-child {
+  border-left: none;
+}
+.chemical-dentemp-wrapper table tr td:last-child, .chemical-dentemp-wrapper table tr th:last-child {
+  border-right: none;
+}
+.chemical-dentemp-wrapper .density-table {
+  width: 1100px;
+}
+.chemical-dentemp-wrapper .temper-table {
+  width: 100%;
 }

@@ -119,24 +119,28 @@
       <div class="pop-title">FLUXING</div>
       <div class="list-grid">
         <ul class="list-data">
-          <li>
+          <li class="data-title">
             <p class="title">구분</p>
             <p>현재온도 (°C)</p>
             <p class="bd-dot top left">농도 (mg/kg)</p>
             <p class="bd-dot bottom left">탁도 (mg/kg)</p>
+            <p>Fluxing Wring Blower A</p>
+            <p>Fluxing Wring Blower B</p>
           </li>
           <li class="data">
             <p class="title">현재온도</p>
-            <p class="bg-wh">53</p>
+            <p class="bg-wh right">53</p>
             <p class="clbk bd-dot top">0</p>
             <p class="clbk bd-dot bottom">0</p>
+            <p class="button"><button class="btn-normal on">운전</button></p>
+            <p class="button"><button class="btn-normal">정지</button></p>
           </li>
-          <li class="data">
+          <!-- <li class="data">
             <p class="title">운전제어</p>
             <p class="t-center"><button class="btn-normal">정지</button></p>
             <p class="bd-dot top right"></p>
             <p class="bd-dot bottom right"></p>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -153,36 +157,40 @@
     <div class="popup-body">
       <div class="pop-title">PLATING RINSE</div>
       <div class="list-grid">
-        <ul class="list-data data1">
-          <li>
+        <ul class="list-data">
+          <li class="data-title">
             <p class="title">구분</p>
             <p>현재온도 (°C)</p>
             <p class="bd-dot top left">농도 (mg/kg)</p>
             <p class="bd-dot bottom left">탁도 (mg/kg)</p>
+            <p>Plating Storage Pump A</p>
+            <p>Plating Storage Pump A</p>
           </li>
           <li class="data">
             <p class="title">현재온도</p>
-            <p class="bg-wh">53</p>
-            <p class="clbk bd-dot top">0</p>
-            <p class="clbk bd-dot bottom">0</p>
+            <p class="bg-wh right">57</p>
+            <p class="clbk bd-dot top right">0</p>
+            <p class="clbk bd-dot bottom right">0</p>
+            <p class="button"><button class="btn-normal on">운전</button></p>
+            <p class="button"><button class="btn-normal">정지</button></p>
           </li>
-          <li class="data">
+          <!-- <li class="data">
             <p class="title">운전제어</p>
             <p class="t-center"><button class="btn-normal">정지</button></p>
             <p class="bd-dot top right"></p>
             <p class="bd-dot bottom right"></p>
-          </li>
+          </li> -->
         </ul>
-        <ul class="list-data data2">
+        <!-- <ul class="list-data data2">
           <li class="data-title">
-            <p>PUMP A</p>
-            <p>PUMP B</p>
+            <p>Plating Storage Pump A</p>
+            <p>Plating Storage Pump A</p>
           </li>
           <li class="data">
             <p class="button"><button class="btn-normal on">운전</button></p>
             <p class="button"><button class="btn-normal">정지</button></p>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
     <div class="popup-footer">
@@ -234,7 +242,7 @@
           </li>
           <li class="data">
             <p>127</p>
-            <p class="t-center"><button class="btn-normal">정지</button></p>
+            <p class="button"><button class="btn-normal">정지</button></p>
           </li>
         </ul>
       </div>
@@ -522,13 +530,13 @@
       <div class="subCon">
         <div class="pop-title">운전모드</div>
         <ul class="button-box">
-          <li><button class="btn-normal on">MAINT</button></li>
-          <li><button class="btn-normal">NORMAL</button></li>          
+          <li><button class="btn-normal h60 on">MAINT</button></li>
+          <li><button class="btn-normal h60">NORMAL</button></li>          
         </ul>
       </div>
     </div>
     <div class="popup-footer">
-      <button class="btn-normal">확인</button>
+      <button class="btn-normal h60">확인</button>
       <button onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
@@ -541,12 +549,12 @@
       <div class="pop-title">LOOP 미세조정 (%)</div>
       <div class="tuning-box">
         <button class="btn-tuning-arrow-60 down"></button>
-        <div class="vaule">92.7</div>
+        <div class="value">92.7</div>
         <button class="btn-tuning-arrow-60 up"></button>
       </div>
     </div>
     <div class="popup-footer">
-      <button class="btn-normal">확인</button>
+      <button class="btn-normal h60">확인</button>
       <button onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
@@ -569,8 +577,7 @@
             <li class="data">
               <p class="title">합계</p>
               <p class="underline wh">9,100</p>
-              <p></p>
-              <p></p>
+              <p class="span2"></p>
             </li>
             <li class="data">
               <p class="title">#1 TOP</p>
@@ -632,8 +639,7 @@
           <li class="data">
             <p class="title">합계</p>
             <p class="underline wh">10,100</p>
-            <p></p>
-            <p></p>
+            <p class="span2"></p>
           </li>
           <li class="data">
             <p class="title">#1 BOTTOM</p>
@@ -749,16 +755,16 @@
                 <p>전류 (KA)</p>
                 <p>출력 (KW)</p>
                 <p>미세조정 (%)</p>
-                <p>운전모드</p>
+                <p>운전상태</p>
               </li>
               <li class="data">
                 <p>0</p>
                 <p>6.4</p>
                 <p>87</p>
                 <div class="tuning-box">
-                  <button class="btn-tuning-arrow down"></button>
-                  <div class="vaule">100</div>
-                  <button class="btn-tuning-arrow up"></button>
+                  <button class="btn-tuning-arrow-40 down"></button>
+                  <div class="value">100</div>
+                  <button class="btn-tuning-arrow-40 up"></button>
                 </div>
                 <p class="button"><button class="btn-normal">정지</button></p>
               </li>              
@@ -824,8 +830,8 @@
             <p>다음값 (Inch. H₂o)</p>
             <p>설정값 (Inch. H₂o)</p>
             <p>미세조정 (%)</p>
-            <p>운전 제어</p>
-            <p>제어 모드</p>
+            <p>운전모드</p>
+            <p>운전상태</p>
           </li>
           <li class="data">
             <p>3.00</p>
@@ -834,7 +840,7 @@
             <p>3.00</p>
             <div class="tuning-box">
               <button class="btn-tuning-arrow down"></button>
-              <div class="vaule">100</div>
+              <div class="value underline">100</div>
               <button class="btn-tuning-arrow up"></button>
             </div>
             <p class="button"><button class="btn-normal">수동</button></p>
@@ -859,9 +865,9 @@
         <div class="pop-title">#2 BR 미세조정 (%)</div>
       </div>
       <div class="tuning-box">
-        <button class="btn-tuning-arrow down"></button>
-        <div class="vaule">92.7</div>
-        <button class="btn-tuning-arrow up"></button>
+        <button class="btn-tuning-arrow-60 down"></button>
+        <div class="value">92.7</div>
+        <button class="btn-tuning-arrow-60 up"></button>
       </div>
     </div>
     <div class="popup-footer">
@@ -886,9 +892,9 @@
             <li class="data">
               <p class="underline">0</p>                
               <div class="tuning-box">
-                <button class="btn-tuning-arrow down"></button>
-                <div class="vaule">100%</div>
-                <button class="btn-tuning-arrow up"></button>
+                <button class="btn-tuning-arrow-40 down"></button>
+                <div class="value">100%</div>
+                <button class="btn-tuning-arrow-40 up"></button>
               </div>
             </li>              
           </ul>        
@@ -943,10 +949,10 @@
       <div class="list-grid">
         <ul class="list-data">
           <li class="data-title"> 
-            <p>운전제어</p>
+            <p class="t-center">운전모드</p>
           </li>
           <li class="data">
-            <p class="button"><button class="btn-normal on">자동</button></p>
+            <p class="button"><button class="btn-normal on">운전</button></p>
           </li>      
           <li class="data">
             <p class="button"><button class="btn-normal">수동</button></p>

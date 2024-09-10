@@ -3,47 +3,44 @@
 @import url("common.css");
 
 .pop-pump {
-   width: 240px;
-   height: 201px; 
+   width: 400px;
+   height: 336px; 
    .list-grid {
     ul li {flex: 1;}
    }
 
    .popup-footer {
     button {
-      width: 66px;
-      flex: none;
+      flex: 1;
     }
    }
 }
 
 .pop-fluxing {
-  width: 340px;
-  height: 256px; 
+  width: 520px;
+  height: 576px; 
   .list-grid {
-   ul li {flex: 1;}
+    ul.list-data .data-title {width: 300px;}
   }
 
   .popup-footer {
     button {
-      width: 66px;
-      flex: none;
+      flex: 1;
     }
    }
 }
 
 .pop-plating-rinse {
-  width: 340px;
-  height: 312px; 
+  width: 520px;
+  height: 576px; 
+
   .list-grid {
-   ul.data1 li {flex: 1;}
-   ul.data2 .data-title {width: 100px;}
+   ul.list-data .data-title {width: 300px;}
   }
 
   .popup-footer {
     button {
-      width: 66px;
-      flex: none;
+      flex: 1;
     }
    }
 }
@@ -57,24 +54,26 @@
 }
 
 .pop-TP31CTS040 {
-  width: 189px;
-  height: 200px;
+  width: 400px;
+  height: 326px;
 
+  .popup-body{padding-bottom: 10px;}
   .list-grid {
-    .list-data .data-title {width: 89px;}
+    .list-data .data-title {width: 180px;}
    }
 }
 
 .pop-TP31EXS060 {
-  width: 574px;
-  height: 228px; 
+  width: 1105px;
+  height: 396px; 
   .list-grid {
-    .list-data .data-title {width: 134px;}
+    .list-data .data-title {width: 240px;}
   }
 
   .popup-footer {
+    justify-content: center;
     button {
-      width: 66px;
+      width: 235px;
       flex: none;
     }
    }
@@ -206,7 +205,7 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    .vaule {
+    .value {
       @include flex_center;
       flex: 1;
       height: 60px;
@@ -221,90 +220,108 @@
 }
 
 .pop-TP31CTS020 {
-  width: 1183px;
-  height: 340px;
+  width: 1680px;
+  height: 540px;
   .popup-body {
     .flex-row {
       display: flex;
       gap: 10px;
       margin: 10px 0;
       .button-box {
-        padding: 0 15px;
-        background: $cl_neutral_7;
-        width: 284px;
+        // padding: 0 15px;
+        // background: $cl_neutral_7;
+        width: 410px;
         align-items: center;
         gap: 10px;
-      }
-      .list-grid {
-        &.grid1 {
-          flex: 1;
-        }
-        &.grid2 {
-          
+        .btn-normal {
+          font-size: 30px;
+          width: 100%;
+          height: 100%;
         }
       }
     }
+
+    .list-grid {
+      font-size: 20px;
+      &.grid1 {flex: 1;}
+      ul.list-data {
+        li {
+          &:first-child, &:nth-child(2) {width: 120px;flex: none;}
+          p {height: 48px;}
+          p.span2 {height: 96px;}
+          p.button {
+            padding: 5px;
+            button {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    } 
   }
 }
 
 .pop-TP31CTS030 {
-  width: 450px;
-  height: 231px;
+  width: 780px;
+  height: 374px;
 
   .flex-row {margin-bottom: 0 !important;}
   .subCon {flex: 1;}
   .popup-footer {
+    justify-content: center;
     button {
-      width: 66px;
+      width: 114px;
+      height: 60px;
       flex: none;
     }
   }
 }
 
 .pop-TP31CTS050 {
-  width: 625px;
-  height: 445px;
+  width: 1000px;
+  height: 778px;
   .flex-row {
     margin: 0;
     .subCon {flex: 1;}
   }
   .grid1 {
-    .list-data .data-title {width: 136px;}
+    .list-data .data-title {width: 228px;}
   }
   .grid2 {
-    .list-data .data-title {width: 199px;}
+    .list-data .data-title {width: 350px;}
   }
   .grid3 {
-    .list-data .data-title {width: 497px;}
+    .list-data .data-title {width: 835px;}
   }
   .popup-footer {
+    justify-content: center;
     button {
-      width: 66px;
+      width: 105px;
       flex: none;
     }
   }
 }
 
 .pop-TP31CTS060 {
-  width: 327px;
-  height: 378px;
+  width: 460px;
+  height: 696px;
   
   .list-grid {
-    .list-data .data-title {width: 140px;}
+    .list-data .data-title {width: 210px;}
   }
   
   .popup-footer {
     button {
-      width: 66px;
-      flex: none;
+      flex: 1;
     }
   }
 }
 
 .pop-TP31CTS070 {
-  width: 210px;
-  height: 211px;
+  width: 400px;
+  height: 324px;
 
+  .popup-body {padding-bottom: 10px;}
   .flex-col {
     .pop-title {
       &:last-child {
@@ -320,13 +337,13 @@
     display: flex;
     gap: 8px;
     align-items: center;
-    .vaule {
+    .value {
       @include flex_center;
       flex: 1;
-      height: 28px;
+      height: 60px;
       border-radius: 4px;
       border: 1px solid $cl_neutral_3;
-      font-size: 14px;
+      font-size: 24px;
       font-weight: 700;
       color: $cl_data_1;
       text-decoration: underline;
@@ -335,53 +352,50 @@
 }
 
 .pop-TP31EXS020 {
-  width: 327px;
-  height: 480px;
+  width: 540px;
+  height: 844px;
 
   .list-data {
     .list-data .data-title {width: 136px;}
   }
   
   .subCon:has(.label) {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .popup-footer {
     button {
-      width: 80px;
-      flex: none;
+      flex: 1;
     }
   }
 }
 
 .pop-TP31EXS040 {
-  width: 287px;
-  height: 172px;
+  width: 520px;
+  height: 276px;
 
-  .list-data {
-    .list-data .data-title {width: 71px;}
+  .list-grid {
+    .list-data .data-title {width: 150px;}
   }
     
   .popup-footer {
     button {
-      width: 80px;
-      flex: none;
+      flex: 1;
     }
   }
 }
 
 .pop-TP31EXS050 {
-  width: 287px;
-  height: 203px;
+  width: 520px;
+  height: 336px;
 
-  .list-data {
-    .list-data .data-title {width: 71px;}
+  .list-grid {
+    .list-data .data-title {width: 150px;}
   }
     
   .popup-footer {
     button {
-      width: 80px;
-      flex: none;
+      flex: 1;
     }
   }
 }

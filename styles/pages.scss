@@ -10,6 +10,7 @@
 
 .line-trk-wrapper {
   .table-wrap {
+    z-index: 2;
     position: absolute;
     width: 1896px;
   }
@@ -109,6 +110,7 @@
   }
 
   .loop-box-wrapper {
+    z-index: 2;
     position: absolute;
     left: 322px;
     top: 134px;
@@ -174,10 +176,12 @@
   }
 
   .gauge1 {
+    z-index: 2;
     position: absolute;         
   }
 
   .gauge2 {
+    z-index: 2;
     position: absolute; 
     top:6px;
     left:829px;
@@ -185,6 +189,7 @@
   }
 
   .loop-box-wrapper {
+    z-index: 2;
     position: absolute;
     .loop-box {
       width: 419px;
@@ -238,12 +243,14 @@
   }
   
   .gauge1 {
+    z-index: 2;
     position: absolute;
     top: 5px;
     left: 20px;
     .gauge-title {text-decoration: underline;}
   }
   .gauge2 {
+    z-index: 2;
     position: absolute;
     top: 5px;
     left: 220px;
@@ -376,10 +383,12 @@
   }
 
   .gauge1 {
+    z-index: 2;
     position: absolute;    
   }
 
   .gauge2 {
+    z-index: 2;
     position: absolute;
     top: 10px;
     left: 270px;
@@ -407,13 +416,14 @@
 
 .post-treatment-wrapper {
   .gauge-wrap {
+    z-index: 2;
     position: absolute;
   }
 
   .tuning-box {
     margin: 0 2px;
     gap: 4px;
-    .vaule {
+    .value {
       flex: 1;
       height: 100%;
       border-radius: 4px;
@@ -592,4 +602,35 @@
     }
   }
 
+}
+
+// 약품 농도 & 온도 관리
+.chemical-dentemp-wrapper {
+  padding: 60px;
+  display: flex;
+  gap: 40px;
+
+  .flex-col {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  table tr td, table tr th {
+    font-weight: 700;
+    background: $cl_neutral_5;
+    &.on {background: $cl_neutral_6;color: $cl_data_1;}
+    &:first-child {border-left: none;}
+    &:last-child {border-right: none;}
+  }
+  .density-table {
+    width: 1100px;
+  }
+  .temper-table {
+    width: 100%;
+  }
+  .conc-table {
+
+  }
 }
