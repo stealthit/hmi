@@ -606,34 +606,216 @@
   box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
 }
 
-.chemical-dentemp-wrapper {
+.chemical-qmsif-wrapper {
   padding: 60px;
   display: flex;
   gap: 40px;
 }
-.chemical-dentemp-wrapper .flex-col {
+.chemical-qmsif-wrapper .flex-col {
   width: 660px;
   display: flex;
   flex-direction: column;
   gap: 28px;
 }
-.chemical-dentemp-wrapper table tr td, .chemical-dentemp-wrapper table tr th {
+.chemical-qmsif-wrapper table tr td, .chemical-qmsif-wrapper table tr th {
   font-weight: 700;
   background: #CCCCCC;
 }
-.chemical-dentemp-wrapper table tr td.on, .chemical-dentemp-wrapper table tr th.on {
+.chemical-qmsif-wrapper table tr td.on, .chemical-qmsif-wrapper table tr th.on {
   background: #FFFFFF;
   color: #002878;
 }
-.chemical-dentemp-wrapper table tr td:first-child, .chemical-dentemp-wrapper table tr th:first-child {
+.chemical-qmsif-wrapper table tr td:first-child, .chemical-qmsif-wrapper table tr th:first-child {
   border-left: none;
 }
-.chemical-dentemp-wrapper table tr td:last-child, .chemical-dentemp-wrapper table tr th:last-child {
+.chemical-qmsif-wrapper table tr td:last-child, .chemical-qmsif-wrapper table tr th:last-child {
   border-right: none;
 }
-.chemical-dentemp-wrapper .density-table {
+.chemical-qmsif-wrapper .density-table {
   width: 1100px;
 }
-.chemical-dentemp-wrapper .temper-table {
+.chemical-qmsif-wrapper .temper-table {
   width: 100%;
+}
+.chemical-mesif-wrapper {
+  padding: 60px 0 0 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.chemical-mesif-wrapper .flex-row {
+  display: flex;
+  gap: 40px;
+}
+.chemical-mesif-wrapper table tr td, .chemical-mesif-wrapper table tr th {
+  font-weight: 700;
+  background: #CCCCCC;
+}
+.chemical-mesif-wrapper table tr td.on, .chemical-mesif-wrapper table tr th.on {
+  background: #FFFFFF;
+}
+.chemical-mesif-wrapper table tr td:first-child, .chemical-mesif-wrapper table tr th:first-child {
+  border-left: none;
+}
+.chemical-mesif-wrapper table tr td:last-child, .chemical-mesif-wrapper table tr th:last-child {
+  border-right: none;
+}
+.chemical-mesif-wrapper table tr td .img-box, .chemical-mesif-wrapper table tr th .img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.chemical-mesif-wrapper table tr td {
+  padding: 0 6px 0 10px;
+}
+.chemical-mesif-wrapper .mesif-table {
+  width: 1040px;
+}
+.chemical-mesif-wrapper .mesif-table table tr td {
+  color: #002878;
+  text-align: right;
+}
+.chemical-mesif-wrapper .mesif-table table tr td:first-child {
+  color: #000000;
+  text-align: left;
+}
+.chemical-mesif-wrapper .mesif-table table tr td:nth-child(2), .chemical-mesif-wrapper .mesif-table table tr td:last-child {
+  text-align: center;
+}
+.chemical-mesif-wrapper .waste-table {
+  width: 620px;
+}
+.chemical-mesif-wrapper .waste-table table tr td {
+  text-align: center;
+  color: #000000;
+}
+.chemical-mesif-wrapper .waste-table table tr td:first-child {
+  text-align: left;
+}
+.chemical-mesif-wrapper .waste-table table tr td:nth-child(2), .chemical-mesif-wrapper .waste-table table tr td:last-child {
+  color: #002878;
+}
+.chemical-mesif-wrapper .utility-table {
+  width: 380px;
+}
+.chemical-mesif-wrapper .utility-table table tr td {
+  text-align: center;
+  color: #000000;
+}
+.chemical-mesif-wrapper .utility-table table tr td:nth-child(2), .chemical-mesif-wrapper .utility-table table tr td:nth-child(4) {
+  text-align: right;
+  color: #002878;
+}
+
+.setting-center-wrapper {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.setting-center-wrapper .list-grid {
+  position: relative;
+}
+.setting-center-wrapper .flex-row {
+  display: flex;
+  gap: 40px;
+}
+.setting-center-wrapper .flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.setting-center-wrapper .plating-table {
+  width: 1360px;
+}
+.setting-center-wrapper .table-wrap table:last-child {
+  margin-top: 10px;
+}
+.setting-center-wrapper .table-wrap table tr td, .setting-center-wrapper .table-wrap table tr th {
+  font-weight: 700;
+  background: #CCCCCC;
+}
+.setting-center-wrapper .table-wrap table tr td:first-child, .setting-center-wrapper .table-wrap table tr th:first-child {
+  border-left: none;
+}
+.setting-center-wrapper .table-wrap table tr td:last-child, .setting-center-wrapper .table-wrap table tr th:last-child {
+  border-right: none;
+}
+.setting-center-wrapper .table-wrap table tr th:first-child, .setting-center-wrapper .table-wrap table tr td:nth-child(2) {
+  border-right: 2px solid #666666;
+}
+.setting-center-wrapper .table-wrap table tr td {
+  padding: 0 6px;
+  text-align: right;
+  background: #FFFFFF;
+  color: #002878;
+}
+.setting-center-wrapper .table-wrap table tr td:first-child {
+  text-align: left;
+  color: #000000;
+}
+.setting-center-wrapper .table-wrap table tr:last-child td, .setting-center-wrapper .table-wrap table tr td:first-child {
+  background: #CCCCCC;
+}
+.setting-center-wrapper .table-wrap table tr:not(:last-child) td:not(:first-child) {
+  text-decoration: underline;
+}
+.setting-center-wrapper .title-box {
+  height: 28px;
+  font-weight: 700;
+}
+.setting-center-wrapper .gd-chemical {
+  width: 400px;
+}
+.setting-center-wrapper .gd-chemical .list-data li {
+  flex: 1;
+}
+.setting-center-wrapper .gd-chemical .ls-down {
+  margin-top: 10px;
+}
+.setting-center-wrapper .gd-pan {
+  width: 660px;
+}
+.setting-center-wrapper .gd-pan .list-data li {
+  flex: 1;
+}
+.setting-center-wrapper .gd-pan .title-box:nth-child(3) {
+  margin-top: 40px;
+}
+.setting-center-wrapper .gd-attach {
+  width: 660px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.setting-center-wrapper .gd-attach .list-data {
+  width: 330px;
+}
+.setting-center-wrapper .gd-attach .list-data .data-title {
+  width: 100px;
+}
+.setting-center-wrapper .gd-attach .list-data:nth-child(1), .setting-center-wrapper .gd-attach .list-data:nth-child(3) {
+  border-right: 2px solid #666666;
+}
+.setting-center-wrapper .gd-attach .list-data:nth-child(1), .setting-center-wrapper .gd-attach .list-data:nth-child(2) {
+  border-bottom: 2px solid #666666;
+}
+.setting-center-wrapper .setting-box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.setting-center-wrapper .setting-box .button-line {
+  display: flex;
+}
+.setting-center-wrapper .setting-box .button-line .box {
+  height: 56px;
+  flex: 1;
+  background: #CCCCCC;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  padding: 2px;
+}
+.setting-center-wrapper .setting-box .button-line .box button {
+  height: 100%;
 }

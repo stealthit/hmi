@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">약품 농도 & 온도 관리</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>HYDRAULIC</li>
+          <li class="sel">
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper chemical-qmsif-wrapper">
+        <!-- 도금액 농도관리 (QMS IF) -->
+        <div class="table-wrap density-table">
+          <div class="table-title">도금액 농도관리 (QMS IF)</div>
+          <table>
+            <colgroup>
+              <col width="160px">
+              <col width="260px">
+              <col width="80px">          
+              <col width="80px">          
+              <col width="80px">          
+              <col width="80px">          
+              <col width="180px">
+              <col width="180px">                        
+            </colgroup>
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>항목</th>
+                <th>항목</th>
+                <th>하한</th> 
+                <th>상한</th>
+                <th>측정값</th>
+                <th>분석시간</th>
+                <th>입력시간</th>               
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>No1. Clean</td>
+                <td>NaOH농도</td>
+                <td>g/L</td>   
+                <td>2</td>
+                <td>5</td>
+                <td class="on">2.7</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>   
+              <tr>
+                <td>No2. Clean</td>
+                <td>NaOH농도</td>
+                <td>g/L</td>   
+                <td>2</td>
+                <td>5</td>
+                <td class="on">3.2</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>    
+              <tr>
+                <td rowspan="2">Pickler</td>
+                <td>NaOH농도</td>
+                <td>g/L</td>
+                <td>2</td>
+                <td>5</td>
+                <td class="on">10</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>    
+              <tr>
+                <td>Fe+2</td>
+                <td>g/L</td>
+                <td>0</td>
+                <td>20</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>    
+              <tr>
+                <td rowspan="7">ET 도금액<br> (PLATING)</td>
+                <td>Sn+2</td>
+                <td>g/L</td>
+                <td>18</td>
+                <td>22</td>
+                <td class="on">18.5</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>    
+              <tr>
+                <td>F</td>
+                <td>g/L</td>
+                <td>25</td>
+                <td>30</td>
+                <td class="on">26.4</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>   
+              <tr>
+                <td>M비</td>
+                <td></td>
+                <td>7.5</td>
+                <td>8.7</td>
+                <td class="on">8.91</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>  
+              <tr>
+                <td>PH</td>
+                <td>PH</td>
+                <td>3.4</td>
+                <td>3.7</td>
+                <td class="on">3.58</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>       
+              <tr>
+                <td>DYH-A</td>
+                <td>g/L</td>
+                <td>0.9</td>
+                <td>1.4</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>      
+              <tr>
+                <td>황혈영</td>
+                <td>g/L</td>
+                <td>0.6</td>
+                <td>0.9</td>
+                <td class="on">0.87</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>      
+              <tr>
+                <td>NaCL</td>
+                <td>g/L</td>
+                <td>60</td>
+                <td>70</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>         
+              <tr>
+                <td>No1. Enclosure</td>
+                <td>Sn+2</td>
+                <td>g/L</td>   
+                <td>0</td>
+                <td>5</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>   
+              <tr>
+                <td>No2. Enclosure</td>
+                <td>Sn+2</td>
+                <td>g/L</td>   
+                <td>0</td>
+                <td>10</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>   
+              <tr>
+                <td>Drag-Out</td>
+                <td>Sn+2</td>
+                <td>g/L</td>   
+                <td>0</td>
+                <td>100</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>    
+              <tr>
+                <td rowspan="2">FLUXING</td>
+                <td>Flux 농도</td>
+                <td>g/L</td>
+                <td>0.5</td>
+                <td>1.5</td>
+                <td class="on">0.91</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>    
+              <tr>
+                <td>Flux 탁도</td>
+                <td>NTU</td>
+                <td>0</td>
+                <td>20</td>
+                <td class="on">95</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>     
+              <tr>
+                <td rowspan="5">CHEMICAL</td>
+                <td>Ch-Tr 농도</td>
+                <td>g/L</td>
+                <td>22</td>
+                <td>28</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>   
+              <tr>
+                <td>Ch-Tr PH</td>
+                <td>g/L</td>
+                <td>4.2</td>
+                <td>5</td>
+                <td class="on">4.4</td>
+                <td class="on">2024-08-22 07:00:00</td>
+                <td class="on">2024-08-22 07:00:00</td>             
+              </tr>     
+              <tr>
+                <td>ch-Tr 탁도</td>
+                <td>g/L</td>
+                <td>0</td>
+                <td>150</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>     
+              <tr>
+                <td>Ch D-O 농도</td>
+                <td>g/L</td>
+                <td>0</td>
+                <td>1</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>   
+              <tr>
+                <td>Ch D-O-R 농도</td>
+                <td>PPM</td>
+                <td>0</td>
+                <td>20</td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>     
+              <tr>
+                <td>Sludge</td>
+                <td>Sludge</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="on">-</td>
+                <td class="on"></td>
+                <td class="on"></td>             
+              </tr>       
+            </tbody>
+          </table>
+        </div>
+        <div class="flex-col">
+          <!-- 온도 관리 (PLC 실시간) -->
+          <div class="table-wrap temper-table">
+            <div class="table-title">온도 관리 (PLC 실시간)</div>
+            <table>
+              <colgroup>
+                <col width="160px">
+                <col width="260px">
+                <col width="80px">              
+                <col width="80px">              
+                <col width="80px">              
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>항목</th>
+                  <th>하한</th> 
+                  <th>상한</th>               
+                  <th>온도 값</th>               
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="2">Clean</td>
+                  <td>#1 Clean Circulation</td>
+                  <td>0.5</td>
+                  <td>1.5</td>
+                  <td class="on">0.91</td>                
+                </tr>    
+                <tr>
+                  <td>#2 Clean Circulation</td>
+                  <td>2</td>
+                  <td>200</td>
+                  <td class="on">95</td>                
+                </tr>  
+                <tr>
+                  <td rowspan="5">PLATING</td>
+                  <td>Plating Rinse</td>
+                  <td>5.5</td>
+                  <td>9.5</td>
+                  <td class="on">10</td>                
+                </tr>   
+                <tr>
+                  <td>Plating Heater Storage</td>
+                  <td>18</td>
+                  <td>22</td>
+                  <td class="alarm">18.5</td>                
+                </tr>   
+                <tr>
+                  <td>Panting Cooler (Bottom)</td>
+                  <td>25</td>
+                  <td>30</td>
+                  <td class="on">26.4</td>                
+                </tr>   
+                <tr>
+                  <td>Top Plating</td>
+                  <td>7.5</td>
+                  <td>8.7</td>
+                  <td class="alarm">8.91</td>                
+                </tr>   
+                <tr>
+                  <td>Plating(냉각)</td>
+                  <td>22</td>
+                  <td>28</td>
+                  <td class="on">-</td>                
+                </tr>   
+                <tr>
+                  <td rowspan="6">TREATMENT</td>
+                  <td>FLUXING</td>
+                  <td>2</td>
+                  <td>4</td>
+                  <td class="on">2.7</td>                
+                </tr>   
+                <tr>
+                  <td>Quenching</td>
+                  <td>0.9</td>
+                  <td>1.4</td>
+                  <td class="on">-</td>                
+                </tr>   
+                <tr>
+                  <td>Quenching 배관</td>
+                  <td>0</td>
+                  <td>100</td>
+                  <td class="on">-</td>                
+                </tr>  
+                <tr>
+                  <td>#1 Air Dryer</td>
+                  <td>0.6</td>
+                  <td>0.9</td>
+                  <td class="on">0.87</td>                
+                </tr>   
+                <tr>
+                  <td>#2 Air Dryer</td>
+                  <td>60</td>
+                  <td>70</td>
+                  <td class="on">-</td>                
+                </tr>   
+                <tr>
+                  <td>ES Oiler</td>
+                  <td>0</td>
+                  <td>10</td>
+                  <td class="on">-</td>                
+                </tr>  
+                <tr>
+                  <td rowspan="4">Chemical</td>
+                  <td>화학처리(냉각)</td>
+                  <td>4.2</td>
+                  <td>5</td>
+                  <td class="on">4.4</td>                
+                </tr>  
+                <tr>
+                  <td>Chemical Treat CR Tank</td>
+                  <td>2</td>
+                  <td>5</td>
+                  <td class="on">3.2</td>                
+                </tr> 
+                <tr>
+                  <td>Chemical Drug Out</td>
+                  <td>3.4</td>
+                  <td>3.7</td>
+                  <td class="on">3.58</td>                
+                </tr> 
+                <tr>
+                  <td>Chemical Drug Out Rinse Storage</td>
+                  <td>0</td>
+                  <td>5</td>
+                  <td class="on">-</td>                
+                </tr> 
+              </tbody>
+            </table>
+          </div>
+          <!-- 도금약품 원액 탱크 -->
+          <div class="table-wrap conc-table">
+            <div class="table-title">도금약품 원액 탱크</div>
+            <table>
+              <colgroup>
+                <col width="300px">
+                <col width="120px">
+                <col width="120px">              
+                <col width="120px">              
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>항목</th>
+                  <th>NaOH</th>
+                  <th>H2SO4</th>       
+                  <th>HCL</th>         
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>농도 (g/L)</td>
+                  <td>2.7</td>
+                  <td>2</td>                
+                  <td>5</td>
+                </tr>    
+                <tr>
+                  <td>액량 (L)</td>
+                  <td>3.2</td>
+                  <td>2</td>
+                  <td>5</td>                
+                </tr>                   
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">ENTRY</p>
+          <p class="on">CENTER</p>
+          <p class="on">EXIT</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

@@ -977,6 +977,7 @@ body {position: relative;}
           &.off {
             background: $cl_neutral_5;
           }
+          &.alarm {background: $cl_alaram_2 !important;}
         }
       }
     }
@@ -1622,7 +1623,12 @@ button.btn-normal{
   width: 16px;
   height: 16px;  
 }
-
+.ic-leak-sensor-20 {
+  content: url(#{$imgPath}ic_leak_sensor_20.svg);
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: multiply;
+}
 .img-err404 {
   content: url(#{$imgPath}img_404.png);
   width: 12px;

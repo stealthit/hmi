@@ -605,7 +605,7 @@
 }
 
 // 약품 농도 & 온도 관리
-.chemical-dentemp-wrapper {
+.chemical-qmsif-wrapper {
   padding: 60px;
   display: flex;
   gap: 40px;
@@ -632,5 +632,168 @@
   }
   .conc-table {
 
+  }
+}
+// 약품 액량 & 폐액 관리
+.chemical-mesif-wrapper {
+  padding: 60px 0 0 410px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .flex-row {
+    display: flex;
+    gap: 40px;
+  }
+
+  table tr td, table tr th {
+    font-weight: 700;
+    background: $cl_neutral_5;
+    &.on {background: $cl_neutral_6;}
+    &:first-child {border-left: none;}
+    &:last-child {border-right: none;}
+
+    .img-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;      
+      gap: 7px;
+    }
+  }
+  table tr td {
+    padding: 0 6px 0 10px;
+  }
+  .mesif-table {
+    width: 1040px;
+
+    table tr td {
+      color: $cl_data_1;
+      text-align: right;
+      &:first-child {color: $cl_neutral_1;text-align: left;}
+      &:nth-child(2),&:last-child {text-align: center;}
+    }
+  }
+  .waste-table {
+    width: 620px;
+    table tr td {
+      text-align: center;
+      color: $cl_neutral_1;
+      &:first-child {text-align: left;}
+      &:nth-child(2),&:last-child {color: $cl_data_1;}
+    }
+  }
+  .utility-table {
+    width: 380px;
+    table tr td {
+      text-align: center;
+      color: $cl_neutral_1;
+      &:nth-child(2),&:nth-child(4) {text-align: right;color:$cl_data_1}
+    }
+  }
+}
+
+// CENTER 제어기준 설정
+.setting-center-wrapper {
+  .list-grid {
+    position: relative;    
+  }
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  .flex-row {
+    display: flex;
+    gap: 40px;
+  }
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plating-table {
+    width: 1360px;
+  }
+  .table-wrap {
+    table {
+      &:last-child {margin-top: 10px;}
+      tr td, tr th {
+        font-weight: 700;
+        background: $cl_neutral_5;
+        &.on {}
+        &:first-child {border-left: none;}
+        &:last-child {border-right: none;}
+      }
+      
+      tr {
+        th:first-child,td:nth-child(2) {
+          border-right:2px solid $cl_neutral_3;
+        }
+        td {
+          padding: 0 6px;
+          text-align: right;
+          background: $cl_neutral_6;color: $cl_data_1;   
+          &:first-child {text-align: left;color: $cl_neutral_1;}  
+        }
+        &:last-child td, td:first-child {background: $cl_neutral_5;}
+        &:not(:last-child) td:not(:first-child){text-decoration: underline;}
+      }
+    }
+  }
+  .title-box {height: 28px;font-weight: 700;}
+
+  .gd-chemical {
+    width: 400px;
+
+    .list-data li {flex: 1;}
+    .ls-down {margin-top: 10px;}
+  }
+
+  .gd-pan {
+    width: 660px;
+    .list-data li {flex: 1;}
+
+    .title-box {
+      &:nth-child(3) {margin-top: 40px;}
+    }
+  }
+
+
+  .gd-attach {
+    width: 660px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .list-data {
+      width: 330px;
+      .data-title {width: 100px;}
+
+      &:nth-child(1),&:nth-child(3) {
+        border-right: 2px solid $cl_neutral_3;
+      }
+      &:nth-child(1),&:nth-child(2) {
+        border-bottom: 2px solid $cl_neutral_3;
+      }
+    }
+
+  }
+
+  .setting-box {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    .button-line {
+      display: flex;
+      .box {
+        height: 56px;
+        flex: 1;
+        background: $cl_neutral_5;
+        border-top: 1px solid $cl_neutral_4;
+        border-bottom: 1px solid $cl_neutral_4;
+        padding: 2px;
+        button {
+          height: 100%;
+        }
+      }
+    }
   }
 }

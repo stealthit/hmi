@@ -1084,6 +1084,9 @@ body {
 .table-wrap table tbody tr td.off {
   background: #CCCCCC;
 }
+.table-wrap table tbody tr td.alarm {
+  background: #FEF546 !important;
+}
 
 .inter-table-wrap .table-title {
   display: flex;
@@ -1739,6 +1742,13 @@ button.btn-normal.on {
   content: url(../assets/ic_wh_arrow.svg);
   width: 16px;
   height: 16px;
+}
+
+.ic-leak-sensor-20 {
+  content: url(../assets/ic_leak_sensor_20.svg);
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: multiply;
 }
 
 .img-err404 {
