@@ -125,11 +125,11 @@ body {
   height: 92px;
   padding: 10px;
   display: flex;
-  gap: 14px;
+  gap: 10px;
   background: #999999;
 }
 .wrapper header .header-contents .hd-table-wrap {
-  width: 552px;
+  width: 650px;
 }
 .wrapper header .header-contents .hd-table-wrap table {
   table-layout: fixed;
@@ -145,12 +145,6 @@ body {
   background: #666666;
   border: 1px solid #999999;
   color: #FFFFFF;
-}
-.wrapper header .header-contents .hd-table-wrap table thead tr th:nth-child(2), .wrapper header .header-contents .hd-table-wrap table tbody tr td:first-child:nth-child(2) {
-  width: 130px;
-}
-.wrapper header .header-contents .hd-table-wrap table thead tr th:not(:nth-child(2)), .wrapper header .header-contents .hd-table-wrap table tbody tr td:first-child:not(:nth-child(2)) {
-  width: 60px;
 }
 .wrapper header .header-contents .hd-table-wrap table tr td {
   white-space: nowrap;
@@ -647,6 +641,7 @@ body {
 .list-grid ul.list-data li .tuning-box {
   height: 28px;
   border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
   width: 100%;
   background: #CCCCCC;
   display: flex;
@@ -998,7 +993,7 @@ body {
 .table-box .table-wrap td:last-child, .table-box .table-wrap th:last-child {
   border-right: none;
 }
-.table-box .table-wrap table thead th:first-child {
+.table-box .table-wrap table thead tr:first-child th:first-child {
   text-decoration: underline;
 }
 .table-box .table-wrap table tbody {
@@ -1373,6 +1368,7 @@ body {
 }
 .gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p.value {
   flex: 1;
+  text-decoration: underline;
 }
 .gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p.on {
   background: #FFFFFF;
@@ -1838,11 +1834,36 @@ button.btn-normal.on {
 .img-entry-loop-bottom {
   z-index: 2;
   position: absolute;
-  content: url(../assets/img_TENSION_LOOP_1.png);
-  width: 377px;
-  height: 61px;
+  content: url(../assets/img_TENSION_LOOP_2.png);
+  width: 379px;
+  height: 33px;
   top: 516px;
   left: 21.39px;
+}
+
+.ic-loop-state {
+  position: absolute;
+  width: 32px;
+  height: 35px;
+  background: url(../assets/ic_loop_state_none.svg);
+  z-index: 99;
+  top: 547px;
+  left: 195.39px;
+}
+.ic-loop-state.stop {
+  background: url(../assets/ic_loop_state_stop.svg);
+}
+.ic-loop-state.run {
+  background: url(../assets/ic_loop_state_run.svg);
+}
+.ic-loop-state.fault {
+  background: url(../assets/ic_loop_state_stop.svg);
+}
+.ic-loop-state.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_loop_state_fault.svg);
+  animation: blink-effect 1s step-end infinite;
 }
 
 .ic-roll-120 {
@@ -2755,6 +2776,24 @@ button.btn-normal.on {
   background: #FFFFFF;
 }
 .ic-square.fault {
+  background: #999999;
+}
+
+.ic-phd {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-phd.stop {
+  background: #999999;
+}
+.ic-phd.run {
+  background: #FFFFFF;
+}
+.ic-phd.fault {
   background: #999999;
 }
 

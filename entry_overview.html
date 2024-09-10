@@ -273,6 +273,10 @@
             <!-- 초기값에서 1눈금자마다 img-entry-loop-b-line의 height 에 4.3px 씩 더하면 됩니다. -->
             <div class="img-entry-loop-b-line" style="height: calc(38px + 43px);"></div>
             <div class="img-entry-loop-bottom"></div>
+            <div class="ic-loop-state run">
+              <!-- fault 일때는 fault-img 태그 추가 -->
+              <!-- <div class="fault-img"></div> -->
+            </div>
           </div>
         </div>
  <!-- End 아이콘 배치 -->
@@ -287,9 +291,9 @@
               <p>SENSOR</p>
             </li>
             <li class="data">
-              <p>0</p>
               <p class="bd-dot top right left clbk">0</p>
-              <p class="bd-dot bottom right left bg-wh t-center">UP</p>
+              <p class="bd-dot bottom right left clbk">0</p>
+              <p class="t-center bg-wh bottom">UP</p>
             </li>
           </ul>
         </div>
@@ -303,9 +307,9 @@
               <p>SENSOR</p>
             </li>
             <li class="data">
-              <p>0</p>
               <p class="bd-dot top right left clbk">0</p>
-              <p class="bd-dot bottom right left t-center">DOWN</p>
+              <p class="bd-dot bottom right left clbk">0</p>
+              <p class="t-center bg-wh bottom">DOWN</p>
             </li>
           </ul>
         </div>
@@ -551,7 +555,7 @@
               <div class="img-needle" style="transform: rotate(0deg);"></div>
       
             </div>
-            <div class="gauge-value">230 m/min</div>
+            <div class="gauge-value"><span>230</span> m/min</div>
           </div>          
         </div>
 
@@ -589,7 +593,7 @@
                 <div class="img-needle" style="transform: rotate(0deg);"></div>
         
               </div>
-              <div class="gauge-value">170 m/min</div>
+              <div class="gauge-value"><span>170</span> m/min</div>
             </div>          
             <ul class="gauge-right">
               <li>
@@ -647,7 +651,7 @@
               <div class="img-needle" style="transform: rotate(0deg);"></div>
       
             </div>
-            <div class="gauge-value">5 A</div>
+            <div class="gauge-value"><span>5</span> A</div>
           </div>          
         </div>
 
@@ -684,7 +688,7 @@
               <div class="img-needle" style="transform: rotate(0deg);"></div>
       
             </div>
-            <div class="gauge-value">190 A</div>
+            <div class="gauge-value"><span>190</span> A</div>
           </div>          
         </div>
 
@@ -720,7 +724,7 @@
               <div class="img-needle" style="transform: rotate(0deg);"></div>
       
             </div>
-            <div class="gauge-value">190 A</div>
+            <div class="gauge-value"><span>190</span> A</div>
           </div>          
         </div>
 
@@ -756,7 +760,7 @@
               <div class="img-needle" style="transform: rotate(0deg);"></div>
       
             </div>
-            <div class="gauge-value">0.0 A</div>
+            <div class="gauge-value"><span>0.0</span> A</div>
           </div>          
         </div>
       </div>
