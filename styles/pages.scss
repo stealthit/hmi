@@ -621,17 +621,37 @@
     font-weight: 700;
     background: $cl_neutral_5;
     &.on {background: $cl_neutral_6;color: $cl_data_1;}
+    padding: 0 6px;
     &:first-child {border-left: none;}
+    &:nth-last-child(7) {padding: 0 10px;}
     &:last-child {border-right: none;}
   }
   .density-table {
     width: 1100px;
+    table tr td {
+      &:nth-last-child(7),&:nth-last-child(8) {text-align: left;}
+      &:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5) {text-align: right;}
+      &:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3) {
+        color: $cl_data_1;
+      }
+    }
   }
   .temper-table {
     width: 100%;
+    table tr td {
+      &:nth-last-child(4),&:nth-last-child(5) {text-align: left;}
+      &:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3) {text-align: right;}
+      &:nth-last-child(1) {
+        color: $cl_data_1;
+      }
+    }
   }
   .conc-table {
-
+    width: 100%;
+    table tr td {
+      text-align: right;
+      &:first-child {text-align: left;}
+    }
   }
 }
 // 약품 액량 & 폐액 관리

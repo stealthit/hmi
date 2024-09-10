@@ -620,6 +620,7 @@
 .chemical-qmsif-wrapper table tr td, .chemical-qmsif-wrapper table tr th {
   font-weight: 700;
   background: #CCCCCC;
+  padding: 0 6px;
 }
 .chemical-qmsif-wrapper table tr td.on, .chemical-qmsif-wrapper table tr th.on {
   background: #FFFFFF;
@@ -628,15 +629,46 @@
 .chemical-qmsif-wrapper table tr td:first-child, .chemical-qmsif-wrapper table tr th:first-child {
   border-left: none;
 }
+.chemical-qmsif-wrapper table tr td:nth-last-child(7), .chemical-qmsif-wrapper table tr th:nth-last-child(7) {
+  padding: 0 10px;
+}
 .chemical-qmsif-wrapper table tr td:last-child, .chemical-qmsif-wrapper table tr th:last-child {
   border-right: none;
 }
 .chemical-qmsif-wrapper .density-table {
   width: 1100px;
 }
+.chemical-qmsif-wrapper .density-table table tr td:nth-last-child(7), .chemical-qmsif-wrapper .density-table table tr td:nth-last-child(8) {
+  text-align: left;
+}
+.chemical-qmsif-wrapper .density-table table tr td:nth-last-child(3), .chemical-qmsif-wrapper .density-table table tr td:nth-last-child(4), .chemical-qmsif-wrapper .density-table table tr td:nth-last-child(5) {
+  text-align: right;
+}
+.chemical-qmsif-wrapper .density-table table tr td:nth-last-child(1), .chemical-qmsif-wrapper .density-table table tr td:nth-last-child(2), .chemical-qmsif-wrapper .density-table table tr td:nth-last-child(3) {
+  color: #002878;
+}
 .chemical-qmsif-wrapper .temper-table {
   width: 100%;
 }
+.chemical-qmsif-wrapper .temper-table table tr td:nth-last-child(4), .chemical-qmsif-wrapper .temper-table table tr td:nth-last-child(5) {
+  text-align: left;
+}
+.chemical-qmsif-wrapper .temper-table table tr td:nth-last-child(1), .chemical-qmsif-wrapper .temper-table table tr td:nth-last-child(2), .chemical-qmsif-wrapper .temper-table table tr td:nth-last-child(3) {
+  text-align: right;
+}
+.chemical-qmsif-wrapper .temper-table table tr td:nth-last-child(1) {
+  color: #002878;
+}
+.chemical-qmsif-wrapper .conc-table {
+  width: 100%;
+}
+.chemical-qmsif-wrapper .conc-table table tr td {
+  text-align: right;
+}
+.chemical-qmsif-wrapper .conc-table table tr td:first-child {
+  text-align: left;
+}
+
 .chemical-mesif-wrapper {
   padding: 60px 0 0 410px;
   display: flex;
