@@ -989,6 +989,110 @@ body {position: relative;}
   }
 }
 
+.dt-table-wrap {
+  .table-title {
+    @include flex_center;
+    width: 100%;
+    height: 36px;
+    background: $cl_neutral_3;
+    // border-top: 1px solid $cl_neutral_4;
+    // border-bottom: 1px solid $cl_neutral_4;
+    font-size: 14px;
+    font-weight: 700;
+    color: $cl_neutral_6;
+  }
+  .dt-layout-row {
+    margin: 0 !important;
+    &:first-child {display: none !important;}
+    &:last-child {
+      // margin-top: 19.91px !important;
+      height: 36px !important; 
+    }
+  }
+  table {
+    thead {
+      tr th {text-align: center;color: $cl_neutral_1;padding: 0 !important;vertical-align:middle}
+    }
+    tbody > tr:nth-child(odd) > * {box-shadow: none !important;}
+    tr {
+      height: 36px;
+      line-height: 1;
+      font-size: 16px;
+      font-weight: 700;
+      color: $cl_data_1;
+      background-color: $cl_neutral_5 !important;
+      box-shadow: none !important;
+      border-top: 1px solid $cl_neutral_4 !important;
+      
+      &:not(:last-child) {border-bottom: $cl_neutral_4 !important;}      
+      td, th {
+        border-right: 1px solid $cl_neutral_4;
+        
+      }
+      td {
+        &:first-child,&:nth-child(5),&:last-child {text-align: center;}
+      }
+    }
+  }
+
+  .dt-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .dt-paging {
+      height: 36px !important;
+      border-top: 1px solid $cl_neutral_3 !important;
+      width: 100%;
+      background: $cl_neutral_5;
+      @include flex_center;
+      nav {
+        height: 29.25px !important;
+        .dt-paging-button {
+          padding: 0;
+          width: 28px;
+          font-size: 18px;
+          font-weight: 700;
+          margin-left: 10px;
+          &:hover {border-radius: 4px;}
+          &.current {
+            border-radius: 4px;
+            background: $cl_neutral_1;
+            color: $cl_neutral_6 !important;
+          }
+          &.first,&.first:hover {
+            color: transparent !important;
+            background: url(#{$imgPath}ic_tb_arr_first.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 28px;
+          }
+          &.previous,&.previous:hover {
+            color: transparent !important;
+            background: url(#{$imgPath}ic_tb_arr_previous.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 28px;
+          }
+          &.next,&.next:hover {
+            color: transparent !important;
+            background: url(#{$imgPath}ic_tb_arr_next.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 28px;
+          }
+          &.last,&.last:hover {
+            color: transparent !important;
+            background: url(#{$imgPath}ic_tb_arr_last.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
 .inter-table-wrap {
   .table-title {
     @include flex_center;
@@ -2115,6 +2219,24 @@ button.btn-normal{
   position: absolute;
   width: 10px;
   height: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: $cl_neutral_7;
+  z-index: 99;
+  &.stop {
+    background: $cl_neutral_1;
+  }
+  &.run {
+    background: $cl_neutral_6;
+  }
+  &.fault {
+    background: $cl_neutral_4;
+  }
+}
+.ic-circle-16 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   border: 1px solid #000;
   background: $cl_neutral_7;

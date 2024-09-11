@@ -1081,6 +1081,116 @@ body {
   background: #FEF546 !important;
 }
 
+.dt-table-wrap .table-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  background: #666666;
+  font-size: 14px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+.dt-table-wrap .dt-layout-row {
+  margin: 0 !important;
+}
+.dt-table-wrap .dt-layout-row:first-child {
+  display: none !important;
+}
+.dt-table-wrap .dt-layout-row:last-child {
+  height: 36px !important;
+}
+.dt-table-wrap table thead tr th {
+  text-align: center;
+  color: #000000;
+  padding: 0 !important;
+  vertical-align: middle;
+}
+.dt-table-wrap table tbody > tr:nth-child(odd) > * {
+  box-shadow: none !important;
+}
+.dt-table-wrap table tr {
+  height: 36px;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #002878;
+  background-color: #CCCCCC !important;
+  box-shadow: none !important;
+  border-top: 1px solid #999999 !important;
+}
+.dt-table-wrap table tr:not(:last-child) {
+  border-bottom: #999999 !important;
+}
+.dt-table-wrap table tr td, .dt-table-wrap table tr th {
+  border-right: 1px solid #999999;
+}
+.dt-table-wrap table tr td:first-child, .dt-table-wrap table tr td:nth-child(5), .dt-table-wrap table tr td:last-child {
+  text-align: center;
+}
+.dt-table-wrap .dt-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dt-table-wrap .dt-container .dt-paging {
+  height: 36px !important;
+  border-top: 1px solid #666666 !important;
+  width: 100%;
+  background: #CCCCCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dt-table-wrap .dt-container .dt-paging nav {
+  height: 29.25px !important;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button {
+  padding: 0;
+  width: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button:hover {
+  border-radius: 4px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.current {
+  border-radius: 4px;
+  background: #000000;
+  color: #FFFFFF !important;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.first, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.first:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_first.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.previous, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.previous:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_previous.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.next, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.next:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_next.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.last, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.last:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_last.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+
 .inter-table-wrap .table-title {
   display: flex;
   justify-content: center;
@@ -2812,6 +2922,25 @@ button.btn-normal.on {
   background: #FFFFFF;
 }
 .ic-circle-10.fault {
+  background: #999999;
+}
+
+.ic-circle-16 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #E0E0E0;
+  z-index: 99;
+}
+.ic-circle-16.stop {
+  background: #000000;
+}
+.ic-circle-16.run {
+  background: #FFFFFF;
+}
+.ic-circle-16.fault {
   background: #999999;
 }
 

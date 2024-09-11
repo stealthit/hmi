@@ -159,7 +159,7 @@
         <div class="flex-row">
           <div class="table-wrap plating-table">
             <div class="table-title">PLATING</div>
-            <table>
+            <table class="top-table">
               <colgroup>
                 <col width="75px">
                 <col width="75px">
@@ -184,7 +184,7 @@
                   <th>#5 TOP</th>         
                   <th>#6 TOP</th>         
                   <th>#7 TOP</th>         
-                  <th>POST</th>         
+                  <th></th>         
                   <th></th>         
                   <th></th>            
                 </tr>
@@ -200,7 +200,7 @@
                   <td>8,000</td>
                   <td>8,000</td>
                   <td>8,000</td>
-                  <td>8,000</td>
+                  <td></td>
                   <td></td>
                   <td></td>
                 </tr>    
@@ -214,7 +214,7 @@
                   <td>500</td>
                   <td>500</td>
                   <td>500</td>
-                  <td>500</td>
+                  <td></td>
                   <td></td>
                   <td></td>
                 </tr> 
@@ -228,7 +228,7 @@
                   <td>300</td>
                   <td>300</td>
                   <td>300</td>
-                  <td>300</td>
+                  <td></td>
                   <td></td>
                   <td></td>
                 </tr>  
@@ -242,7 +242,7 @@
                   <td>0</td>
                   <td>0</td>
                   <td>0</td>
-                  <td>104</td>
+                  <td></td>
                   <td></td>
                   <td></td>
                 </tr>                    
@@ -340,6 +340,22 @@
           </div>          
           <div class="list-grid gd-chemical">
             <div class="title-box">CHEMICAL</div>
+            <ul class="list-data">
+              <li class="data-title">
+                <p class="title">구분</p>
+                <p>MAX (A)</p>    
+                <p>MIN (A)</p>       
+                <p>경보 (A)</p>       
+                <p>지령값 (A)</p>       
+              </li>
+              <li class="data">
+                <p class="title">DOWN</p>
+                <p class="bg-wh underline">8,000</p>
+                <p class="bg-wh underline">100</p>
+                <p class="bg-wh underline">300</p>
+                <p>0</p>                
+              </li>              
+            </ul>
             <ul class="list-data ls-up">
               <li class="data-title">
                 <p class="title">구분</p>
@@ -350,22 +366,6 @@
               </li>
               <li class="data">
                 <p class="title">UP</p>
-                <p class="bg-wh underline">8,000</p>
-                <p class="bg-wh underline">100</p>
-                <p class="bg-wh underline">300</p>
-                <p>0</p>                
-              </li>              
-            </ul>
-            <ul class="list-data ls-down">
-              <li class="data-title">
-                <p class="title">구분</p>
-                <p>MAX (A)</p>    
-                <p>MIN (A)</p>       
-                <p>경보 (A)</p>       
-                <p>지령값 (A)</p>       
-              </li>
-              <li class="data">
-                <p class="title">DOWN</p>
                 <p class="bg-wh underline">8,000</p>
                 <p class="bg-wh underline">100</p>
                 <p class="bg-wh underline">300</p>
@@ -398,23 +398,23 @@
             <ul class="list-data">
               <li class="data">
                 <p class="title">단위 중량</p>
-                <p class="bg-wh">7,850</p>
+                <p class="bg-wh underline">7,850</p>
               </li>   
               <li class="data">
                 <p class="title">비열</p>
-                <p class="bg-wh">7,850</p>
+                <p class="bg-wh underline">7,850</p>
               </li>  
               <li class="data">
                 <p class="title">K1</p>
-                <p class="bg-wh">7,850</p>
+                <p class="bg-wh underline">7,850</p>
               </li>  
               <li class="data">
                 <p class="title">K2</p>
-                <p class="bg-wh">7,850</p>
+                <p class="bg-wh underline">7,850</p>
               </li>  
               <li class="data">
                 <p class="title">C/D 출력 Gain</p>
-                <p class="bg-wh">0.776</p>
+                <p class="bg-wh underline">0.776</p>
               </li>             
             </ul>        
           </div>
@@ -428,7 +428,7 @@
                   <p>MIN</p>       
                 </li>
                 <li class="data">
-                  <p class="title">TOP PLATING</p>
+                  <p class="title">PLATING TOP</p>
                   <p class="bg-wh underline">15.00</p>
                   <p class="bg-wh underline">1.00</p>
                 </li>              
@@ -440,7 +440,7 @@
                   <p>MIN</p>       
                 </li>
                 <li class="data">
-                  <p class="title">TOP PLATING</p>
+                  <p class="title">PLATING BOTTOM</p>
                   <p class="bg-wh underline">15.00</p>
                   <p class="bg-wh underline">1.00</p>
                 </li>              
@@ -452,7 +452,7 @@
                   <p>MIN</p>       
                 </li>
                 <li class="data">
-                  <p class="title">TOP PLATING</p>
+                  <p class="title">CHEMICAL (DOWN)</p>
                   <p class="bg-wh underline">5.00</p>
                   <p class="bg-wh underline">1.00</p>
                 </li>              
@@ -464,7 +464,7 @@
                   <p>MIN</p>       
                 </li>
                 <li class="data">
-                  <p class="title">TOP PLATING</p>
+                  <p class="title">CHEMICAL (UP)</p>
                   <p class="bg-wh underline">5.00</p>
                   <p class="bg-wh underline">1.00</p>
                 </li>              

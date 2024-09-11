@@ -165,7 +165,7 @@
         <div class="img-label" style="top:431px;left:641px">#2 CLEANING</div>
         <div class="img-label" style="top:431px;left:966px">CLEANING RINSE</div>
         <div class="img-label" style="top:431px;left:1298px">PICKLING</div>
-        <div class="img-label" style="top:431px;left:1574px">PLATING RINSE</div>
+        <div class="img-label" style="top:431px;left:1574px">PICKLING RINSE</div>
         
 <!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
         <!-- #1 CLEANING -->
@@ -234,17 +234,17 @@
         <div class="ic-roll-46 stop" style="top:348px;left:1352px;"></div>
         <div class="ic-roll-20 stop" style="top:329px;left:1425px;"></div>
         <div class="ic-roll-30 stop" style="top:352px;left:1420px;"></div>
-        <!-- PLATING RINSE -->
+        <!-- PICKLING RINSE -->
         <div class="ic-roll-46 stop" style="top:348px;left:1503px;"></div>
         <div class="ic-roll-46 stop" style="top:348px;left:1692px;"></div>
-        <div class="ic-roll-10 stop" style="top:240px;left:1721px;"></div>
-        <div class="ic-roll-10 stop" style="top:240px;left:1748px;"></div>
+        <div class="ic-circle-10 stop" style="top:241px;left:1721px;"></div>
+        <div class="ic-circle-10 stop" style="top:241px;left:1749px;"></div>
         <div class="ic-roll-20 stop" style="top:59px;left:1717px;"></div>
         <div class="ic-roll-20 stop" style="top:59px;left:1742px;"></div>
-        <div class="ic-roll-16 stop" style="top:115px;left:1720px;"></div>
-        <div class="ic-roll-16 stop" style="top:115px;left:1744px;"></div>
-        <div class="ic-roll-16 stop" style="top:135px;left:1720px;"></div>
-        <div class="ic-roll-16 stop" style="top:135px;left:1744px;"></div>
+        <div class="ic-circle-16 stop" style="top:115px;left:1720px;"></div>
+        <div class="ic-circle-16 stop" style="top:115px;left:1746px;"></div>
+        <div class="ic-circle-16 stop" style="top:135px;left:1720px;"></div>
+        <div class="ic-circle-16 stop" style="top:135px;left:1746px;"></div>
 
 
  <!-- End 아이콘 배치 -->
@@ -255,30 +255,30 @@
           <ul class="list-data">
             <li class="data">
               <p class="title">Pump A</p>
-              <p class="button"><button class="btn-normal on">운전</button></p>
+              <p class="title bg-a2">Fault</p>
             </li>
             <li class="data">
               <p class="title">Pump B</p>
-              <p class="button"><button class="btn-normal">정지</button></p>
+              <p class="title">Fault</p>
             </li>
           </ul>
         </div>
         <!-- #2 CLEANING -->
         <div class="list-grid" style="top:119px;left:600px;width: 160px;">
-          <div class="list-title">#2 CLEANING</div>
+          <!-- <div class="list-title">#2 CLEANING</div> -->
           <ul class="list-data">
             <li class="data">
-              <p class="title">Pump A</p>
-              <p class="button"><button class="btn-normal on">운전</button></p>
+              <p class="title">2 CLEANING PUMP</p>
+              <p class="title">Fault</p>
             </li>
-            <li class="data">
+            <!-- <li class="data">
               <p class="title">Pump B</p>
               <p class="button"><button class="btn-normal">정지</button></p>
-            </li>
+            </li> -->
           </ul>
         </div>
         <!-- CLEANING RINSE -->
-        <div class="list-grid" style="top:119px;left:936px;width: 160px;">
+        <!-- <div class="list-grid" style="top:119px;left:936px;width: 160px;">
           <div class="list-title">CLEANING RINSE</div>
           <ul class="list-data">
             <li class="data">
@@ -290,7 +290,7 @@
               <p class="button"><button class="btn-normal">정지</button></p>
             </li>
           </ul>
-        </div>
+        </div> -->
         <!-- #1 BRUSH ROLL -->
         <div class="list-grid" style="top:223px;left:151px;width: 141px;">
           <ul class="list-data">
@@ -376,7 +376,7 @@
               <p class="title">구분</p>
               <p>현재값 전압 (V)</p>
               <p>현재값 전류 (A)</p>
-              <p>출력 (KW)</p>
+              <p>전류값 합계(KA)</p>
               <p class="clbk bd-dot left top">약품농도 (mg/kg)</p>
               <p class="clbk bd-dot left bottom">약품탁도 (mg/kg)</p>
               <p>운전모드</p>
@@ -391,7 +391,7 @@
               <p>12</p>
               <p class="clbk bd-dot right top">0</p>
               <p class="clbk bd-dot right bottom">0</p>
-              <p class="t-center">수동</p>
+              <p class="button"><button class="btn-normal">수동</button></p>
               <p class="button"><button class="btn-normal on">운전</button></p>
               <div class="way-box">
                 <div class="way">
@@ -403,7 +403,12 @@
                   <button class="btn-tuning-arrow right"></button>
                 </div>
               </div>
-              <p class="underline">1000</p>
+              <div class="button-box">
+                <div class="box">
+                  <button class="btn-normal on">설정</button>
+                </div>
+                <div class="box">1000</div>
+              </div>
             </li>
           </ul>
         </div>
@@ -414,7 +419,7 @@
               <p class="title">구분</p>
               <p>현재값 전압 (V)</p>
               <p>현재값 전류 (A)</p>
-              <p>출력 (KW)</p>
+              <p>전류값 합계(KA)</p>
               <p>운전모드</p>
               <p>운전상태</p>
               <p>RECTIFIER 방향</p>
@@ -425,7 +430,7 @@
               <p class="bg-wh">25.7</p>
               <p class="bg-wh">1987</p>
               <p>12</p>
-              <p class="t-center">수동</p>
+              <p class="button"><button class="btn-normal">수동</button></p>
               <p class="button"><button class="btn-normal on">운전</button></p>
               <div class="way-box">
                 <div class="way">
@@ -437,7 +442,12 @@
                   <button class="btn-tuning-arrow right"></button>
                 </div>
               </div>
-              <p>1000</p>
+              <div class="button-box">
+                <div class="box">
+                  <button class="btn-normal on">설정</button>
+                </div>
+                <div class="box">1000</div>
+              </div>
             </li>
           </ul>
         </div>

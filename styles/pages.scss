@@ -402,6 +402,7 @@
       width: 135px;
     }
     .way-box {
+      height: 28px;
       display: flex;
       justify-content: space-between;
       border-top: 1px solid $cl_neutral_4;
@@ -410,6 +411,24 @@
         gap: 4px;
         p {border: none;}
       }
+    }
+    .button-box {
+      height: 28px;
+      border-top: 1px solid $cl_neutral_4;
+      border-bottom: 1px solid $cl_neutral_4;
+      background: $cl_neutral_5;
+      display: flex;
+      width: 100%;
+      .box {
+        // background: transparent;
+        flex: 1;
+        &:first-child {padding: 1px;border-right: 1px solid $cl_neutral_4;}
+        &:last-child {
+          display: flex;align-items: center;justify-content: flex-end;
+          padding-right: 6px;
+          text-decoration: underline;
+        }
+      }     
     }
   }
 }
@@ -517,6 +536,8 @@
 .rectifier-preset-wrapper {
   .list-grid {
     position: relative;    
+    .list-data li > * {height: 36px;}
+    ul li .btn-normal{height: 100%;}
   }
   padding: 60px;
   display: flex;
@@ -717,6 +738,7 @@
 .setting-center-wrapper {
   .list-grid {
     position: relative;    
+    .list-data li > * {height: 36px;}
   }
   padding: 60px;
   display: flex;
@@ -746,8 +768,9 @@
       }
       
       tr {
+        height: 36px;
         th:first-child,td:nth-child(2) {
-          border-right:2px solid $cl_neutral_3;
+          border-right:3px solid $cl_neutral_3;
         }
         td {
           padding: 0 6px;
@@ -760,13 +783,20 @@
       }
     }
   }
+  .top-table {
+    tr td {
+      &:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3) {
+        background: $cl_neutral_5;
+      }
+    }
+  }
   .title-box {height: 28px;font-weight: 700;}
 
   .gd-chemical {
     width: 400px;
 
     .list-data li {flex: 1;}
-    .ls-down {margin-top: 10px;}
+    .ls-up {margin-top: 10px;}
   }
 
   .gd-pan {
@@ -910,6 +940,27 @@
           &:last-child {border-right: none;}
         }
       }
+    }
+  }
+}
+
+.history-al-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .search-wrap {
+    height: 92px;
+  }
+  .dt-table-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $cl_neutral_3;
+    #his-alaram-table_wrapper {
+
+
+      
     }
   }
 }
