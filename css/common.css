@@ -497,6 +497,10 @@ body {
   color: #002878 !important;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .list-grid {
   z-index: 2;
   position: absolute;
@@ -514,9 +518,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.list-grid .underline {
-  text-decoration: underline;
 }
 .list-grid .t-center {
   justify-content: center !important;
@@ -559,9 +560,6 @@ body {
 }
 .list-grid ul.list-data li p.bg-wh {
   background: #FFFFFF;
-}
-.list-grid ul.list-data li p.bg-wh:last-child:not(.bottom) {
-  border-bottom: none;
 }
 .list-grid ul.list-data li p.bg-wh.right {
   border-right: 1px solid #999999;
@@ -641,7 +639,6 @@ body {
 .list-grid ul.list-data li .tuning-box {
   height: 28px;
   border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
   width: 100%;
   background: #CCCCCC;
   display: flex;
@@ -953,6 +950,7 @@ body {
   border: 1px solid #666666;
   border-radius: 4px;
   color: #002878;
+  text-decoration: underline;
 }
 
 .table-box {
@@ -1208,6 +1206,15 @@ body {
   background: url(../assets/graduation_2x.png);
   background-size: contain;
 }
+.gauge-wrap .gauge-box-wrap .gauge-box .img-graduation2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 80px;
+  background: url(../assets/graduation2_2x.png);
+  background-size: contain;
+}
 .gauge-wrap .gauge-box-wrap .gauge-box .unit-txt {
   position: absolute;
   font-size: 14px;
@@ -1368,7 +1375,6 @@ body {
 }
 .gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p.value {
   flex: 1;
-  text-decoration: underline;
 }
 .gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p.on {
   background: #FFFFFF;
@@ -1389,12 +1395,12 @@ body {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1019607843);
 }
 .info-box-wrap.off {
-  animation: fadeout 2s;
+  animation: fadeout 1s;
 }
 .info-box-wrap.on {
   z-index: 1000;
   opacity: 1;
-  animation: fadein 2s;
+  animation: fadein 1s;
 }
 .info-box-wrap .info-box {
   display: flex;
@@ -1434,12 +1440,12 @@ body {
   opacity: 0;
 }
 #bg-popup1.off {
-  animation: fadeout 2s;
+  animation: fadeout 1s;
 }
 #bg-popup1.on {
   z-index: 1000;
   opacity: 1;
-  animation: fadein 2s;
+  animation: fadein 1s;
 }
 
 #bg-popup2 {
@@ -1456,12 +1462,12 @@ body {
   opacity: 0;
 }
 #bg-popup2.off {
-  animation: fadeout 2s;
+  animation: fadeout 1s;
 }
 #bg-popup2.on {
   z-index: 1002;
   opacity: 1;
-  animation: fadein 2s;
+  animation: fadein 1s;
 }
 
 .popup-wrap {
@@ -1479,12 +1485,12 @@ body {
   opacity: 0;
 }
 .popup-wrap.off {
-  animation: fadeout 2s;
+  animation: fadeout 1s;
 }
 .popup-wrap.on {
   z-index: 1001;
   opacity: 1;
-  animation: fadein 2s;
+  animation: fadein 1s;
 }
 .popup-wrap.popup-wrap2.on {
   z-index: 1003;
@@ -1839,6 +1845,16 @@ button.btn-normal.on {
   height: 33px;
   top: 516px;
   left: 21.39px;
+}
+
+.img-ruler {
+  position: absolute;
+  z-index: 2;
+  content: url(../assets/img_ruler.png);
+  width: 33px;
+  height: 446px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .ic-loop-state {
@@ -2637,6 +2653,52 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.ic-bar1 {
+  position: absolute;
+  width: 81px;
+  height: 32px;
+  background: url(../assets/ic_bar1_none.svg);
+  z-index: 99;
+}
+.ic-bar1.stop {
+  background: url(../assets/ic_bar1_stop.svg);
+}
+.ic-bar1.run {
+  background: url(../assets/ic_bar1_run.svg);
+}
+.ic-bar1.fault {
+  background: url(../assets/ic_bar1_stop.svg);
+}
+.ic-bar1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_bar1_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-bar2 {
+  position: absolute;
+  width: 85px;
+  height: 45px;
+  background: url(../assets/ic_bar2_none.svg);
+  z-index: 99;
+}
+.ic-bar2.stop {
+  background: url(../assets/ic_bar2_stop.svg);
+}
+.ic-bar2.run {
+  background: url(../assets/ic_bar2_run.svg);
+}
+.ic-bar2.fault {
+  background: url(../assets/ic_bar2_stop.svg);
+}
+.ic-bar2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_bar2_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
 .ic-plating {
   position: absolute;
   width: 7px;
@@ -3272,7 +3334,7 @@ button.btn-normal.on {
 .ic-wpd {
   z-index: 2;
   position: absolute;
-  width: 28px;
+  width: 29px;
   height: 15px;
   background: url(../assets/ic_wpd.svg);
   z-index: 99;

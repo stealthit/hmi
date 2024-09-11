@@ -818,3 +818,98 @@
     }
   }
 }
+
+.setting-mcc-wrapper {
+  padding: 60px 305px 50px 305px;
+  .table-wrap {
+    width: 1310px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    .table-title {width: 1310px;}
+    table {
+      width: 650px;
+      tr td, tr th {
+        &:first-child {border-left: none;}
+            &:last-child {border-right: none;}
+      }
+      thead tr th {border-top: none;}
+      tbody {
+        tr {
+          td {
+            padding: 2px;
+            background: $cl_neutral_5;
+            font-weight: 700;
+            &.on {
+              background: $cl_neutral_6;
+            }  
+            &:nth-child(2) {
+              padding: 0 10px;
+              text-align: left;
+            }          
+          }      
+        } 
+      }
+    }
+  }
+}
+
+.setting-temper-wrapper {
+  margin: 60px 560px;
+
+  .temper-table {
+    width: 800px;
+
+    table {
+      tr {
+        td {
+          font-weight: 700;
+          &:first-child {background: $cl_neutral_5;}
+          &:nth-child(2) {background: $cl_neutral_5;text-align: left;padding-left: 10px;}
+          &:nth-child(3) {color: $cl_data_1;padding-right: 6px;text-align: right;}
+          &:nth-child(4),&:nth-child(5),&:nth-child(6) {
+            text-align: right;
+            color: $cl_data_1;
+            text-decoration: underline;
+            padding-right: 6px;
+          }
+          &:nth-child(7) {background: $cl_neutral_5;padding: 2px;}
+          .btn-normal {color: $cl_neutral_1;}
+        }
+      }
+    }
+  }
+}
+
+.setting-exit-interlock {
+  padding: 40px 60px 0 60px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  .table-wrap {
+    width: 420px;
+    table {
+      tr {
+        td {
+          background: $cl_neutral_5;
+          padding: 0 10px;
+          font-weight: 700;
+          &:first-child {border-left: none;}
+          &:nth-child(2) {
+            text-align: left;
+          }
+          &:last-child {
+            color: $cl_data_1;
+            border-right: none;
+          }
+          &.on {background: $cl_neutral_6;}
+        }
+        th {
+          &:first-child {border-left: none;}
+          &:last-child {border-right: none;}
+        }
+      }
+    }
+  }
+}
