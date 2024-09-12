@@ -1003,8 +1003,63 @@
   flex-direction: column;
   gap: 20px;
 }
+.history-al-wrapper .flex-row {
+  display: flex;
+}
+.history-al-wrapper .flex-row > * {
+  flex: 1;
+}
 .history-al-wrapper .search-wrap {
-  height: 92px;
+  display: flex;
+  gap: 10px;
+  border: 2px solid #666666;
+  padding: 10px;
+}
+.history-al-wrapper .search-wrap .search-field-box {
+  background: #CCCCCC;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 700;
+}
+.history-al-wrapper .search-wrap .search-field-box .field-row {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  border-bottom: 1px solid #999999;
+}
+.history-al-wrapper .search-wrap .search-field-box .field-row .title {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-right: 1px solid #999999;
+  width: 210px;
+}
+.history-al-wrapper .search-wrap .search-field-box .field-row .data-box {
+  padding: 0 10px;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.history-al-wrapper .search-wrap .search-field-box .field-row .data-box.date-group {
+  border-right: 1px solid #999999;
+  gap: 4px;
+}
+.history-al-wrapper .search-wrap .search-field-box .field-row .data-box.rd-group1, .history-al-wrapper .search-wrap .search-field-box .field-row .data-box.rd-group2 {
+  gap: 20px;
+}
+.history-al-wrapper .search-wrap .button-box {
+  display: flex;
+  align-items: flex-end;
+}
+.history-al-wrapper .search-wrap .button-box .btn-normal {
+  background: #FFFFFF;
+  width: 100px;
+  height: 36px;
+  color: #000000;
 }
 .history-al-wrapper .dt-table-wrap {
   flex: 1;

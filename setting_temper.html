@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">CENTER 온도 설정</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li class="sel">
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>HYDRAULIC</li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper setting-temper-wrapper">
+        <!-- 액량 관리 (MESIF) -->
+        <div class="table-wrap temper-table">
+          <div class="table-title">CENTER 온도 설정</div>
+          <table>
+            <colgroup>
+              <col width="50px">
+              <col width="360px">
+              <col width="78px">          
+              <col width="78px">          
+              <col width="78px">          
+              <col width="78px">          
+              <col width="78px">          
+            </colgroup>
+            <thead>
+              <tr>
+                <th>순번</th>
+                <th>내용</th>
+                <th>현재값</th>
+                <th>설정값</th>
+                <th>MAX</th>
+                <th>MIN</th>
+                <th>상/하환</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>#1 Cleaning Cir. 온도</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>2</td>
+                <td>#2 Cleaning Cir. 온도</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>3</td>
+                <td>Plating Heat Storage</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>4</td>
+                <td>Plating Cooler (BOTTOM)</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>5</td>
+                <td>Plating Rinse</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>6</td>
+                <td>TOP Plating</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>7</td>
+                <td>Fluxing</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>8</td>
+                <td>Quenching</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>9</td>
+                <td>Quenching 배관온도</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>10</td>
+                <td>Che-Treat-CR Tank</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>11</td>
+                <td>Chemical D.O.R</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>12</td>
+                <td>Chemical D.O.R Stor B</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>13</td>
+                <td>Chemical Drug Out</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>14</td>
+                <td>#1 Air Dryer</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>15</td>
+                <td>#2 Air Dryer</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>16</td>
+                <td>#3 Air Dryer</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>17</td>
+                <td>ES Oiler</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>18</td>
+                <td>Plating</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>19</td>
+                <td>Plating D.O.R</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>   
+              <tr>
+                <td>20</td>
+                <td>화학처리냉각</td>
+                <td>49</td>
+                <td>50</td>
+                <td>-5</td>
+                <td>-5</td>
+                <td><button class="btn-normal on">설정</button></td>
+              </tr>                 
+            </tbody>
+          </table>          
+        </div>        
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">ENTRY</p>
+          <p class="on">CENTER</p>
+          <p class="on">EXIT</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

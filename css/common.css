@@ -34,6 +34,77 @@ body {
   position: relative;
 }
 
+/* input 초기화 */
+input[type=radio] {
+  display: none;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  /* 체크박스 디자인 */
+}
+.radio-label .radio-icon::before {
+  content: "";
+  display: block;
+  margin-right: 4px;
+  margin-top: 7px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+}
+.radio-label .radio-icon::before {
+  border-radius: 50%;
+}
+
+/* checked */
+.radio-label input:checked + .radio-icon::before {
+  transition: all 0.15s ease;
+  background: url(../assets/ic_rd_check.svg) no-repeat center;
+  border: none;
+}
+
+input[type=datetime-local] {
+  border: none;
+  position: relative;
+  width: 220px;
+  height: 28px;
+  padding: 10px;
+  background: url(../assets/ic_calendar.svg) no-repeat right 10px center/12px auto;
+  background-color: #CCCCCC;
+  border: 1px solid #666666;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+input[type=datetime-local]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 28px;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+input[type=datetime-local]::before {
+  content: attr(placeholder);
+  width: 220px;
+  height: 28px;
+}
+
+input[type=datetime-local]:valid::before {
+  display: none;
+}
+
 .wrapper {
   width: 1920px;
   height: 1080px;
@@ -1107,9 +1178,6 @@ body {
   padding: 0 !important;
   vertical-align: middle;
 }
-.dt-table-wrap table tbody > tr:nth-child(odd) > * {
-  box-shadow: none !important;
-}
 .dt-table-wrap table tr {
   height: 36px;
   line-height: 1;
@@ -1128,6 +1196,11 @@ body {
 }
 .dt-table-wrap table tr td:first-child, .dt-table-wrap table tr td:nth-child(5), .dt-table-wrap table tr td:last-child {
   text-align: center;
+}
+.dt-table-wrap table.display.dataTable > tbody > tr.selected > *, .dt-table-wrap table.display.dataTable > tbody > tr.odd.selected > *, .dt-table-wrap table.display.dataTable > tbody > tr.selected:hover > * {
+  box-shadow: inset 0 0 0 9999px #93C2E4 !important;
+  color: #002878;
+  background-color: #93C2E4;
 }
 .dt-table-wrap .dt-container {
   flex: 1;
@@ -1162,30 +1235,58 @@ body {
   background: #000000;
   color: #FFFFFF !important;
 }
-.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.first, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.first:hover {
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.first {
   color: transparent !important;
   background: url(../assets/ic_tb_arr_first.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 28px;
 }
-.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.previous, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.previous:hover {
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.first.disabled, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.first.disabled:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_first_d.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.previous {
   color: transparent !important;
   background: url(../assets/ic_tb_arr_previous.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 28px;
 }
-.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.next, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.next:hover {
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.previous.disabled, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.previous.disabled:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_previous_d.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.next {
   color: transparent !important;
   background: url(../assets/ic_tb_arr_next.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 28px;
 }
-.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.last, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.last:hover {
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.next.disabled, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.next.disabled:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_next_d.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.last {
   color: transparent !important;
   background: url(../assets/ic_tb_arr_last.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+.dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.last.disabled, .dt-table-wrap .dt-container .dt-paging nav .dt-paging-button.last.disabled:hover {
+  color: transparent !important;
+  background: url(../assets/ic_tb_arr_last_d.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 28px;
