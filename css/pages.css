@@ -963,37 +963,37 @@
   color: #000000;
 }
 
-.setting-exit-interlock {
+.exit-interlock-wrapper {
   padding: 40px 60px 0 60px;
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
 }
-.setting-exit-interlock .table-wrap {
+.exit-interlock-wrapper .table-wrap {
   width: 420px;
 }
-.setting-exit-interlock .table-wrap table tr td {
+.exit-interlock-wrapper .table-wrap table tr td {
   background: #CCCCCC;
   padding: 0 10px;
   font-weight: 700;
 }
-.setting-exit-interlock .table-wrap table tr td:first-child {
+.exit-interlock-wrapper .table-wrap table tr td:first-child {
   border-left: none;
 }
-.setting-exit-interlock .table-wrap table tr td:nth-child(2) {
+.exit-interlock-wrapper .table-wrap table tr td:nth-child(2) {
   text-align: left;
 }
-.setting-exit-interlock .table-wrap table tr td:last-child {
+.exit-interlock-wrapper .table-wrap table tr td:last-child {
   color: #002878;
   border-right: none;
 }
-.setting-exit-interlock .table-wrap table tr td.on {
+.exit-interlock-wrapper .table-wrap table tr td.on {
   background: #FFFFFF;
 }
-.setting-exit-interlock .table-wrap table tr th:first-child {
+.exit-interlock-wrapper .table-wrap table tr th:first-child {
   border-left: none;
 }
-.setting-exit-interlock .table-wrap table tr th:last-child {
+.exit-interlock-wrapper .table-wrap table tr th:last-child {
   border-right: none;
 }
 
