@@ -1392,6 +1392,7 @@ input[type='datetime-local']:valid::before {
       font-size: 14px;
       font-weight: 700;
       color: $cl_data_1;
+      span {margin-right: 4px;}
     }
   }
   .gauge-bottom-wrap {

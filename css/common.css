@@ -1483,6 +1483,9 @@ input[type=datetime-local]:valid::before {
   font-weight: 700;
   color: #002878;
 }
+.gauge-wrap .gauge-box-wrap .gauge-value span {
+  margin-right: 4px;
+}
 .gauge-wrap .gauge-bottom-wrap {
   padding: 6px 10px 10px 10px;
 }
