@@ -128,7 +128,7 @@
               <li><p>CENTER 온도 설정</p></li>
             </ul>
           </li>
-          <li class="sel">
+          <li>
             <p class="mainmenu-title">EXIT</p>
             <ul class="submenu-wrap">
               <li><p>EXIT OVERVIEW</p></li>
@@ -147,7 +147,7 @@
             </ul>
           </li>
           <li>POWER LINE</li>
-          <li>
+          <li class="sel">
             <p class="mainmenu-title">ALARM & EVENT</p>
             <ul class="submenu-wrap">
               <li><p>ALARM</p></li>
@@ -191,14 +191,11 @@
                 </label>                
               </div>
             </div>                        
-          </div>
-          <div class="button-box">
-            <button class="btn-normal">조회</button>
-          </div>
+          </div>          
         </div>
-        <div class="dt-table-wrap">
+        <div class="dt-table-wrap scroll-table">
           <div class="table-title">SUMMARY(REAL-TIME) ALARMS</div>
-          <table id="his-alaram-table" class="display table-striped" style="width:1880px">            
+          <table id="sum-alaram-table" class="display table-striped" style="width:1880px">            
             <thead>
               <tr>
                 <th>발생시간</th>
@@ -620,19 +617,22 @@
   </div>
 
   <script>
-    new DataTable('#his-alaram-table', {
-      columns: [
-        { width: '220px' }, 
-        { width: '240px' }, 
-        { width: '340px' }, 
-        { width: 'auto' }, 
-        { width: '140px' }
+    new DataTable('#sum-alaram-table', {
+      columnDefs: [
+        { width: '220px', targets: 0 },
+        { width: 240, targets: 1 },
+        { width: 340, targets: 2 },
+        // { width: 'auto', targets: 3 },
+        { width: 140, targets: 4 }
       ],
+      fixedColumns: true,
+
+      paging: false,
       order: [],
       searching: false,
       lengthChange: false,
       info: false,
-      pageLength: 16,
+      // pageLength: 16,
       layout: {
         bottom: 'paging',
         bottomStart: null,
@@ -640,7 +640,10 @@
       },
       select: {
         style: 'multi'
-      }
+      },
+      scrollCollapse: true,
+      scrollY: 596
+      // scrollX: true
     });
   </script>
 </body>

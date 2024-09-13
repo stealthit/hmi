@@ -850,15 +850,17 @@
 }
 
 .setting-mcc-wrapper {
-  padding: 60px 305px 50px 305px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   .table-wrap {
-    width: 1310px;
+    width: 910px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    .table-title {width: 1310px;}
+    .table-title {width: 910px;}
     table {
-      width: 650px;
+      width: 450px;
       tr td, tr th {
         &:first-child {border-left: none;}
             &:last-child {border-right: none;}
@@ -867,6 +869,7 @@
       tbody {
         tr {
           td {
+            height: 36px;
             padding: 2px;
             background: $cl_neutral_5;
             font-weight: 700;
@@ -876,7 +879,8 @@
             &:nth-child(2) {
               padding: 0 10px;
               text-align: left;
-            }          
+            }   
+            .btn-normal {height: 100%;}       
           }      
         } 
       }
@@ -885,28 +889,45 @@
 }
 
 .setting-temper-wrapper {
-  margin: 60px 560px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 
+  .title-box {
+    width: 1666px;
+    height: 28px;
+  }
   .temper-table {
-    width: 800px;
+    display: flex;
+    gap: 10px;
+    width: 1666px;
 
     table {
+      flex: 1;
       tr {
+        &:first-child th:first-child, th:nth-child(5), td:nth-child(5) {
+          border-right: 2px solid $cl_neutral_2;
+        } 
+        th:first-child,td:first-child {border-left: none;}       
+        th:last-child,td:last-child {border-right: none;}       
         td {
-          font-weight: 700;
+          height: 36px;
+          font-weight: 700;   
           &:first-child {background: $cl_neutral_5;}
           &:nth-child(2) {background: $cl_neutral_5;text-align: left;padding-left: 10px;}
           &:nth-child(3) {color: $cl_data_1;padding-right: 6px;text-align: right;}
-          &:nth-child(4),&:nth-child(5),&:nth-child(6) {
+          &:nth-child(4),&:nth-child(6),&:nth-child(7) {
             text-align: right;
             color: $cl_data_1;
             text-decoration: underline;
             padding-right: 6px;
-          }
-          &:nth-child(7) {background: $cl_neutral_5;padding: 2px;}
-          .btn-normal {color: $cl_neutral_1;}
+          }       
+          &:nth-child(5), &:last-child {background: $cl_neutral_5;padding: 2px;}      
+          .btn-normal {color: $cl_neutral_1;height: 100%;}
         }
-      }
+      }           
     }
   }
 }
@@ -953,64 +974,31 @@
     display: flex;
     & > * {flex: 1;}
   }
-  .search-wrap {
-    display: flex;
-    gap: 10px;
-    border: 2px solid $cl_neutral_3;
-    // height: 92px;
-    padding: 10px;
-    .search-field-box {
-      background: $cl_neutral_5;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      font-size: 16px;
-      font-weight: 700;
-      .field-row {
-        display: flex;
-        align-items: center;
-        height: 36px;
-        border-bottom: 1px solid $cl_neutral_4;
-        .title {
-          padding: 0 10px;
-          display: flex;
-          align-items: center;
-          height: 100%;
-          border-right: 1px solid $cl_neutral_4;
-          width: 210px;
-        }
-        .data-box {
-          padding: 0 10px;
-          height: 100%;
-          flex: 1;
-          display: flex;
-          align-items: center;
-          &.date-group {
-            border-right: 1px solid $cl_neutral_4;
-            gap: 4px;
-          }
-          &.rd-group1, &.rd-group2 {
-            gap: 20px;
-          }
-          
-        }
-      }
-    }
-    .button-box {      
-      display: flex;
-      align-items: flex-end;
-      .btn-normal {background: $cl_neutral_6;width: 100px;height: 36px;color: $cl_neutral_1;}
-    }
-  }
+  
   .dt-table-wrap {
     flex: 1;
     display: flex;
     flex-direction: column;
     border: 1px solid $cl_neutral_3;
-    #his-alaram-table_wrapper {
-
-
-      
+    table tr {border-top: none !important;}
+    &.scroll-table {
+      .dt-layout-row:last-child {height: 0 !important;}
+      .dt-container {
+        .dt-layout-table {
+          .dt-layout-full {
+            .dt-scroll {
+              .dt-scroll-head {
+                border-bottom: 1px solid $cl_neutral_3;
+              }
+              .dt-scroll-body {
+                max-height: 632px !important;
+                border-bottom: none;
+                // table thead {display: none;}
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
