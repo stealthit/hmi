@@ -2021,6 +2021,14 @@ button.btn-normal.on {
   mix-blend-mode: multiply;
 }
 
+.img-wave-37 {
+  position: absolute;
+  content: url(../assets/img_wave_37.png);
+  width: 37px;
+  height: 30px;
+  mix-blend-mode: multiply;
+}
+
 .img-err404 {
   content: url(../assets/img_404.png);
   width: 12px;
@@ -3615,6 +3623,522 @@ button.btn-normal.on {
   width: 100%;
   height: 100%;
   background: url(../assets/ic_epc_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-valve-s {
+  position: absolute;
+  width: 11.8px;
+  height: 14px;
+  background: url(../assets/ic_VALVE_S_none.svg);
+  background-size: cover;
+  z-index: 99;
+}
+.ic-valve-s.stop {
+  background: url(../assets/ic_VALVE_S_stop.svg);
+  background-size: cover;
+}
+.ic-valve-s.run {
+  background: url(../assets/ic_VALVE_S_run.svg);
+  background-size: cover;
+}
+.ic-valve-s.fault {
+  background: url(../assets/ic_VALVE_S_stop.svg);
+  background-size: cover;
+}
+.ic-valve-s.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_VALVE_S_fault.svg);
+  background-size: cover;
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-valve {
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  background: url(../assets/ic_VALVE_none.svg);
+  z-index: 99;
+}
+.ic-valve.stop {
+  background: url(../assets/ic_VALVE_stop.svg);
+}
+.ic-valve.run {
+  background: url(../assets/ic_VALVE_run.svg);
+}
+.ic-valve.fault {
+  background: url(../assets/ic_VALVE_stop.svg);
+}
+.ic-valve.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_VALVE_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-valve-l {
+  position: absolute;
+  width: 19px;
+  height: 22px;
+  background: url(../assets/ic_VALVE_L_none.svg);
+  z-index: 99;
+}
+.ic-valve-l.stop {
+  background: url(../assets/ic_VALVE_L_stop.svg);
+}
+.ic-valve-l.run {
+  background: url(../assets/ic_VALVE_L_run.svg);
+}
+.ic-valve-l.fault {
+  background: url(../assets/ic_VALVE_L_stop.svg);
+}
+.ic-valve-l.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_VALVE_L_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-valve-r {
+  position: absolute;
+  width: 19px;
+  height: 22px;
+  background: url(../assets/ic_VALVE_R_none.svg);
+  z-index: 99;
+}
+.ic-valve-r.stop {
+  background: url(../assets/ic_VALVE_R_stop.svg);
+}
+.ic-valve-r.run {
+  background: url(../assets/ic_VALVE_R_run.svg);
+}
+.ic-valve-r.fault {
+  background: url(../assets/ic_VALVE_R_stop.svg);
+}
+.ic-valve-r.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_VALVE_R_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-flexible-hose {
+  position: absolute;
+  width: 22px;
+  height: 15px;
+  background: url(../assets/ic_FLEXIBLE_HOSE_none.svg);
+  z-index: 99;
+}
+.ic-flexible-hose.stop {
+  background: url(../assets/ic_FLEXIBLE_HOSE_stop.svg);
+}
+.ic-flexible-hose.run {
+  background: url(../assets/ic_FLEXIBLE_HOSE_run.svg);
+}
+.ic-flexible-hose.fault {
+  background: url(../assets/ic_FLEXIBLE_HOSE_stop.svg);
+}
+.ic-flexible-hose.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_FLEXIBLE_HOSE_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-diaphragm-valve {
+  position: absolute;
+  width: 7px;
+  height: 30px;
+  background-image: url(../assets/ic_diaphragm_valve_none.svg);
+  z-index: 99;
+}
+.ic-diaphragm-valve.stop {
+  background-image: url(../assets/ic_diaphragm_valve_stop.svg);
+}
+.ic-diaphragm-valve.run {
+  background: url(../assets/ic_diaphragm_valve_run.svg);
+}
+.ic-diaphragm-valve.fault {
+  background: url(../assets/ic_diaphragm_valve_stop.svg);
+}
+.ic-diaphragm-valve.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_diaphragm_valve_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-solenoide-valve {
+  position: absolute;
+  width: 22px;
+  height: 24px;
+  background: url(../assets/ic_SOLENOIDE_VALVE_none.svg);
+  z-index: 99;
+}
+.ic-solenoide-valve.stop {
+  background: url(../assets/ic_SOLENOIDE_VALVE_stop.svg);
+}
+.ic-solenoide-valve.run {
+  background: url(../assets/ic_SOLENOIDE_VALVE_run.svg);
+}
+.ic-solenoide-valve.fault {
+  background: url(../assets/ic_SOLENOIDE_VALVE_stop.svg);
+}
+.ic-solenoide-valve.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_SOLENOIDE_VALVE_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-solenoide-l-valve {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background: url(../assets/ic_SOLENOIDE_VALVE_L_none.svg);
+  z-index: 99;
+}
+.ic-solenoide-l-valve.stop {
+  background: url(../assets/ic_SOLENOIDE_VALVE_L_stop.svg);
+}
+.ic-solenoide-l-valve.run {
+  background: url(../assets/ic_SOLENOIDE_VALVE_L_run.svg);
+}
+.ic-solenoide-l-valve.fault {
+  background: url(../assets/ic_SOLENOIDE_VALVE_L_stop.svg);
+}
+.ic-solenoide-l-valve.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_SOLENOIDE_VALVE_L_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-control-valve {
+  position: absolute;
+  width: 24px;
+  height: 22px;
+  background: url(../assets/ic_Control_valve_none.svg);
+  z-index: 99;
+}
+.ic-control-valve.stop {
+  background: url(../assets/ic_Control_valve_stop.svg);
+}
+.ic-control-valve.run {
+  background: url(../assets/ic_Control_valve_run.svg);
+}
+.ic-control-valve.fault {
+  background: url(../assets/ic_Control_valve_stop.svg);
+}
+.ic-control-valve.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_Control_valve_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pump {
+  position: absolute;
+  width: 26px;
+  height: 38px;
+  background: url(../assets/ic_PUMP_none.svg);
+  z-index: 99;
+}
+.ic-pump.stop {
+  background: url(../assets/ic_PUMP_stop.svg);
+}
+.ic-pump.run {
+  background: url(../assets/ic_PUMP_run.svg);
+}
+.ic-pump.fault {
+  background: url(../assets/ic_PUMP_stop.svg);
+}
+.ic-pump.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_PUMP_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pump-l {
+  position: absolute;
+  width: 32px;
+  height: 46px;
+  background: url(../assets/ic_PUMP_l_none.svg);
+  z-index: 99;
+}
+.ic-pump-l.stop {
+  background: url(../assets/ic_PUMP_l_stop.svg);
+}
+.ic-pump-l.run {
+  background: url(../assets/ic_PUMP_l_run.svg);
+}
+.ic-pump-l.fault {
+  background: url(../assets/ic_PUMP_l_stop.svg);
+}
+.ic-pump-l.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_PUMP_l_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-tic {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(../assets/ic_tic_none.svg);
+  z-index: 99;
+}
+.ic-tic.stop {
+  background: url(../assets/ic_tic_stop.svg);
+}
+.ic-tic.run {
+  background: url(../assets/ic_tic_run.svg);
+}
+.ic-tic.fault {
+  background: url(../assets/ic_tic_stop.svg);
+}
+.ic-tic.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_tic_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pg {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(../assets/ic_pg_none.svg);
+  z-index: 99;
+}
+.ic-pg.stop {
+  background: url(../assets/ic_pg_stop.svg);
+}
+.ic-pg.run {
+  background: url(../assets/ic_pg_run.svg);
+}
+.ic-pg.fault {
+  background: url(../assets/ic_pg_stop.svg);
+}
+.ic-pg.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_pg_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-strainer-b {
+  position: absolute;
+  width: 33px;
+  height: 46px;
+  background: url(../assets/ic_Strainer_b_none.svg);
+  z-index: 99;
+}
+.ic-strainer-b.stop {
+  background: url(../assets/ic_Strainer_b_stop.svg);
+}
+.ic-strainer-b.run {
+  background: url(../assets/ic_Strainer_b_run.svg);
+}
+.ic-strainer-b.fault {
+  background: url(../assets/ic_Strainer_b_stop.svg);
+}
+.ic-strainer-b.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_Strainer_b_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-li {
+  position: absolute;
+  width: 28px;
+  height: 58px;
+  background: url(../assets/ic_li_none.svg);
+  z-index: 99;
+}
+.ic-li.stop {
+  background: url(../assets/ic_li_stop.svg);
+}
+.ic-li.run {
+  background: url(../assets/ic_li_run.svg);
+}
+.ic-li.fault {
+  background: url(../assets/ic_li_stop.svg);
+}
+.ic-li.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_li_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-circle-li-32 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(../assets/ic_circle_li_none_32.svg);
+  z-index: 99;
+}
+.ic-circle-li-32.stop {
+  background: url(../assets/ic_circle_li_stop_32.svg);
+}
+.ic-circle-li-32.run {
+  background: url(../assets/ic_circle_li_run_32.svg);
+}
+.ic-circle-li-32.fault {
+  background: url(../assets/ic_circle_li_stop_32.svg);
+}
+.ic-circle-li-32.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_circle_li_fault_32.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-fm {
+  position: absolute;
+  width: 58px;
+  height: 28px;
+  background: url(../assets/ic_fm_none.svg);
+  z-index: 99;
+}
+.ic-fm.stop {
+  background: url(../assets/ic_fm_stop.svg);
+}
+.ic-fm.run {
+  background: url(../assets/ic_fm_run.svg);
+}
+.ic-fm.fault {
+  background: url(../assets/ic_fm_stop.svg);
+}
+.ic-fm.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_fm_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-circle-type1 {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url(../assets/ic_circle_type1_none.svg);
+  z-index: 99;
+}
+.ic-circle-type1.stop {
+  background: url(../assets/ic_circle_type1_stop.svg);
+}
+.ic-circle-type1.run {
+  background: url(../assets/ic_circle_type1_run.svg);
+}
+.ic-circle-type1.fault {
+  background: url(../assets/ic_circle_type1_stop.svg);
+}
+.ic-circle-type1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_circle_type1_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-circle-type1-d {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url(../assets/ic_circle_type1_none.svg);
+  z-index: 99;
+  transform: rotate(180deg);
+}
+.ic-circle-type1-d.stop {
+  background: url(../assets/ic_circle_type1_stop.svg);
+  transform: rotate(180deg);
+}
+.ic-circle-type1-d.run {
+  background: url(../assets/ic_circle_type1_run.svg);
+  transform: rotate(180deg);
+}
+.ic-circle-type1-d.fault {
+  background: url(../assets/ic_circle_type1_stop.svg);
+  transform: rotate(180deg);
+}
+.ic-circle-type1-d.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_circle_type1_fault.svg);
+  transform: rotate(180deg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-circle-type1-r {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url(../assets/ic_circle_type1_r_none.svg);
+  z-index: 99;
+}
+.ic-circle-type1-r.stop {
+  background: url(../assets/ic_circle_type1_r_stop.svg);
+}
+.ic-circle-type1-r.run {
+  background: url(../assets/ic_circle_type1_r_run.svg);
+}
+.ic-circle-type1-r.fault {
+  background: url(../assets/ic_circle_type1_r_stop.svg);
+}
+.ic-circle-type1-r.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_circle_type1_r_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-flow-meter {
+  position: absolute;
+  width: 19px;
+  height: 30px;
+  background: url(../assets/ic_flow_meter_none.svg);
+  z-index: 99;
+}
+.ic-flow-meter.stop {
+  background: url(../assets/ic_flow_meter_stop.svg);
+}
+.ic-flow-meter.run {
+  background: url(../assets/ic_flow_meter_run.svg);
+}
+.ic-flow-meter.fault {
+  background: url(../assets/ic_flow_meter_stop.svg);
+}
+.ic-flow-meter.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_flow_meter_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-flow-meter-l {
+  position: absolute;
+  width: 28px;
+  height: 44px;
+  background: url(../assets/ic_flow_meter_l_none.svg);
+  z-index: 99;
+}
+.ic-flow-meter-l.stop {
+  background: url(../assets/ic_flow_meter_l_stop.svg);
+}
+.ic-flow-meter-l.run {
+  background: url(../assets/ic_flow_meter_l_run.svg);
+}
+.ic-flow-meter-l.fault {
+  background: url(../assets/ic_flow_meter_l_stop.svg);
+}
+.ic-flow-meter-l.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_flow_meter_l_fault.svg);
   animation: blink-effect 1s step-end infinite;
 }
 

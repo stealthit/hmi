@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">CLEANING</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>HYDRAULIC</li>
+          <li class="sel">
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper cleaning-wrapper">
+        <!-- Title -->
+        <div class="title-box" style="top: 8px;left: 69px;width: 356px;">#1 CLEANING</div>
+        <div class="title-box" style="top: 8px;left: 795px;width: 347px;">#2 CLEANING</div>
+        <div class="title-box" style="top: 8px;left: 1484px;width: 315px;">CLEANING RINSE</div>
+
+        <div class="img-label" style="top: 294px;left: 120px;">TO SUMP</div>
+        <div class="img-label" style="top: 659px;left: 96px;">TO SUMP</div>
+        <div class="img-label" style="top: 185px;left: 796px;">TO SUMP</div>
+        <div class="img-label" style="top: 339px;left: 801px;">TO SUMP</div>
+        <div class="img-label" style="top: 659px;left: 868px;">TO SUMP</div>
+        <div class="img-label" style="top: 663px;left: 1408px;">TO SUMP</div>
+        <div class="img-label" style="top: 286px;left: 1571px;">TO SUMP</div>
+        <div class="img-label" style="top: 404px;left: 1660px;">TO SUMP</div>
+        
+        <div class="img-label" style="top: 256px;left: 1822px;">유량계</div>
+        <div class="img-label line-3" style="top: 164px;left: 688px;">NaOH<br> STROAGE<br> TANK</div>
+        <div class="img-label line-2" style="top: 520px;left: 246px;">#1 CLEANING<br> CIRCULATION TANK</div>
+        <div class="img-label line-3" style="top: 520px;left: 1009px;">#2 CLEANING<br> CIRCULATION<br> TANK</div>
+        <div class="img-label line-3" style="top: 520px;left: 1549px;">CLEANING<br> RINSE CIRCULATION<br> TANK</div>
+
+        <!-- #1 CLEANING -->
+        <div class="ic-valve-s stop" style="top: 80px;left: 92px;"></div>
+        <div class="ic-valve-s" style="top: 80px;left: 109px;"></div>
+        <div class="ic-valve-s run" style="top: 80px;left: 126px;"></div>
+        <div class="ic-valve-s fault" style="top: 80px;left: 146px;">
+          <div class="fault-img"></div>
+        </div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 164px;"></div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 183px;"></div>
+        
+        <div class="ic-valve-s stop" style="top: 80px;left: 228px;"></div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 245px;"></div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 262px;"></div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 279px;"></div>
+        
+        <div class="ic-valve-s stop" style="top: 80px;left: 313px;"></div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 330px;"></div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 347px;"></div>
+        <div class="ic-valve-s stop" style="top: 80px;left: 364px;"></div>  
+        
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 95px;"></div>  
+        <div class="ic-diaphragm-valve" style="top: 102px;left: 112px;"></div>  
+        <div class="ic-diaphragm-valve run" style="top: 102px;left: 129px;"></div>  
+        <div class="ic-diaphragm-valve fault" style="top: 102px;left: 149px;">
+          <div class="fault-img"></div>
+        </div>  
+        <div class="ic-diaphragm-valve" style="top: 102px;left: 167px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 186px;"></div>  
+        
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 231px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 248px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 266px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 282px;"></div>  
+        
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 316px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 333px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 350px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 367px;"></div>  
+
+        <div class="ic-roll-26 stop" style="top: 156.25px;left: 201px;"></div>  
+        <div class="ic-roll-22 stop" style="top: 185.75px;left: 203px;"></div>  
+        
+        <div class="ic-roll-22 stop" style="top: 160.25px;left: 291px;"></div>  
+        <div class="ic-roll-26 stop" style="top: 185.75px;left: 289px;"></div>  
+        
+        <div class="ic-roll-22 stop" style="top: 160.25px;left: 375px;"></div>  
+        <div class="ic-roll-26 stop" style="top: 185.75px;left: 373px;"></div>  
+
+        <div class="ic-valve stop" style="top: 234px;left: 178px;"></div>  
+        <div class="ic-valve" style="top: 234px;left: 277px;"></div>  
+        
+        <!-- #1 cleaning circulation tank -->
+        <div class="tank-box-wrap" style="top: 504px;left: 187px">
+          <div class="tank-box" style="width: 229px;height: 131px;">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box" style="height: 40%;"></div>   
+            <div class="img-wave-37" style="bottom: 0; left: 144px;"></div>         
+          </div>
+        </div>
+        
+        <div class="ic-valve run" style="top: 602px;left: 152px;"></div>  
+        <div class="ic-valve fault" style="top: 604px;left: 422px;">
+          <div class="fault-img"></div>
+        </div>  
+        <div class="ic-valve stop" style="top: 671px;left: 258px;"></div>  
+        <div class="ic-valve stop" style="top: 772px;left: 196px;"></div>  
+        <div class="ic-valve stop" style="top: 704px;left: 405px;"></div>  
+        <div class="ic-valve stop" style="top: 704px;left: 477px;"></div>  
+        <div class="ic-valve stop" style="top: 745px;left: 442px;"></div>  
+        <div class="ic-valve stop" style="top: 745px;left: 529px;"></div>  
+        <div class="ic-flexible-hose stop" style="top: 286px;left: 263px;"></div>  
+        <div class="ic-tic stop" style="top: 563px;left: 144px;"></div>  
+        <div class="ic-valve-r stop" style="top: 445px;left: 208px;"></div>  
+        <div class="ic-circle-type1-d stop" style="top: 701px;left: 440px;"></div>  
+        <div class="ic-control-valve stop" style="top: 721px;left: 169px;"></div>  
+        <div class="ic-valve-l stop" style="top: 692px;left: 174px;"></div>  
+        <div class="ic-valve-l run" style="top: 722px;left: 131px;"></div>  
+        <div class="ic-valve-l fault" style="top: 749px;left: 174px;">
+          <div class="fault-img"></div>
+        </div>  
+        <div class="ic-valve-l" style="top: 681px;left: 360px;"></div>  
+        <div class="ic-valve-l stop" style="top: 499px;left: 452px;"></div>  
+        <div class="ic-valve-l stop" style="top: 499px;left: 506px;"></div>  
+        <div class="ic-valve-l stop" style="top: 579px;left: 452px;"></div>  
+        <div class="ic-valve-l stop" style="top: 579px;left: 506px;"></div>  
+        <div class="ic-pump stop" style="top: 531px;left: 449px;"></div>  
+        <div class="ic-pump fault" style="top: 531px;left: 503px;">
+          <div class="fault-img"></div>
+        </div>  
+        
+        <!-- #2 CLEANING -->
+        <!-- NaOH STROAGE TANK -->
+        <div class="tank-box-wrap" style="top: 71px;left: 656px">
+          <div class="tank-box" style="width: 117px;height: 84px;">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box2" style="height: 60%;"></div>   
+          </div>
+        </div>
+        <!-- #2 cleaning circulation tank -->
+        <div class="tank-box-wrap" style="top: 500px;left: 967px">
+          <div class="tank-box" style="width: 164px;height: 133px;">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box" style="height: 30%;"></div>   
+            <div class="img-wave-37" style="bottom: 0; left: 68px;"></div>         
+          </div>
+        </div>
+
+        <div class="ic-valve" style="top: 129px;left: 782px;"></div>  
+        <div class="ic-valve stop" style="top: 228px;left: 984px;"></div>  
+        <div class="ic-valve stop" style="top: 604px;left: 929px;"></div>  
+        <div class="ic-valve stop" style="top: 604px;left: 1146px;"></div>  
+        <div class="ic-valve stop" style="top: 687px;left: 938px;"></div>  
+        <div class="ic-valve stop" style="top: 734px;left: 883px;"></div>  
+        <div class="ic-valve stop" style="top: 734px;left: 989px;"></div>  
+        <div class="ic-solenoide-valve stop" style="top: 729px;left: 940px;"></div>  
+        <div class="ic-circle-type1-r stop" style="top: 684px;left: 1065px;"></div>  
+        <div class="ic-tic stop" style="top: 561px;left: 926px;"></div>  
+        <div class="ic-pg stop" style="top: 639px;left: 980px;"></div>  
+        <div class="ic-valve-r stop" style="top: 458px;left: 978px;"></div>  
+        <div class="ic-valve-l stop" style="top: 737px;left: 1065px;"></div>  
+        <div class="ic-valve-l stop" style="top: 155px;left: 624px;"></div>  
+        <div class="ic-valve-l stop" style="top: 224px;left: 624px;"></div>  
+        <div class="ic-valve-l stop" style="top: 343px;left: 608px;"></div>  
+        <div class="ic-valve-l stop" style="top: 343px;left: 651px;"></div>  
+        <div class="ic-valve-l stop" style="top: 267px;left: 816px;"></div>  
+        <div class="ic-valve-l stop" style="top: 267px;left: 937px;"></div>  
+        <div class="ic-valve-l stop" style="top: 267px;left: 1017px;"></div>  
+
+        <div class="ic-valve-l stop" style="top: 499px;left: 1175px;"></div>  
+        <div class="ic-valve-l stop" style="top: 499px;left: 1229px;"></div>  
+        <div class="ic-valve-l stop" style="top: 579px;left: 1175px;"></div>  
+        <div class="ic-valve-l stop" style="top: 579px;left: 1229px;"></div>  
+        <div class="ic-pump stop" style="top: 531px;left: 1174px;"></div>  
+        <div class="ic-pump" style="top: 531px;left: 1226px;"></div>  
+        
+        <div class="ic-roll-26 stop" style="top: 157px;left: 927px;"></div>  
+        <div class="ic-roll-26 stop" style="top: 158px;left: 1039px;"></div>  
+        <div class="ic-roll-18 stop" style="top: 123px;left: 1084px;"></div>  
+        <div class="ic-roll-18 stop" style="top: 145px;left: 1084px;"></div>  
+        
+
+        <!-- CLEANING RINSE -->
+        <!-- CLEANING RINSE circulation tank -->
+        <div class="tank-box-wrap" style="top: 501px;left: 1506px">
+          <div class="tank-box" style="width: 203px;height: 129px;">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box3" style="height: 40%;"></div>   
+          </div>
+        </div>
+
+        <div class="ic-valve-s stop" style="top: 80px;left: 1508px;"></div>  
+        <div class="ic-valve-s stop" style="top: 80px;left: 1526px;"></div>  
+        <div class="ic-valve-s stop" style="top: 80px;left: 1542px;"></div>  
+        <div class="ic-valve-s stop" style="top: 80px;left: 1558px;"></div>  
+        
+        <div class="ic-valve-s stop" style="top: 80px;left: 1597px;"></div>  
+        <div class="ic-valve-s stop" style="top: 80px;left: 1614px;"></div>  
+        
+        <div class="ic-valve-s stop" style="top: 80px;left: 1662px;"></div>  
+        <div class="ic-valve-s stop" style="top: 80px;left: 1679px;"></div>  
+        
+        <div class="ic-valve-s stop" style="top: 80px;left: 1723px;"></div>  
+        <div class="ic-valve-s stop" style="top: 80px;left: 1740px;"></div>
+        
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1511px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1529px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1545px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1561px;"></div>  
+        
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1600px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1617px;"></div>  
+        
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1665px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1682px;"></div>  
+        
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1726px;"></div>  
+        <div class="ic-diaphragm-valve stop" style="top: 102px;left: 1743px;"></div>  
+
+        <div class="ic-roll-20 stop" style="top: 161px;left: 1573px;"></div>  
+        <div class="ic-roll-20 stop" style="top: 161px;left: 1769px;"></div>  
+        <div class="ic-roll-20 stop" style="top: 185px;left: 1573px;"></div>  
+        <div class="ic-roll-26 stop" style="top: 185px;left: 1766px;"></div>  
+        
+        <div class="ic-strainer-b stop" style="top: 401px;left: 1769px;"></div>  
+        <div class="ic-flow-meter stop" style="top: 248px;left: 1863px;"></div>  
+        <div class="ic-li" style="top: 290px;left: 1796px;"></div>  
+        <div class="ic-solenoide-l-valve stop" style="top: 401px;left: 1439px;"></div>  
+        <div class="ic-solenoide-l-valve stop" style="top: 362px;left: 1837px;"></div>  
+
+        <div class="ic-valve-l stop" style="top: 499px;left: 1755px;"></div>  
+        <div class="ic-valve-l stop" style="top: 499px;left: 1808px;"></div>  
+        <div class="ic-valve-l stop" style="top: 579px;left: 1755px;"></div>  
+        <div class="ic-valve-l stop" style="top: 579px;left: 1808px;"></div>  
+        <div class="ic-pump stop" style="top: 531px;left: 1754px;"></div>  
+        <div class="ic-pump" style="top: 531px;left: 1806px;"></div>  
+        
+        <div class="ic-valve stop" style="top: 463px;left: 1342px;"></div>  
+        <div class="ic-valve stop" style="top: 604px;left: 1464px;"></div>  
+        <div class="ic-valve stop" style="top: 604px;left: 1726px;"></div>  
+        <div class="ic-valve stop" style="top: 683px;left: 1801px;"></div>  
+        <div class="ic-valve-l stop" style="top: 229px;left: 1587px;"></div>  
+        <div class="ic-valve-l stop" style="top: 229px;left: 1675px;"></div>  
+        <div class="ic-valve-l stop" style="top: 229px;left: 1722px;"></div>  
+        <div class="ic-valve-l stop" style="top: 359px;left: 1886px;"></div>  
+        <div class="ic-valve-l stop" style="top: 321px;left: 1842px;"></div>  
+        <div class="ic-valve-l stop" style="top: 400px;left: 1842px;"></div>  
+        <div class="ic-valve-l stop" style="top: 345px;left: 1675px;"></div>  
+        <div class="ic-valve-l stop" style="top: 397px;left: 1475px;"></div>  
+        <div class="ic-valve-l stop" style="top: 359px;left: 1443px;"></div>  
+        <div class="ic-valve-l stop" style="top: 439px;left: 1443px;"></div>  
+        <div class="ic-fm" style="top: 461px;left: 1377px;"></div>  
+
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">ENTRY</p>
+          <p class="on">CENTER</p>
+          <p class="on">EXIT</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

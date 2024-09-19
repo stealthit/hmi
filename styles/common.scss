@@ -1915,6 +1915,13 @@ button.btn-normal{
   height: 20px;
   mix-blend-mode: multiply;
 }
+.img-wave-37 {
+  position: absolute;
+  content: url(#{$imgPath}img_wave_37.png);
+  width: 37px;
+  height: 30px;
+  mix-blend-mode: multiply;
+}
 .img-err404 {
   content: url(#{$imgPath}img_404.png);
   width: 12px;
@@ -2928,6 +2935,524 @@ button.btn-normal{
       width: 100%;
       height: 100%;
       background: url(#{$imgPath}ic_epc_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+
+// 
+.ic-valve-s {
+  position: absolute;
+  width: 11.8px;
+  height: 14px;
+  background: url(#{$imgPath}ic_VALVE_S_none.svg);
+  background-size: cover;
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_VALVE_S_stop.svg);
+    background-size: cover;
+  }
+  &.run {
+    background: url(#{$imgPath}ic_VALVE_S_run.svg);
+    background-size: cover;
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_VALVE_S_stop.svg);
+    background-size: cover;
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_VALVE_S_fault.svg);
+      background-size: cover;
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-valve {
+  position: absolute;
+  width: 22px;
+  height: 19px;
+  background: url(#{$imgPath}ic_VALVE_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_VALVE_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_VALVE_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_VALVE_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_VALVE_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-valve-l {
+  position: absolute;
+  width: 19px;
+  height: 22px;
+  background: url(#{$imgPath}ic_VALVE_L_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_VALVE_L_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_VALVE_L_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_VALVE_L_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_VALVE_L_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-valve-r {
+  position: absolute;
+  width: 19px;
+  height: 22px;
+  background: url(#{$imgPath}ic_VALVE_R_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_VALVE_R_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_VALVE_R_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_VALVE_R_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_VALVE_R_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-flexible-hose {
+  position: absolute;
+  width: 22px;
+  height: 15px;
+  background: url(#{$imgPath}ic_FLEXIBLE_HOSE_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_FLEXIBLE_HOSE_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_FLEXIBLE_HOSE_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_FLEXIBLE_HOSE_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_FLEXIBLE_HOSE_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-diaphragm-valve {
+  position: absolute;
+  width: 7px;
+  height: 30px;
+  background-image: url(#{$imgPath}ic_diaphragm_valve_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background-image: url(#{$imgPath}ic_diaphragm_valve_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_diaphragm_valve_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_diaphragm_valve_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_diaphragm_valve_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-solenoide-valve {
+  position: absolute;
+  width: 22px;
+  height: 24px;
+  background: url(#{$imgPath}ic_SOLENOIDE_VALVE_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_SOLENOIDE_VALVE_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_SOLENOIDE_VALVE_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_SOLENOIDE_VALVE_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_SOLENOIDE_VALVE_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-solenoide-l-valve {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background: url(#{$imgPath}ic_SOLENOIDE_VALVE_L_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_SOLENOIDE_VALVE_L_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_SOLENOIDE_VALVE_L_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_SOLENOIDE_VALVE_L_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_SOLENOIDE_VALVE_L_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-control-valve {
+  position: absolute;
+  width: 24px;
+  height: 22px;
+  background: url(#{$imgPath}ic_Control_valve_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_Control_valve_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_Control_valve_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_Control_valve_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_Control_valve_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pump {
+  position: absolute;
+  width: 26px;
+  height: 38px;
+  background: url(#{$imgPath}ic_PUMP_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_PUMP_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_PUMP_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_PUMP_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_PUMP_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pump-l {
+  position: absolute;
+  width: 32px;
+  height: 46px;
+  background: url(#{$imgPath}ic_PUMP_l_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_PUMP_l_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_PUMP_l_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_PUMP_l_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_PUMP_l_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-tic {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(#{$imgPath}ic_tic_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_tic_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_tic_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_tic_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_tic_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pg {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(#{$imgPath}ic_pg_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_pg_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_pg_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_pg_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_pg_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-strainer-b {
+  position: absolute; 
+  width: 33px;
+  height: 46px;
+  background: url(#{$imgPath}ic_Strainer_b_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_Strainer_b_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_Strainer_b_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_Strainer_b_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_Strainer_b_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-li {
+  position: absolute;
+  width: 28px;
+  height: 58px;
+  background: url(#{$imgPath}ic_li_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_li_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_li_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_li_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_li_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-circle-li-32 {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(#{$imgPath}ic_circle_li_none_32.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_circle_li_stop_32.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_circle_li_run_32.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_circle_li_stop_32.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_circle_li_fault_32.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-fm {
+  position: absolute;
+  width: 58px;
+  height: 28px;
+  background: url(#{$imgPath}ic_fm_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_fm_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_fm_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_fm_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_fm_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-circle-type1 {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url(#{$imgPath}ic_circle_type1_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_circle_type1_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_circle_type1_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_circle_type1_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_circle_type1_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-circle-type1-d {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url(#{$imgPath}ic_circle_type1_none.svg);
+  z-index: 99;
+  transform: rotate(180deg);
+  
+  &.stop {
+    background: url(#{$imgPath}ic_circle_type1_stop.svg);
+    transform: rotate(180deg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_circle_type1_run.svg);
+    transform: rotate(180deg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_circle_type1_stop.svg);
+    transform: rotate(180deg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_circle_type1_fault.svg);
+      transform: rotate(180deg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-circle-type1-r {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: url(#{$imgPath}ic_circle_type1_r_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_circle_type1_r_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_circle_type1_r_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_circle_type1_r_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_circle_type1_r_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-flow-meter {
+  position: absolute;
+  width: 19px;
+  height: 30px;
+  background: url(#{$imgPath}ic_flow_meter_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_flow_meter_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_flow_meter_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_flow_meter_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_flow_meter_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-flow-meter-l {
+  position: absolute;
+  width: 28px;
+  height: 44px;
+  background: url(#{$imgPath}ic_flow_meter_l_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_flow_meter_l_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_flow_meter_l_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_flow_meter_l_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_flow_meter_l_fault.svg);
       animation: blink-effect 1s step-end infinite;    
     }
   }

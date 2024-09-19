@@ -1002,3 +1002,78 @@
     }
   }
 }
+
+.cleaning-wrapper {
+  background: url(#{$imgPath}img_bg_cleaning.png);
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+}
+
+.tank-box-wrap {
+  position: absolute;
+  .tank-box {
+    position: relative;
+    border: 5px solid #000;
+    display: flex;
+    align-items: flex-end;    
+    .volume-box {
+      width: 100%;
+      background: linear-gradient(180deg, #EF23EF 0%, #F790F7 80.5%, #F33DF2 100%);
+    }
+    .volume-box2 {
+      width: 100%;
+      background: linear-gradient(180deg, #C868E7 0%, #EB3FF0 40.04%, #DE40EC 100%);
+    }
+    .volume-box3 {
+      width: 100%;
+      background: linear-gradient(180deg, #703DB1 0%, #BEC7DB 100%);    }
+  }
+
+  &.s112x93 {
+    width: 112px;
+    height: 93px;
+    background: url(#{$imgPath}img_tankbox_112x93.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tank-box {
+      width: 98px;
+      height: 82px;
+      border: none;
+    }
+  }
+  &.s234x142 {
+    width: 236px;
+    height: 146px;
+    background: url(#{$imgPath}img_tankbox_234x142.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tank-box {
+      width: 210px;
+      height: 120px;
+      border: none;
+    }
+  }
+  &.s221x80 {
+
+  }
+}
+
+.pickling-wrapper {
+  background: url(#{$imgPath}img_bg_pickling.png);
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+}
