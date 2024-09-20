@@ -1915,6 +1915,14 @@ button.btn-normal{
   height: 20px;
   mix-blend-mode: multiply;
 }
+.img-pickling-tank {
+  position: absolute;
+  content: url(#{$imgPath}img_pickling_tank.png);
+  width: 162px;
+  height: 261px;
+  mix-blend-mode: multiply; 
+  opacity: 0.5;
+}
 .img-wave-37 {
   position: absolute;
   content: url(#{$imgPath}img_wave_37.png);
@@ -3436,7 +3444,7 @@ button.btn-normal{
 }
 .ic-flow-meter-l {
   position: absolute;
-  width: 28px;
+  width: 27px;
   height: 44px;
   background: url(#{$imgPath}ic_flow_meter_l_none.svg);
   z-index: 99;

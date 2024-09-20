@@ -186,7 +186,7 @@
               <tr>
                 <td>3</td>
                 <td>NO.1 Air Dryer</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>    
               <tr>
                 <td>4</td>
@@ -227,7 +227,23 @@
                 <td>11</td>
                 <td>Fluxing Wring Blower A</td>
                 <td><button class="btn-normal">정지</button></td>
-              </tr>   
+              </tr>                              
+            </tbody>
+          </table>
+          <table>
+            <colgroup>
+              <col width="50px">
+              <col width="300px">
+              <col width="100px">          
+            </colgroup>
+            <thead>
+              <tr>
+                <th>NO.</th>
+                <th>항목</th>
+                <th>제어</th>
+              </tr>
+            </thead>
+            <tbody>              
               <tr>
                 <td>12</td>
                 <td>Fluxing Wring Blower B</td>
@@ -272,7 +288,17 @@
                 <td>20</td>
                 <td>-</td>
                 <td><button class="btn-normal">정지</button></td>
-              </tr>                 
+              </tr>     
+              <tr>
+                <td>21</td>
+                <td>NO.2 Enclosure Pump A</td>
+                <td><button class="btn-normal">정지</button></td>
+              </tr>                  
+              <tr>
+                <td>22</td>
+                <td>Chemical Pump B</td>
+                <td><button class="btn-normal">정지</button></td>
+              </tr>                              
             </tbody>
           </table>
           <table>
@@ -290,10 +316,10 @@
             </thead>
             <tbody>
               <tr>
-                <td>21</td>
+                <td>23</td>
                 <td>NO.2 Enclosure Pump A</td>
                 <td><button class="btn-normal">정지</button></td>
-              </tr>                  
+              </tr>   
               <tr>
                 <td>24</td>
                 <td>Chemical Pump B</td>
@@ -322,28 +348,44 @@
               <tr>
                 <td>29</td>
                 <td>EPC Hyd. Pump</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>   
               <tr>
                 <td>30</td>
                 <td>TR Hyd. Pump</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>  
               <tr>
                 <td>31</td>
                 <td>#1EPC Hyd. Pump</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>  
               <tr>
                 <td>32</td>
                 <td>#1TR Hyd. Pump</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>  
               <tr>
                 <td>33</td>
                 <td>Bottom Plating Cir. Pump #1</td>
                 <td><button class="btn-normal">정지</button></td>
-              </tr>  
+              </tr>                          
+            </tbody>
+          </table>
+          <table>
+            <colgroup>
+              <col width="50px">
+              <col width="300px">
+              <col width="100px">          
+            </colgroup>
+            <thead>
+              <tr>
+                <th>NO.</th>
+                <th>항목</th>
+                <th>제어</th>
+              </tr>
+            </thead>
+            <tbody>              
               <tr>
                 <td>34</td>
                 <td>Bottom Plating Cir. Pump #2</td>
@@ -357,7 +399,7 @@
               <tr>
                 <td>36</td>
                 <td>Bottom Plating Cir. Pump #4</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>   
               <tr>
                 <td>37</td>
@@ -372,12 +414,12 @@
               <tr>
                 <td>39</td>
                 <td>Top Plating Cir. Pump #2</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>   
               <tr>
                 <td>40</td>
                 <td>Top Plating Cir. Pump #3</td>
-                <td><button class="btn-normal on">운전</button></td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>   
               <tr>
                 <td>41</td>
@@ -388,6 +430,16 @@
                 <td>42</td>
                 <td>E.S Oiler Spray Pump</td>
                 <td><button class="btn-normal">정지</button></td>
+              </tr>                
+              <tr>
+                <td>43</td>
+                <td>Top Plating Cir. Pump #4</td>
+                <td><button class="btn-normal on">정지</button></td>
+              </tr>                
+              <tr>
+                <td>44</td>
+                <td>E.S Oiler Spray Pump</td>
+                <td><button class="btn-normal on">정지</button></td>
               </tr>                
             </tbody>
           </table>
@@ -462,5 +514,14 @@
       </ul>
     </footer>
   </div>
+
+  <script>
+    let targetFirst = document.querySelectorAll('.btn-normal');
+    targetFirst.forEach((target) => target.addEventListener("click", function(){ 
+			var parent_this = this;
+			target.classList.toggle('on');
+      })
+    );    
+  </script>
 </body>
 </html>

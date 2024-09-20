@@ -854,11 +854,11 @@
   align-items: center;
   justify-content: center;
   .table-wrap {
-    width: 910px;
+    width: 1830px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    .table-title {width: 910px;}
+    .table-title {width: 1830px;}
     table {
       width: 450px;
       tr td, tr th {
@@ -880,7 +880,18 @@
               padding: 0 10px;
               text-align: left;
             }   
-            .btn-normal {height: 100%;}       
+            .btn-normal {
+              height: 100%;
+              text-indent: 0px;
+              &.on {
+                text-indent: -9999999999px;
+                &::after {
+                  content: '운전';
+                  text-indent: 0px;
+                  float: left;
+                }
+              }
+            }       
           }      
         } 
       }
@@ -1032,7 +1043,12 @@
     }
     .volume-box3 {
       width: 100%;
-      background: linear-gradient(180deg, #703DB1 0%, #BEC7DB 100%);    }
+      background: linear-gradient(180deg, #703DB1 0%, #BEC7DB 100%);    
+    }
+    .volume-box4 {
+      width: 100%;
+      background: #DF46EB;    
+    }
   }
 
   &.s112x93 {
@@ -1062,12 +1078,34 @@
     }
   }
   &.s221x80 {
-
+    width: 227px;
+    height: 86px;
+    background: url(#{$imgPath}img_tankbox_221x80.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tank-box {
+      width: 217px;
+      height: 76px;
+      border: none;
+    }
   }
 }
 
 .pickling-wrapper {
   background: url(#{$imgPath}img_bg_pickling.png);
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+}
+
+.fluxing-wrapper {
+  background: url(#{$imgPath}img_bg_fluxing.png);
   width: 1920px;
   height: 820px;
   overflow: hidden;

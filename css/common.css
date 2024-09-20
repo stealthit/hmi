@@ -2021,6 +2021,15 @@ button.btn-normal.on {
   mix-blend-mode: multiply;
 }
 
+.img-pickling-tank {
+  position: absolute;
+  content: url(../assets/img_pickling_tank.png);
+  width: 162px;
+  height: 261px;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
 .img-wave-37 {
   position: absolute;
   content: url(../assets/img_wave_37.png);
@@ -4121,7 +4130,7 @@ button.btn-normal.on {
 
 .ic-flow-meter-l {
   position: absolute;
-  width: 28px;
+  width: 27px;
   height: 44px;
   background: url(../assets/ic_flow_meter_l_none.svg);
   z-index: 99;
