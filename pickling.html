@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/pages.css">
 </head>
 <body>
   <div class="wrapper">
@@ -21,7 +21,7 @@
             TP3 LINE
           </div>
         </div>
-        <p class="topbar-menutext">LINE TRACKING OVERVIEW</p>
+        <p class="topbar-menutext">PICKLING</p>
         <div class="topbar-right">
           <div class="datetime-wrap">
             <p class="date">8월 21일 (수)</p>
@@ -33,17 +33,6 @@
       <div class="header-contents">
         <div class="hd-table-wrap">
           <table>
-            <colgroup>
-              <col width="60px">
-              <col width="130px">
-              <col width="60px">              
-              <col width="60px">              
-              <col width="60px">              
-              <col width="60px">              
-              <col width="60px">              
-              <col width="80px">              
-              <col width="80px">              
-            </colgroup>
             <thead>
               <tr>
                 <th></th>
@@ -53,8 +42,7 @@
                 <th>TOP</th>
                 <th>BOT</th>
                 <th>도유량</th>
-                <th>화학처리(D)</th>
-                <th>화학처리(U)</th>
+                <th>화학처리</th>
               </tr>
             </thead>
             <tbody>
@@ -67,14 +55,12 @@
                 <td>30.00</td>
                 <td>3.0</td>
                 <td>0.7</td>
-                <td>0.7</td>
               </tr>
               <tr>
                 <td>다 음</td>
                 <td>LOTN00000105</td>
                 <td>0.400</td>
                 <td>580</td>
-                <td>0.00</td>
                 <td>0.00</td>
                 <td>0.00</td>
                 <td>0.00</td>
@@ -117,7 +103,7 @@
               <li><p>비가동 실적 현황</p></li>
             </ul>
           </li>
-          <li>LINE TRACKING</li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
           <li>
             <p class="mainmenu-title">ENTRY</p>
             <ul class="submenu-wrap">
@@ -147,16 +133,8 @@
               <li><p>EXIT INTERLOCK</p></li>
             </ul>
           </li>
-          <li>            
-            <p class="mainmenu-title">HYDRAULIC</p>
-            <ul class="submenu-wrap">
-              <li><p>TP3 유압라인 (ENTRY)</p></li>
-              <li class="line-2"><p>TP3 유압라인<br> (CPC HYDRAULIC)</p></li>
-              <li class="line-2"><p>TP3 유압라인<br> (EXIT EPC HYDRAULIC)</p></li>
-              <li><p>TP3 유압라인 (EXIT)</p></li>
-            </ul>
-          </li>
-          <li>
+          <li>HYDRAULIC</li>
+          <li class="sel">
             <p class="mainmenu-title">CHEMICAL</p>
             <ul class="submenu-wrap">
               <li><p>약품 관리</p></li>
@@ -177,7 +155,101 @@
       </nav>
     </header>
     <main>
-      <div class="main-wrapper"></div>
+      <div class="main-wrapper pickling-wrapper">
+        <!-- Title -->
+        <div class="title-box" style="top: 8px;left: 539px;width: 340px;">PICKLING</div>
+        <div class="title-box" style="top: 8px;left: 1040px;width: 347px;">PICKLING RINSE</div>
+
+        <div class="img-label" style="top: 246px;left: 70px;">From TANK LORRY</div>
+        <div class="img-label" style="top: 249px;left: 241px;">3000(L)</div>
+        <div class="img-label" style="top: 249px;left: 434px;">200(L)</div>
+        <div class="img-label" style="top: 387px;left: 639px;">TO SUMP</div>
+        <div class="img-label" style="top: 731px;left: 575px;">TO SUMP</div>
+        <div class="img-label" style="top: 642px;left: 1604px;">ENTRY SUMP</div>
+        <div class="img-label" style="top: 385px;left: 1264px;">유량계</div>
+        <div class="img-label" style="top: 385px;left: 1351px;">유량계</div>
+        
+        <!-- PICKLING -->
+        <div class="ic-valve stop" style="top: 301px;left: 331px;"></div>        
+        <div class="ic-valve fault" style="top: 301px;left: 522px;">
+          <div class="fault-img"></div>
+        </div>
+        <div class="ic-valve stop" style="top: 309px;left: 681px;"></div>        
+        <div class="ic-valve stop" style="top: 488px;left: 628px;"></div>        
+        <div class="ic-valve stop" style="top: 642px;left: 628px;"></div>        
+        <div class="ic-pump stop" style="top: 237px;left: 356px;"></div>        
+        <div class="ic-pump stop" style="top: 384px;left: 559px;"></div>        
+        <div class="ic-pump stop" style="top: 607px;left: 908px;"></div>        
+        <div class="ic-pump stop" style="top: 607px;left: 960px;"></div>        
+        <div class="ic-roll-28 stop" style="top: 242px;left: 709px;"></div>        
+        <div class="ic-roll-28 stop" style="top: 242px;left: 826px;"></div>        
+        <div class="ic-roll-18 stop" style="top: 210px;left: 873px;"></div>        
+        <div class="ic-roll-18 stop" style="top: 231px;left: 873px;"></div>        
+        <div class="ic-valve-l stop" style="top: 333px;left: 708px;"></div>        
+        <div class="ic-valve-l stop" style="top: 314px;left: 803px;"></div>        
+        <div class="ic-valve-l stop" style="top: 314px;left: 858px;"></div>        
+        <div class="ic-valve-l stop" style="top: 404px;left: 828px;"></div>        
+        <div class="ic-valve-l stop" style="top: 404px;left: 885px;"></div>        
+        
+        <!-- PICKLING RINSE -->
+        <div class="ic-valve stop" style="top: 90px;left: 1336px;"></div>        
+        <div class="ic-valve stop" style="top: 117px;left: 1336px;"></div>        
+        <div class="ic-valve stop" style="top: 144px;left: 1336px;"></div>        
+        <div class="ic-valve stop" style="top: 171px;left: 1336px;"></div>        
+        <div class="ic-valve stop" style="top: 671px;left: 1336px;"></div>        
+        <div class="ic-valve stop" style="top: 768px;left: 1336px;"></div>        
+        <div class="ic-pump-l stop" style="top: 509px;left: 1603px;"></div>        
+        <div class="ic-pump-l stop" style="top: 509px;left: 1650px;"></div>        
+        <div class="ic-roll-28 stop" style="top: 210px;left: 1076px;"></div>        
+        <div class="ic-roll-28 stop" style="top: 210px;left: 1208px;"></div>        
+        <div class="ic-roll-20 stop" style="top: 75px;left: 1216px;"></div>        
+        <div class="ic-roll-20 stop" style="top: 75px;left: 1240px;"></div>        
+        <div class="ic-valve-l stop" style="top: 300px;left: 1305px;"></div>        
+        <div class="ic-valve-l stop" style="top: 476px;left: 1305px;"></div>        
+        <div class="ic-valve-l stop" style="top: 554px;left: 1305px;"></div>        
+        <div class="ic-valve-l stop" style="top: 623px;left: 1305px;"></div>        
+        <div class="ic-valve-l stop" style="top: 476px;left: 1392px;"></div>        
+        <div class="ic-valve-l stop" style="top: 554px;left: 1392px;"></div>        
+        <div class="ic-valve-l stop" style="top: 514px;left: 1435px;"></div>        
+        <div class="ic-valve-l stop" style="top: 448px;left: 1609px;"></div>        
+        <div class="ic-valve-l stop" style="top: 448px;left: 1654px;"></div>        
+        <div class="ic-valve-l stop" style="top: 514px;left: 1348px;"></div>        
+        <div class="ic-flow-meter-l stop" style="top: 372px;left: 1303px;"></div>        
+        <div class="ic-flow-meter-l stop" style="top: 372px;left: 1390px;"></div>        
+        <div class="ic-circle-li-32 run" style="top: 484px;left: 1567px;"></div>        
+        <div class="ic-circle-li-32 run" style="top: 484px;left: 1685px;"></div>       
+        <div class="ic-solenoide-l-valve run" style="top: 515px;left: 1300px;"></div> 
+        <div class="ic-solenoide-l-valve run" style="top: 515px;left: 1386px;"></div> 
+        
+        <!-- 황산 원액 TANK -->
+        <div class="tank-box-wrap s112x93" style="top: 234px;left: 209px">
+          <div class="tank-box">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box" style="height: 40%;"></div>   
+          </div>
+        </div>
+        <div class="tank-box-wrap s112x93" style="top: 234px;left: 399px">
+          <div class="tank-box">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box" style="height: 40%;"></div>   
+          </div>
+        </div>
+        <!-- PICKING CIRCULATION TANK -->
+        <div class="tank-box-wrap s234x142" style="top: 544px;left: 659px">
+          <div class="tank-box">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box4" style="height: 40%;"></div>   
+          </div>
+        </div>
+        <!-- ENTRY SUMP -->
+        <div class="tank-box-wrap s221x80" style="top: 543px;left: 1521px">
+          <div class="tank-box">
+            <!-- height 값 변경으로 용액량 조절 -->
+             <div class="img-pickling-tank" style="bottom: 6.5px;left: 19px;"></div>
+            <div class="volume-box3" style="height: 60%;"></div>   
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="alarm-title-box">ALARM</div>
@@ -186,29 +258,29 @@
           <ul class="data-list">
             <li>
               <p class="data-1">2024-12-28 13:28:27</p>
-              <p class="data-2">NPL_ST1014_ALM</p>
-              <p class="data-3">DT_ATT_01_HH</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
               <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
               <p class="data-5">ON</p>
             </li>         
             <li>
               <p class="data-1">2024-12-28 13:28:27</p>
-              <p class="data-2">NPL_ST1014_ALM</p>
-              <p class="data-3">DT_ATT_02_HH</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
               <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
               <p class="data-5">ON</p>
             </li>     
             <li>
               <p class="data-1">2024-12-28 13:28:27</p>
-              <p class="data-2">NPL_ST1014_ALM</p>
-              <p class="data-3">DT_ATT_03_HH</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
               <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
               <p class="data-5">ON</p>
             </li>      
             <li>
               <p class="data-1">2024-12-28 13:28:27</p>
-              <p class="data-2">NPL_ST1014_ALM</p>
-              <p class="data-3">DT_ATT_04_HH</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
               <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
               <p class="data-5">ON</p>
             </li>     

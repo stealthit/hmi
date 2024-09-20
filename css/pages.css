@@ -1105,6 +1105,10 @@
   width: 100%;
   background: #DF46EB;
 }
+.tank-box-wrap .tank-box .volume-box5 {
+  width: 100%;
+  background: linear-gradient(180deg, #F33DF2 0%, #F790F7 19.5%, #EF23EF 100%);
+}
 .tank-box-wrap.s112x93 {
   width: 112px;
   height: 93px;
@@ -1142,6 +1146,35 @@
 .tank-box-wrap.s221x80 .tank-box {
   width: 217px;
   height: 76px;
+  border: none;
+}
+.tank-box-wrap.s220x116 {
+  width: 222px;
+  height: 120px;
+  background: url(../assets/img_tankbox_220x116.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tank-box-wrap.s220x116 .tank-box {
+  width: 198px;
+  height: 105px;
+  margin-left: 1px;
+  margin-bottom: 5px;
+  border: none;
+}
+.tank-box-wrap.s93x52 {
+  width: 95px;
+  height: 56px;
+  background: url(../assets/img_tankbox_93x52.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tank-box-wrap.s93x52 .tank-box {
+  width: 82px;
+  height: 45px;
+  margin-bottom: 3px;
   border: none;
 }
 

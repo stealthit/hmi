@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="ctrl-wrap">
+    <h2>게이지</h2>
+    <div class="gauge-wrap">
+      <div class="gauge-top-wrap">
+        <div class="gauge-title">#1 CLEANING</div>
+        <div class="grp-button">
+          <button>정지</button>
+          <button>수동</button>
+          <button>역</button>
+          <button class="on">정</button>
+        </div>
+      </div>
+      <div class="gauge-box-wrap">
+        <div class="gauge-box">
+          <!-- 눈금자 -->
+          <div class="img-graduation"></div>
+          <!-- 단위Text -->
+          <div class="unit-txt" style="top:38px;left:70px;">KA</div>
+          <!-- 눈금자 숫자 Text -------------------->
+          <div class="grd-txt" style="top:70px;left:13px;">-10</div>
+          <div class="grd-txt" style="top:51px;left:19px;">-8</div>
+          <div class="grd-txt" style="top:32px;left:27px;">-6</div>
+          <div class="grd-txt" style="top:19px;left:39px;">-4</div>
+          <div class="grd-txt" style="top:9px;left:56px;">-2</div>
+          <div class="grd-txt" style="top:6px;left:77px;">0</div>
+          <div class="grd-txt" style="top:9px;left:97px;">2</div>
+          <div class="grd-txt" style="top:19px;left:114px;">4</div>
+          <div class="grd-txt" style="top:32px;left:127px;">6</div>
+          <div class="grd-txt" style="top:51px;left:138px;">8</div>
+          <div class="grd-txt" style="top:70px;left:134px;">10 </div>
+  
+  
+          <!-- 바늘 중심원 -->
+          <div class="ct-needle">
+            <div class="inside"></div>
+          </div>
+          <!-- 바늘 -->
+          <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+          <!-- <div class="img-needle" style="transform: rotate(-90deg);"></div> -->
+          <div class="img-needle"></div> <!-- 임시 태그 -->
+
+        </div>
+        <div class="gauge-value">2.4 KA</div>
+      </div>
+      <div class="gauge-bottom-wrap">
+        <div class="grp-btn-text">
+          <button class="on">설정</button>
+          <div class="txt">2500</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <h2>화살표 버튼</h2>
+    <div class="arrow-wrap" style="display: flex;flex-direction: column;gap: 10px;">
+      <div style="display:flex;gap: 10px;">
+        <h3 style="width: 100px;">down</h3>
+        <div class="btn-tuning-arrow down"></div>
+        <div class="btn-tuning-arrow down disabled"></div>
+      </div>
+      <div style="display:flex;gap: 10px;">
+        <h3 style="width: 100px;">up</h3>
+        <div class="btn-tuning-arrow down"></div>
+        <div class="btn-tuning-arrow down disabled"></div>
+      </div>
+      <div style="display:flex;gap: 10px;">
+        <h3 style="width: 100px;">left</h3>
+        <div class="btn-tuning-arrow left"></div>
+        <div class="btn-tuning-arrow left disabled"></div>
+      </div>
+      <div style="display:flex;gap: 10px;">
+        <h3 style="width: 100px;">right</h3>
+        <div class="btn-tuning-arrow right"></div>
+        <div class="btn-tuning-arrow right disabled"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

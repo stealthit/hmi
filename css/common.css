@@ -398,8 +398,12 @@ input[type=datetime-local]:valid::before {
   display: flex;
   justify-content: space-between;
   overflow: overlay;
+  /* Buttons */
+  /* Up */
 }
 .wrapper footer .alarm-data-box .data-wrap::-webkit-scrollbar-button:single-button:vertical {
+  width: 24px;
+  height: 24px;
   /* single button styling */
 }
 .wrapper footer .alarm-data-box .data-wrap::-webkit-scrollbar-button:single-button:vertical:decrement {
@@ -1923,20 +1927,33 @@ button.btn-normal.on {
 }
 
 .btn-tuning-arrow {
+  cursor: pointer;
   width: 28px;
   height: 28px;
 }
 .btn-tuning-arrow.down {
   background: url(../assets/ic_tuning_arrow_down_28.svg);
 }
+.btn-tuning-arrow.down.disabled {
+  background: url(../assets/ic_tuning_arrow_down_off_28.svg);
+}
 .btn-tuning-arrow.up {
   background: url(../assets/ic_tuning_arrow_up_28.svg);
+}
+.btn-tuning-arrow.up.disabled {
+  background: url(../assets/ic_tuning_arrow_up_off_28.svg);
 }
 .btn-tuning-arrow.left {
   background: url(../assets/ic_tuning_arrow_left_28.svg);
 }
+.btn-tuning-arrow.left.disabled {
+  background: url(../assets/ic_tuning_arrow_left_off_28.svg);
+}
 .btn-tuning-arrow.right {
   background: url(../assets/ic_tuning_arrow_right_28.svg);
+}
+.btn-tuning-arrow.right.disabled {
+  background: url(../assets/ic_tuning_arrow_right_off_28.svg);
 }
 
 .btn-tuning-arrow-20 {
@@ -3754,6 +3771,9 @@ button.btn-normal.on {
   background: url(../assets/ic_FLEXIBLE_HOSE_fault.svg);
   animation: blink-effect 1s step-end infinite;
 }
+.ic-flexible-hose.left {
+  transform: rotate(-90deg);
+}
 
 .ic-diaphragm-valve {
   position: absolute;
@@ -3798,6 +3818,29 @@ button.btn-normal.on {
   width: 100%;
   height: 100%;
   background: url(../assets/ic_SOLENOIDE_VALVE_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-solenoide-valve-pr {
+  position: absolute;
+  width: 22px;
+  height: 23px;
+  background: url(../assets/ic_SOLENOIDE_VALVE_PR_none.svg);
+  z-index: 99;
+}
+.ic-solenoide-valve-pr.stop {
+  background: url(../assets/ic_SOLENOIDE_VALVE_PR_stop.svg);
+}
+.ic-solenoide-valve-pr.run {
+  background: url(../assets/ic_SOLENOIDE_VALVE_PR_run.svg);
+}
+.ic-solenoide-valve-pr.fault {
+  background: url(../assets/ic_SOLENOIDE_VALVE_PR_stop.svg);
+}
+.ic-solenoide-valve-pr.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_SOLENOIDE_VALVE_PR_fault.svg);
   animation: blink-effect 1s step-end infinite;
 }
 
@@ -4005,6 +4048,52 @@ button.btn-normal.on {
   width: 100%;
   height: 100%;
   background: url(../assets/ic_circle_li_fault_32.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-lic {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(../assets/ic_lic_none.svg);
+  z-index: 99;
+}
+.ic-lic.stop {
+  background: url(../assets/ic_lic_stop.svg);
+}
+.ic-lic.run {
+  background: url(../assets/ic_lic_run.svg);
+}
+.ic-lic.fault {
+  background: url(../assets/ic_lic_stop.svg);
+}
+.ic-lic.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_lic_fault.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-lg {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  background: url(../assets/ic_lg_none.svg);
+  z-index: 99;
+}
+.ic-lg.stop {
+  background: url(../assets/ic_lg_stop.svg);
+}
+.ic-lg.run {
+  background: url(../assets/ic_lg_run.svg);
+}
+.ic-lg.fault {
+  background: url(../assets/ic_lg_stop.svg);
+}
+.ic-lg.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_lg_fault.svg);
   animation: blink-effect 1s step-end infinite;
 }
 
