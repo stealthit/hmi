@@ -2081,6 +2081,366 @@ button.btn-normal{
     }
   }
 }
+.svg-line-loop1 {
+  content: url(#{$imgPath}line_loop1.svg);
+  width: 4px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0.2px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop1_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop1_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop1_gr.svg);
+  }
+}
+.svg-line-loop2 {
+  content: url(#{$imgPath}line_loop2.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 4px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop2_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop2_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop2_gr.svg);
+  }
+}
+.svg-line-loop3 {
+  content: url(#{$imgPath}line_loop3.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 11px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop3_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop3_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop3_gr.svg);
+  }
+}
+.svg-line-loop4 {
+  content: url(#{$imgPath}line_loop4.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 15px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop4_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop4_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop4_gr.svg);
+  }
+}
+.svg-line-loop5 {
+  content: url(#{$imgPath}line_loop5.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 22px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop5_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop5_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop5_gr.svg);
+  }
+}
+.svg-line-loop6 {
+  content: url(#{$imgPath}line_loop6.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 26px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop6_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop6_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop6_gr.svg);
+  }
+}
+.svg-line-loop7 {
+  content: url(#{$imgPath}line_loop7.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 32px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop7_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop7_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop7_gr.svg);
+  }
+}
+.svg-line-loop8 {
+  content: url(#{$imgPath}line_loop8.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 37px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop8_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop8_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop8_gr.svg);
+  }
+}
+.svg-line-loop9 {
+  content: url(#{$imgPath}line_loop9.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 44px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop9_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop9_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop9_gr.svg);
+  }
+}
+.svg-line-loop10 {
+  content: url(#{$imgPath}line_loop10.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 48px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop10_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop10_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop10_gr.svg);
+  }
+}
+.svg-line-loop11 {
+  content: url(#{$imgPath}line_loop11.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 55px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop11_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop11_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop11_gr.svg);
+  }
+}
+.svg-line-loop12 {
+  content: url(#{$imgPath}line_loop12.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 60px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop12_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop12_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop12_gr.svg);
+  }
+}
+.svg-line-loop13 {
+  content: url(#{$imgPath}line_loop13.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 67px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop13_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop13_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop13_gr.svg);
+  }
+}
+.svg-line-loop14 {
+  content: url(#{$imgPath}line_loop14.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 71px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop14_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop14_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop14_gr.svg);
+  }
+}
+.svg-line-loop15 {
+  content: url(#{$imgPath}line_loop15.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 78px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop15_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop15_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop15_gr.svg);
+  }
+}
+.svg-line-loop16 {
+  content: url(#{$imgPath}line_loop16.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 82px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop16_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop16_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop16_gr.svg);
+  }
+}
+.svg-line-loop17 {
+  content: url(#{$imgPath}line_loop17.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 89px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop17_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop17_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop17_gr.svg);
+  }
+}
+.svg-line-loop18 {
+  content: url(#{$imgPath}line_loop18.svg);
+  width: 8px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 93px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop18_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop18_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop18_gr.svg);
+  }
+}
+.svg-line-loop19 {
+  content: url(#{$imgPath}line_loop19.svg);
+  width: 5px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 100px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop19_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop19_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop19_gr.svg);
+  }
+}
+.svg-line-loop20 {
+  content: url(#{$imgPath}line_loop20.svg);
+  width: 3px;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 108px;
+
+  &.cl-type1 {
+    content: url(#{$imgPath}line_loop20_wh.svg);
+  }
+  &.cl-type2 {
+    content: url(#{$imgPath}line_loop20_bl.svg);
+  }
+  &.cl-type3 {
+    content: url(#{$imgPath}line_loop20_gr.svg);
+  }
+}
 // -- page Icon -----------------------------
 .ic-roll-120 {
   @include create_ic_roll(120); 

@@ -119,14 +119,19 @@
       width: 111px;
       max-height: 260px;  
       position: relative;
-      background: url(#{$imgPath}img_trk_loop_line.png);     
-      background-size: cover;
+      // background: url(#{$imgPath}img_trk_loop_line.png);     
+      // background-size: cover;
       .roll-base-bar {
         position: absolute;
         width: 111px;
         bottom: 5px;
         left: 0;
-      }      
+      }   
+      
+      .line-box {
+        height: 100%;
+        position: relative;
+      }
     }
   }
 }

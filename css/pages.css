@@ -147,14 +147,16 @@
   width: 111px;
   max-height: 260px;
   position: relative;
-  background: url(../assets/img_trk_loop_line.png);
-  background-size: cover;
 }
 .line-trk-wrapper .loop-box-wrapper .loop-box .roll-base-bar {
   position: absolute;
   width: 111px;
   bottom: 5px;
   left: 0;
+}
+.line-trk-wrapper .loop-box-wrapper .loop-box .line-box {
+  height: 100%;
+  position: relative;
 }
 
 .entry-o-wrapper .bg-line-wrap {

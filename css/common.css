@@ -2184,6 +2184,386 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 
+.svg-line-loop1 {
+  content: url(../assets/line_loop1.svg);
+  width: 4px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 0.2px;
+}
+.svg-line-loop1.cl-type1 {
+  content: url(../assets/line_loop1_wh.svg);
+}
+.svg-line-loop1.cl-type2 {
+  content: url(../assets/line_loop1_bl.svg);
+}
+.svg-line-loop1.cl-type3 {
+  content: url(../assets/line_loop1_gr.svg);
+}
+
+.svg-line-loop2 {
+  content: url(../assets/line_loop2.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 4px;
+}
+.svg-line-loop2.cl-type1 {
+  content: url(../assets/line_loop2_wh.svg);
+}
+.svg-line-loop2.cl-type2 {
+  content: url(../assets/line_loop2_bl.svg);
+}
+.svg-line-loop2.cl-type3 {
+  content: url(../assets/line_loop2_gr.svg);
+}
+
+.svg-line-loop3 {
+  content: url(../assets/line_loop3.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 11px;
+}
+.svg-line-loop3.cl-type1 {
+  content: url(../assets/line_loop3_wh.svg);
+}
+.svg-line-loop3.cl-type2 {
+  content: url(../assets/line_loop3_bl.svg);
+}
+.svg-line-loop3.cl-type3 {
+  content: url(../assets/line_loop3_gr.svg);
+}
+
+.svg-line-loop4 {
+  content: url(../assets/line_loop4.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 15px;
+}
+.svg-line-loop4.cl-type1 {
+  content: url(../assets/line_loop4_wh.svg);
+}
+.svg-line-loop4.cl-type2 {
+  content: url(../assets/line_loop4_bl.svg);
+}
+.svg-line-loop4.cl-type3 {
+  content: url(../assets/line_loop4_gr.svg);
+}
+
+.svg-line-loop5 {
+  content: url(../assets/line_loop5.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 22px;
+}
+.svg-line-loop5.cl-type1 {
+  content: url(../assets/line_loop5_wh.svg);
+}
+.svg-line-loop5.cl-type2 {
+  content: url(../assets/line_loop5_bl.svg);
+}
+.svg-line-loop5.cl-type3 {
+  content: url(../assets/line_loop5_gr.svg);
+}
+
+.svg-line-loop6 {
+  content: url(../assets/line_loop6.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 26px;
+}
+.svg-line-loop6.cl-type1 {
+  content: url(../assets/line_loop6_wh.svg);
+}
+.svg-line-loop6.cl-type2 {
+  content: url(../assets/line_loop6_bl.svg);
+}
+.svg-line-loop6.cl-type3 {
+  content: url(../assets/line_loop6_gr.svg);
+}
+
+.svg-line-loop7 {
+  content: url(../assets/line_loop7.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 32px;
+}
+.svg-line-loop7.cl-type1 {
+  content: url(../assets/line_loop7_wh.svg);
+}
+.svg-line-loop7.cl-type2 {
+  content: url(../assets/line_loop7_bl.svg);
+}
+.svg-line-loop7.cl-type3 {
+  content: url(../assets/line_loop7_gr.svg);
+}
+
+.svg-line-loop8 {
+  content: url(../assets/line_loop8.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 37px;
+}
+.svg-line-loop8.cl-type1 {
+  content: url(../assets/line_loop8_wh.svg);
+}
+.svg-line-loop8.cl-type2 {
+  content: url(../assets/line_loop8_bl.svg);
+}
+.svg-line-loop8.cl-type3 {
+  content: url(../assets/line_loop8_gr.svg);
+}
+
+.svg-line-loop9 {
+  content: url(../assets/line_loop9.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 44px;
+}
+.svg-line-loop9.cl-type1 {
+  content: url(../assets/line_loop9_wh.svg);
+}
+.svg-line-loop9.cl-type2 {
+  content: url(../assets/line_loop9_bl.svg);
+}
+.svg-line-loop9.cl-type3 {
+  content: url(../assets/line_loop9_gr.svg);
+}
+
+.svg-line-loop10 {
+  content: url(../assets/line_loop10.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 48px;
+}
+.svg-line-loop10.cl-type1 {
+  content: url(../assets/line_loop10_wh.svg);
+}
+.svg-line-loop10.cl-type2 {
+  content: url(../assets/line_loop10_bl.svg);
+}
+.svg-line-loop10.cl-type3 {
+  content: url(../assets/line_loop10_gr.svg);
+}
+
+.svg-line-loop11 {
+  content: url(../assets/line_loop11.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 55px;
+}
+.svg-line-loop11.cl-type1 {
+  content: url(../assets/line_loop11_wh.svg);
+}
+.svg-line-loop11.cl-type2 {
+  content: url(../assets/line_loop11_bl.svg);
+}
+.svg-line-loop11.cl-type3 {
+  content: url(../assets/line_loop11_gr.svg);
+}
+
+.svg-line-loop12 {
+  content: url(../assets/line_loop12.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 60px;
+}
+.svg-line-loop12.cl-type1 {
+  content: url(../assets/line_loop12_wh.svg);
+}
+.svg-line-loop12.cl-type2 {
+  content: url(../assets/line_loop12_bl.svg);
+}
+.svg-line-loop12.cl-type3 {
+  content: url(../assets/line_loop12_gr.svg);
+}
+
+.svg-line-loop13 {
+  content: url(../assets/line_loop13.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 67px;
+}
+.svg-line-loop13.cl-type1 {
+  content: url(../assets/line_loop13_wh.svg);
+}
+.svg-line-loop13.cl-type2 {
+  content: url(../assets/line_loop13_bl.svg);
+}
+.svg-line-loop13.cl-type3 {
+  content: url(../assets/line_loop13_gr.svg);
+}
+
+.svg-line-loop14 {
+  content: url(../assets/line_loop14.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 71px;
+}
+.svg-line-loop14.cl-type1 {
+  content: url(../assets/line_loop14_wh.svg);
+}
+.svg-line-loop14.cl-type2 {
+  content: url(../assets/line_loop14_bl.svg);
+}
+.svg-line-loop14.cl-type3 {
+  content: url(../assets/line_loop14_gr.svg);
+}
+
+.svg-line-loop15 {
+  content: url(../assets/line_loop15.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 78px;
+}
+.svg-line-loop15.cl-type1 {
+  content: url(../assets/line_loop15_wh.svg);
+}
+.svg-line-loop15.cl-type2 {
+  content: url(../assets/line_loop15_bl.svg);
+}
+.svg-line-loop15.cl-type3 {
+  content: url(../assets/line_loop15_gr.svg);
+}
+
+.svg-line-loop16 {
+  content: url(../assets/line_loop16.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 82px;
+}
+.svg-line-loop16.cl-type1 {
+  content: url(../assets/line_loop16_wh.svg);
+}
+.svg-line-loop16.cl-type2 {
+  content: url(../assets/line_loop16_bl.svg);
+}
+.svg-line-loop16.cl-type3 {
+  content: url(../assets/line_loop16_gr.svg);
+}
+
+.svg-line-loop17 {
+  content: url(../assets/line_loop17.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 89px;
+}
+.svg-line-loop17.cl-type1 {
+  content: url(../assets/line_loop17_wh.svg);
+}
+.svg-line-loop17.cl-type2 {
+  content: url(../assets/line_loop17_bl.svg);
+}
+.svg-line-loop17.cl-type3 {
+  content: url(../assets/line_loop17_gr.svg);
+}
+
+.svg-line-loop18 {
+  content: url(../assets/line_loop18.svg);
+  width: 8px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 93px;
+}
+.svg-line-loop18.cl-type1 {
+  content: url(../assets/line_loop18_wh.svg);
+}
+.svg-line-loop18.cl-type2 {
+  content: url(../assets/line_loop18_bl.svg);
+}
+.svg-line-loop18.cl-type3 {
+  content: url(../assets/line_loop18_gr.svg);
+}
+
+.svg-line-loop19 {
+  content: url(../assets/line_loop19.svg);
+  width: 5px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 100px;
+}
+.svg-line-loop19.cl-type1 {
+  content: url(../assets/line_loop19_wh.svg);
+}
+.svg-line-loop19.cl-type2 {
+  content: url(../assets/line_loop19_bl.svg);
+}
+.svg-line-loop19.cl-type3 {
+  content: url(../assets/line_loop19_gr.svg);
+}
+
+.svg-line-loop20 {
+  content: url(../assets/line_loop20.svg);
+  width: 3px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 108px;
+}
+.svg-line-loop20.cl-type1 {
+  content: url(../assets/line_loop20_wh.svg);
+}
+.svg-line-loop20.cl-type2 {
+  content: url(../assets/line_loop20_bl.svg);
+}
+.svg-line-loop20.cl-type3 {
+  content: url(../assets/line_loop20_gr.svg);
+}
+
 .ic-roll-120 {
   z-index: 99;
   position: absolute;
