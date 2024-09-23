@@ -17,6 +17,11 @@
   .bg-line-wrap {
     top: 87px;
     left: 44.5px;
+    .line-box {
+      position: relative;
+      width: 1829px;
+      height: 252px;
+    }
   }  
   .bg-line2-wrap {
     top: 87px;
@@ -1033,6 +1038,7 @@
 
 .tank-box-wrap {
   position: absolute;
+  z-index: 4;
   .tank-box {
     position: relative;
     border: 5px solid #000;
@@ -1057,6 +1063,10 @@
     .volume-box5 {
       width: 100%;
       background: linear-gradient(180deg, #F33DF2 0%, #F790F7 19.5%, #EF23EF 100%);
+    }
+    .volume-box6 {
+      width: 100%;
+      background: linear-gradient(180deg, #EFA2F5 31%, #A1B9E1 100%);
     }
 
   }
@@ -1129,6 +1139,19 @@
       border: none;
     }
   }
+  &.s1028x101 {
+    width: 1034px;
+    height: 107px;
+    background: url(#{$imgPath}img_tankbox_1028x101.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tank-box {
+      width: 1023px;
+      height: 96px;
+      border: none;
+    }
+  }
 }
 
 .pickling-wrapper {
@@ -1152,5 +1175,70 @@
   .title-box {
     position: absolute;
     height: 28px;
+  }
+}
+
+.plating-wrapper {
+  background: url(#{$imgPath}img_bg_plating.png);
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+
+  .bottle-wrap {
+    z-index: 4;
+    position: absolute;
+    top: 114px;
+    left: 1656px;
+    width: 118px;
+    height: 268px;
+    background: url(#{$imgPath}img_bottle.png);
+    mix-blend-mode: multiply;
+  }
+  .water-wrap {
+    z-index: 3;
+    position: absolute;
+    width: 113px;
+    max-height: 113px;
+    left: 1658px;
+    bottom: 442px;
+    background: url(#{$imgPath}img_water_sheep.png);
+    background-size: auto;
+    background-position: bottom;
+  }
+}
+.fume-wrapper {
+  background: url(#{$imgPath}img_bg_fume.png);
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+
+  .bottle-wrap {
+    z-index: 4;
+    position: absolute;
+    width: 92px;
+    height: 217px;
+    top: 118px;
+    background: url(#{$imgPath}img_bottle_s.png);
+    mix-blend-mode: multiply;
+  }
+  .water-wrap {
+    z-index: 3;
+    position: absolute;
+    width: 87px;
+    max-height: 96px;
+    bottom: 488px;
+    background: url(#{$imgPath}img_water_sheep_s.png);
+    background-size: auto;
+    background-position: bottom;
   }
 }
