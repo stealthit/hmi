@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">LINE TRACKING OVERVIEW</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li class="sel">LINE TRACKING</li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p><a href="./entry_overview.html">ENTRY OVERVIEW</a></p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>HYDRAULIC</li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper line-trk-wrapper">
+        <div class="bg-line-wrap">
+          <img alt="" class="img-linetracking-o">
+          <div class="line-box">
+            <div data-line-id ="POR_1-1" class="l-POR_1-1 type2"></div> 
+            <div data-line-id ="POR_1-2" class="l-POR_1-2 type2"></div> 
+            <div data-line-id ="POR_1-3" class="l-POR_1-3 type2"></div> 
+            <div data-line-id ="POR_1-4" class="l-POR_1-4 type2"></div> 
+            <div data-line-id ="POR_1-5" class="l-POR_1-5 type2"></div> 
+            <div data-line-id ="POR_2-1" class="l-POR_2-1 type2"></div> 
+            <div data-line-id ="POR_2-2" class="l-POR_2-2 type2"></div> 
+            <div data-line-id ="POR_2-3" class="l-POR_2-3 type2"></div> 
+            <div data-line-id ="POR_2-4" class="l-POR_2-4 type2"></div> 
+            <div data-line-id ="TR_1-1" class="l-TR_1-1 type2"></div> 
+            <div data-line-id ="TR_1-2" class="l-TR_1-2 type2"></div> 
+            <div data-line-id ="TR_1-3" class="l-TR_1-3 type2"></div> 
+            <div data-line-id ="TR_1-4" class="l-TR_1-4 type2"></div> 
+            <div data-line-id ="TR_2-1" class="l-TR_2-1 type2"></div> 
+            <div data-line-id ="TR_2-2" class="l-TR_2-2 type2"></div> 
+            <div data-line-id ="TR_2-3" class="l-TR_2-3 type2"></div> 
+            <div data-line-id ="TR_2-4" class="l-TR_2-4 type2"></div> 
+            <div data-line-id ="TR_2-5" class="l-TR_2-5 type2"></div> 
+            <div data-line-id ="LINE_1" class="l-LINE_1 type2"></div> 
+            <div data-line-id ="LINE_2" class="l-LINE_2 type2"></div> 
+            <div data-line-id ="LINE_3" class="l-LINE_3 type2"></div> 
+            <div data-line-id ="LINE_4" class="l-LINE_4 type2"></div> 
+            <div data-line-id ="LINE_5" class="l-LINE_5 type2"></div> 
+            <div data-line-id ="LINE_6" class="l-LINE_6 type2"></div> 
+            <div data-line-id ="LINE_7" class="l-LINE_7 type2"></div> 
+            <div data-line-id ="LINE_8" class="l-LINE_8 type2"></div> 
+            <div data-line-id ="LINE_9" class="l-LINE_9 type2"></div> 
+            <div data-line-id ="LINE_10" class="l-LINE_10 type2"></div> 
+            <div data-line-id ="LINE_11" class="l-LINE_11 type2"></div> 
+            <div data-line-id ="LINE_12" class="l-LINE_12 type2"></div> 
+            <div data-line-id ="LINE_13" class="l-LINE_13 type2"></div> 
+            <div data-line-id ="LINE_14" class="l-LINE_14 type2"></div> 
+            <div data-line-id ="LINE_15" class="l-LINE_15 type2"></div> 
+            <div data-line-id ="LINE_16" class="l-LINE_16 type2"></div> 
+            <div data-line-id ="LINE_17" class="l-LINE_17 type2"></div> 
+            <div data-line-id ="LINE_18" class="l-LINE_18 type2"></div> 
+            <div data-line-id ="LINE_19" class="l-LINE_19 type2"></div> 
+            <div data-line-id ="LINE_20" class="l-LINE_20 type2"></div> 
+            <div data-line-id ="LINE_21" class="l-LINE_21 type2"></div> 
+            <div data-line-id ="LINE_22" class="l-LINE_22 type2"></div> 
+            <div data-line-id ="LINE_23" class="l-LINE_23 type2"></div> 
+            <div data-line-id ="LINE_24" class="l-LINE_24 type2"></div> 
+            <div data-line-id ="LINE_25" class="l-LINE_25 type2"></div> 
+            <div data-line-id ="LINE_26" class="l-LINE_26 type2"></div> 
+            <div data-line-id ="LINE_27" class="l-LINE_27 type2"></div> 
+            <div data-line-id ="LINE_28" class="l-LINE_28 type2"></div> 
+            <div data-line-id ="LINE_29" class="l-LINE_29 type2"></div> 
+            <div data-line-id ="LINE_30" class="l-LINE_30 type2"></div> 
+            <div data-line-id ="LINE_31" class="l-LINE_31 type2"></div> 
+            <div data-line-id ="LINE_32" class="l-LINE_32 type2"></div> 
+            <div data-line-id ="LINE_33" class="l-LINE_33 type2"></div> 
+            <div data-line-id ="LINE_34" class="l-LINE_34 type2"></div> 
+            <div data-line-id ="LINE_35" class="l-LINE_35 type2"></div> 
+            <div data-line-id ="LINE_36" class="l-LINE_36 type2"></div> 
+            <div data-line-id ="LINE_37" class="l-LINE_37 type2"></div> 
+            <div data-line-id ="LINE_38" class="l-LINE_38 type2"></div> 
+            <div data-line-id ="LINE_39" class="l-LINE_39 type2"></div> 
+            <div data-line-id ="LINE_40" class="l-LINE_40 type2"></div> 
+            <div data-line-id ="LINE_41" class="l-LINE_41 type2"></div> 
+            <div data-line-id ="LINE_42" class="l-LINE_42 type2"></div> 
+            <div data-line-id ="LINE_43" class="l-LINE_43 type2"></div> 
+            <div data-line-id ="LINE_44" class="l-LINE_44 type2"></div> 
+            <div data-line-id ="LINE_45" class="l-LINE_45 type2"></div> 
+            <div data-line-id ="LINE_46" class="l-LINE_46 type2"></div> 
+            <div data-line-id ="LINE_47" class="l-LINE_47 type2"></div> 
+            <div data-line-id ="LINE_48" class="l-LINE_48 type2"></div> 
+            <div data-line-id ="LINE_49" class="l-LINE_49 type2"></div> 
+            <div data-line-id ="LINE_50" class="l-LINE_50 type2"></div> 
+            <div data-line-id ="LINE_51" class="l-LINE_51 type2"></div> 
+            <div data-line-id ="LINE_52" class="l-LINE_52 type2"></div> 
+            <div data-line-id ="LINE_53" class="l-LINE_53 type2"></div> 
+            <div data-line-id ="LINE_54" class="l-LINE_54 type2"></div> 
+            <div data-line-id ="LINE_55" class="l-LINE_55 type2"></div> 
+            <div data-line-id ="LINE_56" class="l-LINE_56 type2"></div> 
+            <div data-line-id ="LINE_57" class="l-LINE_57 type2"></div> 
+            <div data-line-id ="LINE_58" class="l-LINE_58 type2"></div> 
+            <div data-line-id ="LINE_59" class="l-LINE_59 type2"></div> 
+            <div data-line-id ="LINE_60" class="l-LINE_60 type2"></div> 
+            <div data-line-id ="LINE_61" class="l-LINE_61 type2"></div> 
+            <div data-line-id ="LINE_62" class="l-LINE_62 type2"></div> 
+            <div data-line-id ="LINE_63" class="l-LINE_63 type2"></div> 
+            <div data-line-id ="LINE_64" class="l-LINE_64 type2"></div> 
+            <div data-line-id ="LINE_65" class="l-LINE_65 type2"></div> 
+            <div data-line-id ="LINE_66" class="l-LINE_66 type2"></div> 
+            <div data-line-id ="LINE_67" class="l-LINE_67 type2"></div> 
+            <div data-line-id ="LINE_68" class="l-LINE_68 type2"></div> 
+            <div data-line-id ="LINE_69" class="l-LINE_69 type2"></div> 
+            <div data-line-id ="LINE_70" class="l-LINE_70 type2"></div> 
+            <div data-line-id ="LINE_71" class="l-LINE_71 type2"></div> 
+            <div data-line-id ="LINE_72" class="l-LINE_72 type2"></div> 
+            <div data-line-id ="LINE_73" class="l-LINE_73 type2"></div> 
+            <div data-line-id ="LINE_74" class="l-LINE_74 type2"></div> 
+            <div data-line-id ="LINE_75" class="l-LINE_75 type2"></div> 
+            <div data-line-id ="LINE_76" class="l-LINE_76 type2"></div> 
+            <div data-line-id ="LINE_77" class="l-LINE_77 type2"></div> 
+            <div data-line-id ="LINE_78" class="l-LINE_78 type2"></div> 
+            <div data-line-id ="LINE_79" class="l-LINE_79 type2"></div> 
+            <div data-line-id ="LINE_80" class="l-LINE_80 type2"></div> 
+            <div data-line-id ="LINE_81" class="l-LINE_81 type2"></div> 
+            <div data-line-id ="LINE_82" class="l-LINE_82 type2"></div> 
+            <div data-line-id ="LINE_83" class="l-LINE_83 type2"></div> 
+            <div data-line-id ="LINE_84" class="l-LINE_84 type2"></div> 
+            <div data-line-id ="LINE_85" class="l-LINE_85 type2"></div> 
+            <div data-line-id ="LINE_86" class="l-LINE_86 type2"></div> 
+            <div data-line-id ="LINE_87" class="l-LINE_87 type2"></div> 
+            <div data-line-id ="LINE_88" class="l-LINE_88 type2"></div> 
+            <div data-line-id ="LINE_89" class="l-LINE_89 type2"></div> 
+            <div data-line-id ="LINE_90" class="l-LINE_90 type2"></div> 
+            <div data-line-id ="LINE_91" class="l-LINE_91 type2"></div> 
+            <div data-line-id ="LINE_92" class="l-LINE_92 type2"></div> 
+            <div data-line-id ="LINE_93" class="l-LINE_93 type2"></div> 
+            <div data-line-id ="LINE_94" class="l-LINE_94 type2"></div> 
+            <div data-line-id ="LINE_95" class="l-LINE_95 type2"></div> 
+            <div data-line-id ="LINE_96" class="l-LINE_96 type2"></div> 
+            <div data-line-id ="LINE_97" class="l-LINE_97 type2"></div> 
+            <div data-line-id ="LINE_98" class="l-LINE_98 type2"></div> 
+            <div data-line-id ="LINE_99" class="l-LINE_99 type2"></div> 
+            <div data-line-id ="LINE_100" class="l-LINE_100 type2"></div> 
+            <div data-line-id ="LINE_101" class="l-LINE_101 type2"></div> 
+            <div data-line-id ="LINE_102" class="l-LINE_102 type2"></div> 
+            <div data-line-id ="LINE_103" class="l-LINE_103 type2"></div> 
+            <div data-line-id ="LINE_104" class="l-LINE_104 type2"></div> 
+            <div data-line-id ="LINE_105" class="l-LINE_105 type2"></div> 
+            <div data-line-id ="LINE_106" class="l-LINE_106 type2"></div> 
+            <div data-line-id ="LINE_107" class="l-LINE_107 type2"></div> 
+            <div data-line-id ="LINE_108" class="l-LINE_108 type2"></div> 
+            <div data-line-id ="LINE_109" class="l-LINE_109 type2"></div> 
+            <div data-line-id ="LINE_110" class="l-LINE_110 type2"></div> 
+            <div data-line-id ="LINE_111" class="l-LINE_111 type2"></div> 
+            <div data-line-id ="LINE_112" class="l-LINE_112 type2"></div> 
+            <div data-line-id ="LINE_113" class="l-LINE_113 type2"></div> 
+            <div data-line-id ="LINE_114" class="l-LINE_114 type2"></div> 
+            <div data-line-id ="LINE_115" class="l-LINE_115 type2"></div> 
+            <div data-line-id ="LINE_116" class="l-LINE_116 type2"></div> 
+            <div data-line-id ="LINE_117" class="l-LINE_117 type2"></div> 
+            <div data-line-id ="LINE_118" class="l-LINE_118 type2"></div> 
+            <div data-line-id ="LINE_119" class="l-LINE_119 type2"></div> 
+          </div>
+        </div>
+
+        <!-- line 배치 ------------------------------------->
+         
+        <!-- ----------------------------------------------->
+<!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
+        <!-- #1 POR -->
+        <div class="ic-roll-40" style="top:297px;left:25px;"></div>
+        <div class="ic-roll-40 stop" style="top:297px;left:103px;"></div>
+        <div class="ic-roll-40 run-r" style="top:277px;left:1781px;"></div>
+        <div class="ic-roll-40 fault" style="top:277px;left:1844px;">
+          <div class="fault-img"></div>
+        </div>
+
+        <div class="ic-roll-18" style="top:312px;left:231px;"></div>
+        <div class="ic-roll-18 stop" style="top:309px;left:253px;"></div>
+        <div class="ic-roll-18 run-r" style="top:248px;left:478px;"></div>
+        <div class="ic-roll-18 fault" style="top:253px;left:499px;">
+          <div class="fault-img"></div>
+        </div>
+        <div class="ic-roll-18" style="top:298px;left:1637px;"></div>
+        <div class="ic-roll-18" style="top:295px;left:1657px;"></div>
+        <div class="ic-roll-18" style="top:298px;left:1689px;"></div>
+
+        <div class="ic-roll-15" style="top:93px;left:1367px;"></div>
+
+        <div class="ic-roll-14" style="top:249px;left:592px;"></div>
+        <div class="ic-roll-14 stop" style="top:249px;left:633px;"></div>
+        <div class="ic-roll-14 run-r" style="top:249px;left:746px;"></div>
+        <div class="ic-roll-14 fault" style="top:249px;left:786px;">
+          <div class="fault-img"></div>
+        </div>
+        <div class="ic-roll-14" style="top:249px;left:833px;"></div>
+        <div class="ic-roll-14 stop" style="top:249px;left:889px;"></div>
+        <div class="ic-roll-14 run-r" style="top:110px;left:972px;"></div>
+        <div class="ic-roll-14 fault" style="top:110px;left:1012px;">
+          <div class="fault-img"></div>
+        </div>
+        <div class="ic-roll-14" style="top:110px;left:1088px;"></div>
+        <div class="ic-roll-14 stop" style="top:110px;left:1127px;"></div>
+
+        <div class="ic-roll-6" style="top:288px;left:84px;"></div>
+        <div class="ic-roll-6 stop" style="top:295px;left:84px;"></div>
+        <div class="ic-roll-6 run-r" style="top:287px;left:166px;"></div>
+        <div class="ic-roll-6 run-l" style="top:294px;left:166px;"></div>
+        <div class="ic-roll-6 fault" style="top:318px;left:156px;">
+          <div class="fault-img"></div>
+        </div>
+        <div class="ic-roll-6" style="top:307px;left:166px;"></div>
+        <div class="ic-roll-6" style="top:315px;left:166px;"></div>
+        <div class="ic-roll-6" style="top:311px;left:199px;"></div>
+        <div class="ic-roll-6" style="top:302px;left:208px;"></div>
+        <div class="ic-roll-6" style="top:302px;left:259px;"></div>
+        <div class="ic-roll-6" style="top:241px;left:484px;"></div>
+        <div class="ic-roll-6" style="top:250px;left:537px;"></div>
+        <div class="ic-roll-6" style="top:241px;left:555px;"></div>
+        <div class="ic-roll-6" style="top:241px;left:572px;"></div>
+        <div class="ic-roll-6" style="top:241px;left:655px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:677px;"></div>
+        <div class="ic-roll-6" style="top:241px;left:722px;"></div>
+        <div class="ic-roll-6" style="top:241px;left:808px;"></div>
+        <div class="ic-roll-6" style="top:183px;left:896px;"></div>
+        <div class="ic-roll-6" style="top:183px;left:905px;"></div>
+        <!-- BOTTOM PLATING -->
+        <div class="ic-roll-6" style="top:242px;left:968px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:996px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1024px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1052px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1080px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1108px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1136px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1164px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1192px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1220px;"></div>
+        <div class="ic-roll-6" style="top:242px;left:1248px;"></div>        
+        <div class="ic-roll-6" style="top:249px;left:968px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:996px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1024px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1052px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1080px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1108px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1136px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1164px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1192px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1220px;"></div>
+        <div class="ic-roll-6" style="top:249px;left:1248px;"></div>
+        <!-- TOP PLATING -->
+        <div class="ic-roll-6 stop" style="top:184px;left:1052px;"></div> 
+        <div class="ic-roll-6 stop" style="top:184px;left:1080px;"></div> 
+        <div class="ic-roll-6 stop" style="top:184px;left:1108px;"></div> 
+        <div class="ic-roll-6 run-r" style="top:184px;left:1136px;"></div> 
+        <div class="ic-roll-6 run-r" style="top:184px;left:1164px;"></div> 
+        <div class="ic-roll-6 run-r" style="top:184px;left:1192px;"></div> 
+        <div class="ic-roll-6 run-l" style="top:184px;left:1220px;"></div> 
+        <div class="ic-roll-6 run-l" style="top:184px;left:1248px;"></div> 
+        <div class="ic-roll-6 run-l" style="top:184px;left:1278px;"></div> 
+        <div class="ic-roll-6 fault" style="top:191px;left:1052px;">
+          <div class="fault-img"></div>
+        </div> 
+        <div class="ic-roll-6 fault" style="top:191px;left:1080px;">
+          <div class="fault-img"></div>
+        </div> 
+        <div class="ic-roll-6 fault" style="top:191px;left:1108px;">
+          <div class="fault-img"></div>
+        </div> 
+        <div class="ic-roll-6 fault" style="top:191px;left:1136px;">
+          <div class="fault-img"></div>
+        </div> 
+        <div class="ic-roll-6" style="top:191px;left:1164px;"></div> 
+        <div class="ic-roll-6" style="top:191px;left:1192px;"></div> 
+        <div class="ic-roll-6" style="top:191px;left:1220px;"></div> 
+        <div class="ic-roll-6" style="top:191px;left:1248px;"></div> 
+        <div class="ic-roll-6" style="top:250px;left:677px;"></div>
+
+        <div class="ic-roll-8" style="top:249px;left:721px;"></div>
+        <div class="ic-roll-8" style="top:249px;left:807px;"></div>
+        <div class="ic-roll-8" style="top:249px;left:654px;"></div>
+
+        <div class="ic-roll-10" style="top:319px;left:279px;"></div>
+        <div class="ic-roll-10" style="top:224px;left:289px;"></div>
+        <div class="ic-roll-10" style="top:228px;left:308px;"></div>
+        <div class="ic-roll-10" style="top:227px;left:440px;"></div>
+        <div class="ic-roll-10" style="top:224px;left:458px;"></div>
+        <div class="ic-roll-10" style="top:238px;left:535px;"></div>
+        <div class="ic-roll-10" style="top:250px;left:553px;"></div>
+        <div class="ic-roll-10" style="top:250px;left:570px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:904px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:919px;"></div>
+        <div class="ic-roll-10" style="top:237px;left:932px;"></div>
+        <div class="ic-roll-10" style="top:179px;left:957px;"></div>
+        <div class="ic-roll-10" style="top:191px;left:1276px;"></div>
+        <div class="ic-roll-10" style="top:237px;left:1276px;"></div>
+        <!-- PLATING RINSE -->
+        <div class="ic-roll-6" style="top:110px;left:950px;"></div>
+        <div class="ic-roll-10" style="top:108px;left:957px;"></div>
+        <div class="ic-roll-6" style="top:102px;left:1035px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:1033px;"></div>
+        <div class="ic-roll-6" style="top:102px;left:1067px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:1065px;"></div>
+        <!-- FLUXING -->
+        <div class="ic-roll-6" style="top:102px;left:1151px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:1149px;"></div>
+
+        <div class="ic-roll-10" style="top:110px;left:1302px;"></div>
+        <div class="ic-roll-6" style="top:112px;left:1313px;"></div>
+        <div class="ic-roll-4" style="top:113px;left:1320px;"></div>
+        <div class="ic-roll-4" style="top:113px;left:1325px;"></div>
+
+        <div class="ic-roll-10" style="top:197px;left:1313px;"></div>
+        <div class="ic-roll-10" style="top:197px;left:1328px;"></div>
+        <div class="ic-roll-12" style="top:109px;left:1340px;"></div>
+        <div class="ic-roll-12" style="top:230px;left:1353px;"></div>
+        <div class="ic-roll-6" style="top:234px;left:1346px;"></div>
+        <div class="ic-roll-4" style="top:235px;left:1341px;"></div>
+        <div class="ic-roll-4" style="top:235px;left:1336px;"></div>
+        <!-- QUENCHING -->
+        <div class="ic-roll-12" style="top:265px;left:1383px;"></div>
+        <div class="ic-roll-12" style="top:229px;left:1396px;"></div>
+        <div class="ic-roll-6" style="top:233px;left:1389px;"></div>
+        <div class="ic-roll-7" style="top:253px;left:1410px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:1418px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:1433px;"></div>
+        <!-- CHEMICAL -->
+        <div class="ic-roll-10" style="top:219px;left:1444px;"></div>
+        <div class="ic-roll-11" style="top:230px;left:1458.5px;"></div>
+        <div class="ic-roll-8" style="top:295px;left:1472px;"></div>
+        <div class="ic-roll-8" style="top:295px;left:1492px;"></div>
+        <div class="ic-roll-8" style="top:295px;left:1512px;"></div>
+        <div class="ic-roll-10" style="top:231px;left:1481px;"></div>
+        <div class="ic-roll-10" style="top:231px;left:1501px;"></div>
+        <div class="ic-roll-6" style="top:233px;left:1474px;"></div>
+        <div class="ic-roll-6" style="top:233px;left:1494px;"></div>
+        <div class="ic-roll-6" style="top:221px;left:1514px;"></div>
+        <div class="ic-roll-6" style="top:221px;left:1521px;"></div>
+        <!-- #2 AIR DRYER -->
+        <div class="ic-roll-10" style="top:110px;left:1521px;"></div>
+        <div class="ic-roll-10" style="top:110px;left:1536px;"></div>
+        <!-- PIN HOLE DETECTOR -->
+        <div class="ic-roll-10" style="top:306px;left:1547px;"></div>
+        <div class="ic-roll-10" style="top:306px;left:1567px;"></div>
+        <!-- #3 AIR DRYER -->
+        <div class="ic-roll-10" style="top:159px;left:1578px;"></div>
+        <div class="ic-roll-10" style="top:159px;left:1594px;"></div>
+        <!-- #3 BRIDLE ROLL -->
+        <div class="ic-roll-10" style="top:285px;left:1606px;"></div>
+        <div class="ic-roll-6" style="top:288px;left:1663px;"></div>
+        <div class="ic-roll-10" style="top:299px;left:1678px;"></div>
+        <div class="ic-roll-6" style="top:290px;left:1695px;"></div>
+        <!-- SNIP SHEAR -->
+        <div class="ic-roll-6" style="top:255px;left:1709px;"></div>
+        <div class="ic-roll-6" style="top:255px;left:1726px;"></div>
+        <div class="ic-roll-10" style="top:262px;left:1707px;"></div>
+        <div class="ic-roll-6" style="top:262px;left:1726px;"></div>
+        <div class="ic-roll-6" style="top:257px;left:1752px;"></div>
+        <div class="ic-roll-6" style="top:254px;left:1766px;"></div>
+        <div class="ic-roll-6" style="top:265px;left:1830px;"></div>
+        <div class="ic-roll-6" style="top:267px;left:1766px;"></div>
+
+        <!-- #2 CPC -->
+        <div class="ic-cpc2 fault" style="top:135px;left:924px;">
+          <div class="fault-box"></div>
+        </div>
+
+        <div class="ic-air-dryer" style="top:101px;left:1222px;"></div>
+        <div class="ic-air-dryer2" style="top:126px;left:1512px;"></div>
+        <div class="ic-air-dryer2" style="top:126px;left:1539px;"></div>
+
+        <!-- WELDER -->
+        <div class="ic-welder fault" style="top:292px;left:219px;">
+          <div class="fault-img"></div>
+        </div>
+        <div class="ic-cpc" style="top:244px;left:457.05px;"></div>
+        <div class="ic-pinhole" style="top:314px;left:1560px;"></div>
+        <div class="ic-esoiler" style="top:179px;left:1574px;"></div>
+        <div class="ic-tgcwg" style="top:289px;left:1622px;"></div>
+        <div class="ic-tgcwg" style="top:289px;left:1629px;"></div>
+        <div class="ic-snip" style="top:246px;left:1735px;"></div>
+        <!-- PLATING -->
+        <div class="ic-plating" style="top:244px;left:981px;"></div>
+        <div class="ic-plating stop" style="top:244px;left:1010px;"></div>
+        <div class="ic-plating run" style="top:244px;left:1038px;"></div>
+        <div class="ic-plating fault" style="top:244px;left:1066px;">
+          <div class="fault-box"></div>
+        </div>
+        <div class="ic-plating" style="top:244px;left:1094px;"></div>
+        <div class="ic-plating" style="top:244px;left:1122px;"></div>
+        <div class="ic-plating" style="top:244px;left:1150px;"></div>
+        <div class="ic-plating" style="top:244px;left:1178px;"></div>
+        <div class="ic-plating" style="top:244px;left:1206px;"></div>
+        <div class="ic-plating" style="top:244px;left:1234px;"></div>
+
+        <div class="ic-plating" style="top:187px;left:1066px;"></div>
+        <div class="ic-plating" style="top:187px;left:1094px;"></div>
+        <div class="ic-plating" style="top:187px;left:1122px;"></div>
+        <div class="ic-plating" style="top:187px;left:1150px;"></div>
+        <div class="ic-plating" style="top:187px;left:1178px;"></div>
+        <div class="ic-plating" style="top:187px;left:1206px;"></div>
+        <div class="ic-plating" style="top:187px;left:1234px;"></div>
+
+        <!-- TENSION LOOP -->
+        <div class="ic-roll-6" style="top:121px;left:318px;"></div>
+        <div class="ic-roll-6" style="top:121px;left:433px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:316px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:327px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:338px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:349px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:360px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:371px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:383px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:394px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:405px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:416px;"></div>
+        <div class="ic-roll-10" style="top:128px;left:431px;"></div>
+
+        
+        <!-- loop ------>
+        <div class="loop-box-wrapper">
+          <!-- loop-box 의 height 백분율로 이동 -->
+          <div class="loop-box" style="height: 100% ">
+            <div class="line-box">
+              <!-- cl-type1:white cl-type2:blue cl-type3:green -->
+              <img class="svg-line-loop1"/>
+              <img class="svg-line-loop2"/>
+              <img class="svg-line-loop3"/>
+              <img class="svg-line-loop4"/>
+              <img class="svg-line-loop5 cl-type1"/>
+              <img class="svg-line-loop6 cl-type1"/>
+              <img class="svg-line-loop7 cl-type2"/>
+              <img class="svg-line-loop8 cl-type2"/>
+              <img class="svg-line-loop9 cl-type3"/>
+              <img class="svg-line-loop10"/>
+              <img class="svg-line-loop11"/>
+              <img class="svg-line-loop12"/>
+              <img class="svg-line-loop13"/>
+              <img class="svg-line-loop14"/>
+              <img class="svg-line-loop15"/>
+              <img class="svg-line-loop16 cl-type3"/>
+              <img class="svg-line-loop17 cl-type3"/>
+              <img class="svg-line-loop18 cl-type2"/>
+              <img class="svg-line-loop19 cl-type1"/>
+              <img class="svg-line-loop20 cl-type1"/>
+            </div>
+            <div class="roll-base-bar">
+              <div class="ic-roll-10" style="top:0;left:0;"></div> 
+              <div class="ic-roll-10" style="top:0;left:11px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:22px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:33px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:44px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:55px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:66px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:77px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:88px;"></div> 
+              <div class="ic-roll-10" style="top:0;left:99px;"></div> 
+            </div>
+          </div>
+        </div>
+<!-- End 아이콘 배치 -->
+
+
+
+        <!-- 기본 이미지에 대한 텍스트라벨 -->
+        <div class="img-label" style="top:343px;left:24px">#1 POR</div>
+        <div class="img-label" style="top:343px;left:102px">#2 POR</div>
+        <div class="img-label" style="top:271px;left:198px">WELDER</div>
+        <div class="img-label" style="top:346px;left:206px">#1 BRIDLE ROLL</div>
+        <div class="img-label" style="top:402px;left:332px">TENSION LOOP</div>
+        <div class="img-label" style="top:159px;left:453px">WPD</div>
+        <div class="img-label" style="top:223px;left:472px">#1 CPC</div>
+        <div class="img-label" style="top:275px;left:751px">PICKLING</div>
+        <div class="img-label" style="top:130px;left:847px">#2 CPC</div>
+        <div class="img-label" style="top:133px;left:977px">PLATING RINSE</div>
+        <div class="img-label" style="top:133px;left:1098px">FLUXING</div>
+        <div class="img-label" style="top:133px;left:1201px">#1 AIR DRYER</div>
+        <div class="img-label" style="top:163px;left:1108px">TOP PLATING</div>
+        <div class="img-label" style="top:286px;left:1059px">BOTTOM PLATING</div>
+        <div class="img-label" style="top:264px;left:977px">B1</div>
+        <div class="img-label" style="top:264px;left:1006px">B2</div>
+        <div class="img-label" style="top:264px;left:1033px">B3</div>
+        <div class="img-label" style="top:264px;left:1062px">B4</div>
+        <div class="img-label" style="top:264px;left:1090px">B5</div>
+        <div class="img-label" style="top:264px;left:1118px">B6</div>
+        <div class="img-label" style="top:264px;left:1147px">B7</div>
+        <div class="img-label" style="top:264px;left:1174px">B8</div>
+        <div class="img-label" style="top:264px;left:1201px">B9</div>
+        <div class="img-label" style="top:264px;left:1226px">B10</div>
+        <div class="img-label" style="top:206px;left:1230px">T1</div>
+        <div class="img-label" style="top:206px;left:1202px">T2</div>
+        <div class="img-label" style="top:206px;left:1174px">T3</div>
+        <div class="img-label" style="top:206px;left:1147px">T4</div>
+        <div class="img-label" style="top:206px;left:1119px">T5</div>
+        <div class="img-label" style="top:206px;left:1090px">T6</div>
+        <div class="img-label" style="top:206px;left:1063px">T7</div> 
+        <div class="img-label" style="top:62px;left:1351px">REFLOW</div> 
+        <div class="img-label" style="top:313px;left:1352px">QUENCHING</div> 
+        <div class="img-label" style="top:153px;left:1457px">WPD</div> 
+        <div class="img-label" style="top:313px;left:1460px">CHEMICAL</div> 
+        <div class="img-label" style="top:332px;left:1518px">SDD</div> 
+        <div class="img-label" style="top:90px;left:1570px">SDD</div> 
+        <div class="img-label" style="top:192px;left:1609px">E.S OILER</div> 
+        <div class="img-label" style="top:266px;left:1613px">T.G</div> 
+        <div class="img-label" style="top:266px;left:1639px">C.W.G</div> 
+        <div class="img-label" style="top:321px;left:1623px">#3 BRIDLE ROLL</div> 
+        <div class="img-label" style="top:222px;left:1707px">SNIP SHEAR</div> 
+        <div class="img-label" style="top:335px;left:1785px">#1 TR</div> 
+        <div class="img-label" style="top:335px;left:1848px">#2 TR</div> 
+
+        <div class="img-label line-2" style="top:275px;left:442px">#2<br> BRIDLE ROLL</div> 
+        <div class="img-label line-2" style="top:275px;left:526px">#1<br> CLEANING</div> 
+        <div class="img-label line-2" style="top:275px;left:597px">#2<br> CLEANING</div> 
+        <div class="img-label line-2" style="top:275px;left:672px">CLEANING<br> RINSE</div> 
+        <div class="img-label line-2" style="top:275px;left:840px">PICKLING<br> RINSE</div> 
+        <div class="img-label line-2" style="top:324px;left:1550px">PIN HOLE<br> DETECTOR</div> 
+        <div class="img-label line-2" style="top:113px;left:1467px">#2 AIR<br> DRYER</div> 
+        <div class="img-label line-2" style="top:116px;left:1562px">#3 AIR<br> DRYER</div> 
+
+
+
+
+
+        <!-- 롤아이콘 배치 -->
+        <!-- animation 롤아이콘인 경우 on class 추가시 동작 -->
+        <!-- <div class="test-rotate on"></div> -->
+
+        <!-- 그리드 배치 ------------------------------------------------------->
+        <!--일반 그리드는 ul-li 구문으로 처리  (type1, type2,.....)-->     
+        <!-- REFLOW -->
+        <div class="list-grid type1 gd-reflow">
+          <div class="list-title">REFLOW</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>전압 (V)</p>
+              <p>전류 (KA)</p>
+            </li>
+            <li class="data">
+              <p>3.00</p>
+              <p>0.00</p>
+            </li>
+          </ul>
+        </div>
+        <!-- QUENCHING -->
+        <div class="list-grid type1 gd-quenching">
+          <div class="list-title">QUENCHING</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>현재온도 (°C)</p>
+            </li>
+            <li class="data">
+              <p>84</p>
+            </li>
+          </ul>
+        </div>
+        <!-- BOTTOM PLATING -->
+        <div class="list-grid type1 gd-bottom-plating">
+          <div class="list-title">BOTTOM PLATING</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>전류</p>
+            </li>
+            <li class="data">
+              <p>13.3 KA</p>
+            </li>
+          </ul>
+        </div>
+        <!-- TOP PLATING -->
+        <div class="list-grid type1 gd-top-plating">
+          <div class="list-title">TOP PLATING</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>전류</p>
+            </li>
+            <li class="data">
+              <p>12.9 KA</p>
+            </li>
+          </ul>
+        </div>
+        <!-- LOOP POSITION -->
+        <div class="list-grid type1 gd-loop-position">
+          <div class="list-title">LOOP POSITION</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p>위치</p>
+            </li>
+            <li class="data">
+              <p>95%</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #1 BRIDLE ROLL -->
+        <div class="list-grid gd-bridle-roll" style="top:128px; left:12px;">
+          <div class="list-title">#1 BRIDLE ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 BR</p>
+              <p>20.6</p>
+              <p>0</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 BR</p>
+              <p class="bd-dot top left right clbk">0</p>
+              <p class="bd-dot bottom left right clbk">0</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #2 BRIDLE ROLL -->
+        <div class="list-grid gd-bridle-roll" style="top:440px; left:476px;">
+          <div class="list-title">#2 BRIDLE ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 BR</p>
+              <p>20.6</p>
+              <p>0</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 BR</p>
+              <p class="bd-dot top left right clbk">0</p>
+              <p class="bd-dot bottom left right clbk">0</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #3 BRIDLE ROLL -->
+        <div class="list-grid gd-bridle-roll num3" style="top:10px; left:1607px;">
+          <div class="list-title">#3 BRIDLE ROLL</div>
+          <ul class="list-data">
+            <li class="data-title">
+              <p class="title">구분</p>
+              <p>전류 (A)</p>
+              <p>SPEED (mpm)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 BR</p>
+              <p>20.6</p>
+              <p>0</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 BR</p>
+              <p class="bd-dot top left clbk">0</p>
+              <p class="bd-dot bottom left clbk">0</p>
+            </li>
+            <li class="data">
+              <p class="title">#3 BR</p>
+              <p class="bd-dot top right clbk">0</p>
+              <p class="bd-dot bottom right clbk">0</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #2 CLEANING -->
+        <div class="list-grid gd-cleaning">
+          <div class="list-title">#2 CLEANING</div>          
+          <ul class="list-data">    
+            <li class="data-title">
+              <p class="title">전류</p>              
+            </li>          
+            <li class="data">
+              <p class="title">#1 정류기</p>
+              <p>2.4 KA</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 정류기</p>
+              <p>0.7 KA</p>
+            </li>
+          </ul>
+        </div>
+        <!--#1,2 POR -->
+        <div class="list-grid gd-por">
+          <ul class="list-data">
+            <li class="data-title">
+              <p></p>
+              <p>투입원판번호</p>
+              <p>ACTUAL DIA (mm)</p>
+              <p>INITIAL DIA (mm)</p>
+              <p>MIN DIA (mm)</p>
+              <p>감속시작길이 (m)</p>
+              <p>TENSION (%)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 POR</p>
+              <p class="t-center">LOTNO0000104</p>
+              <p>568</p>
+              <p>568</p>
+              <p>102.43</p>
+              <p>506</p>
+              <p>100</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 POR</p>
+              <p class="t-center">LOTNO0000105</p>
+              <p>560</p>
+              <p>560</p>
+              <p>102.43</p>
+              <p>506</p>
+              <p>100</p>
+            </li>
+          </ul>
+        </div>
+        <!-- LINE & MCC -->
+        <div class="list-grid gd-line-mcc">
+          <ul class="list-data">            
+            <li class="data">
+              <p class="title">LINE & MCC</p>
+              <p class="t-center">정상</p>              
+            </li>
+            <li class="data">
+              <p class="title">도금액</p>
+              <p class="t-center">정상</p>              
+            </li>
+          </ul>
+        </div>
+        <!-- CHEMICAL -->
+        <div class="list-grid gd-chemical">
+          <div class="list-title">CHEMICAL</div>          
+          <ul class="list-data">    
+            <li class="data-title">
+              <p class="title">전류</p>              
+            </li>          
+            <li class="data">
+              <p class="title">UP</p>
+              <p>0.7 KA</p>
+            </li>
+            <li class="data">
+              <p class="title">DOWN</p>
+              <p>1.3 KA</p>
+            </li>
+          </ul>
+        </div>
+        <!-- #1,2 TR -->
+        <div class="list-grid gd-tr">
+          <ul class="list-data">
+            <li class="data-title">
+              <p></p>
+              <p>투입원판번호</p>
+              <p>ACTUAL DIA (mm)</p>
+              <p>LENGTH(m)</p>
+              <p>TURN(T)</p>
+              <p>WEIGHT(TON)</p>
+              <p>TENSION (%)</p>
+            </li>
+            <li class="data">
+              <p class="title">#1 TR</p>
+              <p class="t-center">LOTNO0000104</p>
+              <p>560</p>
+              <p>568</p>
+              <p>102.43</p>
+              <p>506</p>
+              <p>100</p>
+            </li>
+            <li class="data">
+              <p class="title">#2 TR</p>
+              <p class="t-center">LOTNO0000105</p>
+              <p>560</p>
+              <p>568</p>
+              <p>102.43</p>
+              <p>506</p>
+              <p>100</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="table-wrap" style=top:645px;left:12px;">
+          <table>
+            <colgroup>
+              <col width="56px">
+              <col width="80px">
+              <col width="80px">
+              <col width="113px">
+              <col width="234px">
+              <col width="182px">
+              <col width="183px">
+              <col width="80px">
+              <col width="80px">
+              <col width="80px">
+              <col width="80px">
+              <col width="80px">
+              <col width="95px">
+              <col width="95px">
+              <col width="108px">
+              <col width="95px">
+              <col width="95px">
+              <col width="80px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>구분</th>
+                <th>MES 순번</th>
+                <th>순서</th>
+                <th>위치</th>
+                <th>수주번호</th>
+                <th>작업지시번호</th>
+                <th>투입원판번호</th>
+                <th>COIL중량</th>
+                <th>조도</th>
+                <th>도유량</th>
+                <th>판폭</th>
+                <th>두께</th>
+                <th>COIL길이</th>
+                <th>TOP 부착량</th>
+                <th>BOTTOM부착량</th>
+                <th>CHE.(UP)</th>
+                <th>CHE.(DOWN)</th>
+                <th>단중량</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="sel">
+                <td>현재</td>
+                <td>1031</td>
+                <td>1</td>
+                <td>-</td>
+                <td>/</td>
+                <td>DUMMY0000104</td>
+                <td>LOTNO0000104</td>
+                <td>17.000</td>
+                <td>3.000</td>
+                <td>3.000</td>
+                <td>934.00</td>
+                <td>0.350</td>
+                <td>10.00</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>10.00</td>
+                <td>10.00</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>다음</td>
+                <td>1031</td>
+                <td>2</td>
+                <td>NO.1 POR</td>
+                <td>/</td>
+                <td>DUMMY0000105</td>
+                <td>LOTNO0000105</td>
+                <td>16.000</td>
+                <td>3.000</td>
+                <td>3.000</td>
+                <td>580.00</td>
+                <td>0.440</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>1031</td>
+                <td>3</td>
+                <td>NO.1 POR</td>
+                <td>/</td>
+                <td>DUMMY0000105</td>
+                <td>LOTNO0000105</td>
+                <td>16.000</td>
+                <td>3.000</td>
+                <td>3.000</td>
+                <td>580.00</td>
+                <td>0.440</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>1031</td>
+                <td>4</td>
+                <td>NO.1 POR</td>
+                <td>/</td>
+                <td>DUMMY0000105</td>
+                <td>LOTNO0000105</td>
+                <td>16.000</td>
+                <td>3.000</td>
+                <td>3.000</td>
+                <td>580.00</td>
+                <td>0.440</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>1031</td>
+                <td>5</td>
+                <td>NO.1 POR</td>
+                <td>/</td>
+                <td>DUMMY0000105</td>
+                <td>LOTNO0000105</td>
+                <td>16.000</td>
+                <td>3.000</td>
+                <td>3.000</td>
+                <td>580.00</td>
+                <td>0.440</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">ENTRY</p>
+          <p class="on">CENTER</p>
+          <p class="on">EXIT</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

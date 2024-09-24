@@ -168,6 +168,11 @@
   top: 180px;
   left: 0;
 }
+.entry-o-wrapper .bg-line-wrap .line-box {
+  position: relative;
+  width: 1920px;
+  height: 602px;
+}
 .entry-o-wrapper .gd-pinchroll {
   width: 191px;
 }
@@ -259,7 +264,12 @@
 
 .center-o-wrapper .bg-line-wrap {
   top: 108px;
-  left: 0;
+  left: -1px;
+}
+.center-o-wrapper .bg-line-wrap .line-box {
+  position: relative;
+  width: 1919px;
+  height: 333px;
 }
 .center-o-wrapper .gauge1 {
   z-index: 2;
@@ -320,6 +330,11 @@
 .exit-o-wrapper .bg-line-wrap {
   top: 160px;
   left: 0;
+}
+.exit-o-wrapper .bg-line-wrap .line-box {
+  position: relative;
+  width: 1919px;
+  height: 353px;
 }
 .exit-o-wrapper .gd-pinchroll {
   width: 191px;
@@ -1200,6 +1215,19 @@
 .tank-box-wrap.s1028x101 .tank-box {
   width: 1023px;
   height: 96px;
+  border: none;
+}
+.tank-box-wrap.s168x80 {
+  width: 168px;
+  height: 80px;
+  background: url(../assets/img_tankbox_168x80.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tank-box-wrap.s168x80 .tank-box {
+  width: 168px;
+  height: 80px;
   border: none;
 }
 

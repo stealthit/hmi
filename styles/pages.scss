@@ -145,6 +145,11 @@
   .bg-line-wrap {
     top: 180px;
     left: 0;
+    .line-box {
+      position: relative;
+      width: 1920px;
+      height: 602px;
+    }
   }
   
   .gd-pinchroll {    
@@ -249,7 +254,12 @@
 .center-o-wrapper {
   .bg-line-wrap {
     top: 108px;
-    left: 0;
+    left: -1px;
+    .line-box {
+      position: relative;
+      width: 1919px;
+      height: 333px;
+    }
   }
   
   .gauge1 {
@@ -312,6 +322,11 @@
   .bg-line-wrap {
     top: 160px;
     left: 0;
+    .line-box {
+      position: relative;
+      width: 1919px;
+      height: 353px;
+    }
   }
   
   .gd-pinchroll {
@@ -1149,6 +1164,19 @@
     .tank-box {
       width: 1023px;
       height: 96px;
+      border: none;
+    }
+  }
+  &.s168x80 {
+    width: 168px;
+    height: 80px;
+    background: url(#{$imgPath}img_tankbox_168x80.png);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .tank-box {
+      width: 168px;
+      height: 80px;
       border: none;
     }
   }
