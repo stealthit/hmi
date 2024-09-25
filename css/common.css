@@ -3321,7 +3321,7 @@ button.btn-normal.on {
 }
 
 .ic-roll-32 {
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .ic-cpc2 {

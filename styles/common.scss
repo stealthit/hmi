@@ -2598,7 +2598,7 @@ button.btn-normal{
   @include create_ic_roll(4); 
 }
 .ic-roll-32 {
-  background-size: cover;
+  background-size: cover !important;
 }
 // line tracking
 .ic-cpc2 {
