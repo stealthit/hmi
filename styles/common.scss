@@ -1951,17 +1951,32 @@ button.btn-normal{
   width: 16px;
   height: 16px;  
 }
+.ic-hot-air {
+  position: absolute;
+  content: url(#{$imgPath}ic_hot_air.png);
+  width: 40px;
+  height: 50px;  
+}
 .ic-leak-sensor-20 {
   content: url(#{$imgPath}ic_leak_sensor_20.svg);
   width: 20px;
   height: 20px;
   mix-blend-mode: multiply;
 }
+
 .img-pickling-tank {
   position: absolute;
   content: url(#{$imgPath}img_pickling_tank.png);
   width: 162px;
   height: 261px;
+  mix-blend-mode: multiply; 
+  opacity: 0.5;
+}
+.img-sump-tank {
+  position: absolute;
+  content: url(#{$imgPath}img_EXIT_SUMP.png);
+  width: 127px;
+  height: 101px;
   mix-blend-mode: multiply; 
   opacity: 0.5;
 }
@@ -1978,6 +1993,13 @@ button.btn-normal{
   content: url(#{$imgPath}img_wave_37.png);
   width: 37px;
   height: 30px;
+  mix-blend-mode: multiply;
+}
+.img-wave-87 {
+  position: absolute;
+  content: url(#{$imgPath}img_wave_87.png);
+  width: 89px;
+  height: 32px;
   mix-blend-mode: multiply;
 }
 .img-err404 {
@@ -2521,6 +2543,9 @@ button.btn-normal{
 .ic-roll-34 {
   @include create_ic_roll(34); 
 } 
+.ic-roll-32 {
+  @include create_ic_roll(32); 
+}
 .ic-roll-30 {
   @include create_ic_roll(30); 
 }
@@ -2571,6 +2596,9 @@ button.btn-normal{
 }
 .ic-roll-4 {
   @include create_ic_roll(4); 
+}
+.ic-roll-32 {
+  background-size: cover;
 }
 // line tracking
 .ic-cpc2 {
@@ -3546,6 +3574,29 @@ button.btn-normal{
     }
   }
 }
+.ic-valve-type2 {
+  position: absolute;
+  width: 22px;
+  height: 14px;
+  background: url(#{$imgPath}ic_valve_type2_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_valve_type2_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_valve_type2_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_valve_type2_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_valve_type2_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
 .ic-flexible-hose {
   position: absolute;
   width: 22px;
@@ -3600,6 +3651,33 @@ button.btn-normal{
     transform: rotate(-90deg);
   }
 }
+.ic-flexible-hose3 {
+  position: absolute;
+  width: 22px;
+  height: 14px;
+  background: url(#{$imgPath}ic_FLEXIBLE_HOSE3_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_FLEXIBLE_HOSE3_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_FLEXIBLE_HOSE3_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_FLEXIBLE_HOSE3_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_FLEXIBLE_HOSE3_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+
+  &.left {
+    transform: rotate(-90deg);
+  }
+}
 .ic-diaphragm-valve {
   position: absolute;
   width: 7px;
@@ -3625,6 +3703,33 @@ button.btn-normal{
 
   &.ori {
     transform: rotate(90deg);
+  }
+}
+.ic-diaphragm2-valve {
+  position: absolute;
+  width: 24px;
+  height: 7px;
+  background-image: url(#{$imgPath}ic_diaphragm2_valve_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background-image: url(#{$imgPath}ic_diaphragm2_valve_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_diaphragm2_valve_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_diaphragm2_valve_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_diaphragm2_valve_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+
+  &.left {
+    transform: rotate(-90deg);
   }
 }
 .ic-line-valve {
@@ -3741,6 +3846,9 @@ button.btn-normal{
       animation: blink-effect 1s step-end infinite;    
     }
   }
+  &.left {
+    transform: rotate(-90deg);
+  }
 }
 .ic-control-valve {
   position: absolute;
@@ -3786,6 +3894,10 @@ button.btn-normal{
       background: url(#{$imgPath}ic_AIR_DIAPHAGM_PUMP_fault.svg);
       animation: blink-effect 1s step-end infinite;    
     }
+  }
+
+  &.mirror {
+    transform: scaleX(-1);
   }
 }
 .ic-air-pump-l {
@@ -3949,6 +4061,29 @@ button.btn-normal{
     }
   }
 }
+.ic-tic-30 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url(#{$imgPath}ic_tic_none_30.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_tic_stop_30.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_tic_run_30.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_tic_stop_30.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_tic_fault_30.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
 .ic-tg {
   position: absolute;
   width: 42px;
@@ -3987,6 +4122,29 @@ button.btn-normal{
   }
   &.fault {
     background: url(#{$imgPath}ic_m_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_m_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-m-30 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url(#{$imgPath}ic_m_none_32.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_m_stop_32.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_m_run_32.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_m_stop_32.svg);
     .fault-img {
       width: 100%;
       height: 100%;
@@ -4034,12 +4192,58 @@ button.btn-normal{
   &.fault {
     background: url(#{$imgPath}ic_pg_stop.svg);
     .fault-img {
-      width: 100%;
+      width: 100%; 
       height: 100%;
       background: url(#{$imgPath}ic_pg_fault.svg);
       animation: blink-effect 1s step-end infinite;    
     }
   }
+}
+.ic-polygon-18 {
+  position: absolute;
+  width: 16px;
+  height: 22px;
+  background: url(#{$imgPath}ic_polygon_none_18.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_polygon_stop_18.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_polygon_run_18.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_polygon_stop_18.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_polygon_fault_18.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-strainer-y {
+  position: absolute; 
+  width: 17px;
+  height: 24px;
+  background: url(#{$imgPath}ic_Strainer_y_none.svg);
+  z-index: 99;
+  
+  // &.stop {
+  //   background: url(#{$imgPath}ic_Strainer_y_stop.svg);
+  // }
+  // &.run {
+  //   background: url(#{$imgPath}ic_Strainer_y_run.svg);
+  // }
+  // &.fault {
+  //   background: url(#{$imgPath}ic_Strainer_y_stop.svg);
+  //   .fault-img {
+  //     width: 100%;
+  //     height: 100%;
+  //     background: url(#{$imgPath}ic_Strainer_y_fault.svg);
+  //     animation: blink-effect 1s step-end infinite;    
+  //   }
+  // }
 }
 .ic-strainer-b {
   position: absolute; 
@@ -4062,6 +4266,33 @@ button.btn-normal{
       background: url(#{$imgPath}ic_Strainer_b_fault.svg);
       animation: blink-effect 1s step-end infinite;    
     }
+  }
+}
+.ic-strainer-b2 {
+  position: absolute; 
+  width: 33px;
+  height: 24px;
+  background: url(#{$imgPath}ic_Strainer_b2_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_Strainer_b2_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_Strainer_b2_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_Strainer_b2_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_Strainer_b2_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+
+  &.left {
+    transform: rotate(-90deg);
   }
 }
 .ic-li {
@@ -4179,6 +4410,29 @@ button.btn-normal{
     }
   }
 }
+.ic-shape {
+  position: absolute;
+  width: 28px;
+  height: 26px;
+  background: url(#{$imgPath}ic_shape_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_shape_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_shape_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_shape_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_shape_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
 .ic-fm {
   position: absolute;
   width: 58px;
@@ -4200,6 +4454,35 @@ button.btn-normal{
       background: url(#{$imgPath}ic_fm_fault.svg);
       animation: blink-effect 1s step-end infinite;    
     }
+  }
+  &.left {
+    transform: rotate(-90deg);
+  }
+}
+.ic-fm2 {
+  position: absolute;
+  width: 28px;
+  height: 48px;
+  background: url(#{$imgPath}ic_fm2_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_fm2_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_fm2_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_fm2_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_fm2_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+  &.left {
+    transform: rotate(-90deg);
   }
 }
 .ic-circle-type1 {
@@ -4305,6 +4588,29 @@ button.btn-normal{
   height: 30px;
   background: url(#{$imgPath}ic_circle_type3.svg);
   z-index: 99;  
+}
+.ic-circle-type4 {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url(#{$imgPath}ic_circle_type4_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_circle_type4_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_circle_type4_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_circle_type4_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_circle_type4_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
 }
 .ic-flow-meter {
   position: absolute;
