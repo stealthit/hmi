@@ -424,6 +424,7 @@
   background: #CCCCCC;
   word-break: break-all;
   line-height: 24px;
+  padding: 1px;
 }
 .pop-coil-sche1 .popup-body .table-wrap table td.on {
   background: #FFFFFF;
@@ -514,6 +515,7 @@
   height: 60px;
 }
 .pop-coil-sche3 .popup-body .table-wrap table td {
+  padding: 1px;
   font-weight: 700;
   color: #002878;
   background: #CCCCCC;

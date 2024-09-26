@@ -419,6 +419,7 @@
           background: $cl_neutral_5;
           word-break: break-all;
           line-height: 24px;
+          padding: 1px;
           input[type='text'] {
             border: none;
             width: 100%;
@@ -491,6 +492,7 @@
         font-weight: 700;
         tr {height: 60px;}
         td {
+          padding: 1px;
           &.on {background: $cl_neutral_6;}
           font-weight: 700;
           color: $cl_data_1;
