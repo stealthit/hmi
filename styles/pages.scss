@@ -1039,6 +1039,184 @@
   }
 }
 
+.coil-sche-wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .flex-row {
+    display: flex;
+    & > * {flex: 1;}
+  }
+  
+  .select-data-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .search-wrap {
+      display: flex;
+      justify-content: space-between;
+      .search-field-box {
+        background: none;
+        flex-direction: row;
+        gap: 10px;
+        .field-row {
+          width: 1460px;
+          background: $cl_neutral_5;
+          
+          .title {width: 210px; justify-content: center;}
+          .data-box {border-right: none;}
+        }
+        .btn-normal {width: 100px;height: 36px; background: $cl_neutral_6;}
+      }
+      .loading-wrap {
+        // &.active {
+
+        //   transition: all 1s;
+        // }
+        width: 125px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        li {
+          width: 10px;
+          height: 24px;
+          border-radius: 5px;
+          border: 1px solid $cl_neutral_2;  
+          &.on {background: $cl_neutral_2}      
+        }
+
+      }
+
+      // ul li::marker { 
+      //     animation-name: GFG; 
+      //     animation-duration: 1s; 
+      //     animation-fill-mode: forwards; 
+      // } 
+
+      // ul li:nth-child(1)::marker { 
+      //     animation-delay: 0; 
+      // } 
+
+      // ul li:nth-child(2)::marker { 
+      //     animation-delay: 1s; 
+      // } 
+
+      // ul li:nth-child(3)::marker { 
+      //     animation-delay: 2s; 
+      // } 
+
+      // ul li:nth-child(4)::marker { 
+      //     animation-delay: 3s; 
+      // } 
+
+      // ul li:nth-child(5)::marker { 
+      //     animation-delay: 4s; 
+      // } 
+
+      // ul li:nth-child(6)::marker { 
+      //   animation-delay: 5s; 
+      // }  
+      // ul li:nth-child(7)::marker { 
+      //   animation-delay: 6s; 
+      // }  
+      // ul li:nth-child(8)::marker { 
+      //   animation-delay: 7s; 
+      // }  
+      // ul li:nth-child(9)::marker { 
+      //   animation-delay: 8s; 
+      // }  
+      // ul li:nth-child(10)::marker { 
+      //   animation-delay: 9s; 
+      // }  
+
+      // @keyframes GFG { 
+      //     from { 
+      //         background: transparent; 
+      //     } 
+
+      //     to { 
+      //         background: $cl_neutral_2;
+      //     } 
+      // } 
+    }
+    .dt-table-wrap {
+      width: 100%;
+      max-height: 598px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      // border: 1px solid $cl_neutral_3;
+      table tr {border-top: none !important;}
+      table tr td, table tr th{text-align: center !important;}
+      .dt-scroll-head table thead tr {height: 59px;line-height: 23px;}
+      &.scroll-table {
+        .dt-layout-row:last-child {height: 0 !important;}
+        .dt-container {
+          .dt-layout-table {
+            .dt-layout-full {
+              .dt-scroll {
+                .dt-scroll-head {
+                  border-bottom: 1px solid $cl_neutral_3;
+                }
+                .dt-scroll-body {
+                  max-height: 502px !important;
+                  border-bottom: none;
+                  // table thead {display: none;}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .msg-wrap {
+      display: flex;
+      height: 36px;
+      font-size: 16px;
+      font-weight: 700;
+      .title {
+        height: 100%;
+        width: 120px;
+        border: 1px solid $cl_neutral_4;
+        background: #656565;
+        color: $cl_neutral_6;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+      }
+      .msg-text {
+        flex: 1;
+        border: 1px solid #656565;
+        height: 100%;
+        border-left: none;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        color: $cl_neutral_1;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .bottom-btn-wrap {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 8px;
+    button.btn-normal {
+      height: 40px;
+      background: $cl_neutral_6;
+
+      &.start {
+        background: $cl_neutral_2;
+        color: $cl_neutral_6;
+      }
+    }
+  }
+}
+
 .cleaning-wrapper {
   background: url(#{$imgPath}img_bg_cleaning.png);
   width: 1920px;

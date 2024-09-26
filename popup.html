@@ -80,6 +80,13 @@
     <button onclick="openPopup1('pop-TP31EXS050')">TP31EXS050 - Exit Overview_#1#2 EPC 제어</button> 
     <button onclick="openPopup1('pop-TP31EXS060')">TP31EXS060 - Exit Overview_SNIP SHEAR 제어</button> 
   </div>
+  <h2>COIL SCHEDULE</h2>
+  <div class="popup-button-group">
+    <button onclick="openPopup1('pop-coil-sche1')">MES 작업순서변경</button> 
+    <button onclick="openPopup1('pop-coil-sche2')">작업지시삭제</button> 
+    <button onclick="openPopup1('pop-coil-sche3')">DUMMY COIL 생성</button> 
+    <button onclick="openPopup1('pop-coil-sche4')">Coil Schedule_RETURN</button> 
+  </div>
 
   <!-- popup Background -->
   <div id="bg-popup1"></div>
@@ -992,6 +999,369 @@
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
       <button onclick='closePopup1(event)'>닫기</button>
+    </div> 
+  </div>
+<!-- MES 작업순서변경 -->
+  <div class="popup-wrap pop-coil-sche1">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="pop-title">MES 작업순서변경</div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="2">선택</th>
+              <th colspan="2">변경</th>
+              <th rowspan="2">작업지시<br>번호</th>
+              <th rowspan="2">상태</th>
+              <th rowspan="2">Record<br>Count</th>
+              <th rowspan="2">순서변경<br>시간</th>
+            </tr>
+            <tr>
+              <th>MES순번</th>
+              <th>투입순서</th>
+              <th>MES순번</th>
+              <th>투입순서</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2001</td>
+              <td>06</td>
+              <td class="on"><input type="text" placeholder="입력"></td>                
+              <td class="on"><input type="text" placeholder="입력"></td>
+              <td>10341242</td>       
+              <td>다음</td>        
+              <td></td> 
+              <td>2024-12-12 12:12:12</td>
+            </tr>    
+            <tr>
+              <td>2001</td>
+              <td>07</td>
+              <td class="on"><input type="text" placeholder="입력"></td>                
+              <td class="on"><input type="text" placeholder="입력"></td>
+              <td>10341248</td>       
+              <td>대기</td>        
+              <td></td> 
+              <td>2024-09-05 12:13:02</td>
+            </tr>    
+            <tr>
+              <td>2002</td>
+              <td>01</td>
+              <td class="on"><input type="text" placeholder="입력"></td>                
+              <td class="on"><input type="text" placeholder="입력"></td>
+              <td>10341250</td>       
+              <td>대기</td>        
+              <td></td> 
+              <td>2024-12-12 12:12:12</td>
+            </tr>    
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>            
+          </tbody>
+        </table>
+      </div>          
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal">확인</button>
+      <button onclick='closePopup1(event)'>취소</button>
+    </div> 
+  </div>
+
+<!-- 작업지시삭제 -->
+  <div class="popup-wrap pop-coil-sche2">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="pop-title">작업지시삭제</div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col width="168px">
+            <col width="168px">
+            <col width="168px">
+            <col width="168px">
+            <col width="168px">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>작업지시번호</th>
+              <th>MES순번</th>
+              <th>투입순서</th>
+              <th>상태</th>
+              <th>Record Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>조회전용</td>
+              <td>조회전용</td>
+              <td>조회전용</td>       
+              <td>다음</td>        
+              <td>002</td> 
+            </tr>    
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>       
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>       
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>       
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>       
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>       
+          </tbody>
+        </table>
+      </div>          
+      <div class="msg-box">
+        <img src="" alt="" class="ic-info-red">
+        “확인" 버튼 클릭시 팝업화면의 작업지시가 삭제됩니다.
+      </div>
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal">확인</button>
+      <button onclick='closePopup1(event)'>취소</button>
+    </div> 
+  </div>
+
+<!-- DUMMY COIL 생성 -->
+  <div class="popup-wrap pop-coil-sche3">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="pop-title">DUMMY COIL 생성</div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col width="280px">
+            <col width="280px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+            <col width="140px">
+          </colgroup>
+          <thead>
+            <tr>
+              <th>작업지시번호</th>
+              <th>투입원판번호</th>
+              <th>MES순번</th>
+              <th>투입순서</th>
+              <th>투입중량<br>(kg)</th>
+              <th>두께<br>(mm)</th>
+              <th>폭<br>(mm)</th>
+              <th>상부착량<br>(mm)</th>
+              <th>하부착량<br>(mm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>D20240823_01</td>
+              <td>Lot_20240823_01</td>
+              <td class="on"><input type="text" name="" id="" placeholder="입력"></td>       
+              <td class="on"><input type="text" name="" id="" placeholder="입력"></td>       
+              <td class="on"><input type="text" name="" id="" placeholder="입력"></td>       
+              <td class="on"><input type="text" name="" id="" placeholder="입력"></td>       
+              <td class="on"><input type="text" name="" id="" placeholder="입력"></td>       
+              <td class="on"><input type="text" name="" id="" placeholder="입력"></td>       
+              <td class="on"><input type="text" name="" id="" placeholder="입력"></td>       
+            </tr>                  
+          </tbody>
+        </table>
+      </div>          
+      <div class="msg-box">
+        <img src="" alt="" class="ic-info-red">
+        DUMMY COIL생성 위치는 MES 순번, 투입순서대로 생성됩니다. 
+      </div>
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal">확인</button>
+      <button onclick='closePopup1(event)'>취소</button>
+    </div> 
+  </div>
+
+<!-- Coil Schedule_RETURN -->
+  <div class="popup-wrap pop-coil-sche4">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="pop-title">COIL Schedule</div>
+      <div class="flex-row">
+        <div class="return-wrap">
+          <div class="table-label">Before Return(중절 이전)</div>
+          <div class="table-wrap">
+            <table>
+              <colgroup>
+                <col width="80px">
+                <col width="120px">
+                <col width="120px">
+                <col width="80px">
+                <col width="179px">
+                <col width="120px">
+                <col width="120px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>상태</th>
+                  <th>MES 순번</th>
+                  <th>투입<br>순서</th>
+                  <th>작업지시번호</th>
+                  <th>코일위치</th>
+                  <th>고객사명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="selected">
+                  <td>0</td>
+                  <td>현재</td>
+                  <td>123456789</td>
+                  <td>1</td>
+                  <td>2001</td>
+                  <td>#1.POR</td>
+                  <td>CC</td>
+                </tr>   
+                <tr>
+                  <td>1</td>
+                  <td>다음</td>
+                  <td>2222</td>
+                  <td>1</td>
+                  <td>2002</td>
+                  <td>#2.POR</td>
+                  <td>DD</td>
+                </tr>                   
+              </tbody>
+            </table>
+          </div>        
+        </div>
+        <div class="img-box">
+          <img src="" alt="" class="img-big-arrow">
+        </div>  
+        <div class="return-wrap">
+          <div class="table-label">After Return(중절 이후)</div>
+          <div class="table-wrap">
+            <table>
+              <colgroup>
+                <col width="80px">
+                <col width="120px">
+                <col width="120px">
+                <col width="80px">
+                <col width="179px">
+                <col width="120px">
+                <col width="120px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>NO</th>
+                  <th>상태</th>
+                  <th>MES 순번</th>
+                  <th>투입<br>순서</th>
+                  <th>작업지시번호</th>
+                  <th>코일위치</th>
+                  <th>고객사명</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="selected">
+                  <td>0</td>
+                  <td>현재</td>
+                  <td>2222</td>
+                  <td>1</td>
+                  <td>2002</td>
+                  <td>#2.POR</td>
+                  <td>DD</td>
+                </tr>   
+                <tr>
+                  <td>1</td>
+                  <td>다음</td>
+                  <td>3333</td>
+                  <td>3</td>
+                  <td>2003</td>
+                  <td>#1.POR</td>
+                  <td>EE</td>
+                </tr>                   
+              </tbody>
+            </table>
+          </div>        
+        </div>
+      </div>
+      <div class="msg-box">
+        <img src="" alt="" class="ic-info-red">
+        DUMMY COIL생성 위치는 MES 순번, 투입순서대로 생성됩니다. 
+      </div>
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal">확인</button>
+      <button onclick='closePopup1(event)'>취소</button>
     </div> 
   </div>
 

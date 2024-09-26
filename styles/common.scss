@@ -38,6 +38,10 @@ input[type='radio'] {
     no-repeat center;
   border:none;
 }
+
+input[type="checkbox"]{
+  zoom: 1.3;  
+}
 // -------------------------------
 // date style
 input[type='datetime-local'] {
@@ -1816,7 +1820,22 @@ input[type='datetime-local']:valid::before {
           height: 100%;
         }
       }
-    }    
+    }  
+    
+    .msg-box {
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 24px;
+      font-weight: 700;
+      color: $cl_alaram_1;
+      width: 100%;
+      height: 60px;
+      margin-top: 20px;
+      background: $cl_neutral_7;
+      border-radius: 4px;
+    }
   }
   .popup-footer {
     padding: 0 20px;
@@ -1936,6 +1955,11 @@ button.btn-normal{
   }
 }
 //----- image -------------------------
+.ic-info-red {
+  content: url(#{$imgPath}ic_info_red.svg);
+  width: 28px;
+  height: 28px;    
+}
 .ic-onoff-24 {
   content: url(#{$imgPath}ic_onoff_24.svg);
   width: 24px;
@@ -1963,7 +1987,11 @@ button.btn-normal{
   height: 20px;
   mix-blend-mode: multiply;
 }
-
+.img-big-arrow {
+  content: url(#{$imgPath}img_big_arrow.png);
+  width: 78px;
+  height: 102px; 
+}
 .img-pickling-tank {
   position: absolute;
   content: url(#{$imgPath}img_pickling_tank.png);
