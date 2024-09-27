@@ -1224,6 +1224,9 @@
   background: #333333;
   color: #FFFFFF;
 }
+.coil-sche-wrapper.live .search-wrap .search-field-box .field-row {
+  width: 100%;
+}
 .coil-sche-wrapper.live .bottom-btn-wrap {
   justify-content: flex-start;
 }

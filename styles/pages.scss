@@ -1223,6 +1223,13 @@
   }
 
   &.live {
+    .search-wrap {
+      .search-field-box {
+        .field-row {
+          width: 100%;
+        }
+      }
+    }
     .bottom-btn-wrap {
       justify-content: flex-start;
       button.btn-normal {
