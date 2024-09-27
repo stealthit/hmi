@@ -1221,6 +1221,15 @@
       }
     }
   }
+
+  &.live {
+    .bottom-btn-wrap {
+      justify-content: flex-start;
+      button.btn-normal {
+        width: 228px;
+      }
+    }
+  }
 }
 
 .cleaning-wrapper {

@@ -1224,6 +1224,12 @@
   background: #333333;
   color: #FFFFFF;
 }
+.coil-sche-wrapper.live .bottom-btn-wrap {
+  justify-content: flex-start;
+}
+.coil-sche-wrapper.live .bottom-btn-wrap button.btn-normal {
+  width: 228px;
+}
 
 .cleaning-wrapper {
   background: url(../assets/img_bg_cleaning.png);
