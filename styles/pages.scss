@@ -1148,7 +1148,13 @@
       flex-direction: column;
       // border: 1px solid $cl_neutral_3;
       table tr {border-top: none !important;}
-      table tr td, table tr th{text-align: center !important;}
+      table tr td, table tr th{
+        text-align: center !important;
+        white-space: nowrap;
+        padding: 0;
+        vertical-align: middle;
+        &:last-child {border-right: none;}
+      }
       .dt-scroll-head table thead tr {height: 59px;line-height: 23px;}
       &.scroll-table {
         .dt-layout-row:last-child {height: 0 !important;}

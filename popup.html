@@ -86,6 +86,9 @@
     <button onclick="openPopup1('pop-coil-sche2')">작업지시삭제</button> 
     <button onclick="openPopup1('pop-coil-sche3')">DUMMY COIL 생성</button> 
     <button onclick="openPopup1('pop-coil-sche4')">Coil Schedule_RETURN</button> 
+    <button onclick="openPopup1('pop-coil-sche5')">COIL 위치 지정</button> 
+    <button onclick="openPopup1('pop-coil-sche6')">임의 작업지시번호 생성</button> 
+    <button onclick="openPopup1('pop-coil-sche7')">DUMMY 강제 전환</button> 
   </div>
 
   <!-- popup Background -->
@@ -1322,6 +1325,8 @@
       </div>
     </div>
     <div class="popup-footer">
+      <button class="btn-normal">추가</button>
+      <button class="btn-normal">삭제</button>
       <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
       <button onclick='closePopup1(event)'>취소</button>
     </div> 
@@ -1444,6 +1449,616 @@
     </div> 
   </div>
 
+  <!-- COIL 위치 지정 -->
+  <div class="popup-wrap pop-coil-sche5">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="pop-title">COIL 위치 지정</div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col width="80px">
+            <col width="120px">
+            <col width="160px">
+            <col width="120px">
+            <col width="180px">
+            <col width="160px">
+            <col width="160px">
+            <col width="160px">
+            <col width="160px">
+          </colgroup>
+          <thead>            
+            <tr>
+              <th>No</th>
+              <th>상태</th>
+              <th>MES 순번</th>
+              <th>투입순서</th>
+              <th>COIL 위치</th>
+              <th>작업지시번호</th>
+              <th>작업지시일자</th>
+              <th>투입원판번호</th>
+              <th>고객사명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="selected">
+              <td>0</td>
+              <td>현재</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select class="input">  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>1</td>
+              <td>다음</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select class="input">  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>2</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>3</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>4</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>5</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>6</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>7</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>8</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>9</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>10</td>
+              <td>대기</td>
+              <td></td>                
+              <td></td>
+              <td class="on">
+                <select>  
+                  <option value="1">#1 POR</option>  
+                  <option value="2">#2 POR</option>  
+                  <option value="3">#3 POR</option>
+                </select>
+              </td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+            </tr>                      
+          </tbody>
+        </table>
+      </div>          
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
+      <button onclick='closePopup1(event)'>취소</button>
+    </div> 
+  </div>
+
+  <!-- 임의 작업지시번호 생성 -->
+  <div class="popup-wrap pop-coil-sche6">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="pop-title">임의 작업지시번호 생성</div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col width="65px">
+            <col width="120px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">
+            <col width="130px">            
+            <col width="130px">            
+          </colgroup>
+          <thead>            
+            <tr>
+              <th>No</th>
+              <th>상태</th>
+              <th>MES 순번</th>
+              <th>투입순서</th>
+              <th>COIL 위치</th>
+              <th>수주번호</th>
+              <th>작업지시번호</th>
+              <th>작업지시일자</th>
+              <th>투입원판번호</th>
+              <th>투입중량<br>(kg)</th>
+              <th>두께<br>(mm)</th>
+              <th>폭<br>(mm)</th>
+              <th>상부착량<br>(mm)</th>
+              <th>하부착량<br>(mm)</th>
+              <th>환산길이<br>(m)</th>
+              <th>후공정</th>
+              <th>단중<br>(kg)</th>
+              <th>품목코드</th>
+              <th>고객사명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="selected">
+              <td>0</td>
+              <td>현재</td>
+              <td>5</td>                
+              <td>5</td>
+              <td>#1 ROR</td>       
+              <td>10000098</td>        
+              <td>10349514</td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td>1</td>
+              <td>다음</td>
+              <td>5</td>                
+              <td>2</td>
+              <td>#1 ROR</td>       
+              <td>10000098</td>        
+              <td>10349514_1</td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+          </tbody>
+        </table>
+      </div>          
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
+      <button onclick='closePopup1(event)'>취소</button>
+    </div> 
+  </div>
+
+  <!-- DUMMY 강제 전환 -->
+  <div class="popup-wrap pop-coil-sche7">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="pop-title">DUMMY 강제 전환</div>
+      <div class="table-wrap">
+        <table>
+          <colgroup>
+            <col width="60px">
+            <col width="80px">
+            <col width="140px">
+            <col width="112px">
+            <col width="120px">
+            <col width="160px">
+            <col width="180px">
+            <col width="160px">
+            <col width="200px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">
+            <col width="120px">                     
+          </colgroup>
+          <thead>            
+            <tr>
+              <th>No</th>
+              <th>상태</th>
+              <th>MES순번</th>
+              <th>투입순서</th>
+              <th>COIL위치</th>
+              <th>수주번호</th>
+              <th>작업지시번호</th>
+              <th>작업지시일자</th>
+              <th>투입원판번호</th>
+              <th>투입중량<br>(kg)</th>
+              <th>두께<br>(mm)</th>
+              <th>폭<br>(mm)</th>
+              <th>상부착량<br>(mm)</th>
+              <th>하부착량<br>(mm)</th>
+              <th>환산길이<br>(m)</th>
+              <th>후공정</th>
+              <th>단중<br>(kg)</th>
+              <th>품목코드</th>
+              <th>고객사명</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="selected">
+              <td class="cl-data1">0</td>
+              <td class="cl-data1">현재</td>
+              <td>10000011</td>                
+              <td>5</td>
+              <td></td>       
+              <td></td>        
+              <td>D20240823<br>_01</td> 
+              <td></td>
+              <td>Lot_20240823<br>_001</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>    
+            <tr>
+              <td class="cl-data1">1</td>
+              <td class="cl-data1">다음</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">2</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">3</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">4</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">5</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">6</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">7</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">8</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+            <tr>
+              <td class="cl-data1">9</td>
+              <td class="cl-data1">대기</td>
+              <td></td>                
+              <td></td>
+              <td></td>       
+              <td></td>        
+              <td></td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                               
+          </tbody>
+        </table>
+      </div>          
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
+      <button onclick='closePopup1(event)'>취소</button>
+    </div> 
+  </div>
 </body>
 <!-- <script src="./scripts/script.js"></script> -->
 <script>

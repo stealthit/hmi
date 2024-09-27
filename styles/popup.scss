@@ -86,7 +86,10 @@
 
 .pop-keypad {
   width: 419px;
-  height: 750px;
+  height: 770px;
+  background: $cl_neutral_6;
+  box-shadow: 0px 4px 30px 0px #00000026;
+
   .calc-wrap {
     display: flex;
     flex-direction: column;
@@ -171,9 +174,14 @@
   }
   .popup-footer {
     justify-content: center;
+    padding-bottom: 20px;
     button { 
       flex: none;
       width: 66px;
+      height: 28px;
+      font-size: 14px;
+      box-shadow: 0px -4px 4px 0px #00000040 inset;
+
     }
   }
 }
@@ -640,6 +648,144 @@
       flex: none;
       box-shadow: 0px -10px 10px 0px #00000040 inset;
 
+    }
+  }
+}
+
+// COIL 위치 지정
+.pop-coil-sche5 {
+  width: 1340px;
+  height: 876px;
+
+  .popup-body {
+    .table-wrap {
+      width: 1300px;
+      table {
+        table-layout: fixed;
+        font-size: 24px;
+        font-weight: 700;
+        tr {height: 54px;}
+        td {
+          &.on {background: $cl_neutral_6;}
+          font-weight: 700;
+          color: $cl_data_1;
+          background: $cl_neutral_5;
+          word-break: break-all;
+          line-height: 24px;
+          padding: 10px;   
+          
+          select {
+            display: none;
+            &.input {display: inline-block;}
+          }
+        }
+      }
+    }
+  }
+  .popup-footer {
+    justify-content: center;
+    button {
+      width: 235px;
+      flex: none;
+    }
+  }
+}
+
+// COIL 위치 지정
+.pop-coil-sche6 {
+  width: 1880px;
+  height: 417px;
+
+  .popup-body {
+    .table-wrap {
+      width: 1840px;
+      overflow: overlay;
+      table {
+        width: 2455px;
+        table-layout: fixed;
+        font-size: 24px;
+        font-weight: 700;
+        th {white-space: nowrap;}
+        tr {height: 54px;}
+        td {
+          &.on {background: $cl_neutral_6;}
+          font-weight: 700;
+          color: $cl_data_1;
+          background: $cl_neutral_5;
+          word-break: break-all;
+          line-height: 24px;
+          padding: 10px;   
+          white-space: nowrap;
+          
+          select {
+            display: none;
+            &.input {display: inline-block;}
+          }
+        }
+      }
+    }
+  }
+  .popup-footer {
+    justify-content: center;
+    button {
+      width: 235px;
+      flex: none;
+    }
+  }
+}
+
+// COIL 위치 지정
+.pop-coil-sche7 {
+  width: 1880px;
+  height: 816px;
+
+  .popup-body {
+    .table-wrap {
+      width: 1840px;
+      height: 600px;
+      overflow: overlay;
+      table {
+        width: 2412px;
+        border-collapse: separate;
+	      border-spacing: 0;
+        table-layout: fixed;
+        font-size: 24px;line-height: 34.75px;
+        font-weight: 700;
+        color: $cl_neutral_1;
+        thead tr {
+          position: sticky;
+          top: 0;
+        }
+        th {
+          height: 90px;
+          border-left: none;
+          // border-bottom: 1px solid $cl_neutral_4;
+          &:last-child {border-right: none;}
+        }
+        tr {min-height: 60px;}
+        td {
+          border-left: none;
+          border-top: none;
+          font-weight: 700;
+          padding: 10px;
+          white-space: wrap;
+          word-break: break-all;
+          min-height: 60px;
+          &:last-child {border-right: none;}
+          &.on {background: $cl_neutral_6;}
+          &.cl-data1 {
+            color: $cl_data_1;
+          }
+          background: $cl_neutral_5;
+        }
+      }
+    }
+  }
+  .popup-footer {
+    justify-content: center;
+    button {
+      width: 235px;
+      flex: none;
     }
   }
 }

@@ -1160,6 +1160,12 @@
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr td, .coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr th {
   text-align: center !important;
+  white-space: nowrap;
+  padding: 0;
+  vertical-align: middle;
+}
+.coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr td:last-child, .coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr th:last-child {
+  border-right: none;
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap .dt-scroll-head table thead tr {
   height: 59px;

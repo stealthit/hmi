@@ -9,6 +9,26 @@ input[type='radio'] {
   display: none;
 }
 
+select {
+  box-sizing: border-box;
+  min-width: 160px;
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 24px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background:url(#{$imgPath}ic_drop_down.svg) no-repeat right -1px center;
+}
+
+option {
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 24px;
+  color: $cl_data_1;
+}
+
 .radio-label{
   display: flex;
   align-items: center;
@@ -44,6 +64,26 @@ input[type="checkbox"]{
 }
 // -------------------------------
 // date style
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button {
+    opacity: 0;
+    appearance: none;
+}
+input[type='date']{
+  border: none; // 테두리 설정은 본인 맘대로
+  position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
+  width: 120px;
+  height: 28px;
+  padding: 10px;
+  background: url(#{$imgPath}ic_calendar.svg) no-repeat right 8px center /
+    12px auto; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
+  background-color: $cl_neutral_5;
+  border: 1px solid $cl_neutral_3;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
 input[type='datetime-local'] {
   border: none; // 테두리 설정은 본인 맘대로
   position: relative; // 캘린더 아이콘을 클릭해야만 달력이 보이기 때문에 이 영역 자체를 제어하기 위해 설정 
@@ -1134,8 +1174,8 @@ input[type='datetime-local']:valid::before {
         height: 28px;
         font-weight: 400;
         background: $cl_neutral_6;
-        &.sel {
-          background: $cl_data_5;
+        &.sel,&.selected td {
+          background: $cl_data_5 !important;
         }
         &.alarm {
           background: $cl_alaram_2 !important;
@@ -1851,7 +1891,8 @@ input[type='datetime-local']:valid::before {
       border-radius: 4px;
       background: $cl_neutral_6;
       border: 1px solid $cl_neutral_4;
-      box-shadow: 0px -4px 4px 0px #00000040 inset;
+      // box-shadow: 0px -4px 4px 0px #00000040 inset;
+      box-shadow: 0px -10px 10px 0px #00000040 inset;
       @include flex_center;
     }
   }  
