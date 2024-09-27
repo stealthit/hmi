@@ -1839,7 +1839,7 @@ input[type=datetime-local]:valid::before {
 .popup-wrap .popup-body .list-grid .list-data li .tuning-box .value {
   font-size: 24px;
 }
-.popup-wrap .popup-body .pop-title {
+.popup-wrap .popup-body .pop-title, .popup-wrap .popup-body .grid-title {
   display: flex;
   justify-content: center;
   align-items: center;

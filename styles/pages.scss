@@ -787,7 +787,7 @@
       tr td, tr th {
         font-weight: 700;
         background: $cl_neutral_5;
-        &.on {}
+        // &.on {}
         &:first-child {border-left: none;}
         &:last-child {border-right: none;}
       }

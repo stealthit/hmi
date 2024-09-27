@@ -193,10 +193,44 @@
     }
    }
 }
-
+.tuning-data {
+  font-size: 24px;
+  font-weight: 700;
+  color: $cl_neutral_1;
+  height: 120px;
+  display: flex;
+  border: 1px solid $cl_neutral_4;
+  background: $cl_neutral_5;
+  .data-low,.data-high {
+    width: 120px;
+    @include flex_center;
+  }
+  .cur-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid $cl_neutral_4;
+    border-right: 1px solid $cl_neutral_4;
+    .text {
+      @include flex_center;
+      width: 100%;
+      flex: 1;
+      border-bottom: 1px solid $cl_neutral_4;
+    }
+    .data-cur {
+      color: $cl_data_1;
+      @include flex_center;
+      flex: 1;
+    }
+  }
+}
+// TP31ENS030 : Entry Overview_LOOP 미세조정 
 .pop-TP31ENS030 {
   width: 400px;
-  height: 276px;
+  height: 406px;
+  .pop-title {
+    margin-bottom: 10px;
+  }
   .popup-body {
     padding-bottom: 10px;
   }
@@ -279,20 +313,22 @@
 
 .pop-TP31CTS050 {
   width: 1000px;
-  height: 778px;
+  height: 697px;
   .flex-row {
     margin: 0;
-    .subCon {flex: 1;}
+    .subCon,.flex-col {width: 475px;}
   }
   .grid1 {
-    .list-data .data-title {width: 228px;}
+    .list-data .data-title {width: 248px;}
   }
-  .grid2 {
+  .grid2,.grid3 { 
     .list-data .data-title {width: 350px;}
   }
-  .grid3 {
-    .list-data .data-title {width: 835px;}
-  }
+
+  .grid4 {margin-top: 20px;}
+  // .grid3 {
+  //   .list-data .data-title {width: 835px;}
+  // }
   .popup-footer {
     justify-content: center;
     button {
@@ -303,23 +339,39 @@
 }
 
 .pop-TP31CTS060 {
-  width: 460px;
-  height: 696px;
-  
+  width: 890px;
+  height: 566px;
+    
   .list-grid {
+    .grid-title {height: 60px;}
     .list-data .data-title {width: 210px;}
   }
-  
-  .popup-footer {
+  .flex-row {
+    .list-grid {flex: 1;}
+    .flex-col {flex: 1;justify-content: space-between;}
+  }
+  .button-box {
+    display: flex;
+    gap: 10px;
     button {
       flex: 1;
+      height: 100px;
+      background: $cl_neutral_6;
+      font-size: 24px;
+      font-weight: 700;
+      color: $cl_neutral_1;
     }
   }
+  // .popup-footer {
+  //   button {
+  //     flex: 1;
+  //   }
+  // }
 }
 
 .pop-TP31CTS070 {
   width: 400px;
-  height: 324px;
+  height: 469px;
 
   .popup-body {padding-bottom: 10px;}
   .flex-col {
@@ -328,7 +380,6 @@
         background: $cl_neutral_5;
         color: $cl_neutral_1;
         border-top: 1px solid $cl_neutral_4;
-        border-bottom: 1px solid $cl_neutral_4;
       }
     }
   }
@@ -353,12 +404,16 @@
 
 .pop-TP31EXS020 {
   width: 540px;
-  height: 844px;
+  height: 1042px;
+
+  .pop-title {margin-bottom: 10px;}
 
   .list-grid {
     .list-data .data-title {width: 280px;}
   }
-  
+  .tuning-data {border-bottom: none;}
+  .subCon:nth-child(2) .list-grid .list-data{height: 60px;}
+  .subCon:nth-child(3) {margin-top: 20px;}
   .subCon:has(.label) {
     margin-bottom: 20px;
   }
@@ -586,6 +641,18 @@
       box-shadow: 0px -10px 10px 0px #00000040 inset;
 
     }
+  }
+}
+
+.pop-msg {
+  min-width: 520px;
+  min-height: 278px;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  .popup-body {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
   }
 }
 

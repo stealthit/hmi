@@ -208,9 +208,50 @@
   flex: none;
 }
 
+.tuning-data {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  height: 120px;
+  display: flex;
+  border: 1px solid #999999;
+  background: #CCCCCC;
+}
+.tuning-data .data-low, .tuning-data .data-high {
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tuning-data .cur-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #999999;
+  border-right: 1px solid #999999;
+}
+.tuning-data .cur-box .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+  border-bottom: 1px solid #999999;
+}
+.tuning-data .cur-box .data-cur {
+  color: #002878;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
 .pop-TP31ENS030 {
   width: 400px;
-  height: 276px;
+  height: 406px;
+}
+.pop-TP31ENS030 .pop-title {
+  margin-bottom: 10px;
 }
 .pop-TP31ENS030 .popup-body {
   padding-bottom: 10px;
@@ -298,22 +339,22 @@
 
 .pop-TP31CTS050 {
   width: 1000px;
-  height: 778px;
+  height: 697px;
 }
 .pop-TP31CTS050 .flex-row {
   margin: 0;
 }
-.pop-TP31CTS050 .flex-row .subCon {
-  flex: 1;
+.pop-TP31CTS050 .flex-row .subCon, .pop-TP31CTS050 .flex-row .flex-col {
+  width: 475px;
 }
 .pop-TP31CTS050 .grid1 .list-data .data-title {
-  width: 228px;
+  width: 248px;
 }
-.pop-TP31CTS050 .grid2 .list-data .data-title {
+.pop-TP31CTS050 .grid2 .list-data .data-title, .pop-TP31CTS050 .grid3 .list-data .data-title {
   width: 350px;
 }
-.pop-TP31CTS050 .grid3 .list-data .data-title {
-  width: 835px;
+.pop-TP31CTS050 .grid4 {
+  margin-top: 20px;
 }
 .pop-TP31CTS050 .popup-footer {
   justify-content: center;
@@ -324,19 +365,38 @@
 }
 
 .pop-TP31CTS060 {
-  width: 460px;
-  height: 696px;
+  width: 890px;
+  height: 566px;
+}
+.pop-TP31CTS060 .list-grid .grid-title {
+  height: 60px;
 }
 .pop-TP31CTS060 .list-grid .list-data .data-title {
   width: 210px;
 }
-.pop-TP31CTS060 .popup-footer button {
+.pop-TP31CTS060 .flex-row .list-grid {
   flex: 1;
+}
+.pop-TP31CTS060 .flex-row .flex-col {
+  flex: 1;
+  justify-content: space-between;
+}
+.pop-TP31CTS060 .button-box {
+  display: flex;
+  gap: 10px;
+}
+.pop-TP31CTS060 .button-box button {
+  flex: 1;
+  height: 100px;
+  background: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
 }
 
 .pop-TP31CTS070 {
   width: 400px;
-  height: 324px;
+  height: 469px;
 }
 .pop-TP31CTS070 .popup-body {
   padding-bottom: 10px;
@@ -345,7 +405,6 @@
   background: #CCCCCC;
   color: #000000;
   border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
 }
 .pop-TP31CTS070 .tuning-box {
   margin-top: 10px;
@@ -369,10 +428,22 @@
 
 .pop-TP31EXS020 {
   width: 540px;
-  height: 844px;
+  height: 1042px;
+}
+.pop-TP31EXS020 .pop-title {
+  margin-bottom: 10px;
 }
 .pop-TP31EXS020 .list-grid .list-data .data-title {
   width: 280px;
+}
+.pop-TP31EXS020 .tuning-data {
+  border-bottom: none;
+}
+.pop-TP31EXS020 .subCon:nth-child(2) .list-grid .list-data {
+  height: 60px;
+}
+.pop-TP31EXS020 .subCon:nth-child(3) {
+  margin-top: 20px;
 }
 .pop-TP31EXS020 .subCon:has(.label) {
   margin-bottom: 20px;
@@ -624,6 +695,18 @@
   width: 235px;
   flex: none;
   box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.2509803922) inset;
+}
+
+.pop-msg {
+  min-width: 520px;
+  min-height: 278px;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.pop-msg .popup-body {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .flex-row {

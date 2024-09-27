@@ -406,6 +406,17 @@
   </div>
 </div>
 
+<div class="popup-wrap pop-msg popup-wrap2">
+  <div class="popup-header">
+    <button class="btn-close" onclick='closePopup2(event)'></button>
+  </div>
+  <div class="popup-body">
+    <p>해당 메세지 <br>(개발시 팝업을 띄울때 해당 메세지 입력)</p>
+  </div>
+  <div class="popup-footer">
+    <button class="btn-normal" onclick='closePopup2(event)'>확인</button>
+  </div>
+</div>
 <!-- 게이지1 (#1 CLEANING) -->
   <div class="popup-wrap pop-gauge1">
     <div class="popup-header">
@@ -554,6 +565,14 @@
     </div>
     <div class="popup-body">
       <div class="pop-title">LOOP 미세조정 (%)</div>
+      <div class="tuning-data">
+        <div class="data-low">0</div>
+        <div class="cur-box">
+          <div class="text">현재값</div>
+          <div class="data-cur">96</div>
+        </div>
+        <div class="data-high">+2</div>
+      </div>
       <div class="tuning-box">
         <button class="btn-tuning-arrow-60 down"></button>
         <div class="value">92.7</div>
@@ -761,65 +780,81 @@
                 <p>전압 (V)</p>
                 <p>전류 (KA)</p>
                 <p>출력 (KW)</p>
-                <p>미세조정 (%)</p>
                 <p>Quenching 운전상태</p>
               </li>
               <li class="data">
                 <p>0</p>
                 <p>6.4</p>
-                <p>87</p>
-                <div class="tuning-box">
-                  <button class="btn-tuning-arrow-40 down"></button>
-                  <div class="value">100</div>
-                  <button class="btn-tuning-arrow-40 up"></button>
-                </div>
+                <p>87</p>                
                 <p class="button"><button class="btn-normal">정지</button></p>
               </li>              
             </ul>        
           </div>
-        </div>
-        <div class="subCon">
-          <div class="label">온도 제어</div>
-          <div class="list-grid grid2">
-            <ul class="list-data">
-              <li class="data-title"> 
-                <p>Quenching 현재 온도 (℃ )</p>
-                <p>Quenching 설정 온도 (℃ )</p>
-                <p>Quenching 배관 현재온도 (℃ )</p>
-                <p>Quenching 배관 설정온도 (℃ )</p>
-                <p>Quenching 온도제어</p>
-              </li>
+          <div class="list-grid grid4">
+            <div class="grid-title">미세조정 (%)</div>
+            <ul class="list-data">              
               <li class="data">
-                <p>87</p>
-                <p>84</p>
-                <p>84</p>
-                <p>84</p>
-                <p class="button"><button class="btn-normal on">냉각</button></p>
+                <div class="tuning-data">
+                  <div class="data-low">0</div>
+                  <div class="cur-box">
+                    <div class="text">현재값</div>
+                    <div class="data-cur">96</div>
+                  </div>
+                  <div class="data-high">+2</div>
+                </div>
+                <div class="tuning-box">
+                  <button class="btn-tuning-arrow-40 down"></button>
+                  <div class="value underline">100</div>
+                  <button class="btn-tuning-arrow-40 up"></button>
+                </div>
               </li>              
             </ul>        
+          </div>  
+        </div>
+        <div class="flex-col">
+          <div class="subCon">
+            <div class="label">온도 제어</div>
+            <div class="list-grid grid2">
+              <ul class="list-data">
+                <li class="data-title"> 
+                  <p>Quenching 현재 온도 (℃ )</p>
+                  <p>Quenching 설정 온도 (℃ )</p>
+                  <p>Quenching 배관 현재온도 (℃ )</p>
+                  <p>Quenching 배관 설정온도 (℃ )</p>
+                  <p>Quenching 온도제어</p>
+                </li>
+                <li class="data">
+                  <p>87</p>
+                  <p>84</p>
+                  <p>84</p>
+                  <p>84</p>
+                  <p class="button"><button class="btn-normal on">냉각</button></p>
+                </li>              
+              </ul>        
+            </div>
+          </div>
+          <div class="subCon">
+            <div class="label">냉각PUMP 제어</div>
+            <div class="list-grid grid3">
+              <ul class="list-data">
+                <li class="data-title"> 
+                  <p>Quenching Cir. Pump A</p>
+                  <p>Quenching Cir. Pump B</p>
+                </li>
+                <li class="data">
+                  <p class="button"><button class="btn-normal">정지</button></p>
+                  <p class="button"><button class="btn-normal">정지</button></p>
+                </li>              
+              </ul>        
+            </div>
           </div>
         </div>
       </div>
-      <div class="subCon">
-        <div class="label">냉각PUMP 제어</div>
-        <div class="list-grid grid3">
-          <ul class="list-data">
-            <li class="data-title"> 
-              <p>Quenching Cir. Pump A</p>
-              <p>Quenching Cir. Pump B</p>
-            </li>
-            <li class="data">
-              <p class="button"><button class="btn-normal">정지</button></p>
-              <p class="button"><button class="btn-normal">정지</button></p>
-            </li>              
-          </ul>        
-        </div>
-      </div>
     </div>
-    <div class="popup-footer">
+    <!-- <div class="popup-footer">
       <button class="btn-normal">확인</button>
       <button onclick='closePopup1(event)'>닫기</button>
-    </div> 
+    </div>  -->
   </div>
 <!-- TP31CTS056 : Center Overview_ES Oiler 제어 -->
   <div class="popup-wrap pop-TP31CTS060">
@@ -829,37 +864,57 @@
     <div class="popup-body">
       <div class="pop-title">E.S OILER 제어</div>
       <div class="list-grid">
-        <div class="list-title">E.S OILER</div>
-        <ul class="list-data">
-          <li class="data-title"> 
-            <p>도유량 (mg/㎡)</p>
-            <p>현재값 (Inch. H₂o)</p>
-            <p>다음값 (Inch. H₂o)</p>
-            <p>설정값 (Inch. H₂o)</p>
-            <p>미세조정 (%)</p>
-            <p>Oiler 운전상태</p>
-            <p>Blower 운전상태</p>
-          </li>
-          <li class="data">
-            <p>3.00</p>
-            <p class="wh">2.68</p>
-            <p>3.00</p>
-            <p>3.00</p>
-            <div class="tuning-box">
-              <button class="btn-tuning-arrow down"></button>
-              <div class="value underline">100</div>
-              <button class="btn-tuning-arrow up"></button>
-            </div>
-            <p class="button"><button class="btn-normal on">운전</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
-          </li>              
-        </ul>        
+        <div class="list-title">E.S OILER</div>            
       </div>      
-    </div>
-    <div class="popup-footer">
-      <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
-    </div> 
+      <div class="flex-row">
+        <div class="list-grid">
+          <ul class="list-data">
+            <li class="data-title"> 
+              <p>도유량 (mg/㎡)</p>
+              <p>현재값 (Inch. H₂o)</p>
+              <p>다음값 (Inch. H₂o)</p>
+              <p>설정값 (Inch. H₂o)</p>
+              <p>Oiler 운전상태</p>
+              <p>Blower 운전상태</p>
+            </li>
+            <li class="data">
+              <p>3.00</p>
+              <p class="wh">2.68</p>
+              <p>3.00</p>
+              <p>3.00</p>              
+              <p class="button"><button class="btn-normal on">운전</button></p>
+              <p class="button"><button class="btn-normal">정지</button></p>
+            </li>              
+          </ul>        
+        </div>   
+        <div class="flex-col">
+          <div class="list-grid">
+            <div class="grid-title">미세조정 (%)</div>
+            <ul class="list-data">              
+              <li class="data">
+                <div class="tuning-data">
+                  <div class="data-low">0</div>
+                  <div class="cur-box">
+                    <div class="text">현재값</div>
+                    <div class="data-cur">96</div>
+                  </div>
+                  <div class="data-high">+2</div>
+                </div>
+                <div class="tuning-box">
+                  <button class="btn-tuning-arrow-40 down"></button>
+                  <div class="value underline">100</div>
+                  <button class="btn-tuning-arrow-40 up"></button>
+                </div>
+              </li>              
+            </ul>        
+          </div>   
+          <div class="button-box">
+            <button class="btn-normal">확인</button>
+            <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
+          </div> 
+        </div>
+      </div>
+    </div>    
   </div>
 <!-- Center Overview_#2 BRIDEL ROLL TENSION -->
   <div class="popup-wrap pop-TP31CTS070">
@@ -870,6 +925,14 @@
       <div class="flex-col">
         <div class="pop-title">LINE TENSION 제어</div>
         <div class="pop-title">#2 BR 미세조정 (%)</div>
+      </div>
+      <div class="tuning-data">
+        <div class="data-low">0</div>
+        <div class="cur-box">
+          <div class="text">현재값</div>
+          <div class="data-cur">96</div>
+        </div>
+        <div class="data-high">+2</div>
       </div>
       <div class="tuning-box">
         <button class="btn-tuning-arrow-60 down"></button>
@@ -894,10 +957,26 @@
           <ul class="list-data">
             <li class="data-title"> 
               <p>TENSION (kg/m2)</p>
-              <p>미세조정(%)</p>
             </li>
             <li class="data">
-              <p class="underline">0</p>                
+              <p class="underline">0</p>                              
+            </li>              
+          </ul>        
+        </div>
+      </div>
+      <div class="subCon">
+        <div class="list-grid">
+          <div class="grid-title">미세조정 (%)</div>
+          <ul class="list-data">
+            <li class="data">
+              <div class="tuning-data">
+                <div class="data-low">0</div>
+                <div class="cur-box">
+                  <div class="text">현재값</div>
+                  <div class="data-cur">96</div>
+                </div>
+                <div class="data-high">+2</div>
+              </div>          
               <div class="tuning-box">
                 <button class="btn-tuning-arrow-40 down"></button>
                 <div class="value">100</div>
@@ -1102,7 +1181,7 @@
       </div>          
     </div>
     <div class="popup-footer">
-      <button class="btn-normal">확인</button>
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
       <button onclick='closePopup1(event)'>취소</button>
     </div> 
   </div>
@@ -1184,7 +1263,7 @@
       </div>
     </div>
     <div class="popup-footer">
-      <button class="btn-normal">확인</button>
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
       <button onclick='closePopup1(event)'>취소</button>
     </div> 
   </div>
@@ -1243,7 +1322,7 @@
       </div>
     </div>
     <div class="popup-footer">
-      <button class="btn-normal">확인</button>
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
       <button onclick='closePopup1(event)'>취소</button>
     </div> 
   </div>
@@ -1356,11 +1435,11 @@
       </div>
       <div class="msg-box">
         <img src="" alt="" class="ic-info-red">
-        DUMMY COIL생성 위치는 MES 순번, 투입순서대로 생성됩니다. 
+        “확인” 버튼 클릭시  COIL Schedule이 팝업화면과 같이 변경됩니다.
       </div>
     </div>
     <div class="popup-footer">
-      <button class="btn-normal">확인</button>
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
       <button onclick='closePopup1(event)'>취소</button>
     </div> 
   </div>
