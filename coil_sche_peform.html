@@ -24,7 +24,7 @@
             TP3 LINE
           </div>
         </div>
-        <p class="topbar-menutext">COIL SCHEDULE LIVE</p>
+        <p class="topbar-menutext">작업실적 현황</p>
         <div class="topbar-right">
           <div class="datetime-wrap">
             <p class="date">8월 21일 (수)</p>
@@ -158,181 +158,64 @@
       </nav>
     </header>
     <main>
-      <div class="main-wrapper coil-sche-wrapper live">
+      <div class="main-wrapper coil-sche-wrapper perform">
         <div class="select-data-wrap">
           <div class="search-wrap">
             <div class="search-field-box">
               <div class="field-row">
-                <div class="title">기준일</div>
-                <p>2024-08-01</p>
+                <div class="title">생산일자</div>
+                <div class="data-box date-group">
+                  <input type="date" name="" id="" step="10" value="2024-08-01">                
+                  ~
+                  <input type="date" name="" id="" step="10" value="2024-08-01">                
+                </div>
+              </div>  
+              <div class="field-row">
+                <div class="title">작업지시번호</div>
+                <div class="data-box date-group">
+                  <input type="text" name="" id="">         
+                </div>
+              </div>  
+              <div class="field-row">
+                <div class="title">투입원판번호</div>
+                <div class="data-box date-group">
+                  <input type="text" name="" id="">           
+                </div>
               </div>                        
-              <!-- <button class="btn-normal">조회</button>               -->
             </div>            
+            <button class="btn-normal">조회</button>              
           </div>
           <div class="dt-table-wrap scroll-table">
-            <div class="table-title">COIL SCHEDULE</div>
+            <div class="table-title">작업실적 현황</div>
             <table id="coil-sche-table" class="display table-striped" style="width:1880px">            
               <thead>
                 <tr>
                   <th>No</th>
-                  <th></th>
-                  <th>상태</th>
                   <th>MES 순번</th>
                   <th>투입순서</th>
-                  <th>COIL 위치</th>
-                  <th>수주번호</th>
                   <th>작업지시번호</th>
                   <th>작업지시일자</th>
                   <th>투입원판번호</th>
+                  <th>작업시작</th>
+                  <th>작업종료</th>
                   <th>투입중량<br>(kg)</th>
                   <th>두께<br>(mm)</th>
                   <th>폭<br>(mm)</th>
                   <th>상부착량<br>(mm)</th>
                   <th>하부착량<br>(mm)</th>
+                  <th>순번</th>
+                  <th>TR NO.</th>
+                  <th>생산중량<br>(kg)</th>
+                  <th>회전수<br>(코일감김수)</th>
                   <th>환산길이<br>(m)</th>
-                  <th>후공정</th>
-                  <th>단중<br>(kg)</th>
-                  <th>품목코드</th>
-                  <th>고객사명</th>
+                  <th>실측길이<br> (m)</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>완료</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>완료</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>완료</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>완료</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>완료</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr class="selected">
-                  <td>0</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>현재</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
                   <td>1</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>다음</td>
+                  <td>10000096</td>
+                  <td>1</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -349,12 +232,29 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                </tr>
-                <tr>
+                </tr>                         
+                <tr class="selected">
                   <td>2</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
+                  <td>10000097</td>
+                  <td>2</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                         
+                <tr class="selected">
                   <td></td>
                   <td></td>
                   <td></td>
@@ -368,15 +268,38 @@
                   <td></td>
                   <td></td>
                   <td></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                         
+                <tr class="selected">
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
                   <td>3</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
+                  <td>10000102</td>
+                  <td>3</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -393,12 +316,11 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                </tr>
+                </tr>                         
                 <tr>
                   <td>4</td>
-                  <td><input type="checkbox" name="" id=""></td >
-                  <td>대기</td>
+                  <td>10000101</td>
+                  <td>5</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -415,12 +337,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
-                </tr>
+                </tr>                         
                 <tr>
                   <td>5</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
+                  <td>10000099</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -438,11 +358,8 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                </tr>                         
                 <tr>
-                  <td>6</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -460,11 +377,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>7</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -482,11 +398,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>8</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -504,11 +419,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>9</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -526,11 +440,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>10</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -548,11 +461,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>11</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -570,11 +482,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>12</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -592,11 +503,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>13</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -614,11 +524,10 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                  <td></td>
+                  <td></td>
+                </tr>                         
                 <tr>
-                  <td>14</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
                   <td></td>
                   <td></td>
                   <td></td>
@@ -636,7 +545,30 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>              
+                  <td></td>
+                  <td></td>
+                </tr>                         
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>                         
               </tbody>            
             </table>  
           </div> 
@@ -644,10 +576,7 @@
             <div class="title">Message</div>
             <div class="msg-text">Message Text 표시</div>
           </div>
-        </div>
-        <div class="bottom-btn-wrap">
-          <button class="btn-normal">강제 작업 종료</button>         
-        </div>                 
+        </div>               
       </div>
     </main>
     <footer>
@@ -722,9 +651,9 @@
   <script>
     new DataTable('#coil-sche-table', {
       columnDefs: [
-        { width: 49, targets: 0 },
-        { width: 37, targets: 1 },
-        { width: 89, targets: 2 },
+        { width: 79, targets: 0 },
+        { width: 99, targets: 1 },
+        { width: 99, targets: 2 },
         { width: 99, targets: 3 },
         { width: 99, targets: 4 },
         { width: 99, targets: 5 },
@@ -740,8 +669,6 @@
         { width: 99, targets: 15 },
         { width: 99, targets: 16 },
         { width: 99, targets: 17 },
-        { width: 99, targets: 18 },
-        { width: 99, targets: 19 }
       ],
       select: true,
       fixedColumns: true,

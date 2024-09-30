@@ -1086,59 +1086,7 @@
           &.on {background: $cl_neutral_2}      
         }
 
-      }
-
-      // ul li::marker { 
-      //     animation-name: GFG; 
-      //     animation-duration: 1s; 
-      //     animation-fill-mode: forwards; 
-      // } 
-
-      // ul li:nth-child(1)::marker { 
-      //     animation-delay: 0; 
-      // } 
-
-      // ul li:nth-child(2)::marker { 
-      //     animation-delay: 1s; 
-      // } 
-
-      // ul li:nth-child(3)::marker { 
-      //     animation-delay: 2s; 
-      // } 
-
-      // ul li:nth-child(4)::marker { 
-      //     animation-delay: 3s; 
-      // } 
-
-      // ul li:nth-child(5)::marker { 
-      //     animation-delay: 4s; 
-      // } 
-
-      // ul li:nth-child(6)::marker { 
-      //   animation-delay: 5s; 
-      // }  
-      // ul li:nth-child(7)::marker { 
-      //   animation-delay: 6s; 
-      // }  
-      // ul li:nth-child(8)::marker { 
-      //   animation-delay: 7s; 
-      // }  
-      // ul li:nth-child(9)::marker { 
-      //   animation-delay: 8s; 
-      // }  
-      // ul li:nth-child(10)::marker { 
-      //   animation-delay: 9s; 
-      // }  
-
-      // @keyframes GFG { 
-      //     from { 
-      //         background: transparent; 
-      //     } 
-
-      //     to { 
-      //         background: $cl_neutral_2;
-      //     } 
-      // } 
+      }      
     }
     .dt-table-wrap {
       width: 100%;
@@ -1166,9 +1114,8 @@
                   border-bottom: 1px solid $cl_neutral_3;
                 }
                 .dt-scroll-body {
-                  max-height: 502px !important;
-                  border-bottom: none;
-                  // table thead {display: none;}
+                  // max-height: 502px;
+                  border-bottom: none;                  
                 }
               }
             }
@@ -1176,35 +1123,36 @@
         }
       }
     }
-    .msg-wrap {
+  }
+  .msg-wrap {
+    display: flex;
+    height: 36px;
+    font-size: 16px;
+    font-weight: 700;
+    .title {
+      height: 100%;
+      width: 120px;
+      border: 1px solid $cl_neutral_4;
+      background: #656565;
+      color: $cl_neutral_6;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      padding: 0 10px;
       display: flex;
-      height: 36px;
-      font-size: 16px;
-      font-weight: 700;
-      .title {
-        height: 100%;
-        width: 120px;
-        border: 1px solid $cl_neutral_4;
-        background: #656565;
-        color: $cl_neutral_6;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-        padding: 0 10px;
-        display: flex;
-        align-items: center;
-      }
-      .msg-text {
-        flex: 1;
-        border: 1px solid #656565;
-        height: 100%;
-        border-left: none;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px;
-        color: $cl_neutral_1;
-        padding: 0 10px;
-        display: flex;
-        align-items: center;
-      }
+      align-items: center;
+      justify-content: center;
+    }
+    .msg-text {
+      flex: 1;
+      border: 1px solid #656565;
+      height: 100%;
+      border-left: none;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      color: $cl_neutral_1;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
     }
   }
   .bottom-btn-wrap {
@@ -1222,20 +1170,169 @@
     }
   }
 
+  &.default {
+    .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
+      max-height: 502px !important;
+    }    
+  }
+
   &.live {
     .search-wrap {
       .search-field-box {
         .field-row {
           width: 100%;
+          p {padding-left: 20px;}
         }
       }
     }
+    .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
+      max-height: 502px !important;
+    }   
     .bottom-btn-wrap {
       justify-content: flex-start;
       button.btn-normal {
         width: 228px;
       }
     }
+  }
+
+  &.perform, &.mes {
+    .select-data-wrap {
+      flex: 1;
+      .search-wrap {
+        width: 100%;
+        gap: 10px;
+        .search-field-box {
+          flex: 1;
+          gap: 0;
+          .field-row {
+            width: initial;
+            flex: 1;
+
+            input[type="text"] {width: 260px;}
+
+            &:not(:last-child) {border-right: 1px solid $cl_neutral_4;}
+            
+          }
+        }
+        .btn-normal {
+          width: 100px;
+          height: 100%;
+          background: $cl_neutral_6;
+          box-shadow: 0px -4px 4px 0px #00000040 inset;
+          color: $cl_neutral_1;
+        }
+      }
+    }
+    .dt-table-wrap {
+      max-height: 648px;
+      table {
+        tbody {
+          tr {
+            td {
+              &:nth-child(n+14) {
+                background: $cl_neutral_7;
+              }
+            }
+          }
+        }
+      }
+      .dt-container {
+        .dt-layout-table {
+          .dt-layout-full {
+            .dt-scroll {
+              .dt-scroll-body {
+                max-height: 553px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.mes {
+      table tbody tr td:nth-child(3) {text-align: left !important;padding-left: 10px;}
+    }
+  }
+
+  &.not-oper {
+    .flex-row {
+      flex: 1;
+      gap: 20px;
+      
+      .select-data-wrap {
+        width: 1400px;
+        flex: 1;
+        .search-wrap {
+          .search-field-box {
+            .field-row {
+              width: 1270px;
+            }
+          }
+          .btn-normal {
+            width: 100px;
+            height: 100%;
+            background: $cl_neutral_6;
+            box-shadow: 0px -4px 4px 0px #00000040 inset;
+            color: $cl_neutral_1;
+          }
+        }
+        .dt-table-wrap {max-height: initial;}
+        .dt-scroll-head table thead tr {height: 47px;}
+        table tbody tr td {height: 47px;}
+        .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
+          max-height: 564px !important;
+        }  
+      }
+      .standard-wrap {
+        width: 460px;
+        border: 2px solid $cl_data_1;
+        background: $cl_neutral_6;
+        font-size: 16px;
+        font-weight: 400;
+        .title {
+          height: 56px;
+          background: $cl_data_1;
+          font-weight: 700;
+          color: $cl_neutral_6;
+          @include flex_center;
+        }
+        .detail-box {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          .std-box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .sub-title {
+              padding: 8px 10px;
+              font-weight: 700;
+              min-height: 39px;
+              border-radius: 4px;
+              background: $cl_neutral_7;
+            }
+            ul.std-details {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+               
+              li {
+                display: flex;
+                &::before {
+                  content: '';
+                  margin: 10px 6px;
+                  width: 4px;
+                  height: 4px;
+                  background: $cl_data_1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bd-r-none {border-right: none;}
   }
 }
 

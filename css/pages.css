@@ -1178,16 +1178,15 @@
   border-bottom: 1px solid #666666;
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 502px !important;
   border-bottom: none;
 }
-.coil-sche-wrapper .select-data-wrap .msg-wrap {
+.coil-sche-wrapper .msg-wrap {
   display: flex;
   height: 36px;
   font-size: 16px;
   font-weight: 700;
 }
-.coil-sche-wrapper .select-data-wrap .msg-wrap .title {
+.coil-sche-wrapper .msg-wrap .title {
   height: 100%;
   width: 120px;
   border: 1px solid #999999;
@@ -1198,8 +1197,9 @@
   padding: 0 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.coil-sche-wrapper .select-data-wrap .msg-wrap .msg-text {
+.coil-sche-wrapper .msg-wrap .msg-text {
   flex: 1;
   border: 1px solid #656565;
   height: 100%;
@@ -1224,14 +1224,146 @@
   background: #333333;
   color: #FFFFFF;
 }
+.coil-sche-wrapper.default .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
+  max-height: 502px !important;
+}
 .coil-sche-wrapper.live .search-wrap .search-field-box .field-row {
   width: 100%;
+}
+.coil-sche-wrapper.live .search-wrap .search-field-box .field-row p {
+  padding-left: 20px;
+}
+.coil-sche-wrapper.live .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
+  max-height: 502px !important;
 }
 .coil-sche-wrapper.live .bottom-btn-wrap {
   justify-content: flex-start;
 }
 .coil-sche-wrapper.live .bottom-btn-wrap button.btn-normal {
   width: 228px;
+}
+.coil-sche-wrapper.perform .select-data-wrap, .coil-sche-wrapper.mes .select-data-wrap {
+  flex: 1;
+}
+.coil-sche-wrapper.perform .select-data-wrap .search-wrap, .coil-sche-wrapper.mes .select-data-wrap .search-wrap {
+  width: 100%;
+  gap: 10px;
+}
+.coil-sche-wrapper.perform .select-data-wrap .search-wrap .search-field-box, .coil-sche-wrapper.mes .select-data-wrap .search-wrap .search-field-box {
+  flex: 1;
+  gap: 0;
+}
+.coil-sche-wrapper.perform .select-data-wrap .search-wrap .search-field-box .field-row, .coil-sche-wrapper.mes .select-data-wrap .search-wrap .search-field-box .field-row {
+  width: initial;
+  flex: 1;
+}
+.coil-sche-wrapper.perform .select-data-wrap .search-wrap .search-field-box .field-row input[type=text], .coil-sche-wrapper.mes .select-data-wrap .search-wrap .search-field-box .field-row input[type=text] {
+  width: 260px;
+}
+.coil-sche-wrapper.perform .select-data-wrap .search-wrap .search-field-box .field-row:not(:last-child), .coil-sche-wrapper.mes .select-data-wrap .search-wrap .search-field-box .field-row:not(:last-child) {
+  border-right: 1px solid #999999;
+}
+.coil-sche-wrapper.perform .select-data-wrap .search-wrap .btn-normal, .coil-sche-wrapper.mes .select-data-wrap .search-wrap .btn-normal {
+  width: 100px;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  color: #000000;
+}
+.coil-sche-wrapper.perform .dt-table-wrap, .coil-sche-wrapper.mes .dt-table-wrap {
+  max-height: 648px;
+}
+.coil-sche-wrapper.perform .dt-table-wrap table tbody tr td:nth-child(n+14), .coil-sche-wrapper.mes .dt-table-wrap table tbody tr td:nth-child(n+14) {
+  background: #E0E0E0;
+}
+.coil-sche-wrapper.perform .dt-table-wrap .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body, .coil-sche-wrapper.mes .dt-table-wrap .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
+  max-height: 553px !important;
+}
+.coil-sche-wrapper.perform.mes table tbody tr td:nth-child(3), .coil-sche-wrapper.mes.mes table tbody tr td:nth-child(3) {
+  text-align: left !important;
+  padding-left: 10px;
+}
+.coil-sche-wrapper.not-oper .flex-row {
+  flex: 1;
+  gap: 20px;
+}
+.coil-sche-wrapper.not-oper .flex-row .select-data-wrap {
+  width: 1400px;
+  flex: 1;
+}
+.coil-sche-wrapper.not-oper .flex-row .select-data-wrap .search-wrap .search-field-box .field-row {
+  width: 1270px;
+}
+.coil-sche-wrapper.not-oper .flex-row .select-data-wrap .search-wrap .btn-normal {
+  width: 100px;
+  height: 100%;
+  background: #FFFFFF;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  color: #000000;
+}
+.coil-sche-wrapper.not-oper .flex-row .select-data-wrap .dt-table-wrap {
+  max-height: initial;
+}
+.coil-sche-wrapper.not-oper .flex-row .select-data-wrap .dt-scroll-head table thead tr {
+  height: 47px;
+}
+.coil-sche-wrapper.not-oper .flex-row .select-data-wrap table tbody tr td {
+  height: 47px;
+}
+.coil-sche-wrapper.not-oper .flex-row .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
+  max-height: 564px !important;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap {
+  width: 460px;
+  border: 2px solid #002878;
+  background: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap .title {
+  height: 56px;
+  background: #002878;
+  font-weight: 700;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap .detail-box {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap .detail-box .std-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap .detail-box .std-box .sub-title {
+  padding: 8px 10px;
+  font-weight: 700;
+  min-height: 39px;
+  border-radius: 4px;
+  background: #E0E0E0;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap .detail-box .std-box ul.std-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap .detail-box .std-box ul.std-details li {
+  display: flex;
+}
+.coil-sche-wrapper.not-oper .flex-row .standard-wrap .detail-box .std-box ul.std-details li::before {
+  content: "";
+  margin: 10px 6px;
+  width: 4px;
+  height: 4px;
+  background: #002878;
+}
+.coil-sche-wrapper.not-oper .bd-r-none {
+  border-right: none;
 }
 
 .cleaning-wrapper {

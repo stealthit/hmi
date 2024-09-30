@@ -481,11 +481,11 @@
 }
 
 .pop-coil-sche1 {
-  width: 1160px;
+  width: 1266px;
   height: 696px;
 }
 .pop-coil-sche1 .popup-body .table-wrap {
-  width: 1120px;
+  width: 1226px;
 }
 .pop-coil-sche1 .popup-body .table-wrap table {
   table-layout: fixed;
@@ -523,8 +523,7 @@
   text-align: center;
 }
 .pop-coil-sche1 .popup-body .table-wrap table td:last-child {
-  text-align: left;
-  padding-left: 4px;
+  font-size: 21px;
 }
 .pop-coil-sche1 .popup-footer {
   justify-content: center;
