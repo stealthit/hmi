@@ -228,6 +228,12 @@
         height: 470px;
         display: flex;
         flex-direction: column;
+
+        .line-box {
+          // height: 100%;
+          width: 350px;
+          position: relative;
+        }
       }
       .img-entry-loop-b-line {
         position: absolute;
@@ -1380,7 +1386,10 @@
       width: 100%;
       background: linear-gradient(180deg, #EFA2F5 31%, #A1B9E1 100%);
     }
-
+    .volume-box7 {
+      width: 100%;
+      background: linear-gradient(184.31deg, #D074E6 3.26%, #ED995D 96.29%);
+    }
   }
 
   &.s112x93 {
@@ -1519,6 +1528,20 @@
       border: none;
     }
   }
+  &.s408x163 {
+    width: 410px;
+    height: 167px;
+    background: url(#{$imgPath}img_tankbox_408x163.png);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 14px;
+    .tank-box {
+      width: 376px;
+      height: 147px;
+      border: none;
+    }
+  }
 }
 
 .pickling-wrapper {
@@ -1637,4 +1660,102 @@
     height: 28px;
   }
 
+}
+
+.hyd-entry-wrapper {
+  background: url(#{$imgPath}img_hyd_ENTRY.png);
+  background-position: center 128px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+
+  .img-label {
+    line-height: 14px;
+    text-align: left;
+  }
+
+  .gd1 {
+    width: 200px;
+    .list-data {
+      .data-title {
+        width: 120px;
+        p {
+          padding-left: 10px;
+        }
+      }
+      .data {
+        p {
+          color: #000;
+          justify-content: center;
+        }
+      }
+    }
+
+  }
+
+  .gd2 {
+    width: 120px;
+    .list-data .data p {justify-content: center;}
+  }
+}
+
+.hyd-cpc-wrapper {
+  background: url(#{$imgPath}img_CPC_HYDRAULIC.png);
+  background-position: center 107px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+
+  .img-label {
+    line-height: 14px;
+    text-align: left;
+  }
+
+  .gd1 {
+    width: 200px;
+    .list-data {
+      .data-title {
+        width: 120px;
+        p {
+          padding-left: 10px;
+        }
+      }
+      .data {
+        p {
+          color: #000;
+          justify-content: center;
+        }
+      }
+    }
+
+  }
+
+  .gd2 {
+    width: 120px;
+    .list-data .data p {justify-content: center;}
+  }
+  
+  .gd3 {
+    width: 120px;
+    .list-data {
+      li {flex: 1;}
+      .data-title p { padding-left: 10px;}
+      .data p {justify-content: center;color: #000;}
+    }
+    z-index: 1001;
+  }
 }

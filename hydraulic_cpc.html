@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">TP3 유압라인 (CPC HYDRAULIC)</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li class="sel">HYDRAULIC</li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper hyd-cpc-wrapper">
+        <!-- Title -->
+        <div class="title-box" style="top: 80px;left: 313px;width: 500px;">NO.1 STEERING ROLL C.P.C UNIT</div>
+        <div class="title-box" style="top: 80px;left: 1114px;width: 500px;">NO.2 STEERING ROLL C.P.C UNIT</div>
+        
+        <div class="img-label" style="top: 612px;left: 257px;">NO.1 EPC MAIN<br> HYDRAULIC PUMP</div>
+        <div class="img-label" style="top: 300px;left: 532px;">Oil<br> Cooler</div>
+        <div class="img-label" style="top: 388px;left: 532px;">Return<br> Line<br> Filter</div>
+        <div class="img-label" style="top: 650px;left: 602px;">Oil Tank</div>
+        <div class="img-label" style="top: 612px;left: 894px;">HYDRAULIC<br> COOLING PUMP</div>
+        <div class="img-label" style="top: 612px;left: 1075px;">NO.2 EPC MAIN<br> HYDRAULIC PUMP</div>
+        <div class="img-label" style="top: 300px;left: 1353px;">Oil<br> Cooler</div>
+        <div class="img-label" style="top: 388px;left: 1353px;">Return<br> Line<br> Filter</div>
+        <div class="img-label" style="top: 650px;left: 1423px;">Oil Tank</div>
+        <div class="img-label" style="top: 612px;left: 1738px;">HYDRAULIC<br> COOLING PUMP</div>
+                
+        <!-- NO.1 STEERING ROLL C.P.C UNIT -->
+        <div class="value-wrap" style="top: 241px;left: 236px;width: 98px;">175.3 bar</div>
+        <div class="ic-hyd-bar left stop" style="top: 228px;left: 336px;"></div>
+        <div class="ic-r stop" style="top: 509px;left: 356px;"></div>
+        <div class="ic-m2 run" style="top: 509px;left: 386px;"></div>
+        <div class="ic-pump-xl run" style="top: 539px;left: 361px;"></div>
+        <div class="ic-air-cooler run" style="top: 284px;left: 581px;"></div>
+        <div class="ic-oil-filter stop" style="top: 382px;left: 591px;"></div>
+        <div class="ic-valve-xl run" style="top: 309px;left: 661px;"></div>
+        <div class="ic-l stop" style="top: 345px;left: 656px;"></div>
+        <div class="ic-a run" style="top: 345px;left: 683px;"></div>
+        <div class="ic-r stop" style="top: 509px;left: 851px;"></div>
+        <div class="ic-m2 run" style="top: 509px;left: 882px;"></div>
+        <div class="ic-pump-xl run" style="top: 539px;left: 857px;"></div>
+
+        
+        <!-- Oil Tank -->
+        <div class="tank-box-wrap s408x163" style="top: 475px;left: 422px">
+          <div class="tank-box">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box7" style="height: 60%;"></div>   
+          </div>
+        </div>   
+        
+        <div class="list-grid gd1" style="top:501px;left:134px;">
+          <ul class="list-data">
+            <li class="data-title">
+              <p>SYSTEM ON</p>              
+              <p>COOLING ON</p>
+              <p>HEAT ON</p>
+            </li>
+            <li class="data">
+              <p>OFF</p>
+              <p class="on">ON</p>
+              <p>OFF</p>
+            </li>            
+          </ul>          
+        </div>
+        
+        <div class="list-grid gd2" style="top:664px;left:134px;">
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">Tank Temp (℃)</p>
+              <p>45.1</p>
+            </li>            
+          </ul>          
+        </div>
+
+        <div class="list-grid gd2" style="top:664px;left:279px;">
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">Tank 용량 (L)</p>
+              <p>2098.1</p>
+            </li>            
+          </ul>          
+        </div>
+
+        <div class="list-grid gd3" style="top:564px;left:686px;">
+          <ul class="list-data">
+            <li class="data-title">
+              <p>L</p>              
+              <!-- 깜빡임 효과: blinkcss class 추가 -->
+              <p class="blinkcss">LL</p>
+            </li>
+            <li class="data">
+              <p>OFF</p>
+              <p>OFF</p>
+            </li>            
+          </ul>          
+        </div>
+
+        <!-- NO.2 STEERING ROLL C.P.C UNIT -->
+        <div class="value-wrap" style="top: 241px;left: 1051px;width: 98px;">175.3 bar</div>
+        <div class="ic-hyd-bar left stop" style="top: 228px;left: 1152px;"></div>
+        <div class="ic-r stop" style="top: 509px;left: 1171px;"></div>
+        <div class="ic-m2 run" style="top: 509px;left: 1202px;"></div>
+        <div class="ic-pump-xl run" style="top: 539px;left: 1177px;"></div>
+        <div class="ic-air-cooler run" style="top: 284px;left: 1402px;"></div>
+        <div class="ic-oil-filter stop" style="top: 382px;left: 1414px;"></div>
+        <div class="ic-valve-xl run" style="top: 309px;left: 1482px;"></div>
+        <div class="ic-l stop" style="top: 345px;left: 1477px;"></div>
+        <div class="ic-a run" style="top: 345px;left: 1504px;"></div>
+        <div class="ic-r stop" style="top: 509px;left: 1691px;"></div>
+        <div class="ic-m2 run" style="top: 509px;left: 1722px;"></div>
+        <div class="ic-pump-xl run" style="top: 539px;left: 1697px;"></div>
+
+        
+        <!-- Oil Tank -->
+        <div class="tank-box-wrap s408x163" style="top: 475px;left: 1243px">
+          <div class="tank-box">
+            <!-- height 값 변경으로 용액량 조절 -->
+            <div class="volume-box7" style="height: 60%;"></div>   
+          </div>
+        </div>   
+        
+        <div class="list-grid gd1" style="top:501px;left:957px;">
+          <ul class="list-data">
+            <li class="data-title">
+              <p>SYSTEM ON</p>              
+              <p>COOLING ON</p>
+              <p>HEAT ON</p>
+            </li>
+            <li class="data">
+              <p>OFF</p>
+              <p class="on">ON</p>
+              <p>OFF</p>
+            </li>            
+          </ul>          
+        </div>
+        
+        <div class="list-grid gd2" style="top:664px;left:957px;">
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">Tank Temp (℃)</p>
+              <p>45.1</p>
+            </li>            
+          </ul>          
+        </div>
+
+        <div class="list-grid gd2" style="top:664px;left:1102px;">
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">Tank 용량 (L)</p>
+              <p>2098.1</p>
+            </li>            
+          </ul>          
+        </div>
+
+        <div class="list-grid gd3" style="top:564px;left:1507px;">
+          <ul class="list-data">
+            <li class="data-title">
+              <p>L</p>              
+              <!-- 깜빡임 효과: blinkcss class 추가 -->
+              <p class="blinkcss">LL</p>
+            </li>
+            <li class="data">
+              <p>OFF</p>
+              <p>OFF</p>
+            </li>            
+          </ul>          
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">ENTRY</p>
+          <p class="on">CENTER</p>
+          <p class="on">EXIT</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

@@ -243,6 +243,10 @@
   display: flex;
   flex-direction: column;
 }
+.entry-o-wrapper .loop-box-wrapper .loop-box .loop-line .line-box {
+  width: 350px;
+  position: relative;
+}
 .entry-o-wrapper .loop-box-wrapper .loop-box .img-entry-loop-b-line {
   position: absolute;
   bottom: 0;
@@ -1411,6 +1415,10 @@
   width: 100%;
   background: linear-gradient(180deg, #EFA2F5 31%, #A1B9E1 100%);
 }
+.tank-box-wrap .tank-box .volume-box7 {
+  width: 100%;
+  background: linear-gradient(184.31deg, #D074E6 3.26%, #ED995D 96.29%);
+}
 .tank-box-wrap.s112x93 {
   width: 112px;
   height: 93px;
@@ -1547,6 +1555,20 @@
   height: 95px;
   border: none;
 }
+.tank-box-wrap.s408x163 {
+  width: 410px;
+  height: 167px;
+  background: url(../assets/img_tankbox_408x163.png);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 14px;
+}
+.tank-box-wrap.s408x163 .tank-box {
+  width: 376px;
+  height: 147px;
+  border: none;
+}
 
 .pickling-wrapper {
   background: url(../assets/img_bg_pickling.png);
@@ -1655,4 +1677,92 @@
 .chemical-wrapper .title-box {
   position: absolute;
   height: 28px;
+}
+
+.hyd-entry-wrapper {
+  background: url(../assets/img_hyd_ENTRY.png);
+  background-position: center 128px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+}
+.hyd-entry-wrapper .title-box {
+  position: absolute;
+  height: 28px;
+}
+.hyd-entry-wrapper .img-label {
+  line-height: 14px;
+  text-align: left;
+}
+.hyd-entry-wrapper .gd1 {
+  width: 200px;
+}
+.hyd-entry-wrapper .gd1 .list-data .data-title {
+  width: 120px;
+}
+.hyd-entry-wrapper .gd1 .list-data .data-title p {
+  padding-left: 10px;
+}
+.hyd-entry-wrapper .gd1 .list-data .data p {
+  color: #000;
+  justify-content: center;
+}
+.hyd-entry-wrapper .gd2 {
+  width: 120px;
+}
+.hyd-entry-wrapper .gd2 .list-data .data p {
+  justify-content: center;
+}
+
+.hyd-cpc-wrapper {
+  background: url(../assets/img_CPC_HYDRAULIC.png);
+  background-position: center 107px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+}
+.hyd-cpc-wrapper .title-box {
+  position: absolute;
+  height: 28px;
+}
+.hyd-cpc-wrapper .img-label {
+  line-height: 14px;
+  text-align: left;
+}
+.hyd-cpc-wrapper .gd1 {
+  width: 200px;
+}
+.hyd-cpc-wrapper .gd1 .list-data .data-title {
+  width: 120px;
+}
+.hyd-cpc-wrapper .gd1 .list-data .data-title p {
+  padding-left: 10px;
+}
+.hyd-cpc-wrapper .gd1 .list-data .data p {
+  color: #000;
+  justify-content: center;
+}
+.hyd-cpc-wrapper .gd2 {
+  width: 120px;
+}
+.hyd-cpc-wrapper .gd2 .list-data .data p {
+  justify-content: center;
+}
+.hyd-cpc-wrapper .gd3 {
+  width: 120px;
+  z-index: 1001;
+}
+.hyd-cpc-wrapper .gd3 .list-data li {
+  flex: 1;
+}
+.hyd-cpc-wrapper .gd3 .list-data .data-title p {
+  padding-left: 10px;
+}
+.hyd-cpc-wrapper .gd3 .list-data .data p {
+  justify-content: center;
+  color: #000;
 }
