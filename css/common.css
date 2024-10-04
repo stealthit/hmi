@@ -509,6 +509,7 @@ input[type=datetime-local]:valid::before {
   display: flex;
   flex-direction: column;
   border: 1px solid #666666;
+  border-radius: 4px;
 }
 .wrapper footer .server-info-box li {
   display: flex;
@@ -528,19 +529,25 @@ input[type=datetime-local]:valid::before {
 .wrapper footer .server-info-box li p:not(:last-child) {
   border-right: 1px solid #666666;
 }
-.wrapper footer .server-info-box li p:first-child, .wrapper footer .server-info-box li p:last-child {
+.wrapper footer .server-info-box li p:first-child {
   width: 102px;
 }
 .wrapper footer .server-info-box li p:nth-child(2) {
   width: 38px;
 }
-.wrapper footer .server-info-box li p:nth-child(3), .wrapper footer .server-info-box li p:nth-child(4) {
-  width: 100px;
+.wrapper footer .server-info-box li p:last-child {
+  width: 302px;
 }
 .wrapper footer .server-info-box li p.on {
   background: #4EFD70;
   font-weight: 700;
   color: #000000;
+}
+.wrapper footer .server-info-box li:first-child p:last-child {
+  border-top-right-radius: 4px;
+}
+.wrapper footer .server-info-box li:last-child p:last-child {
+  border-bottom-right-radius: 4px;
 }
 
 .err404-wrapper {
@@ -966,6 +973,27 @@ input[type=datetime-local]:valid::before {
   border: 1px solid #666666;
   text-decoration: underline;
   color: #002878;
+}
+
+.tuning-data {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  height: 60px;
+  display: flex;
+  border: 1px solid #999999;
+  background: #CCCCCC;
+}
+.tuning-data li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tuning-data .data-cur {
+  color: #002878;
+  border-left: 1px solid #999999;
+  border-right: 1px solid #999999;
 }
 
 .main-button-box {
@@ -2184,6 +2212,496 @@ button.btn-normal.on {
   content: url(../assets/img_LINETRACKING_o_layer.png);
   width: 1829px;
   height: 252px;
+}
+
+.ic-trk-CLEANING1 {
+  position: absolute;
+  width: 56px;
+  height: 38px;
+  background: url(../assets/trk_1_CLEANING.png);
+  z-index: 99;
+}
+.ic-trk-CLEANING1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_1_CLEANING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-CLEANING2 {
+  position: absolute;
+  width: 83px;
+  height: 38px;
+  background: url(../assets/trk_2_CLEANING.png);
+  z-index: 99;
+}
+.ic-trk-CLEANING2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_2_CLEANING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-CL-RINSE {
+  position: absolute;
+  width: 65px;
+  height: 38px;
+  background: url(../assets/trk_CLEANING_RINSE.png);
+  z-index: 99;
+}
+.ic-trk-CL-RINSE.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_CLEANING_RINSE_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-PICKLING {
+  position: absolute;
+  width: 83px;
+  height: 38px;
+  background: url(../assets/trk_PICKLING.png);
+  z-index: 99;
+}
+.ic-trk-PICKLING.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_PICKLING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-PK-RINSE {
+  position: absolute;
+  width: 93px;
+  height: 103px;
+  background: url(../assets/trk_PICKLING_RINSE.png);
+  z-index: 99;
+}
+.ic-trk-PK-RINSE.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_PICKLING_RINSE_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-PT-RINSE1 {
+  position: absolute;
+  width: 79px;
+  height: 40px;
+  background: url(../assets/trk_PLATING_RINSE_1.png);
+  z-index: 99;
+}
+.ic-trk-PT-RINSE1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_PLATING_RINSE_1_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-PT-RINSE2 {
+  position: absolute;
+  width: 33px;
+  height: 40px;
+  background: url(../assets/trk_PLATING_RINSE_2.png);
+  z-index: 99;
+}
+.ic-trk-PT-RINSE2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_PLATING_RINSE_2_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-FLUXING {
+  position: absolute;
+  width: 79px;
+  height: 40px;
+  background: url(../assets/trk_FLUXING.png);
+  z-index: 99;
+}
+.ic-trk-FLUXING.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_FLUXING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-REFLOW {
+  position: absolute;
+  width: 33px;
+  height: 122px;
+  background: url(../assets/trk_REFLOW.png);
+  z-index: 99;
+}
+.ic-trk-REFLOW.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_REFLOW_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-QUENCHING {
+  position: absolute;
+  width: 23px;
+  height: 42px;
+  background: url(../assets/trk_QUENCHING.png);
+  z-index: 99;
+}
+.ic-trk-QUENCHING.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_QUENCHING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-CHEMICAL {
+  position: absolute;
+  width: 19px;
+  height: 42px;
+  background: url(../assets/trk_CHEMICAL.png);
+  z-index: 99;
+}
+.ic-trk-CHEMICAL.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_CHEMICAL_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-trk-box1 {
+  position: absolute;
+  width: 17px;
+  height: 25px;
+  background: url(../assets/trk_box1.png);
+  z-index: 99;
+}
+.ic-trk-box1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/trk_box1_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-CLEANING1 {
+  position: absolute;
+  width: 97px;
+  height: 66px;
+  background: url(../assets/center_1_CLEANING.png);
+  z-index: 99;
+}
+.ic-center-CLEANING1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_1_CLEANING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-CLEANING2 {
+  position: absolute;
+  width: 145px;
+  height: 66px;
+  background: url(../assets/center_2_CLEANING.png);
+  z-index: 99;
+}
+.ic-center-CLEANING2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_2_CLEANING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-CL-RINSE {
+  position: absolute;
+  width: 95px;
+  height: 66px;
+  background: url(../assets/center_CLEANING_RINSE.png);
+  z-index: 99;
+}
+.ic-center-CL-RINSE.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_CLEANING_RINSE_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-PICKLING {
+  position: absolute;
+  width: 145px;
+  height: 66px;
+  background: url(../assets/center_PICKLING.png);
+  z-index: 99;
+}
+.ic-center-PICKLING.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_PICKLING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-PK-RINSE {
+  position: absolute;
+  width: 145px;
+  height: 166px;
+  background: url(../assets/center_PICKLING_RINSE.png);
+  z-index: 99;
+}
+.ic-center-PK-RINSE.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_PICKLING_RINSE_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-PT-RINSE1 {
+  position: absolute;
+  width: 126px;
+  height: 69px;
+  background: url(../assets/center_PLATING_RINSE_1.png);
+  z-index: 99;
+}
+.ic-center-PT-RINSE1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_PLATING_RINSE_1_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-PT-RINSE2 {
+  position: absolute;
+  width: 58px;
+  height: 69px;
+  background: url(../assets/center_PLATING_RINSE_2.png);
+  z-index: 99;
+}
+.ic-center-PT-RINSE2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_PLATING_RINSE_2_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-FLUXING {
+  position: absolute;
+  width: 138px;
+  height: 69px;
+  background: url(../assets/center_FLUXING.png);
+  z-index: 99;
+}
+.ic-center-FLUXING.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_FLUXING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-REFLOW {
+  position: absolute;
+  width: 51px;
+  height: 192px;
+  background: url(../assets/center_REFLOW.png);
+  z-index: 99;
+}
+.ic-center-REFLOW.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_REFLOW_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-QUENCHING {
+  position: absolute;
+  width: 38px;
+  height: 58px;
+  background: url(../assets/center_QUENCHING.png);
+  z-index: 99;
+}
+.ic-center-QUENCHING.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_QUENCHING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-CHEMICAL {
+  position: absolute;
+  width: 33px;
+  height: 61px;
+  background: url(../assets/center_CHEMICAL.png);
+  z-index: 99;
+}
+.ic-center-CHEMICAL.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_CHEMICAL_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-box1 {
+  position: absolute;
+  width: 30px;
+  height: 36px;
+  background: url(../assets/center_box1.png);
+  z-index: 99;
+}
+.ic-center-box1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_box1_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-ENCLOSURE1 {
+  position: absolute;
+  width: 40px;
+  height: 132px;
+  background: url(../assets/center_ENCLOSURE1.png);
+  z-index: 99;
+}
+.ic-center-ENCLOSURE1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_ENCLOSURE1_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-center-ENCLOSURE2 {
+  position: absolute;
+  width: 45px;
+  height: 188px;
+  background: url(../assets/center_ENCLOSURE2.png);
+  z-index: 99;
+}
+.ic-center-ENCLOSURE2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/center_ENCLOSURE2_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pre-CLEANING1 {
+  position: absolute;
+  width: 361px;
+  height: 123px;
+  background: url(../assets/pre_1_CLEANING.png);
+  z-index: 99;
+}
+.ic-pre-CLEANING1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/pre_1_CLEANING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pre-CLEANING2 {
+  position: absolute;
+  width: 321px;
+  height: 123px;
+  background: url(../assets/pre_2_CLEANING.png);
+  z-index: 99;
+}
+.ic-pre-CLEANING2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/pre_2_CLEANING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pre-PICKLING {
+  position: absolute;
+  width: 271px;
+  height: 123px;
+  background: url(../assets/pre_PICKLING.png);
+  z-index: 99;
+}
+.ic-pre-PICKLING.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/pre_PICKLING_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pre-PK-RINSE {
+  position: absolute;
+  width: 297px;
+  height: 123px;
+  background: url(../assets/pre_PICKLING_RINSE.png);
+  z-index: 99;
+}
+.ic-pre-PK-RINSE.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/pre_PICKLING_RINSE_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pre-CL-RINSE {
+  position: absolute;
+  width: 335px;
+  height: 123px;
+  background: url(../assets/pre_CLEANING_RINSE.png);
+  z-index: 99;
+}
+.ic-pre-CL-RINSE.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/pre_CLEANING_RINSE_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pre-box1 {
+  position: absolute;
+  width: 42px;
+  height: 88px;
+  background: url(../assets/pre_box1.png);
+  z-index: 99;
+}
+.ic-pre-box1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/pre_box1_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-pre-box2 {
+  position: absolute;
+  width: 84px;
+  height: 164px;
+  background: url(../assets/pre_box2.png);
+  z-index: 99;
+}
+.ic-pre-box2.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/pre_box2_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-post-CHEMICAL {
+  position: absolute;
+  width: 52px;
+  height: 101px;
+  background: url(../assets/post_CHEMICAL.png);
+  z-index: 99;
+}
+.ic-post-CHEMICAL.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/post_CHEMICAL_fault.png);
+  animation: blink-effect 1s step-end infinite;
+}
+
+.ic-post-box1 {
+  position: absolute;
+  width: 47px;
+  height: 59px;
+  background: url(../assets/post_box1.png);
+  z-index: 99;
+}
+.ic-post-box1.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/post_box1_fault.png);
+  animation: blink-effect 1s step-end infinite;
 }
 
 .img-linetracking-2 {
@@ -5982,6 +6500,78 @@ button.btn-normal.on {
   width: 29px;
   height: 15px;
   background: url(../assets/ic_wpd.svg);
+  z-index: 99;
+}
+
+.ic-wpd-s {
+  z-index: 2;
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  background: url(../assets/ic_wpd_s.svg);
+  z-index: 99;
+}
+
+.ic-wpd-l {
+  z-index: 2;
+  position: absolute;
+  width: 46px;
+  height: 23px;
+  background: url(../assets/ic_wpd_l.svg);
+  z-index: 99;
+}
+
+.ic-cam1-up {
+  z-index: 2;
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  background: url(../assets/ic_cam1_up.svg);
+  z-index: 99;
+}
+
+.ic-cam1-down {
+  z-index: 2;
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  background: url(../assets/ic_cam1_down.svg);
+  z-index: 99;
+}
+
+.ic-cam2-up {
+  z-index: 2;
+  position: absolute;
+  width: 25px;
+  height: 23px;
+  background: url(../assets/ic_cam2_up.svg);
+  z-index: 99;
+}
+
+.ic-cam2-down {
+  z-index: 2;
+  position: absolute;
+  width: 25px;
+  height: 23px;
+  background: url(../assets/ic_cam2_down.svg);
+  z-index: 99;
+}
+
+.ic-cam3-up {
+  z-index: 2;
+  position: absolute;
+  width: 41px;
+  height: 38px;
+  background: url(../assets/ic_cam3_up.svg);
+  z-index: 99;
+}
+
+.ic-cam3-down {
+  z-index: 2;
+  position: absolute;
+  width: 41px;
+  height: 38px;
+  background: url(../assets/ic_cam3_down.svg);
   z-index: 99;
 }
 

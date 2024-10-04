@@ -511,7 +511,7 @@ input[type='datetime-local']:valid::before {
       display: flex;
       flex-direction: column;
       border: 1px solid $cl_neutral_3;
-
+      border-radius: 4px;
       li {
         display: flex;
         height: 30px;
@@ -524,14 +524,21 @@ input[type='datetime-local']:valid::before {
         p {
           @include flex_center;
           &:not(:last-child) {border-right: 1px solid $cl_neutral_3;}
-          &:first-child,&:last-child {width: 102px;}
+          &:first-child {width: 102px;}
           &:nth-child(2) {width: 38px;}
-          &:nth-child(3), &:nth-child(4) {width: 100px;}
+          &:last-child {width: 302px;}
           &.on {
             background: $cl_alaram_5;
             font-weight: 700;
             color: $cl_neutral_1;
           }
+        }
+
+        &:first-child p {
+          &:last-child {border-top-right-radius: 4px;}
+        }
+        &:last-child p {
+          &:last-child {border-bottom-right-radius: 4px;}
         }
       }
     }
@@ -931,6 +938,26 @@ input[type='datetime-local']:valid::before {
 
   }  
 
+}
+.tuning-data {
+  font-size: 24px;
+  font-weight: 700;
+  color: $cl_neutral_1;
+  height: 60px;
+  display: flex;
+  border: 1px solid $cl_neutral_4;
+  background: $cl_neutral_5;
+  
+  li {
+    flex: 1;
+    @include flex_center;
+  }
+  .data-cur {
+    color: $cl_data_1;
+    border-left: 1px solid $cl_neutral_4;
+    border-right: 1px solid $cl_neutral_4;
+  }
+  
 }
 .main-button-box {
   z-index: 2;
@@ -2101,6 +2128,574 @@ button.btn-normal{
   width: 1829px;
   height: 252px;
 }
+// line tracking box 
+.ic-trk-CLEANING1 {
+  position: absolute;
+  width: 56px;
+  height: 38px;
+  background: url(#{$imgPath}trk_1_CLEANING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_1_CLEANING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-CLEANING2 {
+  position: absolute;
+  width: 83px;
+  height: 38px;
+  background: url(#{$imgPath}trk_2_CLEANING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_2_CLEANING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-CL-RINSE {
+  position: absolute;
+  width: 65px;
+  height: 38px;
+  background: url(#{$imgPath}trk_CLEANING_RINSE.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_CLEANING_RINSE_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-PICKLING {
+  position: absolute;
+  width: 83px;
+  height: 38px;
+  background: url(#{$imgPath}trk_PICKLING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_PICKLING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-PK-RINSE {
+  position: absolute;
+  width: 93px;
+  height: 103px;
+  background: url(#{$imgPath}trk_PICKLING_RINSE.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_PICKLING_RINSE_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-PT-RINSE1 {
+  position: absolute;
+  width: 79px;
+  height: 40px;
+  background: url(#{$imgPath}trk_PLATING_RINSE_1.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_PLATING_RINSE_1_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-PT-RINSE2 {
+  position: absolute;
+  width: 33px;
+  height: 40px;
+  background: url(#{$imgPath}trk_PLATING_RINSE_2.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_PLATING_RINSE_2_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-FLUXING {
+  position: absolute;
+  width: 79px;
+  height: 40px;
+  background: url(#{$imgPath}trk_FLUXING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_FLUXING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-REFLOW {
+  position: absolute;
+  width: 33px;
+  height: 122px;
+  background: url(#{$imgPath}trk_REFLOW.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_REFLOW_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-QUENCHING {
+  position: absolute;
+  width: 23px;
+  height: 42px;
+  background: url(#{$imgPath}trk_QUENCHING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_QUENCHING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-CHEMICAL {
+  position: absolute;
+  width: 19px;
+  height: 42px;
+  background: url(#{$imgPath}trk_CHEMICAL.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_CHEMICAL_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-trk-box1 {
+  position: absolute;
+  width: 17px;
+  height: 25px;
+  background: url(#{$imgPath}trk_box1.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}trk_box1_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+// -----------
+// -- center overview box ----
+.ic-center-CLEANING1 {
+  position: absolute;
+  width: 97px;
+  height: 66px;
+  background: url(#{$imgPath}center_1_CLEANING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_1_CLEANING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-CLEANING2 {
+  position: absolute;
+  width: 145px;
+  height: 66px;
+  background: url(#{$imgPath}center_2_CLEANING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_2_CLEANING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-CL-RINSE {
+  position: absolute;
+  width: 95px;
+  height: 66px;
+  background: url(#{$imgPath}center_CLEANING_RINSE.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_CLEANING_RINSE_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-PICKLING {
+  position: absolute;
+  width: 145px;
+  height: 66px;
+  background: url(#{$imgPath}center_PICKLING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_PICKLING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-PK-RINSE {
+  position: absolute;
+  width: 145px;
+  height: 166px;
+  background: url(#{$imgPath}center_PICKLING_RINSE.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_PICKLING_RINSE_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-PT-RINSE1 {
+  position: absolute;
+  width: 126px;
+  height: 69px;
+  background: url(#{$imgPath}center_PLATING_RINSE_1.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_PLATING_RINSE_1_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-PT-RINSE2 {
+  position: absolute;
+  width: 58px;
+  height: 69px;
+  background: url(#{$imgPath}center_PLATING_RINSE_2.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_PLATING_RINSE_2_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-FLUXING {
+  position: absolute;
+  width: 138px;
+  height: 69px;
+  background: url(#{$imgPath}center_FLUXING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_FLUXING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-REFLOW {
+  position: absolute;
+  width: 51px;
+  height: 192px;
+  background: url(#{$imgPath}center_REFLOW.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_REFLOW_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-QUENCHING {
+  position: absolute;
+  width: 38px;
+  height: 58px;
+  background: url(#{$imgPath}center_QUENCHING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_QUENCHING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-CHEMICAL {
+  position: absolute;
+  width: 33px;
+  height: 61px;
+  background: url(#{$imgPath}center_CHEMICAL.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_CHEMICAL_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-box1 {
+  position: absolute;
+  width: 30px;
+  height: 36px;
+  background: url(#{$imgPath}center_box1.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_box1_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-ENCLOSURE1 {
+  position: absolute;
+  width: 40px;
+  height: 132px;
+  background: url(#{$imgPath}center_ENCLOSURE1.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_ENCLOSURE1_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-center-ENCLOSURE2 {
+  position: absolute;
+  width: 45px;
+  height: 188px;
+  background: url(#{$imgPath}center_ENCLOSURE2.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}center_ENCLOSURE2_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+// ----------------------------
+// pre-tretment box ----------
+.ic-pre-CLEANING1 {
+  position: absolute;
+  width: 361px;
+  height: 123px;
+  background: url(#{$imgPath}pre_1_CLEANING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}pre_1_CLEANING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pre-CLEANING2 {
+  position: absolute;
+  width: 321px;
+  height: 123px;
+  background: url(#{$imgPath}pre_2_CLEANING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}pre_2_CLEANING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pre-PICKLING {
+  position: absolute;
+  width: 271px;
+  height: 123px;
+  background: url(#{$imgPath}pre_PICKLING.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}pre_PICKLING_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pre-PK-RINSE {
+  position: absolute;
+  width: 297px;
+  height: 123px;
+  background: url(#{$imgPath}pre_PICKLING_RINSE.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}pre_PICKLING_RINSE_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pre-CL-RINSE {
+  position: absolute;
+  width: 335px;
+  height: 123px;
+  background: url(#{$imgPath}pre_CLEANING_RINSE.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}pre_CLEANING_RINSE_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pre-box1 {
+  position: absolute;
+  width: 42px;
+  height: 88px;
+  background: url(#{$imgPath}pre_box1.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}pre_box1_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-pre-box2 {
+  position: absolute;
+  width: 84px;
+  height: 164px;
+  background: url(#{$imgPath}pre_box2.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}pre_box2_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+// ------------------------------
+// post tretment box -----------
+.ic-post-CHEMICAL {
+  position: absolute;
+  width: 52px;
+  height: 101px;
+  background: url(#{$imgPath}post_CHEMICAL.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}post_CHEMICAL_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-post-box1 {
+  position: absolute;
+  width: 47px;
+  height: 59px;
+  background: url(#{$imgPath}post_box1.png);
+  z-index: 99;
+    
+  &.fault {
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}post_box1_fault.png);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+// -----------------------------
 .img-linetracking-2 {
   content: url(#{$imgPath}img_LINETRACKING_data2.png);
   width: 1920px;
@@ -5245,6 +5840,70 @@ button.btn-normal{
   width: 29px;
   height: 15px;
   background: url(#{$imgPath}ic_wpd.svg);
+  z-index: 99;
+}
+.ic-wpd-s {
+  z-index: 2;
+  position: absolute;
+  width: 18px;
+  height: 10px;
+  background: url(#{$imgPath}ic_wpd_s.svg);
+  z-index: 99;
+}
+.ic-wpd-l {
+  z-index: 2;
+  position: absolute;
+  width: 46px;
+  height: 23px;
+  background: url(#{$imgPath}ic_wpd_l.svg);
+  z-index: 99;
+}
+.ic-cam1-up {
+  z-index: 2;
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  background: url(#{$imgPath}ic_cam1_up.svg);
+  z-index: 99;
+}
+.ic-cam1-down {
+  z-index: 2;
+  position: absolute;
+  width: 19px;
+  height: 17px;
+  background: url(#{$imgPath}ic_cam1_down.svg);
+  z-index: 99;
+}
+.ic-cam2-up {
+  z-index: 2;
+  position: absolute;
+  width: 25px;
+  height: 23px;
+  background: url(#{$imgPath}ic_cam2_up.svg);
+  z-index: 99;
+}
+.ic-cam2-down {
+  z-index: 2;
+  position: absolute;
+  width: 25px;
+  height: 23px;
+  background: url(#{$imgPath}ic_cam2_down.svg);
+  z-index: 99;
+}
+.ic-cam3-up {
+  z-index: 2;
+  position: absolute;
+  width: 41px;
+  height: 38px;
+  background: url(#{$imgPath}ic_cam3_up.svg);
+  z-index: 99;
+}
+.ic-cam3-down {
+  z-index: 2;
+  position: absolute;
+  width: 41px;
+  height: 38px;
+  background: url(#{$imgPath}ic_cam3_down.svg);
   z-index: 99;
 }
 .ic-oil-filter {

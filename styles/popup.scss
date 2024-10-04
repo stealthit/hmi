@@ -201,41 +201,11 @@
     }
    }
 }
-.tuning-data {
-  font-size: 24px;
-  font-weight: 700;
-  color: $cl_neutral_1;
-  height: 120px;
-  display: flex;
-  border: 1px solid $cl_neutral_4;
-  background: $cl_neutral_5;
-  .data-low,.data-high {
-    width: 120px;
-    @include flex_center;
-  }
-  .cur-box {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    border-left: 1px solid $cl_neutral_4;
-    border-right: 1px solid $cl_neutral_4;
-    .text {
-      @include flex_center;
-      width: 100%;
-      flex: 1;
-      border-bottom: 1px solid $cl_neutral_4;
-    }
-    .data-cur {
-      color: $cl_data_1;
-      @include flex_center;
-      flex: 1;
-    }
-  }
-}
+
 // TP31ENS030 : Entry Overview_LOOP 미세조정 
 .pop-TP31ENS030 {
   width: 400px;
-  height: 406px;
+  height: 346px;
   .pop-title {
     margin-bottom: 10px;
   }
@@ -363,7 +333,7 @@
     gap: 10px;
     button {
       flex: 1;
-      height: 100px;
+      height: 170px;
       background: $cl_neutral_6;
       font-size: 24px;
       font-weight: 700;
@@ -379,12 +349,14 @@
 
 .pop-TP31CTS070 {
   width: 400px;
-  height: 469px;
+  height: 409px;
 
   .popup-body {padding-bottom: 10px;}
   .flex-col {
     .pop-title {
       &:last-child {
+        height: 60px;
+        margin-top: 11px;
         background: $cl_neutral_5;
         color: $cl_neutral_1;
         border-top: 1px solid $cl_neutral_4;
@@ -392,7 +364,7 @@
     }
   }
   .tuning-box {
-    margin-top: 10px;
+    margin-top: 12px; 
     display: flex;
     gap: 8px;
     align-items: center;
@@ -412,7 +384,7 @@
 
 .pop-TP31EXS020 {
   width: 540px;
-  height: 1042px;
+  height: 982px;
 
   .pop-title {margin-bottom: 10px;}
 

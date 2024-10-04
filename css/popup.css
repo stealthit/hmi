@@ -214,47 +214,9 @@
   flex: none;
 }
 
-.tuning-data {
-  font-size: 24px;
-  font-weight: 700;
-  color: #000000;
-  height: 120px;
-  display: flex;
-  border: 1px solid #999999;
-  background: #CCCCCC;
-}
-.tuning-data .data-low, .tuning-data .data-high {
-  width: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.tuning-data .cur-box {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid #999999;
-  border-right: 1px solid #999999;
-}
-.tuning-data .cur-box .text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  flex: 1;
-  border-bottom: 1px solid #999999;
-}
-.tuning-data .cur-box .data-cur {
-  color: #002878;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-}
-
 .pop-TP31ENS030 {
   width: 400px;
-  height: 406px;
+  height: 346px;
 }
 .pop-TP31ENS030 .pop-title {
   margin-bottom: 10px;
@@ -393,7 +355,7 @@
 }
 .pop-TP31CTS060 .button-box button {
   flex: 1;
-  height: 100px;
+  height: 170px;
   background: #FFFFFF;
   font-size: 24px;
   font-weight: 700;
@@ -402,18 +364,20 @@
 
 .pop-TP31CTS070 {
   width: 400px;
-  height: 469px;
+  height: 409px;
 }
 .pop-TP31CTS070 .popup-body {
   padding-bottom: 10px;
 }
 .pop-TP31CTS070 .flex-col .pop-title:last-child {
+  height: 60px;
+  margin-top: 11px;
   background: #CCCCCC;
   color: #000000;
   border-top: 1px solid #999999;
 }
 .pop-TP31CTS070 .tuning-box {
-  margin-top: 10px;
+  margin-top: 12px;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -434,7 +398,7 @@
 
 .pop-TP31EXS020 {
   width: 540px;
-  height: 1042px;
+  height: 982px;
 }
 .pop-TP31EXS020 .pop-title {
   margin-bottom: 10px;
