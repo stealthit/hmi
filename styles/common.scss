@@ -2737,8 +2737,8 @@ button.btn-normal{
 }
 .img-center-helper {
   content: url(#{$imgPath}img_CENTER_HELPER.png);
-  width: 1920px;
-  height: 190px;
+  width: 1880px;
+  height: 300px;
   object-fit: none;
 }
 .img-hyd-entry {
@@ -3591,6 +3591,10 @@ button.btn-normal{
 }
 .ic-roll-18 {
   @include create_ic_roll(18); 
+}
+.ic-roll-17 {
+  @include create_ic_roll(17); 
+  background-size: cover !important;
 }
 .ic-roll-16 {
   @include create_ic_roll(16); 

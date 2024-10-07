@@ -535,12 +535,13 @@
 }
 .center-helper-wrapper .bg-box {
   width: 1880px;
-  height: 284px;
+  height: 300px;
   border-radius: 10px;
   background: #FFFFFF;
   margin-bottom: 20px;
 }
 .center-helper-wrapper .table-box {
+  width: 1880px;
   display: flex;
 }
 .center-helper-wrapper .table-box .table-wrap {
@@ -552,7 +553,7 @@
 .center-helper-wrapper .table-box .table-wrap table thead tr th {
   text-decoration: none !important;
   font-weight: 700;
-  height: 46px;
+  height: 30px;
   line-height: 14px;
   background: #666666;
   border: 1px solid #999999;
@@ -1310,10 +1311,11 @@
 }
 .coil-sche-wrapper .bottom-btn-wrap {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   gap: 8px;
 }
 .coil-sche-wrapper .bottom-btn-wrap button.btn-normal {
+  width: 228px;
   height: 40px;
   background: #FFFFFF;
 }
@@ -1328,10 +1330,17 @@
   width: 100%;
 }
 .coil-sche-wrapper.live .search-wrap .search-field-box .field-row p {
-  padding-left: 20px;
+  margin-left: 10px;
+  padding: 0 10px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #666666;
+}
+.coil-sche-wrapper.live .dt-table-wrap {
+  max-height: 638px;
 }
 .coil-sche-wrapper.live .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 502px !important;
+  max-height: 542px !important;
 }
 .coil-sche-wrapper.live .bottom-btn-wrap {
   justify-content: flex-start;
@@ -1858,4 +1867,41 @@
 .hyd-cpc-wrapper .gd3 .list-data .data p {
   justify-content: center;
   color: #000;
+}
+
+.hyd-epc-wrapper {
+  background: url(../assets/img_hyd_EPC.png);
+  background-position: center 87px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+}
+.hyd-epc-wrapper .title-box {
+  position: absolute;
+  height: 28px;
+}
+.hyd-epc-wrapper .img-label {
+  line-height: 14px;
+  text-align: left;
+}
+.hyd-epc-wrapper .gd1 {
+  width: 200px;
+}
+.hyd-epc-wrapper .gd1 .list-data .data-title {
+  width: 120px;
+}
+.hyd-epc-wrapper .gd1 .list-data .data-title p {
+  padding-left: 10px;
+}
+.hyd-epc-wrapper .gd1 .list-data .data p {
+  color: #000;
+  justify-content: center;
+}
+.hyd-epc-wrapper .gd2 {
+  width: 120px;
+}
+.hyd-epc-wrapper .gd2 .list-data .data p {
+  justify-content: center;
 }
