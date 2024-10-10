@@ -103,10 +103,21 @@
 }
 
 .pop-keypad {
-  width: 419px;
-  height: 770px;
+  width: 420px;
+  height: 873px;
   background: #FFFFFF;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.pop-keypad .popup-header {
+  height: 28px;
+}
+.pop-keypad .popup-header .btn-close {
+  width: 18px;
+  height: 18px;
+  background-size: cover;
+}
+.pop-keypad .popup-body {
+  padding-top: 10px;
 }
 .pop-keypad .calc-wrap {
   display: flex;
@@ -115,28 +126,27 @@
 .pop-keypad .calc-wrap .calc-value-wrap {
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
 .pop-keypad .calc-wrap .calc-value-wrap .value-row {
+  height: 55px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: 700;
   color: #000000;
+  padding-right: 10px;
 }
 .pop-keypad .calc-wrap .final-value {
-  margin-top: 11px;
+  margin-top: 10px;
   margin-bottom: 20px;
-  padding-right: 6px;
-  height: 40px;
-  border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
-  background: #CCCCCC;
+  padding-right: 10px;
+  height: 60px;
+  background: #E0E0E0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 26px;
+  font-size: 40px;
   font-weight: 700;
   color: #002878;
 }
@@ -176,11 +186,16 @@
   background: url(../assets/ic_minus_24.svg) no-repeat center/24px;
 }
 .pop-keypad .calc-wrap .calc-btn-wrap .plus {
-  grid-column: 4/5;
-  grid-row: 2/4;
   background: url(../assets/ic_plus_24.svg) no-repeat center/24px;
 }
-.pop-keypad .calc-wrap .calc-btn-wrap .enter {
+.pop-keypad .calc-wrap .calc-btn-wrap .back {
+  display: flex;
+  flex-direction: column;
+  line-height: 29px;
+  grid-column: 4/5;
+  grid-row: 2/4;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .clear {
   grid-column: 4/5;
   grid-row: 4/6;
 }
@@ -193,10 +208,9 @@
   padding-bottom: 20px;
 }
 .pop-keypad .popup-footer button {
-  flex: none;
-  width: 66px;
-  height: 28px;
-  font-size: 14px;
+  flex: 1;
+  height: 60px;
+  font-size: 24px;
   box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
 }
 
@@ -822,6 +836,13 @@
   font-size: 24px;
   font-weight: 700;
   text-align: center;
+}
+.pop-msg .popup-footer {
+  justify-content: center;
+}
+.pop-msg .popup-footer button {
+  width: 235px;
+  flex: none;
 }
 
 .flex-row {

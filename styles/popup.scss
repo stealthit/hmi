@@ -85,39 +85,50 @@
 }
 
 .pop-keypad {
-  width: 419px;
-  height: 770px;
+  width: 420px;
+  height: 873px;
   background: $cl_neutral_6;
   box-shadow: 0px 4px 30px 0px #00000026;
 
+  .popup-header {
+    height: 28px;
+    .btn-close {
+      width: 18px;
+      height: 18px;
+      background-size: cover;
+    }
+  }
+  .popup-body {padding-top: 10px;}
   .calc-wrap {
     display: flex;
     flex-direction: column;
     .calc-value-wrap {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      // gap: 2px;
       .value-row {
+        height: 55px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 18px;
+        font-size: 40px;
         font-weight: 700;
         color: $cl_neutral_1;
+        padding-right: 10px;
       }
     }
     .final-value {
-      margin-top: 11px;
+      margin-top: 10px;
       margin-bottom: 20px;
-      padding-right: 6px;
-      height: 40px;
-      border-top: 1px solid $cl_neutral_4;
-      border-bottom: 1px solid $cl_neutral_4;
-      background: $cl_neutral_5;
+      padding-right: 10px;
+      height: 60px;
+      // border-top: 1px solid $cl_neutral_4;
+      // border-bottom: 1px solid $cl_neutral_4;
+      background: $cl_neutral_7;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      font-size: 26px;
+      font-size: 40px;
       font-weight: 700;
       color: $cl_data_1 ;
     }
@@ -156,12 +167,17 @@
       .minus {
         background: url(#{$imgPath}ic_minus_24.svg) no-repeat center / 24px;    
       }
-      .plus {
-        grid-column: 4 / 5;
-        grid-row: 2 / 4;
+      .plus {        
         background: url(#{$imgPath}ic_plus_24.svg) no-repeat center / 24px;        
       }
-      .enter {
+      .back {
+        display: flex;
+        flex-direction: column;
+        line-height: 29px;
+        grid-column: 4 / 5;
+        grid-row: 2 / 4;
+      }
+      .clear {
         grid-column: 4 / 5;
         grid-row: 4 / 6;
       }
@@ -176,10 +192,10 @@
     justify-content: center;
     padding-bottom: 20px;
     button { 
-      flex: none;
-      width: 66px;
-      height: 28px;
-      font-size: 14px;
+      flex: 1;
+      // width: 66px;
+      height: 60px;
+      font-size: 24px;
       box-shadow: 0px -4px 4px 0px #00000040 inset;
 
     }
@@ -771,6 +787,10 @@
     font-size: 24px;
     font-weight: 700;
     text-align: center;
+  }
+  .popup-footer {
+    justify-content: center;
+    button {width: 235px;flex:none;}
   }
 }
 

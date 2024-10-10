@@ -978,16 +978,17 @@
   gap: 25px;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap {
-  width: 1370px;
+  width: 1468px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+  row-gap: 10px;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap .table-title {
-  width: 1830px;
+  width: 100%;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap table {
-  width: 450px;
+  width: 476px;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap table tr td, .setting-mcc-wrapper .mcc-con .table-wrap table tr th {
   height: 42px;
@@ -1005,6 +1006,7 @@
   padding: 2px;
   background: #CCCCCC;
   font-weight: 700;
+  padding: 5px 6px;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td.on {
   background: #FFFFFF;
@@ -1017,7 +1019,7 @@
   height: 32px;
   text-indent: 0px;
 }
-.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td .btn-normal.on {
+.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td .btn-normal.on:not(.num) {
   text-indent: -9999999999px;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td .btn-normal.on:not(.num)::after {
@@ -1025,10 +1027,21 @@
   text-indent: 0px;
   float: left;
 }
-.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td .btn-normal.on.num::after {
-  content: "No. 1";
+.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td .btn-normal.two {
+  text-indent: -9999999999px;
+}
+.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td .btn-normal.two::after {
+  content: "No. 2";
   text-indent: 0px;
   float: left;
+}
+.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td.f-row {
+  display: flex;
+  gap: 6px;
+  border: none;
+}
+.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr:last-child td {
+  border-bottom: none;
 }
 .setting-mcc-wrapper .mcc-con .flex-col {
   flex: 1;
@@ -1059,7 +1072,7 @@
 }
 .setting-mcc-wrapper .mcc-con .flex-col .list-grid .list-data li .tuning-box {
   height: 42px;
-  padding: 2px;
+  padding: 2px 6px;
   border-bottom: 1px solid #999999;
 }
 

@@ -90,6 +90,10 @@
     <button onclick="openPopup1('pop-coil-sche6')">임의 작업지시번호 생성</button> 
     <button onclick="openPopup1('pop-coil-sche7')">DUMMY 강제 전환</button> 
   </div>
+  <h2>메세지 팝업</h2>
+  <div class="popup-button-group">
+    <button onclick="openPopup2('pop-msg')">확인</button> 
+  </div>
 
   <!-- popup Background -->
   <div id="bg-popup1"></div>
@@ -383,21 +387,21 @@
       </div>
       <div class="final-value">90</div>
       <div class="calc-btn-wrap">
-        <div class="item small">CLEAR</div>
         <div class="item divide"></div>
         <div class="item mul"></div>
         <div class="item minus"></div>
+        <div class="item plus"></div>
         <div class="item">7</div>
         <div class="item">8</div>
         <div class="item">9</div>
-        <div class="item plus"></div>
+        <div class="item back small"><div class="ic-back"></div> BACK</div>
         <div class="item">4</div>
         <div class="item">5</div>
         <div class="item">6</div>
         <div class="item">1</div>
         <div class="item">2</div>
         <div class="item">3</div>
-        <div class="item enter small">ENTER</div>
+        <div class="item clear small">CLEAR</div>
         <div class="item zero">0</div>
         <div class="item dot"></div>
       </div>
@@ -420,6 +424,7 @@
     <button class="btn-normal" onclick='closePopup2(event)'>확인</button>
   </div>
 </div>
+
 <!-- 게이지1 (#1 CLEANING) -->
   <div class="popup-wrap pop-gauge1">
     <div class="popup-header">

@@ -202,8 +202,8 @@
             <table>
               <colgroup>
                 <col width="50px">
-                <col width="300px">
-                <col width="100px">          
+                <col width="260px">
+                <col width="166px">          
               </colgroup>
               <thead>
                 <tr>
@@ -278,8 +278,8 @@
             <table>
               <colgroup>
                 <col width="50px">
-                <col width="300px">
-                <col width="100px">          
+                <col width="260px">
+                <col width="166px">          
               </colgroup>
               <thead>
                 <tr>
@@ -347,15 +347,18 @@
                 <tr>
                   <td>24</td>
                   <td>EPC Hyd. Pump 변경</td>
-                  <td><button class="btn-normal num on">No. 2</button></td>
+                  <td class="f-row">
+                    <button class="btn-normal on">정지</button>
+                    <button class="btn-normal num on">No. 1</button>
+                  </td>
                 </tr>  
               </tbody>
             </table>
             <table>
               <colgroup>
                 <col width="50px">
-                <col width="300px">
-                <col width="100px">          
+                <col width="260px">
+                <col width="166px">          
               </colgroup>
               <thead>
                 <tr>
@@ -368,7 +371,10 @@
                 <tr>
                   <td>25</td>
                   <td>#1TR Hyd. Pump</td>
-                  <td><button class="btn-normal on">정지</button></td>
+                  <td class="f-row">
+                    <button class="btn-normal on">정지</button>
+                    <button class="btn-normal num on two">No. 1</button>
+                  </td>
                 </tr>  
                 <tr>
                   <td>26</td>
@@ -540,7 +546,11 @@
     let targetFirst = document.querySelectorAll('.btn-normal');
     targetFirst.forEach((target) => target.addEventListener("click", function(){ 
 			var parent_this = this;
-			target.classList.toggle('on');
+      if (target.classList.contains('num'))  {
+        target.classList.toggle('two');
+      } else {
+        target.classList.toggle('on');
+      }
       })
     );    
   </script>

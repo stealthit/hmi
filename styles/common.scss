@@ -6144,7 +6144,12 @@ button.btn-normal{
     transform: rotate(-90deg);
   }
 }
-
+.ic-back {
+  width: 24px;
+  height: 24px;
+  background: url(#{$imgPath}ic_BACK.svg);
+  z-index: 99;  
+}
 .blinkcss {
   animation: blink 1s step-end infinite;
 }
