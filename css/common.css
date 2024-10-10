@@ -2133,12 +2133,6 @@ button.btn-normal.on {
   height: 16px;
 }
 
-.ic-wh-arrow {
-  content: url(../assets/ic_wh_arrow.svg);
-  width: 16px;
-  height: 16px;
-}
-
 .ic-hot-air {
   position: absolute;
   content: url(../assets/ic_hot_air.png);
@@ -2867,6 +2861,9 @@ button.btn-normal.on {
 .img-entry-loop-line.type4 {
   content: url(../assets/ENTRY/ENTO_LOOP/TENSION_LOOP_type4.png);
 }
+.img-entry-loop-line.type5 {
+  content: url(../assets/ENTRY/ENTO_LOOP/TENSION_LOOP_type5.png);
+}
 
 .img-entry-loop-b-line {
   content: url(../assets/img_entry_loop_bline.png);
@@ -2910,6 +2907,9 @@ button.btn-normal.on {
 }
 .ic-loop-state.run {
   background: url(../assets/ic_loop_state_run.svg);
+}
+.ic-loop-state.type5 {
+  background: url(../assets/ic_loop_state_type5.svg);
 }
 .ic-loop-state.fault {
   background: url(../assets/ic_loop_state_stop.svg);
@@ -4403,6 +4403,14 @@ button.btn-normal.on {
 
 .ic-roll-32 {
   background-size: cover !important;
+}
+
+.ic-roll-14.type5 {
+  background: url(../assets/ic_COIL_type5_14.svg);
+}
+
+.ic-roll-30.type5 {
+  background: url(../assets/ic_COIL_type5_30.svg);
 }
 
 .ic-cpc2 {
@@ -6802,6 +6810,34 @@ button.btn-normal.on {
   animation: blink-effect 1s step-end infinite;
 }
 .ic-hyd-bar.left {
+  transform: rotate(-90deg);
+}
+
+.ic-wh-arrow {
+  width: 12px;
+  height: 11px;
+  background: url(../assets/ic-wh-arrow_1.svg);
+  z-index: 99;
+}
+.ic-wh-arrow.stop {
+  background: url(../assets/ic-wh-arrow_2.svg);
+}
+.ic-wh-arrow.run {
+  background: url(../assets/ic-wh-arrow_3.svg);
+}
+.ic-wh-arrow.fault {
+  background: url(../assets/ic-wh-arrow_2.svg);
+}
+.ic-wh-arrow.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic-wh-arrow_4.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+.ic-wh-arrow.type5 {
+  background: url(../assets/ic-wh-arrow_5.svg);
+}
+.ic-wh-arrow.left {
   transform: rotate(-90deg);
 }
 

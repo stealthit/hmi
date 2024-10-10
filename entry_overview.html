@@ -199,11 +199,25 @@
         <div class="img-label" style="top:433px;left:453px">#2 PINCH ROLL</div>
         <div class="img-label" style="top:316px;left:594px">WELDER</div>
         <div class="img-label" style="top:464px;left:685px">#1 BRIDLE ROLL</div>
-        <div class="img-label arrow" style="top:245px;left:865px">E-STOP <img alt="" class="ic-wh-arrow"></div>
-        <div class="img-label arrow" style="top:264px;left:865px">ALARM<img alt="" class="ic-wh-arrow"></div>
+        <div class="img-label arrow" style="top:245px;left:865px">
+          E-STOP 
+          <div alt="" class="ic-wh-arrow stop"></div>
+        </div>
+        <div class="img-label arrow" style="top:264px;left:865px">
+          ALARM
+          <div alt="" class="ic-wh-arrow run"></div>
+        </div>
         <!-- <div class="img-label arrow" style="top:637px;left:862px">ALARM1<img alt="" class="ic-wh-arrow"></div> -->
-        <div class="img-label arrow" style="top:656px;left:862px">ALARM<img alt="" class="ic-wh-arrow"></div>
-        <div class="img-label arrow" style="top:676px;left:862px">E-STOP<img alt="" class="ic-wh-arrow"></div>
+        <div class="img-label arrow" style="top:656px;left:862px">
+          ALARM
+          <div alt="" class="ic-wh-arrow fault">
+            <div class="fault-img"></div>
+          </div>
+        </div>
+        <div class="img-label arrow" style="top:676px;left:862px">
+          E-STOP
+          <div alt="" class="ic-wh-arrow type5"></div>
+        </div>
         <div class="img-label" style="top:791px;left:1122px">TENSION LOOP</div>
         <div class="img-label" style="top:263px;left:1372px">WPD</div>
         <div class="img-label" style="top:337px;left:1376px">#1 CPC</div> 
@@ -272,8 +286,8 @@
         <div class="loop-box-wrapper" style="top: 204px;left: 956px;">
           <div class="loop-box">
             <div class="roll-base-bar top" style="top: 0;left: 0;">
-              <div class="ic-roll-14" style="top:-24px;left:21px;"></div>
-              <div class="ic-roll-30" style="top:-10px;left:13px;"></div>
+              <div class="ic-roll-14 type5" style="top:-24px;left:21px;"></div>
+              <div class="ic-roll-30 type5" style="top:-10px;left:13px;"></div>
               <div class="ic-roll-30" style="top:-10px;left:49px;"></div>
               <div class="ic-roll-30" style="top:-10px;left:85px;"></div>
               <div class="ic-roll-30" style="top:-10px;left:121px;"></div>
@@ -293,7 +307,7 @@
               <!-- 예제 눈금자 값이 90일때 -->
               <!-- 초기값에서 1눈금자마다 4.3px 씩 빼면 됩니다. -->
                <!-- type2:blue type3:green gype4:white -->
-              <div class="img-entry-loop-line type3" style="height: calc(466px - 43px);"></div>  
+              <div class="img-entry-loop-line type5" style="height: calc(466px - 43px);"></div>  
               
               <!-- line 1개씩 분리한 부분 line-box 태그에 정의 -->
               <!-- <div class="line-box" style="height: calc(466px - 43px);">
@@ -327,7 +341,7 @@
                 <div class="ic-roll-30" style="top:-9px;left:120px;"></div>
                 <div class="ic-roll-30" style="top:-9px;left:156px;"></div>
                 <div class="ic-roll-30" style="top:-9px;left:192px;"></div>
-                <div class="ic-roll-30" style="top:-9px;left:228px;"></div>
+                <div class="ic-roll-30 type5" style="top:-9px;left:228px;"></div>
                 <div class="ic-roll-30" style="top:-9px;left:264px;"></div>
                 <div class="ic-roll-30" style="top:-9px;left:300px;"></div>
                 <div class="ic-roll-30" style="top:-9px;left:335px;"></div>
@@ -336,7 +350,7 @@
             <!-- 초기값에서 1눈금자마다 img-entry-loop-b-line의 height 에 4.3px 씩 더하면 됩니다. -->
             <div class="img-entry-loop-b-line" style="height: calc(38px + 43px);"></div>
             <div class="img-entry-loop-bottom"></div>
-            <div class="ic-loop-state run">
+            <div class="ic-loop-state type5">
               <!-- fault 일때는 fault-img 태그 추가 -->
               <!-- <div class="fault-img"></div> -->
             </div>

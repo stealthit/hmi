@@ -2051,11 +2051,11 @@ button.btn-normal{
   width: 16px;
   height: 16px;  
 }
-.ic-wh-arrow {
-  content: url(#{$imgPath}ic_wh_arrow.svg);
-  width: 16px;
-  height: 16px;  
-}
+// .ic-wh-arrow {
+//   content: url(#{$imgPath}ic_wh_arrow.svg);
+//   width: 16px;
+//   height: 16px;  
+// }
 .ic-hot-air {
   position: absolute;
   content: url(#{$imgPath}ic_hot_air.png);
@@ -2832,6 +2832,9 @@ button.btn-normal{
   &.type4 {
     content: url(#{$imgPath}ENTRY/ENTO_LOOP/TENSION_LOOP_type4.png);
   }
+  &.type5 {
+    content: url(#{$imgPath}ENTRY/ENTO_LOOP/TENSION_LOOP_type5.png);
+  }
 }
 .img-entry-loop-b-line {
   content: url(#{$imgPath}img_entry_loop_bline.png);
@@ -2869,6 +2872,9 @@ button.btn-normal{
   }
   &.run {
     background: url(#{$imgPath}ic_loop_state_run.svg);
+  }
+  &.type5 {
+    background: url(#{$imgPath}ic_loop_state_type5.svg);
   }
   &.fault {
     background: url(#{$imgPath}ic_loop_state_stop.svg);
@@ -3698,6 +3704,12 @@ button.btn-normal{
 }
 .ic-roll-32 {
   background-size: cover !important;
+}
+.ic-roll-14.type5 {
+  background: url(../assets/ic_COIL_type5_14.svg);
+}
+.ic-roll-30.type5 {
+  background: url(../assets/ic_COIL_type5_30.svg);
 }
 // line tracking
 .ic-cpc2 {
@@ -6098,6 +6110,36 @@ button.btn-normal{
     }
   }
 
+  &.left {
+    transform: rotate(-90deg);
+  }
+}
+
+.ic-wh-arrow {
+  // position: absolute;
+  width: 12px;
+  height: 11px;
+  background: url(#{$imgPath}ic-wh-arrow_1.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic-wh-arrow_2.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic-wh-arrow_3.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic-wh-arrow_2.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic-wh-arrow_4.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+  &.type5 {
+    background: url(#{$imgPath}ic-wh-arrow_5.svg);
+  }
   &.left {
     transform: rotate(-90deg);
   }
