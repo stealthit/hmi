@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+  <div class="wrapper">
+    <header>   
+      <div class="header-topbar">
+        <div class="topbar-left">
+          <div class="grp-arrow">
+            <button class="btn-arrow pre"></button>
+            <button class="btn-arrow next" disabled></button>
+          </div>
+          <img src="./assets/img_cmp_logo.png" class="img-logo" alt="logo">
+          <div class="line-name">
+            <img src="" alt="" class="ic-loc-16">
+            TP3 LINE
+          </div>
+        </div>
+        <p class="topbar-menutext">누적 감시</p>
+        <div class="topbar-right">
+          <div class="datetime-wrap">
+            <p class="date">8월 21일 (수)</p>
+            <p class="time">오전 09:09:23</p>
+          </div>
+          <button class="btn-onoff"></button>
+        </div>
+      </div>
+      <div class="header-contents">
+        <div class="hd-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>투입원판번호</th>
+                <th>판두께</th>
+                <th>판폭</th>
+                <th>TOP</th>
+                <th>BOT</th>
+                <th>도유량</th>
+                <th>화학처리</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>현 재</td>
+                <td>LOTN00000104</td>
+                <td>0.350</td>
+                <td>934</td>
+                <td>10.00</td>
+                <td>30.00</td>
+                <td>3.0</td>
+                <td>0.7</td>
+              </tr>
+              <tr>
+                <td>다 음</td>
+                <td>LOTN00000105</td>
+                <td>0.400</td>
+                <td>580</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="hd-grp-btn"> 
+          <button class="on">비상정지</button>
+          <button>라인고장</button>
+          <button>정류기 고장</button>
+          <button>경보값 초과</button>
+          <button>ENTRY<br> STAND BY</button>
+          <button>CENTER<br> STAND BY</button>
+          <button>EXIT<br> STAND BY</button>
+          <button>HELPER</button>
+        </div>
+        <ul class="hd-info-speed">
+          <li>
+            <div class="title">ENTRY SPEED</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+          <li>
+            <div class="title">LINE SPEED (H)</div>
+            <div class="value">188.9 mpm</div>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL & (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li><a href="./line_tracking.html">LINE TRACKING</a></li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <li><p>ENTRY COIL CAR</p></li>
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li>
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li class="sel">HYDRAULIC</li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM & EVENT</p>
+            <ul class="submenu-wrap">
+              <li><p>ALARM</p></li>
+              <li><p>EVENT</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper leakage-wrapper">
+        
+        <div class="img-label" style="top: 396px;left: 24px;">#1 POR</div>
+        <div class="img-label" style="top: 396px;left: 101px;">#2 POR</div>
+        <div class="img-label" style="top: 324px;left: 198px;">WELDER</div>
+        <div class="img-label" style="top: 399px;left: 206px;">#1 BRIDLE ROLL</div>
+        <div class="img-label" style="top: 455px;left: 332px;">TENSION LOOP</div>
+        <div class="img-label" style="top: 212px;left: 453px;">WPD</div>
+        <div class="img-label" style="top: 276px;left: 472px;">#1 CPC</div>
+        <div class="img-label line-2" style="top: 328px;left: 442px;">#2<br> BRIDLE ROLL</div>
+        <div class="img-label line-2" style="top: 328px;left: 526px;">#1<br> CLEANING</div>
+        <div class="img-label line-2" style="top: 328px;left: 597px;">#2<br> CLEANING</div>
+        <div class="img-label line-2" style="top: 328px;left: 672px;">CLEANING<br> RINSE</div>
+        <div class="img-label" style="top: 328px;left: 751px;">PICKLING</div>
+        <div class="img-label line-2" style="top: 328px;left: 840px;">PICKLING<br> RINSE</div>
+        <div class="img-label" style="top: 183px;left: 850px;">#2 CPC</div>
+        <div class="img-label" style="top: 186px;left: 977px;">PLATING RINSE</div>
+        <div class="img-label" style="top: 186px;left: 1098px;">FLUXING</div>
+        <div class="img-label" style="top: 186px;left: 1201px;">#1 AIR DRYER</div>
+        <div class="img-label" style="top: 216px;left: 1108px;">TOP PLATING</div>
+        <div class="img-label" style="top: 339px;left: 1059px;">BOTTOM PLATING</div>
+        <div class="img-label" style="top: 317px;left: 977px;">B1</div>
+        <div class="img-label" style="top: 317px;left: 1006px;">B2</div>
+        <div class="img-label" style="top: 317px;left: 1033px;">B3</div>
+        <div class="img-label" style="top: 317px;left: 1062px;">B4</div>
+        <div class="img-label" style="top: 317px;left: 1090px;">B5</div>
+        <div class="img-label" style="top: 317px;left: 1118px;">B6</div>
+        <div class="img-label" style="top: 317px;left: 1147px;">B7</div>
+        <div class="img-label" style="top: 317px;left: 1174px;">B8</div>
+        <div class="img-label" style="top: 317px;left: 1201px;">B9</div>
+        <div class="img-label" style="top: 317px;left: 1226px;">B10</div>
+        <div class="img-label" style="top: 259px;left: 1230px;">T1</div>
+        <div class="img-label" style="top: 259px;left: 1202px;">T2</div>
+        <div class="img-label" style="top: 259px;left: 1174px;">T3</div>
+        <div class="img-label" style="top: 259px;left: 1147px;">T4</div>
+        <div class="img-label" style="top: 259px;left: 1119px;">T5</div>
+        <div class="img-label" style="top: 259px;left: 1090px;">T6</div>
+        <div class="img-label" style="top: 259px;left: 1063px;">T7</div>
+        <div class="img-label" style="top: 115px;left: 1351px;">REFLOW</div>
+        <div class="img-label" style="top: 366px;left: 1352px;">QUENCHING</div>
+        <div class="img-label" style="top: 206px;left: 1457px;">WPD</div>
+        <div class="img-label" style="top: 166px;left: 1467px;">#2 AIR<br> DRYER</div>
+        <div class="img-label" style="top: 169px;left: 1562px;">#3 AIR<br> DRYER</div>
+        <div class="img-label" style="top: 366px;left: 1460px;">CHEMICAL</div>
+        <div class="img-label" style="top: 143px;left: 1570px;">SDD</div>
+        <div class="img-label" style="top: 385px;left: 1518px;">SDD</div>
+        <div class="img-label line-2 left" style="top: 377px;left: 1550px;">PIN HOLE<br> DETECTOR</div>
+        <div class="img-label" style="top: 245px;left: 1609px;">E.S OILER</div>
+        <div class="img-label" style="top: 319px;left: 1613px;">T.G</div>
+        <div class="img-label" style="top: 319px;left: 1639px;">C.W.G</div>
+        <div class="img-label" style="top: 374px;left: 1623px;">#3 BRIDLE ROLL</div>
+        <div class="img-label" style="top: 275px;left: 1707px;">SNIP SHEAR</div>
+        <div class="img-label" style="top: 388px;left: 1785px;">#1 TR</div>
+        <div class="img-label" style="top: 388px;left: 1848px;">#2 TR</div>
+        <div class="img-label big" style="top: 434px;left: 25px;">1F</div>
+
+        <div class="img-label big" style="top: 465px;left: 1247px;">B1</div>
+        <div class="box"></div>
+
+        <div class="ic-leakage" style="top: 295.5px;left: 608.3px;"></div>
+        <div class="ic-leakage" style="top: 295.5px;left: 761.5px;"></div>
+        <div class="ic-leakage" style="top: 380px;left: 867px;"></div>
+        <div class="ic-leakage" style="top: 380px;left: 897px;"></div>
+        <div class="ic-leakage" style="top: 380px;left: 927px;"></div>
+        <div class="ic-leakage" style="top: 380px;left: 957px;"></div>
+        <div class="ic-leakage" style="top: 663px;left: 1344px;"></div>
+        <div class="ic-leakage" style="top: 663px;left: 1374px;"></div>
+        <div class="ic-leakage" style="top: 663px;left: 1404px;"></div>
+
+        <div class="ic-leakage fault" style="top: 338px;left: 1423px;">
+          <div class="fault-img"></div>
+        </div>
+        
+        <div class="img-leak-arr01" style="top: 318px;left: 588px;"></div>
+        <ul class="info-box" style="top: 529px;left: 292px;">
+          <li class="title">액상탈지제 액 누출 감지</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>정상</p>
+          </li>
+        </ul>
+        <div class="img-leak-arr02" style="top: 318px;left: 635px;"></div>
+        <ul class="info-box" style="top: 567px;left: 292px;">
+          <li class="title">황산 98% 액 누출 감지</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>정상</p>
+          </li>
+        </ul>
+        <div class="img-leak-arr03" style="top: 398px;left: 793px;"></div>
+        <ul class="info-box" style="top: 453px;left: 867px;">
+          <li class="title">황산액 누출감지 센서</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>정상</p>
+          </li>
+        </ul>
+        <div class="img-leak-arr04" style="top: 398px;left: 815px;"></div>
+        <ul class="info-box" style="top: 491px;left: 867px;">
+          <li class="title">Making Tank 액 누출 감지 #1</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>정상</p>
+          </li>
+        </ul>
+        <div class="img-leak-arr05" style="top: 398px;left: 836px;"></div>
+        <ul class="info-box" style="top: 529px;left: 867px;">
+          <li class="title">Making Tank 액 누출 감지 #2</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>정상</p>
+          </li>
+        </ul>
+        <div class="img-leak-arr06" style="top: 398px;left: 872px;"></div>
+        <ul class="info-box" style="top: 567px;left: 867px;">
+          <li class="title">#2 Enclosure 순환탱크 액누출감지</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>정상</p>
+          </li>
+        </ul>
+        <div class="img-leak-arr07" style="top: 608px;left: 1410px;"></div>
+        <ul class="info-box" style="top: 82px;left: 1445px;">
+          <li class="title" style="width: 316px;">화학처리 Making Tank 액 누출 센서</li>
+          <li class="data fault">
+            <div class="ic-leakage"></div>
+            <p>누출</p>
+          </li>
+        </ul>      
+        <div class="img-leak-arr08" style="top: 641px;left: 1348px;"></div>
+        <ul class="info-box" style="top: 600px;left: 1467px;">
+          <li class="title" style="width: 316px;">[B1] 유무기산 저장시설 액 누출 감지 센서</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>누출</p>
+          </li>
+        </ul>      
+        <div class="img-leak-arr09" style="top: 687px;left: 1380px;"></div>
+        <ul class="info-box" style="top: 638px;left: 1467px;">
+          <li class="title" style="width: 316px;">[B1] 화학처리 D.O 순환탱크 액 누출 감지센서 #1</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>누출</p>
+          </li>
+        </ul>      
+        <div class="img-leak-arr10" style="top: 91px;left: 1408px;"></div>
+        <ul class="info-box" style="top: 676px;left: 1467px;">
+          <li class="title" style="width: 316px;">[B1] 화학처리 D.O 순환탱크 액 누출 감지센서 #2</li>
+          <li class="data">
+            <div class="ic-leakage"></div>
+            <p>누출</p>
+          </li>
+        </ul>      
+      </div>
+    </main>
+    <footer>
+      <div class="alarm-title-box">ALARM</div>
+      <div class="alarm-data-box">
+        <div class="data-wrap">
+          <ul class="data-list">
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_01_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>         
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_02_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_03_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>      
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_04_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_05_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+            <li>
+              <p class="data-1">2024-12-28 13:28:27</p>
+              <p class="data-2">DT_ATT_06_HH</p>
+              <p class="data-3">NPL_ST1014_ALM</p>
+              <p class="data-4">Allkail Trratment Circulation Outlet Naoll High High Alarm</p>
+              <p class="data-5">ON</p>
+            </li>     
+          </ul>
+        </div>        
+      </div>
+      <ul class="server-info-box">
+        <li>
+          <p>SERVER - A</p>
+          <p class="on">M</p>
+          <p class="on">ENTRY</p>
+          <p class="on">CENTER</p>
+          <p class="on">EXIT</p>
+        </li>
+        <li>
+          <p>SERVER - B</p>
+          <p>S</p>
+          <p class="on">MASTER</p>
+          <p class="on">HELPER</p>
+          <p class="on">RECTIFIER</p>
+        </li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

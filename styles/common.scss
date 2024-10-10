@@ -2116,6 +2116,76 @@ button.btn-normal{
   width: 12px;
   height: 10px;
 }
+.img-leak-arr01 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_01.png);
+  width: 32px;
+  height: 205px;
+}
+.img-leak-arr02 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_02.png);
+  width: 138px;
+  height: 269px;
+}
+.img-leak-arr03 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_03.png);
+  width: 181px;
+  height: 187px;
+}
+.img-leak-arr04 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_04.png);
+  width: 128px;
+  height: 148px;
+}
+.img-leak-arr05 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_05.png);
+  width: 78px;
+  height: 112px;
+}
+.img-leak-arr06 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_06.png);
+  width: 13px;
+  height: 47px;
+}
+.img-leak-arr07 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_07.png);
+  width: 53px;
+  height: 53px;
+}
+.img-leak-arr08 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_08.png);
+  width: 113px;
+  height: 21px;
+}
+.img-leak-arr09 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_09.png);
+  width: 82px;
+  height: 20px;
+}
+.img-leak-arr10 {
+  position: absolute;
+  z-index: 99;
+  content: url(#{$imgPath}img_leak_10.png);
+  width: 32px;
+  height: 239px;
+}
 // .img-linetracking-o {
 //   content: url(#{$imgPath}img_LINETRACKING_o.png);
 //   width: 1920px;
@@ -3822,6 +3892,23 @@ button.btn-normal{
       width: 100%;
       height: 100%;
       background: url(#{$imgPath}ic_bar2_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-leakage {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background: url(#{$imgPath}ic_leakage_none.svg);
+  z-index: 99;
+  
+  &.fault {
+    background: url(#{$imgPath}ic_leakage_none.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_leakage_fault.svg);
       animation: blink-effect 1s step-end infinite;    
     }
   }

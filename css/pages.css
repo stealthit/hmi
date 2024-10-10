@@ -1905,3 +1905,105 @@
 .hyd-epc-wrapper .gd2 .list-data .data p {
   justify-content: center;
 }
+
+.hyd-exit-wrapper {
+  background: url(../assets/img_hyd_EXIT.png);
+  background-position: center 128px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+}
+.hyd-exit-wrapper .title-box {
+  position: absolute;
+  height: 28px;
+}
+.hyd-exit-wrapper .img-label {
+  line-height: 14px;
+  text-align: left;
+}
+.hyd-exit-wrapper .gd1 {
+  width: 200px;
+}
+.hyd-exit-wrapper .gd1 .list-data .data-title {
+  width: 120px;
+}
+.hyd-exit-wrapper .gd1 .list-data .data-title p {
+  padding-left: 10px;
+}
+.hyd-exit-wrapper .gd1 .list-data .data p {
+  color: #000;
+  justify-content: center;
+}
+.hyd-exit-wrapper .gd2 {
+  width: 120px;
+}
+.hyd-exit-wrapper .gd2 .list-data .data p {
+  justify-content: center;
+}
+
+.leakage-wrapper {
+  background: url(../assets/img_leakage.png);
+  background-position: center 139px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+}
+.leakage-wrapper .img-label.left {
+  text-align: left;
+}
+.leakage-wrapper .img-label.big {
+  font-size: 30px;
+  line-height: 1.5;
+}
+.leakage-wrapper .box {
+  z-index: 98;
+  position: absolute;
+  top: 453px;
+  left: 1227px;
+  width: 218px;
+  height: 251px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  background: transparent;
+}
+.leakage-wrapper .info-box {
+  position: absolute;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+}
+.leakage-wrapper .info-box .title {
+  height: 28px;
+  width: 240px;
+  border-right: 1px solid #999999;
+  background: #CCCCCC;
+  color: #000000;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.leakage-wrapper .info-box .data {
+  height: 28px;
+  width: 100px;
+  background: #FFFFFF;
+  color: #002878;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.leakage-wrapper .info-box .data .ic-leakage {
+  position: relative;
+}
+.leakage-wrapper .info-box .data.fault {
+  background: #FEF546;
+}
+.leakage-wrapper .info-box .data.fault .ic-leakage {
+  background: url(../assets/ic_leakage_fault.svg);
+}

@@ -1905,3 +1905,111 @@
     .list-data .data p {justify-content: center;}
   }
 }
+
+.hyd-exit-wrapper {
+  background: url(#{$imgPath}img_hyd_EXIT.png);
+  background-position: center 128px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;
+
+  .title-box {
+    position: absolute;
+    height: 28px;
+  }
+
+  .img-label {
+    line-height: 14px;
+    text-align: left;
+  }
+
+  .gd1 {
+    width: 200px;
+    .list-data {
+      .data-title {
+        width: 120px;
+        p {
+          padding-left: 10px;
+        }
+      }
+      .data {
+        p {
+          color: #000;
+          justify-content: center;
+        }
+      }
+    }
+
+  }
+
+  .gd2 {
+    width: 120px;
+    .list-data .data p {justify-content: center;}
+  }
+}
+
+.leakage-wrapper {
+  background: url(#{$imgPath}img_leakage.png);
+  background-position: center 139px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 1920px;
+  height: 820px;
+  overflow: hidden;  
+
+  .img-label {    
+    &.left{text-align: left;}
+    &.big {font-size: 30px;line-height: 1.5;}    
+  }
+
+  .box {
+    z-index: 98;
+    position: absolute;
+    top: 453px;
+    left: 1227px;
+    width: 218px;
+    height: 251px;
+    border: 1px solid $cl_neutral_4;
+    border-radius: 4px;
+    background: transparent;
+  }
+  .info-box {
+    position: absolute;
+    border-top: 1px solid $cl_neutral_4;
+    border-bottom: 1px solid $cl_neutral_4;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    
+    .title {
+      height: 28px;
+      width: 240px;
+      border-right: 1px solid $cl_neutral_4;
+      background: $cl_neutral_5;
+      color: $cl_neutral_1;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .data {
+      height: 28px;
+      width: 100px;
+      background: $cl_neutral_6;
+      color: $cl_data_1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      .ic-leakage {position: relative;}
+      &.fault {
+        background: $cl_alaram_2;
+
+        .ic-leakage {background: url(#{$imgPath}ic_leakage_fault.svg);}
+        // animation: blink-effect 1s step-end infinite;    
+      }
+    }
+  }
+
+}
