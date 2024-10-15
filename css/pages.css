@@ -42,6 +42,19 @@
   position: absolute;
   width: 1896px;
 }
+.line-trk-wrapper .table-wrap table tbody tr {
+  background: #CCCCCC;
+}
+.line-trk-wrapper .table-wrap table tbody tr.curSel {
+  background: #008C3C;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+.line-trk-wrapper .table-wrap table tbody tr.nextSel {
+  background: #0178D5;
+  color: #FFFFFF;
+  font-weight: 400;
+}
 .line-trk-wrapper .bg-line-wrap {
   top: 87px;
   left: 44.5px;
@@ -147,6 +160,7 @@
   left: 322px;
   top: 134px;
   height: 260px;
+  background: #E0E0E0;
 }
 .line-trk-wrapper .loop-box-wrapper .loop-box {
   width: 111px;

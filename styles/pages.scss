@@ -13,6 +13,19 @@
     z-index: 2;
     position: absolute;
     width: 1896px;
+    table tbody tr {
+      background: $cl_neutral_5;
+      &.curSel {
+        background: $cl_data_4;
+        color: $cl_neutral_6;
+        font-weight: 400;
+      }
+      &.nextSel {
+        background: #0178D5;
+        color: $cl_neutral_6;
+        font-weight: 400;
+      }
+    }
   }
   .bg-line-wrap {
     top: 87px;
@@ -120,6 +133,7 @@
     left: 322px;
     top: 134px;
     height: 260px;
+    background: $cl_neutral_7;
     .loop-box {
       width: 111px;
       max-height: 260px;  

@@ -27,6 +27,8 @@
             <p class="date">8월 21일 (수)</p>
             <p class="time">오전 09:09:23</p>
           </div>
+          <!-- 창크기 조절 버튼일 경우는 'win' class 추가 -->
+          <!-- ex) <button class="btn-onoff win"></button> -->
           <button class="btn-onoff"></button>
         </div>
       </div>
@@ -58,7 +60,8 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <!-- 비가동이 기본값(흰색), 비가동:off(그레이), 현재가동:curOn(그린), 다음가동:nextOn(블루)  -->
+              <tr class="curOn">
                 <td>현 재</td>
                 <td>LOTN00000104</td>
                 <td>0.350</td>
@@ -69,7 +72,7 @@
                 <td>0.7</td>
                 <td>0.7</td>
               </tr>
-              <tr>
+              <tr class="nextOn">
                 <td>다 음</td>
                 <td>LOTN00000105</td>
                 <td>0.400</td>
@@ -84,7 +87,7 @@
           </table>
         </div>
         <div class="hd-grp-btn"> 
-          <button class="on">비상정지</button>
+          <button>비상정지</button>
           <button>라인고장</button>
           <button>정류기 고장</button>
           <button>경보값 초과</button>
@@ -96,11 +99,12 @@
         <ul class="hd-info-speed">
           <li>
             <div class="title">ENTRY SPEED</div>
-            <div class="value">188.9 mpm</div>
+            <!-- 비가동이 기본값, 가동:on -->
+            <div class="value on">188.9 mpm</div>
           </li>
           <li>
             <div class="title">LINE SPEED (H)</div>
-            <div class="value">188.9 mpm</div>
+            <div class="value on">188.9 mpm</div>
           </li>
         </ul>
       </div>
@@ -130,7 +134,8 @@
             <p class="mainmenu-title">CENTER</p>
             <ul class="submenu-wrap">
               <li><p>CENTER OVERVIEW</p></li>
-              <li><p>PLATING</p></li>
+              <li><p>PRE PLATING</p></li>
+              <li><p>POST PLATING</p></li>
               <li><p>CENTER HELPER 제어</p></li>
               <li><p>CENTER INTERLOCK</p></li>
               <li><p>RECTIFIER PRESET</p></li>
@@ -167,10 +172,11 @@
           </li>
           <li>POWER LINE</li>
           <li>
-            <p class="mainmenu-title">ALARM & EVENT</p>
+            <p class="mainmenu-title">ALARM / EVENT</p>
             <ul class="submenu-wrap">
-              <li><p>ALARM</p></li>
-              <li><p>EVENT</p></li>
+              <li class="line-2"><p>SUMMARY ALARMM<br> (Real Time)</p></li>
+              <li><p>HISTORY ALARMS</p></li>
+              <li><p>HISTORY EVENTS</p></li>
             </ul>
           </li>
         </ul>

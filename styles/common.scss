@@ -225,6 +225,10 @@ input[type='datetime-local']:valid::before {
           background-image: url(#{$imgPath}ic_onoff_24.svg);
           background-color: transparent;
           background-position: center;  
+
+          &.win {
+            background-image: url(#{$imgPath}ic_win_zoom.svg);
+          }
         }
       }
     }
@@ -250,23 +254,29 @@ input[type='datetime-local']:valid::before {
             font-weight: 700;
             text-align: center;
             vertical-align: middle;
-            background: $cl_neutral_3;
+            background: $cl_neutral_5;
             border: 1px solid $cl_neutral_4;
-            color: $cl_neutral_6;
+            color: $cl_neutral_1;
           }
-          tr td {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            border: 1px solid $cl_neutral_4;
-            background: $cl_neutral_1;
-            padding: 0 2px;
-            font-size: 14px;
-            font-weight: 700;
-            text-align: center;
-            vertical-align: middle;
-            color: $cl_alaram_2;
-          }
+          tr {
+            td {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              border: 1px solid $cl_neutral_4;
+              background: $cl_neutral_6;
+              padding: 0 2px;
+              font-size: 14px;
+              font-weight: 700;
+              text-align: right;
+              vertical-align: middle;
+              color: $cl_data_1;
+              &:nth-child(2) {text-align: center;}
+            }            
+            &.off td {background: $cl_neutral_7;}
+            &.curOn td {background: $cl_data_4;color: $cl_neutral_6;}
+            &.nextOn td {background: #0178D5;color: $cl_neutral_6;}
+          } 
         }
       }
       .hd-grp-btn {
@@ -299,8 +309,8 @@ input[type='datetime-local']:valid::before {
           .title {
             @include flex_center;
             height: 35px;            
-            background: $cl_neutral_3;
-            color: $cl_neutral_6;
+            background: $cl_neutral_5;
+            color: $cl_neutral_1;
             border-right: 1px solid $cl_neutral_4;
           }
           .value {
@@ -309,9 +319,11 @@ input[type='datetime-local']:valid::before {
             justify-content: flex-end;
             padding-right: 4px;            
             height: 37px;
-            background: $cl_neutral_1;
+            background: $cl_neutral_5;
             border-right: 1px solid $cl_neutral_4;
-            color: $cl_alaram_2;
+            border-top: 1px solid $cl_neutral_4;
+            color: $cl_data_1;
+            &.on {background: $cl_neutral_6;}
           }
         }
       }
@@ -417,10 +429,10 @@ input[type='datetime-local']:valid::before {
       @include flex_center;
       width: 90px;
       border-radius: 4px;
-      background: $cl_alaram_1;
+      background: $cl_neutral_7;
       font-size: 20px;
       font-weight: 900;
-      color: $cl_alaram_2;
+      color: $cl_data_1;
     }
     .alarm-data-box {
       padding: 4px 5px 4px 10px;
@@ -499,7 +511,7 @@ input[type='datetime-local']:valid::before {
               &:nth-child(4) {flex: 1;}
               &:last-child {
                 width: 60px;
-                color: $cl_neutral_6;
+                // color: $cl_neutral_6;
               }
             }
           }
@@ -507,7 +519,7 @@ input[type='datetime-local']:valid::before {
       }      
     }
     .server-info-box {
-      width: 442px;
+      width: 238px;
       display: flex;
       flex-direction: column;
       border: 1px solid $cl_neutral_3;
@@ -524,11 +536,11 @@ input[type='datetime-local']:valid::before {
         p {
           @include flex_center;
           &:not(:last-child) {border-right: 1px solid $cl_neutral_3;}
-          &:first-child {width: 102px;}
+          &:first-child {width: 100px;}
           &:nth-child(2) {width: 38px;}
-          &:last-child {width: 302px;}
+          &:last-child {width: 100px;}
           &.on {
-            background: $cl_alaram_5;
+            background: $cl_neutral_6;
             font-weight: 700;
             color: $cl_neutral_1;
           }
@@ -2904,6 +2916,27 @@ button.btn-normal{
     content: url(#{$imgPath}line_loop_gr.png);
   } 
 }
+.img-trk-loop-top-bar {
+  content: url(#{$imgPath}img_trk_loop_top_bar.png);
+  width: 136px;
+  height: 6px;
+  object-fit: cover;
+  position: absolute;
+}
+.img-trk-loop-main {
+  content: url(#{$imgPath}img_trk_loop_main.png);
+  width: 122px;
+  height: 12px;
+  object-fit: cover;
+  position: absolute;
+}
+.img-trk-loop-box {
+  content: url(#{$imgPath}img_trk_loop_box.png);
+  width: 106px;
+  height: 282px;
+  object-fit: contain;
+  position: absolute;
+}
 .svg-line-loop1 {
   content: url(#{$imgPath}line_loop1.svg);
   width: 4px;
@@ -3727,6 +3760,32 @@ button.btn-normal{
   }
   &.fault {
     background: $cl_neutral_4;
+  }
+}
+.ic-trk-loop-head {
+  position: absolute;
+  width: 12px;
+  height: 14px;
+  background: url(#{$imgPath}ic_trk_loop_head_1.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_trk_loop_head_2.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_trk_loop_head_3.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_trk_loop_head_2.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_trk_loop_head_4.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+  &.ic-roll-14.type5 {
+    background: url(#{$imgPath}ic_trk_loop_head_5.svg);
   }
 }
 .fault {cursor: pointer;}
@@ -6155,6 +6214,24 @@ button.btn-normal{
 }
 // -------------------------------------------
 // -- Line Tracking Line ---------------------
+.l-POR_1-0 {
+  position: absolute;
+  top: 209px;
+  left: 17px;
+  width: 29px;
+  height: 29px;
+  background: url(#{$imgPath}LTO_LINE_BK/POR_1/POR_1-0.png);
+  z-index: 99;
+  &.type2 {
+    background: url(#{$imgPath}LTO_LINE_BL/POR_1/POR_1-0.png);
+  }
+  &.type3 {
+    background: url(#{$imgPath}LTO_LINE_GR/POR_1/POR_1-0.png);
+  }
+  &.type4 {
+    background: url(#{$imgPath}LTO_LINE_WH/POR_1/POR_1-0.png);
+  }
+}
 .l-POR_1-1 {
   position: absolute;
   top: 201px;
@@ -6177,7 +6254,7 @@ button.btn-normal{
   position: absolute;
   top: 201px;
   left: 43px;
-  width: 43px;
+  width: 41px;
   height: 16px;
   background: url(#{$imgPath}LTO_LINE_BK/POR_1/POR_1-2.png);
   z-index: 99;
@@ -6243,6 +6320,25 @@ button.btn-normal{
   }
   &.type4 {
     background: url(#{$imgPath}LTO_LINE_WH/POR_1/POR_1-5.png);
+  }
+}
+.l-POR_2-0 {
+  position: absolute;
+  width: 43px;
+  height: 16px;
+  top: 213px;
+  left: 86px;
+  
+  background: url(#{$imgPath}LTO_LINE_BK/POR_2/POR_2-0.png);
+  z-index: 99;
+  &.type2 {
+    background: url(#{$imgPath}LTO_LINE_BL/POR_2/POR_2-0.png);
+  }
+  &.type3 {
+    background: url(#{$imgPath}LTO_LINE_GR/POR_2/POR_2-0.png);
+  }
+  &.type4 {
+    background: url(#{$imgPath}LTO_LINE_WH/POR_2/POR_2-0.png);
   }
 }
 .l-POR_2-1 {

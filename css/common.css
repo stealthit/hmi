@@ -248,6 +248,9 @@ input[type=datetime-local]:valid::before {
   background-color: transparent;
   background-position: center;
 }
+.wrapper header .header-topbar .topbar-right .btn-onoff.win {
+  background-image: url(../assets/ic_win_zoom.svg);
+}
 .wrapper header .header-contents {
   height: 92px;
   padding: 10px;
@@ -269,22 +272,36 @@ input[type=datetime-local]:valid::before {
   font-weight: 700;
   text-align: center;
   vertical-align: middle;
-  background: #666666;
+  background: #CCCCCC;
   border: 1px solid #999999;
-  color: #FFFFFF;
+  color: #000000;
 }
 .wrapper header .header-contents .hd-table-wrap table tr td {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   border: 1px solid #999999;
-  background: #000000;
+  background: #FFFFFF;
   padding: 0 2px;
   font-size: 14px;
   font-weight: 700;
-  text-align: center;
+  text-align: right;
   vertical-align: middle;
-  color: #FEF546;
+  color: #002878;
+}
+.wrapper header .header-contents .hd-table-wrap table tr td:nth-child(2) {
+  text-align: center;
+}
+.wrapper header .header-contents .hd-table-wrap table tr.off td {
+  background: #E0E0E0;
+}
+.wrapper header .header-contents .hd-table-wrap table tr.curOn td {
+  background: #008C3C;
+  color: #FFFFFF;
+}
+.wrapper header .header-contents .hd-table-wrap table tr.nextOn td {
+  background: #0178D5;
+  color: #FFFFFF;
 }
 .wrapper header .header-contents .hd-grp-btn {
   flex: 1;
@@ -324,8 +341,8 @@ input[type=datetime-local]:valid::before {
   justify-content: center;
   align-items: center;
   height: 35px;
-  background: #666666;
-  color: #FFFFFF;
+  background: #CCCCCC;
+  color: #000000;
   border-right: 1px solid #999999;
 }
 .wrapper header .header-contents .hd-info-speed li .value {
@@ -334,9 +351,13 @@ input[type=datetime-local]:valid::before {
   justify-content: flex-end;
   padding-right: 4px;
   height: 37px;
-  background: #000000;
+  background: #CCCCCC;
   border-right: 1px solid #999999;
-  color: #FEF546;
+  border-top: 1px solid #999999;
+  color: #002878;
+}
+.wrapper header .header-contents .hd-info-speed li .value.on {
+  background: #FFFFFF;
 }
 .wrapper header .menu-wrap {
   z-index: 999;
@@ -437,10 +458,10 @@ input[type=datetime-local]:valid::before {
   align-items: center;
   width: 90px;
   border-radius: 4px;
-  background: #FA3232;
+  background: #E0E0E0;
   font-size: 20px;
   font-weight: 900;
-  color: #FEF546;
+  color: #002878;
 }
 .wrapper footer .alarm-data-box {
   padding: 4px 5px 4px 10px;
@@ -502,10 +523,9 @@ input[type=datetime-local]:valid::before {
 }
 .wrapper footer .alarm-data-box .data-wrap .data-list li p:last-child {
   width: 60px;
-  color: #FFFFFF;
 }
 .wrapper footer .server-info-box {
-  width: 442px;
+  width: 238px;
   display: flex;
   flex-direction: column;
   border: 1px solid #666666;
@@ -530,16 +550,16 @@ input[type=datetime-local]:valid::before {
   border-right: 1px solid #666666;
 }
 .wrapper footer .server-info-box li p:first-child {
-  width: 102px;
+  width: 100px;
 }
 .wrapper footer .server-info-box li p:nth-child(2) {
   width: 38px;
 }
 .wrapper footer .server-info-box li p:last-child {
-  width: 302px;
+  width: 100px;
 }
 .wrapper footer .server-info-box li p.on {
-  background: #4EFD70;
+  background: #FFFFFF;
   font-weight: 700;
   color: #000000;
 }
@@ -2940,6 +2960,33 @@ button.btn-normal.on {
   content: url(../assets/line_loop_gr.png);
 }
 
+.img-trk-loop-top-bar {
+  content: url(../assets/img_trk_loop_top_bar.png);
+  width: 136px;
+  height: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.img-trk-loop-main {
+  content: url(../assets/img_trk_loop_main.png);
+  width: 122px;
+  height: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.img-trk-loop-box {
+  content: url(../assets/img_trk_loop_box.png);
+  width: 106px;
+  height: 282px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+}
+
 .svg-line-loop1 {
   content: url(../assets/line_loop1.svg);
   width: 4px;
@@ -4429,6 +4476,32 @@ button.btn-normal.on {
 }
 .ic-cpc2.fault {
   background: #999999;
+}
+
+.ic-trk-loop-head {
+  position: absolute;
+  width: 12px;
+  height: 14px;
+  background: url(../assets/ic_trk_loop_head_1.svg);
+  z-index: 99;
+}
+.ic-trk-loop-head.stop {
+  background: url(../assets/ic_trk_loop_head_2.svg);
+}
+.ic-trk-loop-head.run {
+  background: url(../assets/ic_trk_loop_head_3.svg);
+}
+.ic-trk-loop-head.fault {
+  background: url(../assets/ic_trk_loop_head_2.svg);
+}
+.ic-trk-loop-head.fault .fault-img {
+  width: 100%;
+  height: 100%;
+  background: url(../assets/ic_trk_loop_head_4.svg);
+  animation: blink-effect 1s step-end infinite;
+}
+.ic-trk-loop-head.ic-roll-14.type5 {
+  background: url(../assets/ic_trk_loop_head_5.svg);
 }
 
 .fault {
@@ -6852,6 +6925,25 @@ button.btn-normal.on {
   animation: blink 1s step-end infinite;
 }
 
+.l-POR_1-0 {
+  position: absolute;
+  top: 209px;
+  left: 17px;
+  width: 29px;
+  height: 29px;
+  background: url(../assets/LTO_LINE_BK/POR_1/POR_1-0.png);
+  z-index: 99;
+}
+.l-POR_1-0.type2 {
+  background: url(../assets/LTO_LINE_BL/POR_1/POR_1-0.png);
+}
+.l-POR_1-0.type3 {
+  background: url(../assets/LTO_LINE_GR/POR_1/POR_1-0.png);
+}
+.l-POR_1-0.type4 {
+  background: url(../assets/LTO_LINE_WH/POR_1/POR_1-0.png);
+}
+
 .l-POR_1-1 {
   position: absolute;
   top: 201px;
@@ -6875,7 +6967,7 @@ button.btn-normal.on {
   position: absolute;
   top: 201px;
   left: 43px;
-  width: 43px;
+  width: 41px;
   height: 16px;
   background: url(../assets/LTO_LINE_BK/POR_1/POR_1-2.png);
   z-index: 99;
@@ -6945,6 +7037,25 @@ button.btn-normal.on {
 }
 .l-POR_1-5.type4 {
   background: url(../assets/LTO_LINE_WH/POR_1/POR_1-5.png);
+}
+
+.l-POR_2-0 {
+  position: absolute;
+  width: 43px;
+  height: 16px;
+  top: 213px;
+  left: 86px;
+  background: url(../assets/LTO_LINE_BK/POR_2/POR_2-0.png);
+  z-index: 99;
+}
+.l-POR_2-0.type2 {
+  background: url(../assets/LTO_LINE_BL/POR_2/POR_2-0.png);
+}
+.l-POR_2-0.type3 {
+  background: url(../assets/LTO_LINE_GR/POR_2/POR_2-0.png);
+}
+.l-POR_2-0.type4 {
+  background: url(../assets/LTO_LINE_WH/POR_2/POR_2-0.png);
 }
 
 .l-POR_2-1 {
