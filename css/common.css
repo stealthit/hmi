@@ -905,6 +905,10 @@ input[type=datetime-local]:valid::before {
   width: 103px;
 }
 
+.warning {
+  background: #FEF546;
+}
+
 .cleaning-wrap {
   z-index: 2;
   position: absolute;
@@ -933,7 +937,8 @@ input[type=datetime-local]:valid::before {
 .cleaning-wrap .cleaning-box .value-box {
   width: 100%;
   height: 20px;
-  background: #FFFFFF;
+  text-decoration: underline;
+  cursor: pointer;
   color: #002878;
   display: flex;
   justify-content: center;
@@ -971,7 +976,6 @@ input[type=datetime-local]:valid::before {
   justify-content: center;
   align-items: center;
   height: 20px;
-  background: #FFFFFF;
   color: #002878;
 }
 .tuning-wrap .inner-box .title-box {
@@ -990,7 +994,6 @@ input[type=datetime-local]:valid::before {
   height: 20px;
   width: 68px;
   border-radius: 4px;
-  border: 1px solid #666666;
   text-decoration: underline;
   color: #002878;
 }
@@ -1038,7 +1041,8 @@ input[type=datetime-local]:valid::before {
 }
 .main-button-box .grid-mini-box {
   display: flex;
-  border: 1px solid #999999;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
 }
 .main-button-box .grid-mini-box li {
   width: 100px;
@@ -1062,7 +1066,7 @@ input[type=datetime-local]:valid::before {
   justify-content: center;
   align-items: center;
   height: 40px;
-  background: #FFFFFF;
+  background: #CCCCCC;
   color: #002878;
 }
 
@@ -1108,7 +1112,7 @@ input[type=datetime-local]:valid::before {
   align-items: center;
   height: 28px;
   width: 100%;
-  background: #FFFFFF;
+  background: #CCCCCC;
   color: #002878;
 }
 .chemical-wrap .inner-box .right-box {
@@ -1129,7 +1133,6 @@ input[type=datetime-local]:valid::before {
   align-items: center;
   height: 28px;
   width: 60px;
-  border: 1px solid #666666;
   border-radius: 4px;
   color: #002878;
   text-decoration: underline;
@@ -1499,6 +1502,9 @@ input[type=datetime-local]:valid::before {
 .inter-table-wrap table tbody tr td.on {
   background: #FFFFFF;
 }
+.inter-table-wrap table tbody tr td.no {
+  background: #FEF546;
+}
 .inter-table-wrap table tbody tr td:not(:first-child, :last-child) {
   text-align: left;
 }
@@ -1643,13 +1649,15 @@ input[type=datetime-local]:valid::before {
   align-items: center;
   width: 170px;
   height: 28px;
-  background: #FFFFFF;
   font-size: 14px;
   font-weight: 700;
   color: #002878;
 }
 .gauge-wrap .gauge-box-wrap .gauge-value span {
   margin-right: 4px;
+}
+.gauge-wrap .gauge-box-wrap .gauge-value.warning {
+  background: #FEF546;
 }
 .gauge-wrap .gauge-bottom-wrap {
   padding: 6px 10px 10px 10px;
@@ -1738,7 +1746,6 @@ input[type=datetime-local]:valid::before {
   width: 82px;
   height: 32px;
   border-radius: 4px;
-  border: 1px solid #999999;
   display: flex;
 }
 .gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p {
@@ -1751,15 +1758,14 @@ input[type=datetime-local]:valid::before {
 }
 .gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p.mark {
   width: 32px;
-  border-right: 1px solid #999999;
+  height: 32px;
 }
 .gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p.value {
   flex: 1;
 }
-.gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap p.on {
-  background: #FFFFFF;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+.gauge-wrap.gauge2 .flex-row .gauge-right li .value-wrap button {
+  width: 32px;
+  height: 32px;
 }
 
 .info-box-wrap {
@@ -4732,8 +4738,6 @@ button.btn-normal.on {
 .value-wrap {
   position: absolute;
   height: 28px;
-  border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
   background: #CCCCCC;
   font-size: 14px;
   font-weight: 700;
@@ -9568,6 +9572,25 @@ button.btn-normal.on {
   background: url(../assets/LTO_LINE_WH/LINE_119.png);
 }
 
+.e-POR_1-0 {
+  position: absolute;
+  width: 27px;
+  height: 108px;
+  top: 129px;
+  left: 139px;
+  background: url(../assets/ENTRY/ENTO_LINE_BK/POR_1/POR_1-0.png);
+  z-index: 99;
+}
+.e-POR_1-0.type2 {
+  background: url(../assets/ENTRY/ENTO_LINE_BL/POR_1/POR_1-0.png);
+}
+.e-POR_1-0.type3 {
+  background: url(../assets/ENTRY/ENTO_LINE_GR/POR_1/POR_1-0.png);
+}
+.e-POR_1-0.type4 {
+  background: url(../assets/ENTRY/ENTO_LINE_WH/POR_1/POR_1-0.png);
+}
+
 .e-POR_1-1 {
   position: absolute;
   width: 163px;
@@ -9736,6 +9759,25 @@ button.btn-normal.on {
 }
 .e-POR_1-9.type4 {
   background: url(../assets/ENTRY/ENTO_LINE_WH/POR_1/POR_1-9.png);
+}
+
+.e-POR_2-0 {
+  position: absolute;
+  width: 146.5px;
+  height: 48.5px;
+  top: 179px;
+  left: 326px;
+  background: url(../assets/ENTRY/ENTO_LINE_BK/POR_2/POR_2-0.png);
+  z-index: 99;
+}
+.e-POR_2-0.type2 {
+  background: url(../assets/ENTRY/ENTO_LINE_BL/POR_2/POR_2-0.png);
+}
+.e-POR_2-0.type3 {
+  background: url(../assets/ENTRY/ENTO_LINE_GR/POR_2/POR_2-0.png);
+}
+.e-POR_2-0.type4 {
+  background: url(../assets/ENTRY/ENTO_LINE_WH/POR_2/POR_2-0.png);
 }
 
 .e-POR_2-1 {

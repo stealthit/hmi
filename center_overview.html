@@ -708,19 +708,41 @@
         </div>
         <!-- E.S OILER -->
         <div class="list-grid type1 gd-oiler">
-          <div class="list-title underline">E.S OILER</div>
+          <div class="title-box underline">E.S OILER</div>
           <ul class="list-data">
             <li class="data-title">
-              <p>도유랑 (㎎/㎡)</p>
+              <p>설정값 (㎎/㎡)</p>
+            </li>
+            <li class="data">
+              <p>20</p>
+            </li>
+          </ul>
+          <ul class="list-data">
+            <li class="data-title">
               <p>현재값 (㎎/㎡)</p>
+            </li>
+            <li class="data">
+              <p>0.00</p>
+            </li>
+          </ul>
+          <div class="title-box">미세조정 (%)</div>
+          <ul class="list-data">
+            <li class="data">    
+              <div class="tuning-box">
+                <button class="btn-tuning-arrow down"></button>
+                <div class="value">881</div>
+                <button class="btn-tuning-arrow up"></button>
+              </div>
+            </li>              
+          </ul>     
+          <ul class="list-data">
+            <li class="data-title">
               <p>다음값 (㎎/㎡)</p>
             </li>
             <li class="data">
-              <p>3.00</p>
-              <p>0.00</p>
-              <p>3.00</p>
+              <p>20</p>
             </li>
-          </ul>
+          </ul> 
         </div>
         <!-- #3 BRIDLE ROLL -->
         <div class="list-grid gd-bridle-roll num3" style="top:463px; left:1597px;">
@@ -757,9 +779,10 @@
             <button class="btn-normal">수동</button>
             <button class="btn-normal">역</button>
             <button class="btn-normal on">정</button>
-            <div class="value-box">2.4 KA</div>
-            <button class="btn-normal on clbk">설정</button>
-            <div class="value-box2">2500</div>
+            <!-- 에러 경보일 경우 warning 클래스 추가 -->
+            <div class="value-box warning">2.4 KA</div>
+            <!-- <button class="btn-normal on clbk">설정</button>
+            <div class="value-box2">2500</div> -->
           </div>
         </div>
         <!-- #2 CLEANING #1 정류기 -->
@@ -771,15 +794,16 @@
             <button class="btn-normal">역</button>
             <button class="btn-normal on">정</button>
             <div class="value-box">2.4 KA</div>
-            <button class="btn-normal on clbk">설정</button>
-            <div class="value-box2">2500</div>
+            <!-- <button class="btn-normal on clbk">설정</button>
+            <div class="value-box2">2500</div> -->
           </div>
         </div>
         <!-- TOP PLATING -->
-        <div class="tuning-wrap" style="top: 463px;left: 424px;">
+        <div class="tuning-wrap" style="top: 463px;left: 355px;">
           <div class="title-box">TOP PLATING</div>
           <div class="inner-box">
-            <div class="value-box">10.1 KA</div>
+            <!-- 에러 경고인경우 warning 클래스 추가 -->
+            <div class="value-box warning">10.1 KA</div>
             <div class="title-box">미세조정 [%]</div>
             <div class="inner-tuning-box">
               <button class="btn-tuning-arrow-20 down"></button>
@@ -789,7 +813,7 @@
           </div>
         </div>
         <!-- BOTTOM PLATING -->
-        <div class="tuning-wrap" style="top: 463px;left: 566px;">
+        <div class="tuning-wrap" style="top: 463px;left: 497px;">
          <div class="title-box">BOTTOM PLATING</div>
          <div class="inner-box">
            <div class="value-box">9.1 KA</div>
@@ -801,7 +825,7 @@
            </div>
          </div>
         </div>
-        <div class="main-button-box" style="top: 463px;left: 708px;">
+        <div class="main-button-box" style="top: 463px;left: 639px;">
           <button class="btn-large">N-STOP</button>
           <button class="btn-large">라인 수동</button>
           <ul class="grid-mini-box">
@@ -816,6 +840,7 @@
           </ul>
           <button class="btn-large">수동 트래킹</button>
           <button class="btn-large">부착량 변환</button>
+          <button class="btn-large">부착량 유지</button>
         </div>
         <!-- CHEMICAL (DOWN) -->
         <div class="chemical-wrap" style="top: 586px;left: 1650px;">
@@ -895,19 +920,19 @@
             <ul class="gauge-right">
               <li>
                 <div class="value-wrap">
-                  <p class="mark">H</p>
+                  <button class="btn-normal"><p class="mark">H</p></button>
                   <p class="value underline">230</p>
                 </div>
               </li>
               <li>
                 <div class="value-wrap">
-                  <p class="mark on">M</p>
+                  <button class="btn-normal on"><p class="mark on">M</p></button>
                   <p class="value underline">205</p>
                 </div>
               </li>
               <li>
                 <div class="value-wrap">
-                  <p class="mark">L</p>
+                  <button class="btn-normal"><p class="mark">L</p></button>
                   <p class="value underline">155</p>
                 </div>
               </li>
@@ -1012,7 +1037,7 @@
                   <td>7,950</td>  
                   <td>7,950</td>              
                 </tr>    
-                <tr class="sel">
+                <tr>
                   <td rowspan="2" class="clbold">10.1</td>
                   <td>0.0</td>
                   <td>0.0</td>
@@ -1025,7 +1050,7 @@
                   <td>0.0</td>
                   <td>0.0</td>
                 </tr>              
-                <tr class="sel">
+                <tr>
                   <td>0</td>
                   <td>0</td>
                   <td>3,352</td>

@@ -643,6 +643,16 @@
 .pop-coil-sche4 .popup-body .return-wrap .table-wrap table tr.selected td {
   background: #93C2E4;
 }
+.pop-coil-sche4 .popup-body .return-wrap .table-wrap table tr.curSel td {
+  background: #008C3C;
+  color: #FFFFFF;
+  font-weight: 400;
+}
+.pop-coil-sche4 .popup-body .return-wrap .table-wrap table tr.nextSel td {
+  background: #0178D5;
+  color: #FFFFFF;
+  font-weight: 400;
+}
 .pop-coil-sche4 .popup-body .return-wrap .table-wrap table th {
   height: 90px;
   border-top: none;

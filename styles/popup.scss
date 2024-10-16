@@ -606,7 +606,20 @@
           table-layout: fixed;
           font-size: 20px;
           font-weight: 700;
-          tr {height: 60px;&.selected td{background: $cl_data_5;}}
+          tr {
+            height: 60px;
+            &.selected td{background: $cl_data_5;}
+            &.curSel td{
+              background: $cl_data_4;
+              color: $cl_neutral_6;
+              font-weight: 400;
+            }
+            &.nextSel td{
+              background: #0178D5;
+              color: $cl_neutral_6;
+              font-weight: 400;
+            }
+          }
           th {
             height: 90px;
             border-top: none;

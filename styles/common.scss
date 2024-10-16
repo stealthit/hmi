@@ -872,6 +872,7 @@ input[type='datetime-local']:valid::before {
   }    
 }
 
+.warning {background: $cl_alaram_2;}
 // main list
 .cleaning-wrap {
   z-index: 2;
@@ -895,9 +896,11 @@ input[type='datetime-local']:valid::before {
     .value-box {
       width: 100%;
       height: 20px;
-      background: $cl_neutral_6;
+      text-decoration: underline;
+      cursor: pointer;
+      // background: $cl_neutral_6;
       color: $cl_data_1;
-      @include flex_center;
+      @include flex_center;    
     }
     .value-box2 {
       width: 86px;
@@ -926,7 +929,7 @@ input[type='datetime-local']:valid::before {
     .value-box {
       @include flex_center;
       height: 20px;
-      background: $cl_neutral_6;
+      // background: $cl_neutral_6;
       color: $cl_data_1;
     }
     .title-box {
@@ -942,7 +945,7 @@ input[type='datetime-local']:valid::before {
         height: 20px;
         width: 68px;
         border-radius: 4px;
-        border: 1px solid $cl_neutral_3;
+        // border: 1px solid $cl_neutral_3;
         text-decoration: underline;
         color: $cl_data_1;
       }
@@ -991,7 +994,8 @@ input[type='datetime-local']:valid::before {
   }
   .grid-mini-box {
     display: flex;
-    border: 1px solid $cl_neutral_4;
+    border-top: 1px solid $cl_neutral_4;
+    border-bottom: 1px solid $cl_neutral_4;
     li {
       width: 100px;
       display: flex;
@@ -1007,7 +1011,7 @@ input[type='datetime-local']:valid::before {
       .data {
         @include flex_center;
         height: 40px;
-        background: $cl_neutral_6;
+        background: $cl_neutral_5;
         color: $cl_data_1;
       }
     }
@@ -1044,7 +1048,7 @@ input[type='datetime-local']:valid::before {
         @include flex_center;
         height: 28px;
         width: 100%;
-        background: $cl_neutral_6;
+        background: $cl_neutral_5;
         color: $cl_data_1;
       }
     }
@@ -1060,7 +1064,7 @@ input[type='datetime-local']:valid::before {
           @include flex_center;
           height: 28px;
           width: 60px;
-          border: 1px solid $cl_neutral_3;
+          // border: 1px solid $cl_neutral_3;
           border-radius: 4px;
           color: $cl_data_1;
           text-decoration: underline;
@@ -1423,6 +1427,9 @@ input[type='datetime-local']:valid::before {
           &.on {
             background: $cl_neutral_6;
           }
+          &.no {
+            background: $cl_alaram_2;
+          }
           &:not(:first-child,:last-child) {text-align: left;}
           &:first-child {border-left: none;}
           &:last-child {color: $cl_data_1;}
@@ -1562,11 +1569,12 @@ input[type='datetime-local']:valid::before {
       @include flex_center;
       width: 170px;
       height: 28px;
-      background: $cl_neutral_6;
+      // background: $cl_neutral_6;
       font-size: 14px;
       font-weight: 700;
       color: $cl_data_1;
       span {margin-right: 4px;}
+      &.warning {background: $cl_alaram_2;}
     }
   }
   .gauge-bottom-wrap {
@@ -1651,7 +1659,7 @@ input[type='datetime-local']:valid::before {
             width: 82px;
             height: 32px;
             border-radius: 4px;
-            border: 1px solid $cl_neutral_4;
+            // border: 1px solid $cl_neutral_4;
             display: flex;
             p {
               @include flex_center;
@@ -1660,19 +1668,20 @@ input[type='datetime-local']:valid::before {
               color: $cl_data_1;
               &.mark {
                 width: 32px;
-                border-right: 1px solid $cl_neutral_4;
+                height: 32px;
+                // border-right: 1px solid $cl_neutral_4;
               }
               &.value {
                 flex: 1;
                 // text-decoration: underline;
               }
-              &.on {
-                background: $cl_neutral_6;
-                border-top-left-radius: 4px;
-                border-bottom-left-radius: 4px;
-              }
+              // &.on {
+              //   background: $cl_neutral_6;
+              //   border-top-left-radius: 4px;
+              //   border-bottom-left-radius: 4px;
+              // }
             }
-
+            button {width: 32px;height: 32px;}
           }
         }
       }
@@ -4012,8 +4021,8 @@ button.btn-normal{
 .value-wrap {
   position: absolute;
   height: 28px;
-  border-top: 1px solid $cl_neutral_4;
-  border-bottom: 1px solid $cl_neutral_4;
+  // border-top: 1px solid $cl_neutral_4;
+  // border-bottom: 1px solid $cl_neutral_4;
   background: $cl_neutral_5;
   font-size: 14px;
   font-weight: 700;
@@ -8835,6 +8844,25 @@ button.btn-normal{
 }
 // -------------------------------------------
 // ENTRY LINE --------------------------------
+.e-POR_1-0 {
+  position: absolute;
+  width: 27px;
+  height: 108px;
+  top: 129px;
+  left: 139px;
+  
+  background: url(#{$imgPath}ENTRY/ENTO_LINE_BK/POR_1/POR_1-0.png);
+  z-index: 99;
+  &.type2 {
+    background: url(#{$imgPath}ENTRY/ENTO_LINE_BL/POR_1/POR_1-0.png);
+  }
+  &.type3 {
+    background: url(#{$imgPath}ENTRY/ENTO_LINE_GR/POR_1/POR_1-0.png);
+  }
+  &.type4 {
+    background: url(#{$imgPath}ENTRY/ENTO_LINE_WH/POR_1/POR_1-0.png);
+  }
+}
 .e-POR_1-1 {
   position: absolute;
   width: 163px;
@@ -9003,6 +9031,25 @@ button.btn-normal{
   }
   &.type4 {
     background: url(#{$imgPath}ENTRY/ENTO_LINE_WH/POR_1/POR_1-9.png);
+  }
+}
+.e-POR_2-0 {
+  position: absolute;
+  width: 146.5px;
+  height: 48.5px;
+  top: 179px;
+  left: 326px; 
+  // background-size: contain;
+  background: url(#{$imgPath}ENTRY/ENTO_LINE_BK/POR_2/POR_2-0.png);
+  z-index: 99;
+  &.type2 {
+    background: url(#{$imgPath}ENTRY/ENTO_LINE_BL/POR_2/POR_2-0.png);
+  }
+  &.type3 {
+    background: url(#{$imgPath}ENTRY/ENTO_LINE_GR/POR_2/POR_2-0.png);
+  }
+  &.type4 {
+    background: url(#{$imgPath}ENTRY/ENTO_LINE_WH/POR_2/POR_2-0.png);
   }
 }
 .e-POR_2-1 {

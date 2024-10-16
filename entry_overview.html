@@ -159,6 +159,7 @@
         <div class="bg-line-wrap">
           <!-- <img alt="" class="img-entry-o"> -->
           <div class="line-box">
+            <div data-line-id ="POR_1-0" class="e-POR_1-0 type3"></div> 
             <div data-line-id ="POR_1-1" class="e-POR_1-1 type3"></div> 
             <div data-line-id ="POR_1-2" class="e-POR_1-2 type3"></div> 
             <div data-line-id ="POR_1-3" class="e-POR_1-3 type3"></div> 
@@ -168,6 +169,7 @@
             <div data-line-id ="POR_1-7" class="e-POR_1-7 type3"></div> 
             <div data-line-id ="POR_1-8" class="e-POR_1-8 type3"></div> 
             <div data-line-id ="POR_1-9" class="e-POR_1-9 type3"></div> 
+            <div data-line-id ="POR_2-0" class="e-POR_2-0 type3"></div> 
             <div data-line-id ="POR_2-1" class="e-POR_2-1 type3"></div> 
             <div data-line-id ="POR_2-2" class="e-POR_2-2 type3"></div> 
             <div data-line-id ="POR_2-3" class="e-POR_2-3 type3"></div> 
@@ -370,7 +372,7 @@
             <li class="data">
               <p class="bd-dot top right left clbk">0</p>
               <p class="bd-dot bottom right left clbk">0</p>
-              <p class="t-center bg-wh">UP</p>
+              <p class="t-center">UP</p>
             </li>
           </ul>
         </div>
@@ -386,7 +388,7 @@
             <li class="data">
               <p class="bd-dot top right left clbk">0</p>
               <p class="bd-dot bottom right left clbk">0</p>
-              <p class="t-center bg-wh">DOWN</p>
+              <p class="t-center">DOWN</p>
             </li>
           </ul>
         </div>
@@ -429,7 +431,7 @@
               <p class="underline">102.43</p>
               <p class="underline">506</p>
               <p class="underline">100</p>
-              <p class="t-center bg-wh">운전</p>              
+              <p class="t-center">운전</p>              
             </li>
             <li class="data">
               <p class="title">#1 POR</p>
@@ -449,8 +451,8 @@
               <p>CHEMICAL(UP)</p>
             </li>
             <li class="data">
-              <p class="t-center bg-wh">EXPAND</p>
-              <p class="t-center bg-wh">운전</p>
+              <p class="t-center">EXPAND</p>
+              <p class="t-center">운전</p>
             </li>
             <li class="data">
               <p class="t-center">COLLAPSE</p>
@@ -476,7 +478,7 @@
               <p>0</p>
               <p>0</p>
               <p>0</p>
-              <p class="bg-wh t-center bottom">UP</p>
+              <p class="t-center bottom">UP</p>
             </li>
             <li class="data">
               <p class="title">#3 BR</p>
@@ -492,7 +494,7 @@
               <p>운전상태</p>
             </li>
             <li class="data">
-              <p class="bg-wh t-center">운전</p>
+              <p class="t-center">운전</p>
             </li>
           </ul>
         </div>
@@ -514,7 +516,7 @@
               <p>0</p>
               <p>0</p>
               <p>0</p>
-              <p class="bg-wh t-center bottom">UP</p>
+              <p class="t-center bottom">UP</p>
             </li>
             <li class="data">
               <p class="title">#3 BR</p>
@@ -530,7 +532,7 @@
               <p>운전상태</p>
             </li>
             <li class="data">
-              <p class="bg-wh t-center">운전</p>
+              <p class="t-center">운전</p>
             </li>
           </ul>
         </div>
@@ -670,24 +672,25 @@
                 <div class="img-needle" style="transform: rotate(0deg);"></div>
         
               </div>
-              <div class="gauge-value"><span>170</span> m/min</div>
+              <!-- 경고일 경우 wraning 클래스 추가 -->
+              <div class="gauge-value warning"><span>170</span> m/min</div>
             </div>          
             <ul class="gauge-right">
               <li>
                 <div class="value-wrap">
-                  <p class="mark">H</p>
+                  <button class="btn-normal"><p class="mark">H</p></button>
                   <p class="value">230</p>
                 </div>
               </li>
               <li>
                 <div class="value-wrap">
-                  <p class="mark on">M</p>
+                  <button class="btn-normal on"><p class="mark on">M</p></button>
                   <p class="value">205</p>
                 </div>
               </li>
               <li>
                 <div class="value-wrap">
-                  <p class="mark">L</p>
+                  <button class="btn-normal"><p class="mark">L</p></button>
                   <p class="value">155</p>
                 </div>
               </li>
