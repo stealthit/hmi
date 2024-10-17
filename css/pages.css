@@ -45,12 +45,12 @@
 .line-trk-wrapper .table-wrap table tbody tr {
   background: #CCCCCC;
 }
-.line-trk-wrapper .table-wrap table tbody tr.curSel {
+.line-trk-wrapper .table-wrap table tbody tr.sel-gr {
   background: #008C3C;
   color: #FFFFFF;
   font-weight: 400;
 }
-.line-trk-wrapper .table-wrap table tbody tr.nextSel {
+.line-trk-wrapper .table-wrap table tbody tr.sel-bl {
   background: #0178D5;
   color: #FFFFFF;
   font-weight: 400;
@@ -1317,12 +1317,12 @@
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr {
   border-top: none !important;
 }
-.coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr.curSel td {
+.coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr.sel-gr td {
   background: #008C3C;
   color: #FFFFFF;
   font-weight: 400;
 }
-.coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr.nextSel td {
+.coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr.sel-bl td {
   background: #0178D5;
   color: #FFFFFF;
   font-weight: 400;

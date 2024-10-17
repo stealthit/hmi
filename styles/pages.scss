@@ -15,12 +15,12 @@
     width: 1896px;
     table tbody tr {
       background: $cl_neutral_5;
-      &.curSel {
+      &.sel-gr {
         background: $cl_data_4;
         color: $cl_neutral_6;
         font-weight: 400;
       }
-      &.nextSel {
+      &.sel-bl {
         background: #0178D5;
         color: $cl_neutral_6;
         font-weight: 400;
@@ -1254,12 +1254,12 @@
       // border: 1px solid $cl_neutral_3;
       table tr {
         border-top: none !important;
-        &.curSel td{
+        &.sel-gr td{
           background: $cl_data_4;
           color: $cl_neutral_6;
           font-weight: 400;
         }
-        &.nextSel td{
+        &.sel-bl td{
           background: #0178D5;
           color: $cl_neutral_6;
           font-weight: 400;
