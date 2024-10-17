@@ -159,11 +159,12 @@
   position: absolute;
   left: 322px;
   top: 134px;
-  height: 260px;
+  max-height: 260px;
   background: #E0E0E0;
 }
 .line-trk-wrapper .loop-box-wrapper .loop-box {
   width: 111px;
+  height: 100%;
   max-height: 260px;
   position: relative;
 }
