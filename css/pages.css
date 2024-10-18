@@ -310,7 +310,9 @@
 }
 .center-o-wrapper .gd-enc .list-data .data-title {
   width: 38px;
-  height: 28px;
+}
+.center-o-wrapper .gd-enc .list-data .data-title p {
+  height: 28px !important;
 }
 .center-o-wrapper .gd-quenching {
   top: 463px;

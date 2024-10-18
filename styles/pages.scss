@@ -299,7 +299,10 @@
 
   .gd-enc {
     width: 120px;
-    .list-data .data-title {width: 38px;height: 28px;}
+    .list-data .data-title {
+      width: 38px;
+      p {height: 28px !important;}
+    }
   }
 
   .gd-quenching {
