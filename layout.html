@@ -36,27 +36,27 @@
         <div class="hd-table-wrap">
           <table>
             <colgroup>
-              <col width="60px">
+              <col width="40px">
               <col width="130px">
-              <col width="60px">              
-              <col width="60px">              
-              <col width="60px">              
-              <col width="60px">              
+              <col width="94px">              
+              <col width="108px">              
               <col width="60px">              
               <col width="80px">              
-              <col width="80px">              
+              <col width="108px">              
+              <col width="60px">              
+              <col width="60px">              
             </colgroup>
             <thead>
               <tr>
                 <th></th>
-                <th>투입원판번호</th>
-                <th>판두께</th>
-                <th>판폭</th>
-                <th>TOP</th>
-                <th>BOT</th>
+                <th>작업지시번호</th>
+                <th>TOP 부착량</th>
+                <th>BOTTOM 부착량</th>
                 <th>도유량</th>
-                <th>화학처리(D)</th>
-                <th>화학처리(U)</th>
+                <th>CHE.(UP)</th>
+                <th>CHE.(DOWN)</th>
+                <th>두께</th>
+                <th>폭</th>
               </tr>
             </thead>
             <tbody>
@@ -64,24 +64,24 @@
               <tr class="curOn">
                 <td>현 재</td>
                 <td>LOTN00000104</td>
-                <td>0.350</td>
-                <td>934</td>
                 <td>10.00</td>
                 <td>30.00</td>
                 <td>3.0</td>
                 <td>0.7</td>
                 <td>0.7</td>
+                <td>0.350</td>
+                <td>934</td>
               </tr>
               <tr class="nextOn">
                 <td>다 음</td>
                 <td>LOTN00000105</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
                 <td>0.400</td>
                 <td>580</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
               </tr>
             </tbody>
           </table>
@@ -235,18 +235,24 @@
           </ul>
         </div>        
       </div>
-      <ul class="server-info-box">
-        <li>
-          <p>SERVER - A</p>
-          <p class="on">M</p>
-          <p class="on">PLC</p>
-        </li>
-        <li>
-          <p>SERVER - B</p>
-          <p>S</p>
-          <p class="on">MES</p>
-        </li>
-      </ul>
+      <div class="flex-row">
+        <ul class="server-info-box">
+          <li>
+            <p>SERVER - A</p>
+            <p class="on">M</p>
+            <p class="on">PLC</p>
+          </li>
+          <li>
+            <p>SERVER - B</p>
+            <p>S</p>
+            <p class="on">MES</p>
+          </li>
+        </ul>
+        <button class="btn-legend">   
+          <img src="" alt="" class="ic-legend">      
+          LEGEND
+        </button> 
+      </div>
     </footer>
   </div>
 </body>

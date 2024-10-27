@@ -30,39 +30,50 @@
     opacity: 0;
   }
 }
+@keyframes linemove {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes lineoff {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
 .pop-pump {
   width: 400px;
-  height: 336px;
 }
 .pop-pump .list-grid ul li {
   flex: 1;
 }
-.pop-pump .popup-footer button {
-  flex: 1;
-}
-
 .pop-fluxing {
   width: 520px;
-  height: 576px;
 }
 .pop-fluxing .list-grid ul.list-data .data-title {
   width: 300px;
 }
-.pop-fluxing .popup-footer button {
-  flex: 1;
+.pop-cleaning {
+  width: 450px;
+}
+.pop-cleaning .list-grid ul.list-data .data-title {
+  width: 170px;
+}
+.pop-cleaning .list-grid .list-data li p.button {
+  padding: 10px 20px !important;
 }
 
 .pop-plating-rinse {
-  width: 520px;
-  height: 576px;
+  width: 550px;
 }
 .pop-plating-rinse .list-grid ul.list-data .data-title {
   width: 300px;
 }
-.pop-plating-rinse .popup-footer button {
-  flex: 1;
-}
-
 .pop-quenching {
   width: 189px;
   height: 228px;
@@ -73,27 +84,29 @@
 
 .pop-TP31CTS040 {
   width: 400px;
-  height: 326px;
-}
-.pop-TP31CTS040 .popup-body {
-  padding-bottom: 10px;
 }
 .pop-TP31CTS040 .list-grid .list-data .data-title {
   width: 180px;
 }
+.pop-TP31CTS040 .list-grid .list-data li p.button {
+  display: flex;
+  gap: 6px;
+}
 
 .pop-TP31EXS060 {
   width: 1105px;
-  height: 396px;
 }
 .pop-TP31EXS060 .list-grid .list-data .data-title {
   width: 240px;
+}
+.pop-TP31EXS060 .list-grid .list-data li p.button {
+  gap: 8px !important;
+  padding: 10px 12px !important;
 }
 .pop-TP31EXS060 .popup-footer {
   justify-content: center;
 }
 .pop-TP31EXS060 .popup-footer button {
-  width: 235px;
   flex: none;
 }
 
@@ -103,51 +116,49 @@
 }
 
 .pop-keypad {
-  width: 420px;
-  height: 893px;
+  width: 500px;
   background: #FFFFFF;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .pop-keypad .popup-body {
-  padding-top: 10px;
+  padding: 40px;
 }
 .pop-keypad .calc-wrap {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 .pop-keypad .calc-wrap .calc-value-wrap {
   display: flex;
   flex-direction: column;
 }
 .pop-keypad .calc-wrap .calc-value-wrap .value-row {
-  height: 55px;
+  height: 38px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 40px;
+  font-size: 26px;
   font-weight: 700;
   color: #000000;
-  padding-right: 10px;
+  padding-right: 6px;
 }
 .pop-keypad .calc-wrap .final-value {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-right: 10px;
+  padding-right: 6px;
   height: 60px;
   background: #E0E0E0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  font-size: 40px;
+  font-size: 34px;
   font-weight: 700;
   color: #002878;
 }
 .pop-keypad .calc-wrap .calc-btn-wrap {
-  width: 379px;
-  height: 480px;
+  width: 420px;
+  height: 420px;
   display: grid;
-  grid-template-columns: repeat(4, 80px);
-  grid-template-rows: repeat(5, 80px);
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: repeat(5, 90px);
   grid-gap: 20px;
 }
 .pop-keypad .calc-wrap .calc-btn-wrap .item {
@@ -164,6 +175,12 @@
 }
 .pop-keypad .calc-wrap .calc-btn-wrap .item.small {
   font-size: 20px;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .item.off {
+  background-color: #CCCCCC;
+}
+.pop-keypad .calc-wrap .calc-btn-wrap .item:hover {
+  background-color: #E0E0E0;
 }
 .pop-keypad .calc-wrap .calc-btn-wrap .dot {
   background: url(../assets/ic_calc_dot_24.svg) no-repeat center/24px;
@@ -183,24 +200,28 @@
 .pop-keypad .calc-wrap .calc-btn-wrap .back {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   line-height: 29px;
   grid-column: 4/5;
-  grid-row: 2/4;
+  grid-row: 1/3;
 }
 .pop-keypad .calc-wrap .calc-btn-wrap .clear {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  line-height: 29px;
   grid-column: 4/5;
-  grid-row: 4/6;
+  grid-row: 3/5;
 }
 .pop-keypad .calc-wrap .calc-btn-wrap .zero {
   grid-column: 1/3;
-  grid-row: 5/6;
+  grid-row: 4/5;
 }
 .pop-keypad .popup-footer {
   justify-content: center;
   padding-bottom: 20px;
 }
 .pop-keypad .popup-footer button {
-  flex: 1;
   height: 60px;
   font-size: 24px;
   box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
@@ -213,16 +234,13 @@
 
 .pop-TP31ENS020 {
   width: 500px;
-  height: 374px;
 }
 .pop-TP31ENS020 .popup-footer button {
-  width: 105px;
   flex: none;
 }
 
 .pop-TP31ENS030 {
   width: 400px;
-  height: 346px;
 }
 .pop-TP31ENS030 .pop-title {
   margin-bottom: 10px;
@@ -286,6 +304,8 @@
 }
 .pop-TP31CTS020 .popup-body .list-grid ul.list-data li p.button {
   padding: 5px;
+  display: flex;
+  gap: 6px;
 }
 .pop-TP31CTS020 .popup-body .list-grid ul.list-data li p.button button {
   font-size: 20px;
@@ -294,7 +314,6 @@
   justify-content: center;
 }
 .pop-TP31CTS020 .popup-footer button {
-  width: 235px;
   height: 60px;
   flex: none;
 }
@@ -313,29 +332,37 @@
   justify-content: center;
 }
 .pop-TP31CTS030 .popup-footer button {
-  width: 114px;
   height: 60px;
   flex: none;
 }
 
 .pop-TP31CTS050 {
-  width: 1000px;
+  width: 1095px;
   height: 777px;
 }
 .pop-TP31CTS050 .flex-row {
   margin: 0;
 }
-.pop-TP31CTS050 .flex-row .subCon, .pop-TP31CTS050 .flex-row .flex-col {
-  width: 475px;
+.pop-TP31CTS050 .flex-row .flex-col {
+  flex: 1;
 }
 .pop-TP31CTS050 .flex-row > .subCon {
   height: 489px;
+  width: 475px;
+}
+.pop-TP31CTS050 .flex-row > .subCon .list-grid .list-data li p.button {
+  padding: 10px 24px;
+  gap: 10px;
 }
 .pop-TP31CTS050 .grid1 .list-data .data-title {
   width: 248px;
 }
-.pop-TP31CTS050 .grid2 .list-data .data-title, .pop-TP31CTS050 .grid3 .list-data .data-title {
+.pop-TP31CTS050 .list-grid.grid2 .list-data .data-title, .pop-TP31CTS050 .list-grid.grid3 .list-data .data-title {
   width: 350px;
+}
+.pop-TP31CTS050 .list-grid.grid2 .list-data li p.button, .pop-TP31CTS050 .list-grid.grid3 .list-data li p.button {
+  padding: 10px 20px;
+  gap: 10px;
 }
 .pop-TP31CTS050 .grid4 {
   margin-top: 20px;
@@ -353,12 +380,11 @@
   justify-content: center;
 }
 .pop-TP31CTS050 .popup-footer button {
-  width: 105px;
   flex: none;
 }
 
 .pop-TP31CTS060 {
-  width: 420px;
+  width: 450px;
   height: 576px;
 }
 .pop-TP31CTS060 .list-grid .grid-title {
@@ -386,6 +412,10 @@
 }
 .pop-TP31CTS060 .list-grid .list-data .data p:first-child {
   border-top: none;
+}
+.pop-TP31CTS060 .list-grid .list-data .data p.button {
+  padding: 10px 5px;
+  gap: 10px;
 }
 .pop-TP31CTS060 .flex-row .list-grid {
   flex: 1;
@@ -465,10 +495,6 @@
 .pop-TP31EXS020 .subCon:has(.label) {
   margin-bottom: 20px;
 }
-.pop-TP31EXS020 .popup-footer button {
-  flex: 1;
-}
-
 .pop-TP31EXS040 {
   width: 520px;
   height: 276px;
@@ -476,10 +502,6 @@
 .pop-TP31EXS040 .list-grid .list-data .data-title {
   width: 150px;
 }
-.pop-TP31EXS040 .popup-footer button {
-  flex: 1;
-}
-
 .pop-TP31EXS050 {
   width: 520px;
   height: 336px;
@@ -487,10 +509,6 @@
 .pop-TP31EXS050 .list-grid .list-data .data-title {
   width: 150px;
 }
-.pop-TP31EXS050 .popup-footer button {
-  flex: 1;
-}
-
 .pop-coil-sche1 {
   width: 1266px;
   height: 696px;
@@ -899,25 +917,16 @@
   flex: none;
 }
 
-.pop-msg {
+.pop-msg, .pop-msg2 {
   min-width: 520px;
   min-height: 278px;
   justify-content: space-between;
-  padding-bottom: 20px;
 }
-.pop-msg .popup-body {
+.pop-msg .popup-body, .pop-msg2 .popup-body {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
 }
-.pop-msg .popup-footer {
-  justify-content: center;
-}
-.pop-msg .popup-footer button {
-  width: 235px;
-  flex: none;
-}
-
 .flex-row {
   display: flex;
   gap: 10px;

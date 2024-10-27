@@ -4,35 +4,43 @@
 
 .pop-pump {
    width: 400px;
-   height: 336px; 
+  //  height: 336px; 
    .list-grid {
     ul li {flex: 1;}
    }
 
    .popup-footer {
     button {
-      flex: 1;
+      // flex: 1;
     }
    }
 }
 
 .pop-fluxing {
   width: 520px;
-  height: 576px; 
+  // height: 576px; 
   .list-grid {
     ul.list-data .data-title {width: 300px;}
   }
 
   .popup-footer {
     button {
-      flex: 1;
+      // flex: 1;
     }
    }
 }
 
+.pop-cleaning {
+  width: 450px;
+  .list-grid {
+    ul.list-data .data-title {width: 170px;}
+    .list-data li p.button{padding: 10px 20px !important;}
+  }  
+}
+
 .pop-plating-rinse {
-  width: 520px;
-  height: 576px; 
+  width: 550px;
+  // height: 576px; 
 
   .list-grid {
    ul.list-data .data-title {width: 300px;}
@@ -40,7 +48,7 @@
 
   .popup-footer {
     button {
-      flex: 1;
+      // flex: 1;
     }
    }
 }
@@ -55,25 +63,29 @@
 
 .pop-TP31CTS040 {
   width: 400px;
-  height: 326px;
+  // height: 326px;
 
-  .popup-body{padding-bottom: 10px;}
+  // .popup-body{padding-bottom: 10px;}
   .list-grid {
     .list-data .data-title {width: 180px;}
+    .list-data li p.button{display: flex;gap: 6px;}
    }
 }
 
 .pop-TP31EXS060 {
   width: 1105px;
-  height: 396px; 
+  // height: 396px; 
   .list-grid {
     .list-data .data-title {width: 240px;}
+    .list-data li p.button{
+      gap: 8px !important;
+      padding: 10px 12px !important;}
   }
 
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
     }
    }
@@ -85,8 +97,8 @@
 }
 
 .pop-keypad {
-  width: 420px;
-  height: 893px;
+  width: 500px;
+  // height: 883px;
   background: $cl_neutral_6;
   box-shadow: 0px 4px 30px 0px #00000026;
 
@@ -98,29 +110,30 @@
   //     background-size: cover;
   //   }
   // }
-  .popup-body {padding-top: 10px;}
+  .popup-body {padding: 40px;}
   .calc-wrap {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     .calc-value-wrap {
       display: flex;
       flex-direction: column;
       // gap: 2px;
       .value-row {
-        height: 55px;
+        height: 38px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 40px;
+        font-size: 26px;
         font-weight: 700;
         color: $cl_neutral_1;
-        padding-right: 10px;
+        padding-right: 6px;
       }
     }
     .final-value {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      padding-right: 10px;
+      // margin-top: 10px;
+      // margin-bottom: 20px;
+      padding-right: 6px;
       height: 60px;
       // border-top: 1px solid $cl_neutral_4;
       // border-bottom: 1px solid $cl_neutral_4;
@@ -128,16 +141,16 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      font-size: 40px;
+      font-size: 34px;
       font-weight: 700;
       color: $cl_data_1 ;
     }
     .calc-btn-wrap {
-      width: 379px;
-      height: 480px;
+      width: 420px;
+      height: 420px;
       display: grid;
-      grid-template-columns: repeat(4, 80px);
-      grid-template-rows: repeat(5, 80px);
+      grid-template-columns: repeat(4, 90px);
+      grid-template-rows: repeat(5, 90px);
       grid-gap: 20px;
        
       .item {
@@ -152,6 +165,12 @@
         color: $cl_neutral_1;
         &.small {
           font-size: 20px;
+        }
+        &.off {
+          background-color: $cl_neutral_5;
+        }
+        &:hover {
+          background-color: $cl_neutral_7;
         }
       }
       
@@ -173,17 +192,22 @@
       .back {
         display: flex;
         flex-direction: column;
+        gap: 10px;
         line-height: 29px;
         grid-column: 4 / 5;
-        grid-row: 2 / 4;
+        grid-row: 1 / 3;
       }
       .clear {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        line-height: 29px;
         grid-column: 4 / 5;
-        grid-row: 4 / 6;
+        grid-row: 3 / 5;
       }
       .zero {
         grid-column: 1 / 3;
-        grid-row: 5 / 6;
+        grid-row: 4 / 5;
       }
     }
 
@@ -192,7 +216,7 @@
     justify-content: center;
     padding-bottom: 20px;
     button { 
-      flex: 1;
+      // flex: 1;
       // width: 66px;
       height: 60px;
       font-size: 24px;
@@ -209,10 +233,10 @@
 
 .pop-TP31ENS020 {
   width: 500px;
-  height: 374px;
+  // height: 374px;
   .popup-footer {
     button {
-      width: 105px;
+      // width: 105px;
       flex: none;
     }
    }
@@ -221,7 +245,7 @@
 // TP31ENS030 : Entry Overview_LOOP 미세조정 
 .pop-TP31ENS030 {
   width: 400px;
-  height: 346px;
+  // height: 346px;
   .pop-title {
     margin-bottom: 10px;
   }
@@ -279,6 +303,8 @@
           p.span2 {height: 96px;}
           p.button {
             padding: 5px;
+            display: flex;
+            gap: 6px;
             button {
               font-size: 20px;
             }
@@ -291,7 +317,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       height: 60px;
       flex: none;
     }
@@ -307,7 +333,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 114px;
+      // width: 114px;
       height: 60px;
       flex: none;
     }
@@ -315,20 +341,31 @@
 }
 
 .pop-TP31CTS050 {
-  width: 1000px;
+  width: 1095px;
   height: 777px;
   .flex-row {
     margin: 0;
-    .subCon,.flex-col {width: 475px;}
-    & > .subCon {height: 489px;}
+    .flex-col {flex: 1;}
+    & > .subCon {
+      height: 489px;
+      width: 475px;
+      .list-grid .list-data li p.button {
+        padding: 10px 24px;
+        gap: 10px;
+      }
+    }
   }
   .grid1 {
     .list-data .data-title {width: 248px;}
   }
-  .grid2,.grid3 { 
+  .list-grid.grid2,.list-grid.grid3 { 
     .list-data .data-title {width: 350px;}
+    .list-data li p.button {
+      padding: 10px 20px;
+      gap: 10px;
+    }
   }
-
+  
   .grid4 {
     margin-top: 20px;
     gap: 10px;
@@ -343,14 +380,14 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 105px;
+      // width: 105px;
       flex: none;
     }
   }
 }
 
 .pop-TP31CTS060 {
-  width: 420px;
+  width: 450px;
   height: 576px;
     
   .list-grid {
@@ -373,6 +410,10 @@
     }
     .list-data .data {
       p:first-child {border-top: none;}
+      p.button {
+        padding: 10px 5px;
+        gap: 10px;
+      }
     }
   }
   .flex-row {
@@ -452,7 +493,7 @@
 
   .popup-footer {
     button {
-      flex: 1;
+      // flex: 1;
     }
   }
 }
@@ -467,7 +508,7 @@
     
   .popup-footer {
     button {
-      flex: 1;
+      // flex: 1;
     }
   }
 }
@@ -482,7 +523,7 @@
     
   .popup-footer {
     button {
-      flex: 1;
+      // flex: 1;
     }
   }
 }
@@ -864,19 +905,19 @@
   }
 }
 
-.pop-msg {
+.pop-msg,.pop-msg2 {
   min-width: 520px;
   min-height: 278px;
   justify-content: space-between;
-  padding-bottom: 20px;
+  // padding-bottom: 20px;
   .popup-body {
     font-size: 24px;
     font-weight: 700;
     text-align: center;
   }
   .popup-footer {
-    justify-content: center;
-    button {width: 235px;flex:none;}
+    // justify-content: center;
+    // button {width: 235px;flex:none;}
   }
 }
 

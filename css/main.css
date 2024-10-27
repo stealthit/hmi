@@ -31,6 +31,22 @@
     opacity: 0;
   }
 }
+@keyframes linemove {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes lineoff {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
 .wrapper {
   width: 1920px;
   height: 1080px;

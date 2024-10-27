@@ -31,6 +31,22 @@
     opacity: 0;
   }
 }
+@keyframes linemove {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+@keyframes lineoff {
+  from {
+    height: 100%;
+  }
+  to {
+    height: 0;
+  }
+}
 .main-wrapper {
   position: relative;
   width: 100%;
@@ -177,6 +193,7 @@
 .line-trk-wrapper .loop-box-wrapper .loop-box .line-box {
   height: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .entry-o-wrapper .bg-line-wrap {

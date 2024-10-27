@@ -90,9 +90,11 @@
     <button onclick="openPopup1('pop-coil-sche6')">임의 작업지시번호 생성</button> 
     <button onclick="openPopup1('pop-coil-sche7')">DUMMY 강제 전환</button> 
   </div>
-  <h2>메세지 팝업</h2>
+  <h2>메세지 팝업 & 추가 팝업</h2>
   <div class="popup-button-group">
     <button onclick="openPopup2('pop-msg')">확인</button> 
+    <button onclick="openPopup2('pop-msg2')">확인,닫기</button> 
+    <button onclick="openPopup1('pop-cleaning')">정류기 팝업</button>
   </div>
 
   <!-- popup Background -->
@@ -110,18 +112,24 @@
         <ul class="list-data">
           <li class="data">
             <p class="title">PUMP A</p>
-            <p class="button"><button class="btn-normal on">운전</button></p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">PUMP B</p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
         </ul>
       </div>
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
 <!-- FLUXING -->
@@ -146,8 +154,14 @@
             <p class="right">53</p>
             <p class="clbk bd-dot top">0</p>
             <p class="clbk bd-dot bottom">0</p>
-            <p class="button"><button class="btn-normal on">운전</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <!-- <li class="data">
             <p class="title">운전제어</p>
@@ -160,7 +174,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
 <!-- Center Overview_PLATING RINSE -->
@@ -185,8 +199,14 @@
             <p class="right">57</p>
             <p class="clbk bd-dot top right">0</p>
             <p class="clbk bd-dot bottom right">0</p>
-            <p class="button"><button class="btn-normal on">운전</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <!-- <li class="data">
             <p class="title">운전제어</p>
@@ -209,7 +229,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
 <!-- QUENCHING -->
@@ -238,7 +258,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
 <!-- AIR DRYER -->
@@ -256,14 +276,17 @@
           </li>
           <li class="data">
             <p>127</p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
         </ul>
       </div>
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
 <!-- SNIP SHEAR 제어 -->
@@ -283,34 +306,49 @@
           <li class="data">
             <p class="title">HH</p>
             <p class="t-center underline" onclick="openPopup2('pop-keypad')">150</p>
-            <p class="button"><button class="btn-normal on">ON</button></p>
+            <p class="button">
+              <button class="btn-normal off">OFF</button>
+              <button class="btn-normal on">ON</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">H</p>
             <p class="t-center underline">100</p>
-            <p class="button"><button class="btn-normal">OFF</button></p>
+            <p class="button">
+              <button class="btn-normal off">OFF</button>
+              <button class="btn-normal on">ON</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">M</p>
             <p class="t-center underline">70</p>
-            <p class="button"><button class="btn-normal">OFF</button></p>
+            <p class="button">
+              <button class="btn-normal off">OFF</button>
+              <button class="btn-normal on">ON</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">L</p>
             <p class="t-center underline">55</p>
-            <p class="button"><button class="btn-normal">OFF</button></p>
+            <p class="button">
+              <button class="btn-normal off">OFF</button>
+              <button class="btn-normal on">ON</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">LL</p>
             <p class="t-center underline">20</p>
-            <p class="button"><button class="btn-normal">OFF</button></p>
+            <p class="button">
+              <button class="btn-normal off">OFF</button>
+              <button class="btn-normal on">ON</button>
+            </p>
           </li>
         </ul>
       </div>
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
 <!-- 부착량 설정 -->
@@ -364,6 +402,46 @@
     </div>
   </div>  
 </div>
+
+<!-- 정류기 팝업 -->
+<div class="popup-wrap pop-cleaning">
+  <div class="popup-header">
+    <button class="btn-close" onclick='closePopup1(event)'></button>
+  </div>
+  <div class="popup-body">
+    <div class="pop-title">#2 CLEANING #1 정류기</div>
+    <div class="list-grid">
+      <ul class="list-data">
+        <li class="data-title">
+          <p>전류 현재값 (A)</p>
+          <p>운전모드</p>
+          <p>운전상태</p>
+          <p>방향선택</p>
+        </li>
+        <li class="data">
+          <p class="right">27</p>
+          <p class="button">
+            <button class="btn-normal off">수동</button>
+            <button class="btn-normal on">자동</button>
+          </p>
+          <p class="button">
+            <button class="btn-normal off">정지</button>
+            <button class="btn-normal on">운전</button>
+          </p>
+          <p class="button">
+            <button class="btn-normal off">역</button>
+            <button class="btn-normal on">정</button>
+          </p>
+        </li>        
+      </ul>
+    </div>
+  </div>
+  <div class="popup-footer">
+    <button class="btn-normal">확인</button>
+    <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
+  </div>
+</div>
+
 <!-- 키패드 -->
 <div class="popup-wrap pop-keypad popup-wrap2">
   <div class="popup-header">
@@ -387,21 +465,21 @@
       </div>
       <div class="final-value">90</div>
       <div class="calc-btn-wrap">
-        <div class="item divide"></div>
+        <!-- <div class="item divide"></div>
         <div class="item mul"></div>
         <div class="item minus"></div>
-        <div class="item plus"></div>
-        <div class="item">7</div>
-        <div class="item">8</div>
-        <div class="item">9</div>
+        <div class="item plus"></div> -->
+        <div class="item off">7</div>
+        <div class="item off">8</div>
+        <div class="item off">9</div>
         <div class="item back small"><div class="ic-back"></div> BACK</div>
-        <div class="item">4</div>
-        <div class="item">5</div>
+        <div class="item off">4</div>
+        <div class="item off">5</div>
         <div class="item">6</div>
         <div class="item">1</div>
         <div class="item">2</div>
         <div class="item">3</div>
-        <div class="item clear small">CLEAR</div>
+        <div class="item clear small"><div class="ic-clear"></div>CLEAR</div>
         <div class="item zero">0</div>
         <div class="item dot"></div>
       </div>
@@ -409,7 +487,7 @@
   </div>
   <div class="popup-footer">
     <button class="btn-normal">확인</button>
-    <button onclick='closePopup2(event)'>닫기</button>
+    <button class="btn-normal" onclick='closePopup2(event)'>닫기</button>
   </div>
 </div>
 
@@ -422,6 +500,19 @@
   </div>
   <div class="popup-footer">
     <button class="btn-normal" onclick='closePopup2(event)'>확인</button>
+  </div>
+</div>
+
+<div class="popup-wrap pop-msg2 popup-wrap2">
+  <div class="popup-header">
+    <button class="btn-close" onclick='closePopup2(event)'></button>
+  </div>
+  <div class="popup-body">
+    <p>선택 내용을 반영 하시겠습니까?</p>
+  </div>
+  <div class="popup-footer">
+    <button class="btn-normal" onclick='closePopup2(event)'>확인</button>
+    <button class="btn-normal" onclick='closePopup2(event)'>닫기</button>
   </div>
 </div>
 
@@ -476,7 +567,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div> 
   
@@ -539,7 +630,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>  
 
@@ -579,7 +670,7 @@
         <li class="data-high">+2</li>                  
       </ul>
       <div class="tuning-box">
-        <button class="btn-tuning-arrow-60 down"></button>
+        <button class="btn-tuning-arrow-60 down" disabled></button>
         <div class="value">92.7</div>
         <button class="btn-tuning-arrow-60 up"></button>
       </div>
@@ -613,44 +704,104 @@
             <li class="data">
               <p class="title">#1 TOP</p>
               <p class="underline">0</p>
-              <p class="button"><button class="btn-normal">수동</button></p>
-              <p class="button"><button class="btn-normal">정지</button></p>
+              <p class="button">
+                <button class="btn-normal off">수동</button>
+                <button class="btn-normal on">자동</button>
+              </p>
+              <p class="button">
+                <button class="btn-normal off">정지</button>
+                <button class="btn-normal on">운전</button>
+              </p>
             </li>
             <li class="data">
               <p class="title">#2 TOP</p>
               <p class="underline">3,016</p>
-              <p class="button"><button class="btn-normal on">자동</button></p>
-              <p class="button"><button class="btn-normal on">운전</button></p>
+              <p class="button">
+                <button class="btn-normal off">수동</button>
+                <button class="btn-normal on">자동</button>
+              </p>
+              <p class="button">
+                <button class="btn-normal off">정지</button>
+                <button class="btn-normal on">운전</button>
+              </p>
             </li>
             <li class="data">
               <p class="title">#3 TOP</p>
               <p class="underline">3,016</p>
-              <p class="button"><button class="btn-normal on">자동</button></p>
-              <p class="button"><button class="btn-normal on">운전</button></p>
+              <p class="button">
+                <button class="btn-normal off">수동</button>
+                <button class="btn-normal on">자동</button>
+              </p>
+              <p class="button">
+                <button class="btn-normal off">정지</button>
+                <button class="btn-normal on">운전</button>
+              </p>
             </li>
             <li class="data">
               <p class="title">#4 TOP</p>
               <p class="underline">2,952</p>
-              <p class="button"><button class="btn-normal on">자동</button></p>
-              <p class="button"><button class="btn-normal on">운전</button></p>
+              <p class="button">
+                <button class="btn-normal off">수동</button>
+                <button class="btn-normal on">자동</button>
+              </p>
+              <p class="button">
+                <button class="btn-normal off">정지</button>
+                <button class="btn-normal on">운전</button>
+              </p>
             </li>
             <li class="data">
               <p class="title">#5 TOP</p>
               <p class="underline">12</p>
-              <p class="button"><button class="btn-normal on">자동</button></p>
-              <p class="button"><button class="btn-normal">정지</button></p>
+              <p class="button">
+                <button class="btn-normal off">수동</button>
+                <button class="btn-normal on">자동</button>
+              </p>
+              <p class="button">
+                <button class="btn-normal off">정지</button>
+                <button class="btn-normal on">운전</button>
+              </p>
             </li>
             <li class="data">
               <p class="title">#6 TOP</p>
               <p class="underline">3</p>
-              <p class="button"><button class="btn-normal on">자동</button></p>
-              <p class="button"><button class="btn-normal">정지</button></p>
+              <p class="button">
+                <button class="btn-normal off">수동</button>
+                <button class="btn-normal on">자동</button>
+              </p>
+              <p class="button">
+                <button class="btn-normal off">정지</button>
+                <button class="btn-normal on">운전</button>
+              </p>
             </li>
             <li class="data">
               <p class="title">#7 TOP</p>
               <p class="underline">2</p>
-              <p class="button"><button class="btn-normal on">자동</button></p>
-              <p class="button"><button class="btn-normal">정지</button></p>
+              <p class="button">
+                <button class="btn-normal off">수동</button>
+                <button class="btn-normal on">자동</button>
+              </p>
+              <p class="button">
+                <button class="btn-normal off">정지</button>
+                <button class="btn-normal on">운전</button>
+              </p>
+            </li>
+            <li class="data">
+              <p class="title"></p>
+              <p class="underline"></p>
+              <p class="button"></p>
+              <p class="button"></p>
+            </li>
+            <li class="data">
+              <p class="title"></p>
+              <p class="underline"></p>
+              <p class="button"></p>
+              <p class="button"></p>
+            </li>
+            <li class="data">
+              <p class="title"></p>
+              <p class="underline"></p>
+              <p class="button"></p>
+              <p class="button"></p>
             </li>
           </ul>
         </div>
@@ -675,69 +826,129 @@
           <li class="data">
             <p class="title">#1 BOTTOM</p>
             <p class="underline">0</p>
-            <p class="button"><button class="btn-normal">수동</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#2 BOTTOM</p>
             <p class="underline">0</p>
-            <p class="button"><button class="btn-normal">수동</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#3 BOTTOM</p>
             <p class="underline">3,352</p>
-            <p class="button"><button class="btn-normal on">자동</button></p>
-            <p class="button"><button class="btn-normal on">운전</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#4 BOTTOM</p>
             <p class="underline">3,348</p>
-            <p class="button"><button class="btn-normal on">자동</button></p>
-            <p class="button"><button class="btn-normal on">운전</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#5 BOTTOM</p>
             <p class="underline">3,404</p>
-            <p class="button"><button class="btn-normal on">자동</button></p>
-            <p class="button"><button class="btn-normal on">운전</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#6 BOTTOM</p>
             <p class="underline">0</p>
-            <p class="button"><button class="btn-normal">수동</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#7 BOTTOM</p>
             <p class="underline">0</p>
-            <p class="button"><button class="btn-normal">수동</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#8 BOTTOM</p>
             <p class="underline">0</p>
-            <p class="button"><button class="btn-normal">수동</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#9 BOTTOM</p>
             <p class="underline">0</p>
-            <p class="button"><button class="btn-normal">수동</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
           <li class="data">
             <p class="title">#10 BOTTOM</p>
             <p class="underline">0</p>
-            <p class="button"><button class="btn-normal">수동</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">수동</button>
+              <button class="btn-normal on">자동</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>
         </ul>        
       </div>
     </div>  
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>   
   </div>
 <!-- TP31CTS030 : Center Overview_Reset -->
@@ -770,7 +981,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div> 
   </div>
 <!-- TP31CTS050 : Center Overview_Reflow 제어 -->
@@ -795,7 +1006,10 @@
                 <p>0</p>
                 <p>6.4</p>
                 <p>87</p>                
-                <p class="button"><button class="btn-normal">정지</button></p>
+                <p class="button">
+                  <button class="btn-normal off">정지</button>
+                  <button class="btn-normal on">운전</button>
+                </p>
               </li>              
             </ul>        
           </div>
@@ -809,7 +1023,7 @@
                   <li class="data-high">+2</li>                  
                 </ul>
                 <div class="tuning-box">
-                  <button class="btn-tuning-arrow-60 down"></button>
+                  <button class="btn-tuning-arrow-60 down" disabled></button>
                   <div class="value underline">100</div>
                   <button class="btn-tuning-arrow-60 up"></button>
                 </div>
@@ -834,7 +1048,7 @@
                   <p>84</p>
                   <p>84</p>
                   <p>84</p>
-                  <p class="button"><button class="btn-normal on">냉각</button></p>
+                  <p class="button"><button class="btn-normal off">냉각</button></p>
                 </li>              
               </ul>        
             </div>
@@ -848,8 +1062,14 @@
                   <p>Quenching Cir. Pump B</p>
                 </li>
                 <li class="data">
-                  <p class="button"><button class="btn-normal">정지</button></p>
-                  <p class="button"><button class="btn-normal">정지</button></p>
+                  <p class="button">
+                    <button class="btn-normal off">정지</button>
+                    <button class="btn-normal on">운전</button>
+                  </p>
+                  <p class="button">
+                    <button class="btn-normal off">정지</button>
+                    <button class="btn-normal on">운전</button>
+                  </p>
                 </li>              
               </ul>        
             </div>
@@ -859,7 +1079,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div> 
   </div>
 <!-- TP31CTS056 : Center Overview_ES Oiler 제어 -->
@@ -885,15 +1105,21 @@
             <p>20</p>
             <p>20</p>
             <p>20</p>              
-            <p class="button"><button class="btn-normal on">운전</button></p>
-            <p class="button"><button class="btn-normal">정지</button></p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
+            <p class="button">
+              <button class="btn-normal off">정지</button>
+              <button class="btn-normal on">운전</button>
+            </p>
           </li>              
         </ul>        
       </div>         
     </div>    
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div> 
   </div>
 <!-- Center Overview_#2 BRIDEL ROLL TENSION -->
@@ -912,14 +1138,14 @@
         <li class="data-high">+2</li>                  
       </ul>
       <div class="tuning-box">
-        <button class="btn-tuning-arrow-60 down"></button>
+        <button class="btn-tuning-arrow-60 down" disabled ></button>
         <div class="value">92.7</div>
         <button class="btn-tuning-arrow-60 up"></button>
       </div>
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div>
   </div>
 <!-- #1 #2 TR TENSION 제어 -->
@@ -952,7 +1178,7 @@
                 <li class="data-high">+2</li>                  
               </ul>        
               <div class="tuning-box">
-                <button class="btn-tuning-arrow-40 down"></button>
+                <button class="btn-tuning-arrow-40 down" disabled></button>
                 <div class="value">100</div>
                 <button class="btn-tuning-arrow-40 up"></button>
               </div>
@@ -996,7 +1222,7 @@
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div> 
   </div>
 <!-- Exit Overview_REEL CHANGE 제어 -->
@@ -1012,17 +1238,17 @@
             <p class="t-center">운전모드</p>
           </li>
           <li class="data">
-            <p class="button"><button class="btn-normal on">자동</button></p>
+            <p class="button"><button class="btn-normal">수동</button></p>
           </li>      
           <li class="data">
-            <p class="button"><button class="btn-normal">수동</button></p>
+            <p class="button"><button class="btn-normal on">자동</button></p>
           </li>          
         </ul>        
       </div>            
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div> 
   </div>
 <!-- Exit Overview_#1 EPC 제어 -->
@@ -1039,19 +1265,19 @@
             <p>STAGGER</p>
           </li>
           <li class="data">
-            <p class="button"><button class="btn-normal on">자동</button></p>
-            <p class="button"><button class="btn-normal on">ON</button></p>
-          </li>      
-          <li class="data">
             <p class="button"><button class="btn-normal">수동</button></p>
             <p class="button"><button class="btn-normal">OFF</button></p>
           </li>          
+          <li class="data">
+            <p class="button"><button class="btn-normal on">자동</button></p>
+            <p class="button"><button class="btn-normal on">ON</button></p>
+          </li>      
         </ul>        
       </div>            
     </div>
     <div class="popup-footer">
       <button class="btn-normal">확인</button>
-      <button onclick='closePopup1(event)'>닫기</button>
+      <button class="btn-normal" onclick='closePopup1(event)'>닫기</button>
     </div> 
   </div>
 <!-- MES 작업순서변경 -->
