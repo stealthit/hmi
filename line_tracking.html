@@ -348,8 +348,9 @@
          
         <!-- ----------------------------------------------->
 <!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
+ <!-- type2,type3,type5 추가 (r-run,l-run으로 애니메이션 방향 구분) -->
         <!-- #1 POR -->
-        <div class="ic-roll-40" style="top:297px;left:25px;"></div>
+        <div class="ic-roll-40 type2 r-run" style="top:297px;left:25px;"></div>
         <div class="ic-roll-40 stop" style="top:297px;left:103px;"></div>
         <div class="ic-roll-40 run-r" style="top:277px;left:1781px;"></div>
         <div class="ic-roll-40 fault" style="top:277px;left:1844px;">
@@ -615,7 +616,9 @@
 
               <!-- 개별 라인 처리인 경우 -->
               <!-- 기본 black line -->
-              <img class="svg-line-loop1"/>
+              <!-- 다른색 line 애니메이션 후 lineoff class 추가시 line 없애기 -->
+              <!-- black line 의 animation-delay의 시간과 다른색 line 의 animation-duration 시간을 맞춰주면 같은 시간대에 그려지고 없어짐. -->
+              <img class="svg-line-loop1 lineoff" style="animation-delay: 3s;"/>
               <img class="svg-line-loop2"/>
               <img class="svg-line-loop3"/>
               <img class="svg-line-loop4"/>
@@ -635,69 +638,33 @@
               <img class="svg-line-loop18"/>
               <img class="svg-line-loop19"/>
               <img class="svg-line-loop20"/>
- 
-              <img class="svg-line-loop1 type2 moveon"/>
-              <img class="svg-line-loop2 type2 moveon"/>
-              <img class="svg-line-loop3 type2 moveon"/>
-              <img class="svg-line-loop4 type2 moveon"/>
-              <img class="svg-line-loop5 type2 moveon"/>
-              <img class="svg-line-loop6 type2 moveon"/>
-              <img class="svg-line-loop7 type2 moveon"/>
-              <img class="svg-line-loop8 type2 moveon"/>
-              <img class="svg-line-loop9 type2 moveon"/>
-              <img class="svg-line-loop10 type2 moveon"/>
-              <img class="svg-line-loop11 type2 moveon"/>
-              <img class="svg-line-loop12 type2 moveon"/>
-              <img class="svg-line-loop13 type2 moveon"/>
-              <img class="svg-line-loop14 type2 moveon"/>
-              <img class="svg-line-loop15 type2 moveon"/>
-              <img class="svg-line-loop16 type2 moveon"/>
-              <img class="svg-line-loop17 type2 moveon"/>
-              <img class="svg-line-loop18 type2 moveon"/>
-              <img class="svg-line-loop19 type2 moveon"/>
-              <img class="svg-line-loop20 type2 moveon"/>
               
-              <!-- <img class="trk-line-loop1 type2 on"/>
-              <img class="trk-line-loop2"/>
-              <img class="trk-line-loop3"/>
-              <img class="trk-line-loop4"/>
-              <img class="trk-line-loop5"/>
-              <img class="trk-line-loop6"/>
-              <img class="trk-line-loop7 type3"/>
-              <img class="trk-line-loop8 type3"/>
-              <img class="trk-line-loop9 type4"/>
-              <img class="trk-line-loop10"/>
-              <img class="trk-line-loop11"/>
-              <img class="trk-line-loop12"/>
-              <img class="trk-line-loop13"/>
-              <img class="trk-line-loop14"/>
-              <img class="trk-line-loop15"/>
-              <img class="trk-line-loop16 type4"/>
-              <img class="trk-line-loop17 type4"/>
-              <img class="trk-line-loop18 type3"/>
-              <img class="trk-line-loop19 type2"/>
-              <img class="trk-line-loop20 type2"/>
-              <img class="trk-line-loop21"/>
-              <img class="trk-line-loop22"/>
-              <img class="trk-line-loop23"/>
-              <img class="trk-line-loop24"/>
-              <img class="trk-line-loop25"/>
-              <img class="trk-line-loop26"/>
-              <img class="trk-line-loop27 type3"/>
-              <img class="trk-line-loop28 type3"/>
-              <img class="trk-line-loop29 type4"/>
-              <img class="trk-line-loop30"/>
-              <img class="trk-line-loop31"/>
-              <img class="trk-line-loop32"/>
-              <img class="trk-line-loop33"/>
-              <img class="trk-line-loop34"/>
-              <img class="trk-line-loop35"/>
-              <img class="trk-line-loop36 type4"/>
-              <img class="trk-line-loop37 type4"/>
-              <img class="trk-line-loop38 type3"/>
-              <img class="trk-line-loop39 type2"/>
-              <img class="trk-line-loop40 type2"/> -->
-              <!-------------------------------------->
+              <!-- 
+                1개의 다른색 라인 애니메이션 moveon 할때마다
+               같은 라인 black 라인을 lineoff 합니다.(한 set라고 보면됨) 
+               애니메이션 시간은 같은 시간으로 지정.
+               -->
+              <img class="svg-line-loop1 type2 moveon" style="animation-duration: 3s;"/>
+              <!-- <img class="svg-line-loop2 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop3 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop4 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop5 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop6 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop7 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop8 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop9 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop10 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop11 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop12 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop13 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop14 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop15 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop16 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop17 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop18 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop19 type2 moveon" style="animation-duration: 3s;"/>
+              <img class="svg-line-loop20 type2 moveon" style="animation-duration: 3s;"/>
+               -->              
             </div>
             <div class="roll-base-bar">
               <div class="ic-roll-10" style="top:0;left:0;"></div> 
@@ -815,10 +782,10 @@
           <div class="list-title">BOTTOM PLATING</div>
           <ul class="list-data">
             <li class="data-title">
-              <p>전류</p>
+              <p class="title">전류 (KA)</p>
             </li>
             <li class="data">
-              <p>13.3 KA</p>
+              <p>13.3</p>
             </li>
           </ul>
         </div>
@@ -827,10 +794,10 @@
           <div class="list-title">TOP PLATING</div>
           <ul class="list-data">
             <li class="data-title">
-              <p>전류</p>
+              <p class="title">전류 (KA)</p>
             </li>
             <li class="data">
-              <p>12.9 KA</p>
+              <p>12.9</p>
             </li>
           </ul>
         </div>
@@ -919,15 +886,15 @@
           <div class="list-title">#2 CLEANING</div>          
           <ul class="list-data">    
             <li class="data-title">
-              <p class="title">전류</p>              
+              <p class="title">전류 (KA)</p>              
             </li>          
             <li class="data">
               <p class="title">#1 정류기</p>
-              <p>2.4 KA</p>
+              <p>2.4</p>
             </li>
             <li class="data">
               <p class="title">#2 정류기</p>
-              <p>0.7 KA</p>
+              <p>0.7</p>
             </li>
           </ul>
         </div>
@@ -981,15 +948,15 @@
           <div class="list-title">CHEMICAL</div>          
           <ul class="list-data">    
             <li class="data-title">
-              <p class="title">전류</p>              
+              <p class="title">전류 (KA)</p>              
             </li>          
             <li class="data">
               <p class="title">UP</p>
-              <p>0.7 KA</p>
+              <p>0.7</p>
             </li>
             <li class="data">
               <p class="title">DOWN</p>
-              <p>1.3 KA</p>
+              <p>1.3</p>
             </li>
           </ul>
         </div>
@@ -1033,20 +1000,20 @@
               <col width="80px">
               <col width="80px">
               <col width="113px">
-              <col width="234px">
               <col width="182px">
               <col width="183px">
-              <col width="80px">
-              <col width="80px">
-              <col width="80px">
-              <col width="80px">
+              <col width="120px">
+              <col width="120px">
               <col width="80px">
               <col width="95px">
               <col width="95px">
-              <col width="108px">
-              <col width="95px">
+              <col width="80px">
+              <col width="80px">
               <col width="95px">
               <col width="80px">
+              <col width="80px">
+              <col width="80px">
+              <col width="197px">
             </colgroup>
             <thead>
               <tr>
@@ -1054,20 +1021,20 @@
                 <th>MES 순번</th>
                 <th>순서</th>
                 <th>위치</th>
-                <th>수주번호</th>
                 <th>작업지시번호</th>
                 <th>투입원판번호</th>
-                <th>COIL중량</th>
-                <th>조도</th>
-                <th>도유량</th>
-                <th>판폭</th>
-                <th>두께</th>
-                <th>COIL길이</th>
                 <th>TOP 부착량</th>
-                <th>BOTTOM부착량</th>
+                <th>BOTTOM 부착량</th>
+                <th>도유량</th>
                 <th>CHE.(UP)</th>
                 <th>CHE.(DOWN)</th>
-                <th>단중량</th>
+                <th>두께</th>
+                <th>폭</th>
+                <th>COIL길이</th>
+                <th>투입중량</th>
+                <th>단중</th>
+                <th>조도</th>
+                <th>고객사명</th>
               </tr>
             </thead>
             <tbody>
@@ -1076,19 +1043,19 @@
                 <td>1031</td>
                 <td>1</td>
                 <td>-</td>
-                <td>/</td>
                 <td>DUMMY0000104</td>
                 <td>LOTNO0000104</td>
-                <td>17.000</td>
-                <td>3.000</td>
-                <td>3.000</td>
-                <td>934.00</td>
-                <td>0.350</td>
-                <td>10.00</td>
                 <td>10.00</td>
                 <td>30.00</td>
+                <td>3.000</td>
                 <td>10.00</td>
                 <td>10.00</td>
+                <td>0.350</td>
+                <td>934.00</td>
+                <td>10.00</td>
+                <td>17.000</td>
+                <td>~</td>
+                <td>3.000</td>
                 <td>-</td>
               </tr>
               <tr class="sel-bl">
@@ -1096,80 +1063,80 @@
                 <td>1031</td>
                 <td>2</td>
                 <td>NO.1 POR</td>
-                <td>/</td>
                 <td>DUMMY0000105</td>
                 <td>LOTNO0000105</td>
-                <td>16.000</td>
-                <td>3.000</td>
-                <td>3.000</td>
-                <td>580.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>2.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
                 <td>0.440</td>
+                <td>580.00</td>
                 <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
+                <td>16.000</td>
                 <td></td>
+                <td>2.000</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td>-</td>
                 <td>1031</td>
-                <td>3</td>
+                <td>2</td>
                 <td>NO.1 POR</td>
-                <td>/</td>
                 <td>DUMMY0000105</td>
                 <td>LOTNO0000105</td>
-                <td>16.000</td>
-                <td>3.000</td>
-                <td>3.000</td>
-                <td>580.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>2.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
                 <td>0.440</td>
+                <td>580.00</td>
                 <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
+                <td>16.000</td>
                 <td></td>
+                <td>2.000</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td>-</td>
                 <td>1031</td>
-                <td>4</td>
+                <td>2</td>
                 <td>NO.1 POR</td>
-                <td>/</td>
                 <td>DUMMY0000105</td>
                 <td>LOTNO0000105</td>
-                <td>16.000</td>
-                <td>3.000</td>
-                <td>3.000</td>
-                <td>580.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>2.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
                 <td>0.440</td>
+                <td>580.00</td>
                 <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
+                <td>16.000</td>
                 <td></td>
+                <td>2.000</td>
+                <td>-</td>
               </tr>
               <tr>
                 <td>-</td>
                 <td>1031</td>
-                <td>5</td>
+                <td>2</td>
                 <td>NO.1 POR</td>
-                <td>/</td>
                 <td>DUMMY0000105</td>
                 <td>LOTNO0000105</td>
-                <td>16.000</td>
-                <td>3.000</td>
-                <td>3.000</td>
-                <td>580.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>2.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
                 <td>0.440</td>
+                <td>580.00</td>
                 <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>
+                <td>16.000</td>
                 <td></td>
+                <td>2.000</td>
+                <td>-</td>
               </tr>
             </tbody>
           </table>

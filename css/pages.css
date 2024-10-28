@@ -41,10 +41,10 @@
 }
 @keyframes lineoff {
   from {
-    height: 100%;
+    opacity: 1;
   }
   to {
-    height: 0;
+    opacity: 0;
   }
 }
 .main-wrapper {
@@ -86,7 +86,7 @@
 }
 .line-trk-wrapper .gd-reflow {
   top: 440px;
-  left: 1190px;
+  left: 1109px;
   width: 130px;
 }
 .line-trk-wrapper .gd-reflow .list-data .data-title {
@@ -94,11 +94,14 @@
 }
 .line-trk-wrapper .gd-quenching {
   top: 374px;
-  left: 1334px;
-  width: 157px;
+  left: 1259px;
+  width: 189px;
 }
 .line-trk-wrapper .gd-quenching .list-data .data-title {
-  width: 97px;
+  width: 94px;
+}
+.line-trk-wrapper .gd-quenching .list-data li p {
+  height: 28px !important;
 }
 .line-trk-wrapper .gd-bottom-plating {
   top: 10px;
@@ -106,7 +109,10 @@
   width: 130px;
 }
 .line-trk-wrapper .gd-bottom-plating .list-data .data-title {
-  width: 38px;
+  width: 70px;
+}
+.line-trk-wrapper .gd-bottom-plating .list-data li p {
+  height: 28px !important;
 }
 .line-trk-wrapper .gd-top-plating {
   top: 10px;
@@ -114,7 +120,10 @@
   width: 120px;
 }
 .line-trk-wrapper .gd-top-plating .list-data .data-title {
-  width: 38px;
+  width: 70px;
+}
+.line-trk-wrapper .gd-top-plating .list-data li p {
+  height: 28px !important;
 }
 .line-trk-wrapper .gd-loop-position {
   top: 10px;
@@ -123,6 +132,9 @@
 }
 .line-trk-wrapper .gd-loop-position .list-data .data-title {
   width: 38px;
+}
+.line-trk-wrapper .gd-loop-position .list-data li p {
+  height: 28px !important;
 }
 .line-trk-wrapper .gd-bridle-roll {
   width: 243px;
@@ -134,12 +146,12 @@
   width: 103px;
 }
 .line-trk-wrapper .gd-cleaning {
-  width: 197px;
+  width: 229px;
   top: 10px;
   left: 541px;
 }
 .line-trk-wrapper .gd-cleaning .list-data .data-title {
-  width: 103px;
+  width: 69px;
 }
 .line-trk-wrapper .gd-por {
   top: 440px;
@@ -155,20 +167,20 @@
   width: 200px;
 }
 .line-trk-wrapper .gd-chemical {
-  width: 157px;
+  width: 189px;
   top: 440px;
-  left: 1334px;
+  left: 1259px;
 }
 .line-trk-wrapper .gd-chemical .list-data .data-title {
-  width: 38px;
+  width: 70px;
 }
 .line-trk-wrapper .gd-tr {
   top: 440px;
-  left: 1502px;
-  width: 408px;
+  left: 1458px;
+  width: 452px;
 }
 .line-trk-wrapper .gd-tr .list-data .data-title {
-  width: 130px;
+  width: 152px;
 }
 .line-trk-wrapper .loop-box-wrapper {
   z-index: 2;
@@ -289,13 +301,14 @@
   display: flex;
   -moz-column-gap: 40px;
        column-gap: 40px;
-  row-gap: 38px;
+  row-gap: 34px;
   flex-wrap: wrap;
   padding: 40px 60px;
 }
 .entry-i-wrapper .inter-table-wrap {
   width: 570px;
-  height: 336px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .center-o-wrapper .bg-line-wrap {
@@ -323,21 +336,24 @@
   left: 220px;
 }
 .center-o-wrapper .gd-enc {
-  width: 120px;
+  width: 134px;
 }
 .center-o-wrapper .gd-enc .list-data .data-title {
-  width: 38px;
+  width: 98px;
 }
 .center-o-wrapper .gd-enc .list-data .data-title p {
   height: 28px !important;
 }
 .center-o-wrapper .gd-quenching {
   top: 463px;
-  left: 1297px;
+  left: 1292px;
   width: 149px;
 }
 .center-o-wrapper .gd-quenching .list-data .data-title {
   width: 89px;
+}
+.center-o-wrapper .gd-quenching .list-data li p {
+  height: 28px !important;
 }
 .center-o-wrapper .gd-reflow {
   top: 5px;
@@ -347,31 +363,29 @@
 .center-o-wrapper .gd-reflow .list-data .data-title {
   width: 70px;
 }
+.center-o-wrapper .gd-mini {
+  width: 200px;
+}
+.center-o-wrapper .gd-mini p {
+  justify-content: center !important;
+}
+.center-o-wrapper .gd-large {
+  width: 380px;
+}
+.center-o-wrapper .gd-large p {
+  justify-content: center !important;
+  height: 41px !important;
+}
 .center-o-wrapper .gd-oiler {
   top: 5px;
-  left: 1750px;
+  left: 1752px;
   width: 158px;
-}
-.center-o-wrapper .gd-oiler .title-box {
-  height: 28px;
 }
 .center-o-wrapper .gd-oiler .list-data .data-title {
   width: 98px;
-  height: 28px;
 }
-.center-o-wrapper .gd-oiler .list-data:nth-child(2) {
-  border-bottom: none;
-}
-.center-o-wrapper .gd-oiler .list-data:nth-child(2) li p {
-  border-bottom: none;
-}
-.center-o-wrapper .gd-oiler .list-data:nth-child(3), .center-o-wrapper .gd-oiler .list-data:last-child {
-  margin-top: 4px;
-}
-.center-o-wrapper .gd-oiler .list-data .data .tuning-box {
-  height: 32px;
-  padding: 2px;
-  border-bottom: 1px solid #999999;
+.center-o-wrapper .gd-oiler .list-data .data p:last-child {
+  justify-content: center;
 }
 .center-o-wrapper .table-box .table-wrap table tbody tr td {
   background: #CCCCCC;
@@ -502,46 +516,15 @@
   left: 270px;
 }
 
-.pre-treatment-wrapper .gd-cleaning {
-  width: 275px;
+.pre-treatment-wrapper .gd-clean {
+  width: 480px;
 }
-.pre-treatment-wrapper .gd-cleaning .list-data .data-title {
-  width: 135px;
+.pre-treatment-wrapper .gd-clean .list-data .data-title {
+  width: 140px;
 }
-.pre-treatment-wrapper .gd-cleaning .way-box {
-  height: 28px;
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #999999;
-}
-.pre-treatment-wrapper .gd-cleaning .way-box .way {
-  display: flex;
-  gap: 4px;
-}
-.pre-treatment-wrapper .gd-cleaning .way-box .way p {
-  border: none;
-}
-.pre-treatment-wrapper .gd-cleaning .button-box {
-  height: 28px;
-  border-top: 1px solid #999999;
-  border-bottom: 1px solid #999999;
-  background: #CCCCCC;
-  display: flex;
-  width: 100%;
-}
-.pre-treatment-wrapper .gd-cleaning .button-box .box {
-  flex: 1;
-}
-.pre-treatment-wrapper .gd-cleaning .button-box .box:first-child {
-  padding: 1px;
-  border-right: 1px solid #999999;
-}
-.pre-treatment-wrapper .gd-cleaning .button-box .box:last-child {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 6px;
-  text-decoration: underline;
+.pre-treatment-wrapper .gd-clean .list-data .data p.button {
+  padding: 2px 15px;
+  gap: 7px;
 }
 
 .post-treatment-wrapper .gauge-wrap {
@@ -564,31 +547,49 @@
 }
 .post-treatment-wrapper .gauge-wrap .box {
   width: 100%;
-  padding: 6px 10px 10px 10px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
   font-size: 14px;
   font-weight: 700;
+  border-top: 1px solid #999999;
+  border-bottom: 1px solid #999999;
 }
-.post-treatment-wrapper .gauge-wrap .box .title-box {
+.post-treatment-wrapper .gauge-wrap .box .box-row {
   height: 28px;
-}
-.post-treatment-wrapper .gauge-wrap .box .tuning-box {
-  margin: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 6px;
 }
-.post-treatment-wrapper .gauge-wrap .box .tuning-box .value {
-  flex: 1;
+.post-treatment-wrapper .gauge-wrap .box .box-row .title {
+  width: 80px;
+  border-right: 1px solid #999999;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4px;
-  border: 1px solid #666666;
-  color: #002878;
+}
+.post-treatment-wrapper .gauge-wrap .box .box-row .data {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  padding: 2px 15px;
+}
+.post-treatment-wrapper .gauge-wrap .box .box-row:last-child {
+  border-top: 1px solid #999999;
+}
+.post-treatment-wrapper .list-grid .list-data li.data p.button {
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.post-treatment-wrapper .list-grid .list-data li.data p.button button {
+  width: 37px;
+}
+.post-treatment-wrapper .gd-chemical .list-data li.data {
+  flex: none;
+}
+.post-treatment-wrapper .grid2 .list-data:nth-child(3) {
+  margin: 4px 0;
+}
+.post-treatment-wrapper .grid2 .list-data .data-title {
+  width: 129px;
 }
 
 .center-helper-wrapper {

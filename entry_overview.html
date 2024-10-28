@@ -228,7 +228,8 @@
         <div class="img-label line-2" style="top:239px;left:120px">#1<br> PINCH ROLL</div> 
 
 <!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
-        <div class="ic-roll-120" style="top:356px;left:26px;"></div>
+ <!-- type2,type3,type5 추가 (r-run,l-run으로 애니메이션 방향 구분) -->
+        <div class="ic-roll-120 type3 r-run" style="top:356px;left:26px;"></div>
         <div class="ic-roll-120 run-r" style="top:356px;left:259px;"></div>
         <!-- #1 PINCH ROLL -->
         <div class="ic-roll-18 run-r" style="top:292px;left:155px;"></div>
@@ -313,15 +314,16 @@
               
               <!-- line 1개씩 분리한 부분 line-box 태그에 정의 -->
               <div class="line-box" style="height: calc(466px - 43px);">
-                <img class="entry-line-loop1 cl-type1"/>
-                <img class="entry-line-loop2 cl-type1"/>
-                <img class="entry-line-loop3 cl-type1"/>
-                <img class="entry-line-loop4 cl-type2"/>
-                <img class="entry-line-loop5 cl-type2"/>
-                <img class="entry-line-loop6 cl-type2"/>
-                <img class="entry-line-loop7 cl-type3"/>
-                <img class="entry-line-loop8 cl-type3"/>
-                <img class="entry-line-loop9 cl-type3"/>
+                <!-- line tracking loop 와 같은 방법으로 적용 -->
+                <img class="entry-line-loop1 lineoff" style="animation-delay: 3s;"/>
+                <img class="entry-line-loop2"/>
+                <img class="entry-line-loop3"/>
+                <img class="entry-line-loop4"/>
+                <img class="entry-line-loop5"/>
+                <img class="entry-line-loop6"/>
+                <img class="entry-line-loop7"/>
+                <img class="entry-line-loop8"/>
+                <img class="entry-line-loop9"/>
                 <img class="entry-line-loop10"/>
                 <img class="entry-line-loop11"/>
                 <img class="entry-line-loop12"/>
@@ -333,6 +335,8 @@
                 <img class="entry-line-loop18"/>
                 <img class="entry-line-loop19"/>
                 <img class="entry-line-loop20"/>
+                <!-- line tracking loop 와 같은 방법으로 적용 -->
+                <img class="entry-line-loop1 type2 moveon" style="animation-duration: 3s;"/>
               </div>     
                      
 
@@ -415,6 +419,7 @@
           <ul class="list-data">
             <li class="data-title">
               <p></p>
+              <p>작업지시번호</p>
               <p>투입원판번호</p>
               <p>ACTUAL DIA (mm)</p>
               <p>INITIAL DIA (mm)</p>
@@ -425,6 +430,7 @@
             </li>
             <li class="data">
               <p class="title">#1 POR</p>
+              <p class="t-center">CAH3456</p>
               <p class="t-center">LOTNO0000104</p>
               <p>560</p>
               <p class="underline">568</p>
@@ -435,6 +441,7 @@
             </li>
             <li class="data">
               <p class="title">#1 POR</p>
+              <p class="t-center">CAJ3444</p>
               <p class="t-center">LOTNO0000105</p>
               <p>560</p>
               <p class="underline">568</p>
@@ -448,15 +455,12 @@
           <ul class="list-data">
             <li class="data-title">
               <p>MANDREL EXPAND</p>
-              <p>CHEMICAL(UP)</p>
             </li>
             <li class="data">
               <p class="t-center">EXPAND</p>
-              <p class="t-center">운전</p>
             </li>
             <li class="data">
               <p class="t-center">COLLAPSE</p>
-              <p class="t-center">정지</p>
             </li>
           </ul>
         </div>
@@ -677,20 +681,20 @@
             </div>          
             <ul class="gauge-right">
               <li>
-                <div class="value-wrap">
-                  <button class="btn-normal"><p class="mark">H</p></button>
+                <div class="value-wrap line">
+                  <p class="mark">H</p>
                   <p class="value">230</p>
                 </div>
               </li>
               <li>
-                <div class="value-wrap">
-                  <button class="btn-normal on"><p class="mark on">M</p></button>
+                <div class="value-wrap line">
+                  <p class="mark on">M</p>
                   <p class="value">205</p>
                 </div>
               </li>
               <li>
-                <div class="value-wrap">
-                  <button class="btn-normal"><p class="mark">L</p></button>
+                <div class="value-wrap line">
+                  <p class="mark">L</p>
                   <p class="value">155</p>
                 </div>
               </li>
