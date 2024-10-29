@@ -388,33 +388,21 @@
 
 .pop-TP31CTS060 {
   width: 450px;
-  height: 576px;
+  height: 556px;
     
   .list-grid {
+    gap: 10px;
     .grid-title {height: 60px;}
     .list-data .data-title {
-      position: relative;
-      width: 240px;
-      .ab-text {
-        position: absolute;
-        width: 100px;
-        height: 120px;
-        background: $cl_neutral_5;
-        border-right: 1px solid $cl_neutral_4;
-        @include flex_center;
-      }
-      p:nth-child(2),p:nth-child(3) {
-        padding-left: 108px;
-      }
-      p:nth-child(2) {border-top: none;}
+      width: 240px;            
     }
     .list-data .data {
-      p:first-child {border-top: none;}
       p.button {
-        padding: 10px 5px;
+        padding: 10px 5px !important;
         gap: 10px;
       }
     }
+    .list-data:nth-child(2) li p:first-child{border-top: none;}
   }
   .flex-row {
     .list-grid {flex: 1;}
@@ -438,6 +426,58 @@
   //   }
   // }
 }
+// .pop-TP31CTS060 {
+//   width: 450px;
+//   height: 576px;
+    
+//   .list-grid {
+//     .grid-title {height: 60px;}
+//     .list-data .data-title {
+//       position: relative;
+//       width: 240px;
+//       .ab-text {
+//         position: absolute;
+//         width: 100px;
+//         height: 120px;
+//         background: $cl_neutral_5;
+//         border-right: 1px solid $cl_neutral_4;
+//         @include flex_center;
+//       }
+//       p:nth-child(2),p:nth-child(3) {
+//         padding-left: 108px;
+//       }
+//       p:nth-child(2) {border-top: none;}
+//     }
+//     .list-data .data {
+//       p:first-child {border-top: none;}
+//       p.button {
+//         padding: 10px 5px;
+//         gap: 10px;
+//       }
+//     }
+//   }
+//   .flex-row {
+//     .list-grid {flex: 1;}
+//     .flex-col {flex: 1;justify-content: space-between;}
+//   }
+//   .button-box {
+//     display: flex;
+//     gap: 10px;
+//     button {
+//       flex: 1;
+//       height: 170px;
+//       background: $cl_neutral_6;
+//       font-size: 24px;
+//       font-weight: 700;
+//       color: $cl_neutral_1;
+//     }
+//   }
+//   // .popup-footer {
+//   //   button {
+//   //     flex: 1;
+//   //   }
+//   // }
+// }
 
 .pop-TP31CTS070 {
   width: 400px;

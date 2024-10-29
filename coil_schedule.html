@@ -192,27 +192,27 @@
                   <th></th>
                   <th>상태</th>
                   <th>MES<br>순번</th>
-                  <th>투입순서</th>
-                  <th>COIL 위치</th>
-                  <th>수주번호</th>
+                  <th>순서</th>
+                  <th>위치</th>
                   <th>작업지시<br>번호</th>
                   <th>작업지시<br>일자</th>
                   <th>투입원판<br>번호</th>
-                  <th>투입중량<br>(kg)</th>
                   <th>두께<br>(mm)</th>
                   <th>폭<br>(mm)</th>
-                  <th>상부착량<br>(mm)</th>
-                  <th>하부착량<br>(mm)</th>
-                  <th>환산길이<br>(m)</th>
-                  <th>후공정</th>
+                  <th>TOP 부착량<br>(mm)</th>
+                  <th>BOTTOM 부착량<br>(mm)</th>
+                  <th>도유량</th>
+                  <th>투입중량<br>(kg)</th>
+                  <th>COIL길이<br>(mm)</th>
                   <th>단중<br>(kg)</th>
+                  <th>조도</th>
                   <th>품목코드</th>
                   <th>고객사명</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="sel-gr">
-                  <td>0</td>
+                  <td>1</td>
                   <td><input type="checkbox" name="" id=""></td>
                   <td>현재</td>
                   <td></td>
@@ -234,7 +234,7 @@
                   <td></td>
                 </tr>
                 <tr class="sel-bl">
-                  <td>1</td>
+                  <td>2</td>
                   <td><input type="checkbox" name="" id=""></td>
                   <td>다음</td>
                   <td></td>
@@ -254,29 +254,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td><input type="checkbox" name="" id=""></td>
-                  <td>대기</td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                </tr>                
                 <tr>
                   <td>3</td>
                   <td><input type="checkbox" name="" id=""></td>
@@ -544,19 +522,24 @@
               </tbody>            
             </table>  
           </div> 
-          <div class="msg-wrap">
+          <!-- <div class="msg-wrap">
             <div class="title">Message</div>
             <div class="msg-text">Message Text 표시</div>
-          </div>
+          </div> -->
         </div>
         <div class="bottom-btn-wrap">
-          <button class="btn-normal">MES 순서변경</button>
-          <button class="btn-normal">작업지시삭제</button>
-          <button class="btn-normal">DUMMY 생성</button>
-          <button class="btn-normal">RETURN</button>
-          <button class="btn-normal">COIL 위치 지정</button>
-          <button class="btn-normal">DUMMY 강제 전환</button>
-          <button class="btn-normal start">작업시작</button>
+          <div class="l-group">
+            <button class="btn-normal on">MES 순서변경</button>
+            <button class="btn-normal on">작업지시삭제</button>
+            <button class="btn-normal on">DUMMY 생성</button>
+            <button class="btn-normal on">RETURN</button>
+            <button class="btn-normal on">COIL 위치 지정</button>
+            <button class="btn-normal on">DUMMY 강제 전환</button>
+          </div>
+          <div class="r-group">
+            <button class="btn-normal on">작업시작</button>
+            <button class="btn-normal">작업취소</button>
+          </div>
         </div>                 
       </div>
     </main>
@@ -632,25 +615,25 @@
   <script>
     new DataTable('#coil-sche-table', {
       columnDefs: [
-        { width: 49, targets: 0 },
+        { width: 48, targets: 0 },
         { width: 38, targets: 1 },
-        { width: 89, targets: 2 },
+        { width: 59, targets: 2 },
         { width: 99, targets: 3 },
         { width: 99, targets: 4 },
         { width: 99, targets: 5 },
         { width: 99, targets: 6 },
         { width: 99, targets: 7 },
         { width: 99, targets: 8 },
-        { width: 99, targets: 9 },
-        { width: 99, targets: 10 },
-        { width: 99, targets: 11 },
-        { width: 99, targets: 12 },
+        { width: 79, targets: 9 },
+        { width: 79, targets: 10 },
+        { width: 129, targets: 11 },
+        { width: 129, targets: 12 },
         { width: 99, targets: 13 },
         { width: 99, targets: 14 },
         { width: 99, targets: 15 },
         { width: 99, targets: 16 },
         { width: 99, targets: 17 },
-        { width: 99, targets: 18 },
+        { width: 89, targets: 18 },
         { width: 99, targets: 19 }
       ],
       select: true,
@@ -666,7 +649,7 @@
         bottomEnd: null
       },
       scrollCollapse: true,
-      scrollY: 400,
+      scrollY: 640,
       scrollX: false
     });
   </script>

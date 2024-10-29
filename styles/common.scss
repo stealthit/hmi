@@ -41,7 +41,7 @@ option {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-color: transparent;
+    background-color: $cl_neutral_6;
     border: 1px solid #000;
     box-sizing:border-box;
     position: relative;
@@ -88,12 +88,13 @@ input[type='date']{
   padding-left: 10px;
   background: url(#{$imgPath}ic_calendar.svg) no-repeat right 8px center /
     12px auto; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
-  background-color: $cl_neutral_5;
+  background-color: $cl_neutral_6;
   border: 1px solid $cl_neutral_3;
   border-radius: 4px;
   text-align: left;
   font-size: 14px;
   font-weight: 700;
+  &:disabled {background-color: $cl_neutral_5;}
 }
 input[type='datetime-local'] {
   border: none; // 테두리 설정은 본인 맘대로
@@ -103,12 +104,13 @@ input[type='datetime-local'] {
   padding-left: 10px;
   background: url(#{$imgPath}ic_calendar.svg) no-repeat right 10px center /
     12px auto; // 배경에 커스텀 아이콘을 넣어주자! x축은 오른쪽에서부터 10px 떨어지게 하고, y축은 가운데 정렬하고, width 35px에 height auto라는 크기를 부여한다.
-  background-color: $cl_neutral_5;
+  background-color: $cl_neutral_6;
   border: 1px solid $cl_neutral_3;
   border-radius: 4px;
   text-align: left;
   font-size: 14px;
   font-weight: 700;
+  &:disabled {background-color: $cl_neutral_5;}
 }
 
 // 실제 캘린더 아이콘을 클릭하는 영역을 의미하는 선택자
@@ -1211,7 +1213,7 @@ input[type='datetime-local']:valid::before {
   .button-box {      
     display: flex;
     align-items: flex-end;
-    .btn-normal {background: $cl_neutral_6;width: 100px;height: 36px;color: $cl_neutral_1;}
+    .btn-normal {background: $cl_neutral_5;width: 100px;height: 36px;color: $cl_neutral_1;}
   }
 }
 
@@ -1232,7 +1234,7 @@ input[type='datetime-local']:valid::before {
     background: $cl_neutral_3;
     // border-top: 1px solid $cl_neutral_4;
     // border-bottom: 1px solid $cl_neutral_4;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: $cl_neutral_6;
   }
@@ -1303,8 +1305,8 @@ input[type='datetime-local']:valid::before {
       height: 36px;
       line-height: 1;
       font-size: 16px;
-      font-weight: 700;
-      color: $cl_data_1;
+      font-weight: 400;
+      color: $cl_neutral_1;
       background-color: $cl_neutral_5 !important;
       box-shadow: none !important;
       border-top: 1px solid $cl_neutral_4 !important;
@@ -1320,7 +1322,7 @@ input[type='datetime-local']:valid::before {
     &.display.dataTable > tbody > tr {
       &.selected > *,&.odd.selected > *,&.selected:hover > * {
         box-shadow: inset 0 0 0 9999px #93C2E4 !important;
-        color: #002878;
+        color: $cl_neutral_1;
         background-color: #93C2E4;
         border-bottom: 1px solid $cl_neutral_4
       }
@@ -1523,7 +1525,7 @@ input[type='datetime-local']:valid::before {
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
     .gauge-box {
       position: relative;
       width: 160px;
@@ -1698,6 +1700,7 @@ input[type='datetime-local']:valid::before {
               &.mark {
                 width: 32px;
                 height: 32px;
+                font-size: 20px;
                 color: $cl_neutral_1;
               }
               &.value {
@@ -3048,7 +3051,7 @@ button.btn-normal{
 .trk-line-loop2 {
   content: url(#{$imgPath}LTO/LTO_LOOP/BK/02.png);
   width: 4px;
-  height: 38.61%;
+  height: 61.39%;
   object-fit: cover;
   position: absolute; 
   left: 4px;
@@ -3111,7 +3114,7 @@ button.btn-normal{
 .trk-line-loop5 {
   content: url(#{$imgPath}LTO/LTO_LOOP/BK/05.png);
   width: 4px;
-  height: 61.39%;
+  height: 38.61%;
   object-fit: cover;
   position: absolute;
   left: 22px;
@@ -3425,11 +3428,11 @@ button.btn-normal{
 }
 .trk-line-loop20 {
   content: url(#{$imgPath}LTO/LTO_LOOP/BK/20.png);
-  width: 4px;
+  width: 6px;
   height: 61.39%;
   object-fit: cover;
   position: absolute;
-  left: 108px;
+  left: 104px;
 
   &.type2 {
     content: url(#{$imgPath}LTO/LTO_LOOP/BL/20.png);
@@ -3469,10 +3472,10 @@ button.btn-normal{
 .trk-line-loop22 {
   content: url(#{$imgPath}LTO/LTO_LOOP/BK/22.png);
   width: 4px;
-  height: 61.39%;
+  height: 38.61%;
   object-fit: cover;
   position: absolute;
-  top: 38.61%;
+  top: 61.39%;
   left: 4px;
 
   &.type2 {
@@ -3535,10 +3538,10 @@ button.btn-normal{
 .trk-line-loop25 {
   content: url(#{$imgPath}LTO/LTO_LOOP/BK/25.png);
   width: 4px;
-  height: 38.61%;
+  height: 61.39%;
   object-fit: cover;
   position: absolute;
-  top: 61.39%;
+  top: 38.61%;
   left: 22px;
 
   &.type2 {
@@ -3864,12 +3867,12 @@ button.btn-normal{
 }
 .trk-line-loop40 {
   content: url(#{$imgPath}LTO/LTO_LOOP/BK/40.png);
-  width: 4px;
+  width: 6px;
   height: 38.61%;
   object-fit: cover;
   position: absolute;
   top: 61.39%;
-  left: 108px;
+  left: 104px;
 
   &.type2 {
     content: url(#{$imgPath}LTO/LTO_LOOP/BL/40.png);

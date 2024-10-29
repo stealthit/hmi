@@ -162,7 +162,7 @@
             <table class="top-table">
               <colgroup>
                 <col width="75px">
-                <col width="75px">
+                <col width="95px">
                 <col width="121px">              
                 <col width="121px">              
                 <col width="121px">
@@ -176,7 +176,7 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th colspan="2">#1 CLEANING</th>
+                  <th colspan="2">#2 CLEANING #1 정류기</th>
                   <th>#1 TOP</th>
                   <th>#2 TOP</th>       
                   <th>#3 TOP</th>      
@@ -233,7 +233,7 @@
                   <td></td>
                 </tr>  
                 <tr>
-                  <td>지령값 (A)</td>
+                  <td>설정값 (A)</td>
                   <td>0</td>
                   <td>104</td>
                   <td>103</td>
@@ -251,7 +251,7 @@
             <table>
               <colgroup>
                 <col width="75px">
-                <col width="75px">
+                <col width="95px">
                 <col width="121px">              
                 <col width="121px">              
                 <col width="121px">
@@ -265,7 +265,7 @@
               </colgroup>
               <thead>
                 <tr>
-                  <th colspan="2">#2 CLEANING</th>
+                  <th colspan="2">#2 CLEANING #2 정류기</th>
                   <th>#1 BOTTOM</th>
                   <th>#2 BOTTOM</th>       
                   <th>#3 BOTTOM</th>      
@@ -322,7 +322,7 @@
                   <td>300</td>
                 </tr>  
                 <tr>
-                  <td>지령값 (A)</td>
+                  <td>설정값 (A)</td>
                   <td>0</td>
                   <td>104</td>
                   <td>103</td>
@@ -343,10 +343,10 @@
             <ul class="list-data">
               <li class="data-title">
                 <p class="title">구분</p>
-                <p>MAX (A)</p>    
-                <p>MIN (A)</p>       
-                <p>경보 (A)</p>       
-                <p>지령값 (A)</p>       
+                <p class="title">MAX (A)</p>    
+                <p class="title">MIN (A)</p>       
+                <p class="title">경보 (A)</p>       
+                <p class="title">설정값 (A)</p>       
               </li>
               <li class="data">
                 <p class="title">DOWN</p>
@@ -359,10 +359,10 @@
             <ul class="list-data ls-up">
               <li class="data-title">
                 <p class="title">구분</p>
-                <p>MAX (A)</p>    
-                <p>MIN (A)</p>       
-                <p>경보 (A)</p>       
-                <p>지령값 (A)</p>       
+                <p class="title">MAX (A)</p>    
+                <p class="title">MIN (A)</p>       
+                <p class="title">경보 (A)</p>       
+                <p class="title">설정값 (A)</p>       
               </li>
               <li class="data">
                 <p class="title">UP</p>
@@ -375,25 +375,55 @@
           </div>
         </div>
         <div class="flex-row">
-          <div class="list-grid gd-pan">
-            <div class="title-box">판폭 / 판두께</div>
-            <ul class="list-data">
-              <li class="data-title">
-                <p class="title">구분</p>
-                <p>MAX</p>    
-                <p>MIN</p>       
-              </li>
-              <li class="data">
-                <p class="title">판폭</p>
-                <p class="underline">1,000</p>
-                <p class="underline">600</p>
-              </li>   
-              <li class="data">
-                <p class="title">판두께</p>
-                <p class="underline">1.40</p>
-                <p class="underline">0.41</p>
-              </li>              
-            </ul>      
+          <div class="table-wrap">
+            <table>
+              <colgroup>
+                <col width="170px">
+                <col width="138px">
+                <col width="139px">              
+                <col width="172px">              
+                <col width="173px">
+                <col width="173px">
+                <col width="173px">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th rowspan="2">구분</th>
+                  <th colspan="2">폭/두께</th>
+                  <th colspan="4">부착량</th>                                
+                </tr>
+                <tr>
+                  <th>폭</th>
+                  <th>두께</th>
+                  <th>TOP PLATING</th>
+                  <th>BOTTOM PLATING</th>
+                  <th>CHEMICAL (DOWN)</th>
+                  <th>CHEMICAL (UP)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="center">MIN (mm)</td>                  
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>    
+                <tr>
+                  <td>MAX (mm)</td>                  
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>    
+              </tbody>
+            </table>
+          </div>
+          <div class="list-grid gd-con">   
             <div class="title-box">CONDUCTION 제어 상수</div>
             <ul class="list-data">
               <li class="data">
@@ -417,67 +447,11 @@
                 <p class="underline">0.776</p>
               </li>             
             </ul>        
-          </div>
-          <div class="flex-col">
-            <div class="title-box">부착량</div>
-            <div class="list-grid gd-attach">
-              <ul class="list-data">
-                <li class="data-title">
-                  <p class="title">구분</p>
-                  <p>MAX</p>    
-                  <p>MIN</p>       
-                </li>
-                <li class="data">
-                  <p class="title">TOP PLATING</p>
-                  <p class="underline">15.00</p>
-                  <p class="underline">1.00</p>
-                </li>              
-              </ul>
-              <ul class="list-data">
-                <li class="data-title">
-                  <p class="title">구분</p>
-                  <p>MAX</p>    
-                  <p>MIN</p>       
-                </li>
-                <li class="data">
-                  <p class="title">CHEMICAL (DOWN)</p>
-                  <p class="underline">15.00</p>
-                  <p class="underline">1.00</p>
-                </li>              
-              </ul>
-              <ul class="list-data">
-                <li class="data-title">
-                  <p class="title">구분</p>
-                  <p>MAX</p>    
-                  <p>MIN</p>       
-                </li>
-                <li class="data">
-                  <p class="title">BOTTOM PLATING</p>
-                  <p class="underline">5.00</p>
-                  <p class="underline">1.00</p>
-                </li>              
-              </ul>
-              <ul class="list-data">
-                <li class="data-title">
-                  <p class="title">구분</p>
-                  <p>MAX</p>    
-                  <p>MIN</p>       
-                </li>
-                <li class="data">
-                  <p class="title">CHEMICAL (UP)</p>
-                  <p class="underline">5.00</p>
-                  <p class="underline">1.00</p>
-                </li>              
-              </ul>
-            </div>
-          </div>
-          <div class="setting-box">
-            <div class="title-box">설정 적용</div>
-            <div class="button-line">
-              <div class="box"><button class="btn-normal on">확인</button></div>
-              <div class="box"><button class="btn-normal on">취소</button></div>
-            </div>
-          </div>
+          </div>                  
+        </div>
+        <div class="flex-row">
+          <button class="btn-normal on">확인</button>
+          <button class="btn-normal on">취소</button>
         </div>
       </div>
     </main>

@@ -221,7 +221,7 @@
             <button class="btn-normal">조회</button>
           </div>
         </div>
-        <div class="dt-table-wrap">
+        <div class="dt-table-wrap scroll-table table2">
           <div class="table-title">HISTORY EVENTS</div>
           <table id="his-alaram-table" class="display table-striped" style="width:1880px">            
             <thead>
@@ -758,19 +758,25 @@
         { width: 'auto' }, 
         { width: '140px' },
       ],
-      order: [],
+      fixedColumns: true,
+      ordering: false,
+      paging: false,
+      // order: [],
       searching: false,
       lengthChange: false,
       info: false,
-      pageLength: 15,
+      // pageLength: 16,
       layout: {
         bottom: 'paging',
         bottomStart: null,
         bottomEnd: null
       },
       select: {
-        style: 'multi'
-      }
+        // style: 'multi'
+      },
+      scrollCollapse: true,
+      scrollY: 596
+      // scrollX: true
     });
   </script>
 </body>

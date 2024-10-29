@@ -385,37 +385,23 @@
 
 .pop-TP31CTS060 {
   width: 450px;
-  height: 576px;
+  height: 556px;
+}
+.pop-TP31CTS060 .list-grid {
+  gap: 10px;
 }
 .pop-TP31CTS060 .list-grid .grid-title {
   height: 60px;
 }
 .pop-TP31CTS060 .list-grid .list-data .data-title {
-  position: relative;
   width: 240px;
 }
-.pop-TP31CTS060 .list-grid .list-data .data-title .ab-text {
-  position: absolute;
-  width: 100px;
-  height: 120px;
-  background: #CCCCCC;
-  border-right: 1px solid #999999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.pop-TP31CTS060 .list-grid .list-data .data-title p:nth-child(2), .pop-TP31CTS060 .list-grid .list-data .data-title p:nth-child(3) {
-  padding-left: 108px;
-}
-.pop-TP31CTS060 .list-grid .list-data .data-title p:nth-child(2) {
-  border-top: none;
-}
-.pop-TP31CTS060 .list-grid .list-data .data p:first-child {
-  border-top: none;
-}
 .pop-TP31CTS060 .list-grid .list-data .data p.button {
-  padding: 10px 5px;
+  padding: 10px 5px !important;
   gap: 10px;
+}
+.pop-TP31CTS060 .list-grid .list-data:nth-child(2) li p:first-child {
+  border-top: none;
 }
 .pop-TP31CTS060 .flex-row .list-grid {
   flex: 1;
