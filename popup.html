@@ -1348,7 +1348,7 @@
             <tr>
               <th colspan="2">선택</th>
               <th colspan="2">변경</th>
-              <th rowspan="2">작업지시<br>번호</th>
+              <th rowspan="2">작업지시번호</th>
               <th rowspan="2">상태</th>
               <th rowspan="2">Record<br>Count</th>
               <th rowspan="2">순서변경 시간</th>
@@ -1701,11 +1701,16 @@
       <div class="table-wrap">
         <table>
           <colgroup>
-            <col width="80px">
-            <col width="120px">
+            <col width="60px">
+            <col width="90px">
             <col width="160px">
             <col width="120px">
-            <col width="180px">
+            <col width="110px">
+            <col width="110px">
+            <col width="110px">
+            <col width="110px">
+            <col width="110px">
+            <col width="110px">
             <col width="160px">
             <col width="160px">
             <col width="160px">
@@ -1713,205 +1718,170 @@
           </colgroup>
           <thead>            
             <tr>
-              <th>No</th>
-              <th>상태</th>
-              <th>MES 순번</th>
-              <th>투입순서</th>
-              <th>COIL 위치</th>
-              <th>작업지시번호</th>
-              <th>작업지시일자</th>
-              <th>투입원판번호</th>
-              <th>고객사명</th>
+              <th rowspan="2">No</th>
+              <th rowspan="2">상태</th>
+              <th rowspan="2">MES 순번</th>
+              <th rowspan="2">투입순서</th>
+              <th colspan="6">COIL 위치</th>
+              <th rowspan="2">작업지시번호</th>
+              <th rowspan="2">작업지시일자</th>
+              <th rowspan="2">투입원판번호</th>
+              <th rowspan="2">고객사명</th>
+            </tr>
+            <tr>
+              <th>#1 POR</th>
+              <th>#2 POR</th>
+              <th>SKID #1-1</th>
+              <th>SKID #1-2</th>
+              <th>SKID #2-1</th>
+              <th>SKID #2-2</th>
             </tr>
           </thead>
           <tbody>
-            <tr class="sel-gr">
-              <td>0</td>
-              <td>현재</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select class="input">  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
-              <td></td>
-              <td></td>
-            </tr>    
             <tr class="sel-bl">
               <td>1</td>
-              <td>다음</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select class="input">  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
-              <td></td>
-              <td></td>
+              <td>현재</td>
+              <td>순번노출</td>                
+              <td>노출</td>
+              <td><input type="checkbox" name="" id="" checked></td>        
+              <td><input type="checkbox" name="" id=""></td> 
+              <td><input type="checkbox" name="" id="" disabled></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
             </tr>    
-            <tr>
+            <tr class="sel-gr">
               <td>2</td>
-              <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
-              <td></td>
-              <td></td>
-            </tr>    
+              <td>다음</td>
+              <td>순번노출</td>                
+              <td>노출</td>
+              <td><input type="checkbox" name="" id="" checked></td>        
+              <td><input type="checkbox" name="" id=""></td> 
+              <td><input type="checkbox" name="" id="" disabled></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
+            </tr>   
             <tr>
               <td>3</td>
               <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
-              <td></td>
-              <td></td>
-            </tr>    
+              <td>순번노출</td>                
+              <td>노출</td>
+              <td><input type="checkbox" name="" id="" checked></td>        
+              <td><input type="checkbox" name="" id=""></td> 
+              <td><input type="checkbox" name="" id="" disabled></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
+            </tr>                                              
             <tr>
               <td>4</td>
               <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
-              <td></td>
-              <td></td>
-            </tr>    
+              <td>순번노출</td>                
+              <td>노출</td>
+              <td><input type="checkbox" name="" id="" checked></td>        
+              <td><input type="checkbox" name="" id=""></td> 
+              <td><input type="checkbox" name="" id="" disabled></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td><input type="checkbox" name="" id=""></td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
+              <td>노출</td>
+            </tr>  
             <tr>
-              <td>5</td>
-              <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
               <td></td>
               <td></td>
-            </tr>    
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                            
             <tr>
-              <td>6</td>
-              <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
               <td></td>
               <td></td>
-            </tr>    
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                            
             <tr>
-              <td>7</td>
-              <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
               <td></td>
               <td></td>
-            </tr>    
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                            
             <tr>
-              <td>8</td>
-              <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
               <td></td>
               <td></td>
-            </tr>    
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                            
             <tr>
-              <td>9</td>
-              <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
               <td></td>
               <td></td>
-            </tr>    
-            <tr>
-              <td>10</td>
-              <td>대기</td>
-              <td></td>                
-              <td></td>
-              <td>
-                <select>  
-                  <option value="1">#1 POR</option>  
-                  <option value="2">#2 POR</option>  
-                  <option value="3">#3 POR</option>
-                </select>
-              </td>       
-              <td></td>        
-              <td></td> 
               <td></td>
               <td></td>
-            </tr>                      
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>                                            
           </tbody>
         </table>
       </div>          
@@ -2083,8 +2053,8 @@
           </thead>
           <tbody>
             <tr class="sel-gr">
-              <td class="cl-data1">0</td>
-              <td class="cl-data1">현재</td>
+              <td>0</td>
+              <td>현재</td>
               <td>10000011</td>                
               <td>5</td>
               <td></td>       
@@ -2104,8 +2074,8 @@
               <td></td>
             </tr>    
             <tr class="sel-bl">
-              <td class="cl-data1">1</td>
-              <td class="cl-data1">다음</td>
+              <td>1</td>
+              <td>다음</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2125,8 +2095,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">2</td>
-              <td class="cl-data1">대기</td>
+              <td>2</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2146,8 +2116,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">3</td>
-              <td class="cl-data1">대기</td>
+              <td>3</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2167,8 +2137,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">4</td>
-              <td class="cl-data1">대기</td>
+              <td>4</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2188,8 +2158,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">5</td>
-              <td class="cl-data1">대기</td>
+              <td>5</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2209,8 +2179,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">6</td>
-              <td class="cl-data1">대기</td>
+              <td>6</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2230,8 +2200,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">7</td>
-              <td class="cl-data1">대기</td>
+              <td>7</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2251,8 +2221,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">8</td>
-              <td class="cl-data1">대기</td>
+              <td>8</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       
@@ -2272,8 +2242,8 @@
               <td></td>
             </tr>                                               
             <tr>
-              <td class="cl-data1">9</td>
-              <td class="cl-data1">대기</td>
+              <td>9</td>
+              <td>대기</td>
               <td></td>                
               <td></td>
               <td></td>       

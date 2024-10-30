@@ -1074,6 +1074,8 @@
 }
 .setting-mcc-wrapper .setting-wrap .title-box {
   height: 28px;
+  font-size: 16px;
+  font-weight: 700;
 }
 .setting-mcc-wrapper .setting-wrap .flex-row {
   display: flex;
@@ -1169,6 +1171,7 @@
 .setting-mcc-wrapper .mcc-con .flex-col .list-grid .list-title {
   background: #666666;
   color: #FFFFFF;
+  font-size: 16px;
 }
 .setting-mcc-wrapper .mcc-con .flex-col .list-grid .list-data li {
   flex: 1;
@@ -1401,6 +1404,9 @@
   flex-direction: column;
   border: 1px solid #666666;
 }
+.coil-sche-wrapper .select-data-wrap .dt-table-wrap .table-title {
+  font-size: 16px;
+}
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap table tr {
   border-top: none !important;
 }
@@ -1435,9 +1441,10 @@
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
   border-bottom: none;
+  overflow-x: hidden !important;
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body table tbody tr {
-  height: 42px;
+  height: 36px;
 }
 .coil-sche-wrapper .msg-wrap {
   display: flex;
@@ -1494,6 +1501,9 @@
 .coil-sche-wrapper.default .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
   max-height: 542px !important;
 }
+.coil-sche-wrapper.default .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body table tbody tr {
+  height: 42px;
+}
 .coil-sche-wrapper.live .search-wrap .search-field-box .field-row {
   width: 100%;
 }
@@ -1505,10 +1515,10 @@
   border: 1px solid #666666;
 }
 .coil-sche-wrapper.live .dt-table-wrap {
-  max-height: 638px;
+  max-height: 705px;
 }
 .coil-sche-wrapper.live .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 542px !important;
+  max-height: 609px !important;
 }
 .coil-sche-wrapper.live .bottom-btn-wrap {
   justify-content: flex-start;
@@ -1540,18 +1550,17 @@
 .coil-sche-wrapper.perform .select-data-wrap .search-wrap .btn-normal, .coil-sche-wrapper.mes .select-data-wrap .search-wrap .btn-normal {
   width: 100px;
   height: 100%;
-  background: #FFFFFF;
   box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
   color: #000000;
 }
 .coil-sche-wrapper.perform .dt-table-wrap, .coil-sche-wrapper.mes .dt-table-wrap {
-  max-height: 648px;
+  max-height: 706px;
 }
 .coil-sche-wrapper.perform .dt-table-wrap table tbody tr td:nth-child(n+14), .coil-sche-wrapper.mes .dt-table-wrap table tbody tr td:nth-child(n+14) {
   background: #E0E0E0;
 }
 .coil-sche-wrapper.perform .dt-table-wrap .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body, .coil-sche-wrapper.mes .dt-table-wrap .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 553px !important;
+  max-height: 611px !important;
 }
 .coil-sche-wrapper.perform.mes table tbody tr td:nth-child(3), .coil-sche-wrapper.mes.mes table tbody tr td:nth-child(3) {
   text-align: left !important;
@@ -1571,7 +1580,6 @@
 .coil-sche-wrapper.not-oper .flex-row .select-data-wrap .search-wrap .btn-normal {
   width: 100px;
   height: 100%;
-  background: #FFFFFF;
   box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2509803922) inset;
   color: #000000;
 }
@@ -1585,7 +1593,7 @@
   height: 47px;
 }
 .coil-sche-wrapper.not-oper .flex-row .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 564px !important;
+  max-height: 620px !important;
 }
 .coil-sche-wrapper.not-oper .flex-row .standard-wrap {
   width: 460px;
@@ -2167,7 +2175,7 @@
 .leakage-wrapper .info-box .data {
   height: 28px;
   width: 100px;
-  background: #FFFFFF;
+  background: #CCCCCC;
   color: #002878;
   display: flex;
   align-items: center;

@@ -570,20 +570,20 @@
 // MES 작업순서변경
 .pop-coil-sche1 {
   width: 1266px;
-  height: 696px;
-
+  // height: 696px;
+  .pop-title {font-size: 20px !important;}
   .popup-body {
     .table-wrap {
       width: 1226px;
       table {
         table-layout: fixed;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 700;
         tr {height: 60px;}
         td {
           &.on {background: $cl_neutral_6;}
-          font-weight: 700;
-          color: $cl_data_1;
+          font-weight: 400;
+          color: $cl_neutral_1;
           background: $cl_neutral_5;
           word-break: break-all;
           line-height: 24px;
@@ -605,7 +605,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
     }
   }
@@ -614,21 +614,21 @@
 // 작업지시삭제
 .pop-coil-sche2 {
   width: 880px;
-  height: 746px;
-
+  // height: 746px;
+  .pop-title {font-size: 20px !important;}
   .popup-body {
     .table-wrap {
       width: 840px;
       table {
         table-layout: fixed;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 700;
         tr {height: 60px;}
         th {height: 90px;&:last-child{font-size: 20px;}}
         td {
           &.on {background: $cl_neutral_6;}
-          font-weight: 700;
-          color: $cl_data_1;
+          font-weight: 400;
+          color: $cl_neutral_1;
           background: $cl_neutral_5;
           word-break: break-all;
           &:last-child {font-size: 20px;}
@@ -639,7 +639,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
     }
   }
@@ -648,22 +648,22 @@
 // DUMMY COIL 생성
 .pop-coil-sche3 {
   width: 1581px;
-  height: 600px;
-
+  // height: 600px;
+  .pop-title {font-size: 20px !important;}
   .popup-body {
     .table-wrap {
       width: 1540px;
       height: 304px;
       table {
         table-layout: fixed;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 700;
         tr {height: 60px;}
         td {
           padding: 1px;
           &.on {background: $cl_neutral_6;}
-          font-weight: 700;
-          color: $cl_data_1;
+          font-weight: 400;
+          color: $cl_neutral_1;
           background: $cl_neutral_5;
           word-break: break-all;
           line-height: 24px;
@@ -682,7 +682,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
     }
   }
@@ -691,8 +691,8 @@
 // COIL Schedule
 .pop-coil-sche4 {
   width: 1810px;
-  height: 577px;
-
+  // height: 577px;
+  .pop-title {font-size: 20px !important;}
   .popup-body {
     .flex-row {
       gap: 0;
@@ -745,8 +745,8 @@
           }
           td {
             &.on {background: $cl_neutral_6;}
-            font-weight: 700;
-            color: $cl_data_1;
+            font-weight: 400;
+            color: $cl_neutral_1;
             background: $cl_neutral_5;
             word-break: break-all;
             &:last-child {border-right: none;}
@@ -762,9 +762,9 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
-      box-shadow: 0px -10px 10px 0px #00000040 inset;
+      // box-shadow: 0px -10px 10px 0px #00000040 inset;
 
     }
   }
@@ -772,25 +772,25 @@
 
 // COIL 위치 지정
 .pop-coil-sche5 {
-  width: 1340px;
-  height: 876px;
-
+  width: 1777px;
+  // height: 876px;
+  .pop-title {font-size: 20px !important;width: 1730px !important;}
   .popup-body {
     .table-wrap {
-      width: 1300px;
+      width: 1730px;
       table {
         table-layout: fixed;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 700;
         tr {
-          height: 54px;
+          height: 60px;
           td {
             &.on {background: $cl_neutral_6;}
-            font-weight: 700;
-            color: $cl_data_1;
+            font-weight: 400;
+            color: $cl_neutral_1;
             background: $cl_neutral_5;
             word-break: break-all;
-            line-height: 24px;
+            line-height: 20px;
             padding: 10px;   
             
             select {
@@ -816,7 +816,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
     }
   }
@@ -825,8 +825,8 @@
 // COIL 위치 지정
 .pop-coil-sche6 {
   width: 1880px;
-  height: 417px;
-
+  // height: 417px;
+  .pop-title {font-size: 20px !important;}
   .popup-body {
     .table-wrap {
       width: 1840px;
@@ -836,13 +836,13 @@
         table-layout: fixed;
         font-size: 20px;
         font-weight: 700;
-        th {white-space: nowrap;}
+        th {white-space: nowrap;height: 82px;}
         tr {
           height: 54px;
           td {
             &.on {background: $cl_neutral_6;}
-            font-weight: 700;
-            color: $cl_data_1;
+            font-weight: 400;
+            color: $cl_neutral_1;
             background: $cl_neutral_5;
             word-break: break-all;
             line-height: 24px;
@@ -871,7 +871,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
     }
   }
@@ -880,8 +880,8 @@
 // COIL 위치 지정
 .pop-coil-sche7 {
   width: 1880px;
-  height: 816px;
-
+  // height: 816px;
+  .pop-title {font-size: 20px !important;}
   .popup-body {
     .table-wrap {
       width: 1840px;
@@ -892,7 +892,7 @@
         border-collapse: separate;
 	      border-spacing: 0;
         table-layout: fixed;
-        font-size: 24px;line-height: 34.75px;
+        font-size: 20px;line-height: 28.96px;
         font-weight: 700;
         color: $cl_neutral_1;
         thead tr {
@@ -920,7 +920,7 @@
           td {
             border-left: none;
             border-top: none;
-            font-weight: 700;
+            font-weight: 400;
             padding: 10px;
             white-space: wrap;
             word-break: break-all;
@@ -939,7 +939,7 @@
   .popup-footer {
     justify-content: center;
     button {
-      width: 235px;
+      // width: 235px;
       flex: none;
     }
   }

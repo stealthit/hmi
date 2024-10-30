@@ -497,22 +497,24 @@
 }
 .pop-coil-sche1 {
   width: 1266px;
-  height: 696px;
+}
+.pop-coil-sche1 .pop-title {
+  font-size: 20px !important;
 }
 .pop-coil-sche1 .popup-body .table-wrap {
   width: 1226px;
 }
 .pop-coil-sche1 .popup-body .table-wrap table {
   table-layout: fixed;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 .pop-coil-sche1 .popup-body .table-wrap table tr {
   height: 60px;
 }
 .pop-coil-sche1 .popup-body .table-wrap table td {
-  font-weight: 700;
-  color: #002878;
+  font-weight: 400;
+  color: #000000;
   background: #CCCCCC;
   word-break: break-all;
   line-height: 24px;
@@ -544,20 +546,21 @@
   justify-content: center;
 }
 .pop-coil-sche1 .popup-footer button {
-  width: 235px;
   flex: none;
 }
 
 .pop-coil-sche2 {
   width: 880px;
-  height: 746px;
+}
+.pop-coil-sche2 .pop-title {
+  font-size: 20px !important;
 }
 .pop-coil-sche2 .popup-body .table-wrap {
   width: 840px;
 }
 .pop-coil-sche2 .popup-body .table-wrap table {
   table-layout: fixed;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 .pop-coil-sche2 .popup-body .table-wrap table tr {
@@ -570,8 +573,8 @@
   font-size: 20px;
 }
 .pop-coil-sche2 .popup-body .table-wrap table td {
-  font-weight: 700;
-  color: #002878;
+  font-weight: 400;
+  color: #000000;
   background: #CCCCCC;
   word-break: break-all;
 }
@@ -585,13 +588,14 @@
   justify-content: center;
 }
 .pop-coil-sche2 .popup-footer button {
-  width: 235px;
   flex: none;
 }
 
 .pop-coil-sche3 {
   width: 1581px;
-  height: 600px;
+}
+.pop-coil-sche3 .pop-title {
+  font-size: 20px !important;
 }
 .pop-coil-sche3 .popup-body .table-wrap {
   width: 1540px;
@@ -599,7 +603,7 @@
 }
 .pop-coil-sche3 .popup-body .table-wrap table {
   table-layout: fixed;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 .pop-coil-sche3 .popup-body .table-wrap table tr {
@@ -607,8 +611,8 @@
 }
 .pop-coil-sche3 .popup-body .table-wrap table td {
   padding: 1px;
-  font-weight: 700;
-  color: #002878;
+  font-weight: 400;
+  color: #000000;
   background: #CCCCCC;
   word-break: break-all;
   line-height: 24px;
@@ -636,13 +640,14 @@
   justify-content: center;
 }
 .pop-coil-sche3 .popup-footer button {
-  width: 235px;
   flex: none;
 }
 
 .pop-coil-sche4 {
   width: 1810px;
-  height: 577px;
+}
+.pop-coil-sche4 .pop-title {
+  font-size: 20px !important;
 }
 .pop-coil-sche4 .popup-body .flex-row {
   gap: 0;
@@ -701,8 +706,8 @@
   border-right: none;
 }
 .pop-coil-sche4 .popup-body .return-wrap .table-wrap table td {
-  font-weight: 700;
-  color: #002878;
+  font-weight: 400;
+  color: #000000;
   background: #CCCCCC;
   word-break: break-all;
 }
@@ -722,32 +727,33 @@
   justify-content: center;
 }
 .pop-coil-sche4 .popup-footer button {
-  width: 235px;
   flex: none;
-  box-shadow: 0px -10px 10px 0px rgba(0, 0, 0, 0.2509803922) inset;
 }
 
 .pop-coil-sche5 {
-  width: 1340px;
-  height: 876px;
+  width: 1777px;
+}
+.pop-coil-sche5 .pop-title {
+  font-size: 20px !important;
+  width: 1730px !important;
 }
 .pop-coil-sche5 .popup-body .table-wrap {
-  width: 1300px;
+  width: 1730px;
 }
 .pop-coil-sche5 .popup-body .table-wrap table {
   table-layout: fixed;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 .pop-coil-sche5 .popup-body .table-wrap table tr {
-  height: 54px;
+  height: 60px;
 }
 .pop-coil-sche5 .popup-body .table-wrap table tr td {
-  font-weight: 700;
-  color: #002878;
+  font-weight: 400;
+  color: #000000;
   background: #CCCCCC;
   word-break: break-all;
-  line-height: 24px;
+  line-height: 20px;
   padding: 10px;
 }
 .pop-coil-sche5 .popup-body .table-wrap table tr td.on {
@@ -773,13 +779,14 @@
   justify-content: center;
 }
 .pop-coil-sche5 .popup-footer button {
-  width: 235px;
   flex: none;
 }
 
 .pop-coil-sche6 {
   width: 1880px;
-  height: 417px;
+}
+.pop-coil-sche6 .pop-title {
+  font-size: 20px !important;
 }
 .pop-coil-sche6 .popup-body .table-wrap {
   width: 1840px;
@@ -793,13 +800,14 @@
 }
 .pop-coil-sche6 .popup-body .table-wrap table th {
   white-space: nowrap;
+  height: 82px;
 }
 .pop-coil-sche6 .popup-body .table-wrap table tr {
   height: 54px;
 }
 .pop-coil-sche6 .popup-body .table-wrap table tr td {
-  font-weight: 700;
-  color: #002878;
+  font-weight: 400;
+  color: #000000;
   background: #CCCCCC;
   word-break: break-all;
   line-height: 24px;
@@ -829,13 +837,14 @@
   justify-content: center;
 }
 .pop-coil-sche6 .popup-footer button {
-  width: 235px;
   flex: none;
 }
 
 .pop-coil-sche7 {
   width: 1880px;
-  height: 816px;
+}
+.pop-coil-sche7 .pop-title {
+  font-size: 20px !important;
 }
 .pop-coil-sche7 .popup-body .table-wrap {
   width: 1840px;
@@ -847,8 +856,8 @@
   border-collapse: separate;
   border-spacing: 0;
   table-layout: fixed;
-  font-size: 24px;
-  line-height: 34.75px;
+  font-size: 20px;
+  line-height: 28.96px;
   font-weight: 700;
   color: #000000;
 }
@@ -879,7 +888,7 @@
 .pop-coil-sche7 .popup-body .table-wrap table tr td {
   border-left: none;
   border-top: none;
-  font-weight: 700;
+  font-weight: 400;
   padding: 10px;
   white-space: wrap;
   word-break: break-all;
@@ -899,7 +908,6 @@
   justify-content: center;
 }
 .pop-coil-sche7 .popup-footer button {
-  width: 235px;
   flex: none;
 }
 

@@ -1042,6 +1042,8 @@
     gap: 10px;
     .title-box {
       height: 28px;
+      font-size: 16px;
+      font-weight: 700;
     }
     .flex-row {
       display: flex;
@@ -1152,6 +1154,7 @@
           // border: 1px solid $cl_neutral_4;
           background: $cl_neutral_3;
           color: $cl_neutral_6;
+          font-size: 16px;
         }
         .list-data {
           li {
@@ -1374,6 +1377,7 @@
       }      
     }
     .dt-table-wrap {
+      .table-title {font-size: 16px;}
       width: 100%;
       max-height: 640px;
       flex: 1;
@@ -1413,7 +1417,8 @@
                 .dt-scroll-body {
                   // max-height: 502px;
                   border-bottom: none;  
-                  table tbody tr {height: 42px;}                
+                  overflow-x: hidden !important;
+                  table tbody tr {height: 36px;}                
                 }
               }
             }
@@ -1478,6 +1483,7 @@
   &.default {
     .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
       max-height: 542px !important;
+      table tbody tr {height: 42px;}  
     }    
   }
 
@@ -1496,9 +1502,9 @@
         }
       }
     }
-    .dt-table-wrap {max-height: 638px;}
+    .dt-table-wrap {max-height: 705px;}
     .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-      max-height: 542px !important;
+      max-height: 609px !important;
     }   
     .bottom-btn-wrap {
       justify-content: flex-start;
@@ -1530,14 +1536,14 @@
         .btn-normal {
           width: 100px;
           height: 100%;
-          background: $cl_neutral_6;
+          // background: $cl_neutral_6;
           box-shadow: 0px -4px 4px 0px #00000040 inset;
           color: $cl_neutral_1;
         }
       }
     }
     .dt-table-wrap {
-      max-height: 648px;
+      max-height: 706px;
       table {
         tbody {
           tr {
@@ -1554,7 +1560,7 @@
           .dt-layout-full {
             .dt-scroll {
               .dt-scroll-body {
-                max-height: 553px !important;
+                max-height: 611px !important;
               }
             }
           }
@@ -1583,7 +1589,7 @@
           .btn-normal {
             width: 100px;
             height: 100%;
-            background: $cl_neutral_6;
+            // background: $cl_neutral_6;
             box-shadow: 0px -4px 4px 0px #00000040 inset;
             color: $cl_neutral_1;
           }
@@ -1592,7 +1598,7 @@
         .dt-scroll-head table thead tr {height: 47px;}
         table tbody tr td {height: 47px;}
         .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-          max-height: 564px !important;
+          max-height: 620px !important;
         }  
       }
       .standard-wrap {
@@ -2210,7 +2216,7 @@
     .data {
       height: 28px;
       width: 100px;
-      background: $cl_neutral_6;
+      background: $cl_neutral_5;
       color: $cl_data_1;
       display: flex;
       align-items: center;
