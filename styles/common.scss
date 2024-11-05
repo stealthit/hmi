@@ -658,7 +658,7 @@ input[type='datetime-local']:valid::before {
   }
   &.line-3 {
     height: 53px;
-    line-height: 17.38px;
+    line-height: 14px;
   }
   &.arrow {
     width: 67px;
@@ -1070,6 +1070,10 @@ input[type='datetime-local']:valid::before {
   background: $cl_neutral_3;
   color: $cl_neutral_6;
   text-align: center;
+  &.tank {
+    border-radius: 6px;
+    font-size: 12px;
+  }
 }
 .chemical-wrap {
   z-index: 2;
@@ -2151,7 +2155,218 @@ button.btn-normal{
     background-color: $cl_neutral_7;
   }
 }
+
+.box-tri-wrap {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700;
+  color: $cl_neutral_6;
+  .box-tri-h36 {
+    top: 0;
+    left: 0;
+    position: relative;
+    height: 36px;
+    @include flex_center;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+    &::before {
+      position: absolute;
+      content: url(#{$imgPath}ic_red_tri_h36.svg);
+      width: 20px;
+      height: 37px;
+      object-fit: cover;
+      left: calc(100% - 0.667px);
+      top: -0.95px;
+    }
+
+    &.red {
+      background: #ff0000;
+      &::before {
+        left: calc(100% - 0.2px);
+        top: -0.665px;
+      }
+    }     
+    &.black {
+      background: #000;
+      &::before {
+        position: absolute;
+        content: url(#{$imgPath}ic_black_tri_h36.svg);
+        top: -0.245px;
+      }
+
+    }
+    &.blue {
+      background: #00f;
+      &::before {
+        position: absolute;
+        content: url(#{$imgPath}ic_blue_tri_h36.svg);
+        top: -0.95px;
+      }
+    }
+    &.orange {
+      background: #FF6347;
+      &::before {
+        position: absolute;
+        content: url(#{$imgPath}ic_org_tri_h36.svg);
+        top: -0.95px;
+      }
+    }
+    &.navy {
+      background: #00008B;
+      &::before {
+        position: absolute;
+        content: url(#{$imgPath}ic_navy_tri_h36.svg);
+        top: -0.95px;
+      }
+    }
+    &.sky {
+      background: #00BFFF;
+      &::before {
+        position: absolute;
+        content: url(#{$imgPath}ic_sky_tri_h36.svg);
+        top: -0.1px;
+        left: calc(100% - 0.27px);
+      }
+    }
+    &.lgrey {
+      background: #CCCCCC;
+      &::before {
+        position: absolute;
+        content: url(#{$imgPath}ic_lgrey_tri_h36.svg);
+        top: -0.6px;
+        left: calc(100% - 1.1px);
+      }
+    }
+  }
+
+  .box-tri-h28 {
+    top: 0;
+    left: 0;
+    position: relative;
+    height: 28px;
+    @include flex_center;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+
+    &::before {
+      position: absolute;
+      content: url(#{$imgPath}ic_pur_tri_h28.svg);
+      width: 16px;
+      height: 29px;
+      object-fit: cover;
+      left: calc(100% - 0.667px);
+      top: -0.95px;
+    }
+    
+    &.purple {
+      background: #800080;
+      &::before {
+        left: calc(100% - 0.667px);
+        top: -0.665px;
+      }
+    }  
+  }
+
+  .text {
+    position: absolute;
+    top: 0;left: 0;
+    @include flex_center;
+    height: 100%;
+    width: 100%;   
+    
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: left;
+  }
+
+  &.left {
+    .box-tri-h36 {
+      transform: rotate(-180deg);
+    }
+  }
+  &.top {
+    .box-tri-h36,.text  {
+      transform: rotate(-90deg);
+    }
+    // .text {
+    //   transform: rotate(90deg);
+    // }
+  }
+  &.bottom {
+    .box-tri-h36 {
+      transform: rotate(90deg);
+    }
+    .text {
+      transform: rotate(-90deg);
+    }
+    
+  }
+}
+.img-box-tri2 {
+  position: absolute;
+  background-image: url(#{$imgPath}img_box_tri2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 123px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  padding: 4px 0;
+}
+.img-box-quen {
+  position: absolute;
+  background-image: url(#{$imgPath}img_QUENCHING_B.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 36px;
+  height: 148px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  // text-align: center;
+  padding: 0 4px;
+  padding-top: 80px;
+  color: #fff;
+  .text {
+    transform: rotate(-90deg);
+  }
+}
+.box-squar-grey {
+  position: absolute;
+  width: 85px;
+  height: 36px;
+  background: #CCCCCC;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  @include flex_center;
+  color: #000;
+}
+.box-squar {
+  position: absolute;
+  width: 86px;
+  height: 53px;
+  border: 2px solid #000;
+  background: #4D73BE;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  text-align: center;
+  @include flex_center;
+  color: #fff;
+}
 //----- image -------------------------
+.ic-red-tri {
+  content: url(#{$imgPath}ic_red_triangle.svg);
+  width: 20px;
+  height: 36px;     
+}
 .ic-info-red {
   content: url(#{$imgPath}ic_info_red.svg);
   width: 28px;
@@ -4968,6 +5183,29 @@ z-index: 100;
       width: 100%;
       height: 100%;
       background: url(#{$imgPath}ic_AIRDRYER5_fault.svg);
+      animation: blink-effect 1s step-end infinite;    
+    }
+  }
+}
+.ic-air-dryer4 {
+  position: absolute;
+  width: 106px;
+  height: 56px;
+  background: url(#{$imgPath}ic_AIRDRYER6_none.svg);
+  z-index: 99;
+  
+  &.stop {
+    background: url(#{$imgPath}ic_AIRDRYER6_stop.svg);
+  }
+  &.run {
+    background: url(#{$imgPath}ic_AIRDRYER6_run.svg);
+  }
+  &.fault {
+    background: url(#{$imgPath}ic_AIRDRYER6_stop.svg);
+    .fault-img {
+      width: 100%;
+      height: 100%;
+      background: url(#{$imgPath}ic_AIRDRYER6_fault.svg);
       animation: blink-effect 1s step-end infinite;    
     }
   }
