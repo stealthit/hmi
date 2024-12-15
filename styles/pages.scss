@@ -16,24 +16,29 @@
     table tbody tr {
       background: $cl_neutral_5;
       &.sel-gr {
-        background: $cl_data_4;
-        color: $cl_neutral_6;
+        background: #53e08f;
+        color: $cl_neutral_1;
         font-weight: 400;
       }
       &.sel-bl {
-        background: #0178D5;
-        color: $cl_neutral_6;
+        background: #56aff4;
+        color: $cl_neutral_1;
+        font-weight: 400;
+      }
+      &.sel-wh {
+        background: #ffffff;
+        color: #000000;
         font-weight: 400;
       }
     }
   }
   .bg-line-wrap {
     top: 87px;
-    left: 44.5px;
+    left: 0px;
     .line-box {
       position: relative;
-      width: 1829px;
-      height: 252px;
+      width: 1920px;
+      height: 344px;
     }
   }  
   .bg-line2-wrap {
@@ -43,9 +48,9 @@
   .gd-reflow {
     top: 440px;
     left: 1109px;
-    width: 130px;
+    width: 150px;
     .list-data .data-title {
-      width: 70px;
+      width: 100px;
     }    
   }
   .gd-quenching {
@@ -322,18 +327,18 @@
   .gd-reflow {
     top: 5px;
     left: 1388px;
-    width: 130px;
+    width: 150px;
     .list-data .data-title {
-      width: 70px;
+      width: 100px;
     }    
   }
 
   .gd-mini {
-    width: 200px;
+    width: 300px;
     p {justify-content: center !important;}
   }
   .gd-large {
-    width: 380px;
+    width: 370px;
     p {justify-content: center !important;height: 41px !important;}
   }
   .gd-oiler {
@@ -347,7 +352,12 @@
   }
 
   .table-box .table-wrap table {
-    tbody tr td {background: $cl_neutral_5;}
+    tbody tr td {
+      background: $cl_neutral_5;
+      &.on {
+        background: #ffffff;
+      }
+    }
   }
 }
 
@@ -423,11 +433,11 @@
   }
 
   .gd-chemical {
-    width: 294px;
+    width: 296px;
     top: 374px;
     left: 70px;
     .list-data .data-title {
-      width: 234px;
+      width: 232px;
     } 
   }
 
@@ -557,7 +567,13 @@
         align-items: center;
         justify-content: center;
         gap: 4px;
-        button {width: 37px;}
+        button {
+          width: 37px;
+          &.on {
+            text-align: center;
+            background-color: #ffffff;
+          }
+        }
       }
     }
   }
@@ -785,10 +801,10 @@
 .chemical-qmsif-wrapper {
   padding: 60px;
   display: flex;
-  gap: 40px;
+  gap: 69px;
 
   .flex-col {
-    width: 660px;
+    width: 450px;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -797,14 +813,14 @@
   table tr td, table tr th {
     font-weight: 700;
     background: $cl_neutral_5;
-    &.on {background: $cl_neutral_6;color: $cl_data_1;}
+    &.on {background: $cl_neutral_5;color: $cl_data_1;}
     padding: 0 6px;
     &:first-child {border-left: none;}
     &:nth-last-child(7) {padding: 0 10px;}
     &:last-child {border-right: none;}
   }
   .density-table {
-    width: 1100px;
+    width: 1900px;
     table tr td {
       &:nth-last-child(7),&:nth-last-child(8) {text-align: left;}
       &:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5) {text-align: right;}
@@ -895,19 +911,19 @@
     position: relative;    
     .list-data li > * {height: 36px;}
   }
-  padding: 60px;
+  padding: 90px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   .flex-row {
     display: flex;
     gap: 40px;
-    &:nth-child(2) {
-      justify-content: space-between;
-    }
+    // &:nth-child(2) {
+    //   justify-content: space-between;
+    // }
     &:last-child {
-      margin-top: 20px;
-      justify-content: center;
+      // margin-top: 20px;
+      // justify-content: center;
       button {
         width: 196px;
         height: 48px;
@@ -1029,7 +1045,7 @@
 }
 
 .setting-mcc-wrapper {
-  padding: 56px 50px;
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1070,6 +1086,9 @@
         font-size: 14px;
         font-weight: 700;
         color: $cl_data_1;
+        &.on{
+          background: $cl_neutral_6;
+        }
       }
     }
   }
@@ -1099,6 +1118,9 @@
               padding: 2px;
               background: $cl_neutral_5;
               font-weight: 700;
+              &:nth-child(3) {
+                color: $cl_data_1;
+              }
               &.on {
                 background: $cl_neutral_6;
               }  
@@ -1130,7 +1152,7 @@
               }  
               padding: 5px 6px;
 
-              &:last-child {padding: 3px 23px;}
+              &:last-child {padding: 3px 3px;}
             }   
             // &:last-child td {border-bottom: none;}   
           } 
@@ -1186,30 +1208,39 @@
   gap: 10px;
 
   .title-box {
-    width: 1432px;
+    width: 1588px;
     height: 28px;
   }
   .temper-table {
     display: flex;
     gap: 10px;
-    width: 1432px;
+    width: 1588px;
 
     table {
       flex: 1;
+      .f-row {
+        display: flex;
+        height: 30px;
+        gap: 6px;
+      }
       tr {
-        &:first-child th:first-child, th:nth-child(4), td:nth-child(4) {
+        &:first-child th:first-child, th:nth-child(5), td:nth-child(5) {
           border-right: 2px solid $cl_neutral_2;
+          padding: 0 6px;
         } 
-        th {height: 39px;}
+        th {height: 50px;}
         th:first-child,td:first-child {border-left: none;}       
         th:last-child,td:last-child {border-right: none;}       
         td {
-          height: 50px;
+          height: 40px;
           font-weight: 700;   
           background: $cl_neutral_5;
+          &.on {
+            background: $cl_alaram_2;
+          }
           &:nth-child(2) {text-align: left;padding-left: 10px;}
           &:nth-child(3) {color: $cl_data_1;padding-right: 6px;text-align: right;}
-          &:nth-child(4),&:nth-child(5),&:nth-child(6) {
+          &:nth-child(4),&:nth-child(6),&:nth-child(7) {
             text-align: right;
             color: $cl_data_1;
             text-decoration: underline;
@@ -1218,6 +1249,24 @@
           }       
           // &:nth-child(5), &:last-child {padding: 2px;}      
           .btn-normal {color: $cl_neutral_1;height: 100%;}
+          &:nth-child(5) .flex-row button {
+            flex: 1;
+            height: 100%;
+            width:70px;
+            border-radius: 3.12px;
+            border: 0.78px solid $cl_neutral_4;
+            background: $cl_neutral_5;
+            box-shadow: 0px -3.12px 3.12px 0px rgba(0, 0, 0, 0.2509803922) inset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: $cl_data_1;
+            &.on{
+              background: $cl_neutral_6;
+            }
+          }
         }
       }           
     }
@@ -1276,7 +1325,9 @@
     tr.alarm1 td {background: $cl_alaram_1;}
     tr.alarm2 td {background: $cl_alaram_2;}
     &.scroll-table {
-      .dt-layout-row:last-child {height: 0 !important;}
+      .dt-layout-row:last-child {
+        // height: 0 !important;
+      }
       .dt-container {
         .dt-layout-table {
           .dt-layout-full {
@@ -1379,7 +1430,7 @@
     .dt-table-wrap {
       .table-title {font-size: 16px;}
       width: 100%;
-      max-height: 640px;
+      // max-height: 640px;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -1417,7 +1468,7 @@
                 .dt-scroll-body {
                   // max-height: 502px;
                   border-bottom: none;  
-                  overflow-x: hidden !important;
+                  // overflow-x: hidden !important;
                   table tbody tr {height: 36px;}                
                 }
               }
@@ -1482,7 +1533,8 @@
 
   &.default {
     .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-      max-height: 542px !important;
+      // max-height: 542px !important;
+      max-height: 563px !important;
       table tbody tr {height: 42px;}  
     }    
   }
@@ -1504,7 +1556,8 @@
     }
     .dt-table-wrap {max-height: 705px;}
     .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-      max-height: 609px !important;
+      // max-height: 609px !important;
+      max-height: 625px !important;
     }   
     .bottom-btn-wrap {
       justify-content: flex-start;
@@ -1560,7 +1613,8 @@
           .dt-layout-full {
             .dt-scroll {
               .dt-scroll-body {
-                max-height: 611px !important;
+                // max-height: 611px !important;
+                max-height: 642px !important;
               }
             }
           }
@@ -1598,7 +1652,8 @@
         .dt-scroll-head table thead tr {height: 47px;}
         table tbody tr td {height: 47px;}
         .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-          max-height: 620px !important;
+          // max-height: 620px !important;
+          max-height: 657px !important;
         }  
       }
       .standard-wrap {
@@ -1880,6 +1935,8 @@
 
 .fluxing-wrapper {
   background: url(#{$imgPath}img_bg_fluxing.png);
+  // 2024.11.25 객체화 작업중 위치 맞춤
+  background-position-y: 6px;
   width: 1920px;
   height: 820px;
   overflow: hidden;

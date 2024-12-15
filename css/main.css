@@ -76,7 +76,7 @@
 .wrapper header .header-topbar .topbar-left .grp-arrow .btn-arrow {
   width: 32px;
   height: 32px;
-  background-image: url(../assets/ic_pre_arrow_wh_24.svg);
+  background-image: url(../img/resources/ic_pre_arrow_wh_24.svg);
   background-color: transparent;
   background-position: center;
 }
@@ -84,11 +84,11 @@
   transform: rotate(180deg);
 }
 .wrapper header .header-topbar .topbar-left .grp-arrow .btn-arrow.next:disabled {
-  background-image: url(../assets/ic_next_arrow_dis_24.svg);
+  background-image: url(../img/resources/ic_next_arrow_dis_24.svg);
   transform: rotate(360deg);
 }
 .wrapper header .header-topbar .topbar-left .grp-arrow .btn-arrow.pre:disabled {
-  background-image: url(../assets/ic_next_arrow_dis_24.svg);
+  background-image: url(../img/resources/ic_next_arrow_dis_24.svg);
   transform: rotate(180deg);
 }
 .wrapper header .header-topbar .topbar-left .img-logo {
@@ -130,7 +130,7 @@
 .wrapper header .header-topbar .topbar-right .btn-onoff {
   width: 32px;
   height: 32px;
-  background-image: url(../assets/ic_onoff_24.svg);
+  background-image: url(../img/resources/ic_onoff_24.svg);
   background-color: transparent;
   background-position: center;
 }
@@ -350,10 +350,10 @@
   /* single button styling */
 }
 .wrapper footer .alarm-data-box .data-wrap::-webkit-scrollbar-button:single-button:vertical:decrement {
-  background: url(../assets/ic_arrow_up_24.svg);
+  background: url(../img/resources/ic_arrow_up_24.svg);
 }
 .wrapper footer .alarm-data-box .data-wrap::-webkit-scrollbar-button:single-button:vertical:increment {
-  background: url(../assets/ic_arrow_down_24.svg);
+  background: url(../img/resources/ic_arrow_down_24.svg);
 }
 .wrapper footer .alarm-data-box .data-wrap::-webkit-scrollbar {
   width: 24px;

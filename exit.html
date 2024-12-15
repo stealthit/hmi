@@ -1,0 +1,901 @@
+<!doctype html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+
+        <title>DEMO PAGE</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <link rel="stylesheet" href="./css/common.css"/>
+        <link rel="stylesheet" href="./css/pages.css"/>
+        <link rel="stylesheet" href="./css/popup.css"/>
+        <link rel="stylesheet" href="./css/datatables.css"/>
+        </#if>
+    </head>
+
+    <body>
+    <div class="wrapper" style="overflow: hidden">
+            <header>
+    <div class="header-topbar">
+        <div class="topbar-left">
+            <div class="grp-arrow">
+                <button class="btn-arrow pre"></button>
+                <button class="btn-arrow next"></button>
+            </div>
+            <img src="/assets/hmi/img/resources/img_cmp_logo.png" class="img-logo" alt="logo">
+            <div class="line-name">
+                <img src="" alt="" class="ic-loc-16">
+                TP3 LINE
+            </div>
+        </div>
+        <p class="topbar-menutext">
+            ${_HEADER_TITLE?default('')}
+        </p>
+        <div class="topbar-right">
+            <div class="datetime-wrap">
+                <p class="date">  월   일 (월)</p>
+                <p class="time">오전 00:00:00</p>
+            </div>
+            <!--<button class="btn-onoff"></button>-->
+        </div>
+    </div>
+    <div class="header-contents" id="HEADER-WRAPPER">
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.DO.SYSHMI.COIL_SCHEDULE_CHANGE"></div>
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_CURRENT"></div>
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_NEXT"></div>
+        <div class="hd-table-wrap">
+            <table>
+                <colgroup>
+                    <col width="60px">
+                    <col width="100px">
+                    <col width="100px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="80px">
+                    <col width="80px">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>작업지시번호</th>
+                    <th>투입원판번호</th>
+                    <th>TOP</th>
+                    <th>BOT</th>
+                    <th>도유량</th>
+                    <th>CHE.(UP)</th>
+                    <th>CHE.(DN)</th>
+                    <th>두께</th>
+                    <th>폭</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr id="curCoil">
+                    <td>현 재</td>
+                    <td style="text-align: center;" data-id="T3.AO.PRODNO.CURRENT_Product_No">-</td>
+                    <td style="text-align: center;" data-id="T3.AO.COILNO.CURRENT_COIL_No">-</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_Top_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_Bottom_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_AMT_OF_OIL">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_CHEM_Up_Colum">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_CHEM_Down_Colum">0</td>
+                    <td data-id="T3.AO.THICKN.CURRENT_PLATE_THICK">0</td>
+                    <td data-id="T3.AO._WIDTH.CURRENT_PLATE_WIDTH">0</td>
+                </tr>
+                <tr id="nextCoil">
+                    <td>다 음</td>
+                    <td style="text-align: center;" data-id="T3.AO.PRODNO.NEXT_1_Product_No">-</td>
+                    <td style="text-align: center;" data-id="T3.AO.COILNO.NEXT_1_COIL_No">-</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_Top_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_Bottom_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_AMT_OF_OIL">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_CHEM_Up_Colum">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_CHEM_Down_Colum">0</td>
+                    <td data-id="T3.AO.THICKN.NEXT_1_PLATE_THICK">0</td>
+                    <td data-id="T3.AO._WIDTH.NEXT_1_PLATE_WIDTH">0</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="hd-grp-btn">
+            <button class="btn" data-settype="N" ESTOP="true" data-cb="Y" data-id="T3.DO.SYSHMI.EMG_STOP">비상정지</button>
+            <button class="btn" data-settype="N" ALERT="FAULT_EVENT_LINE" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.LINE_FAULT_ALL">라인고장</button>
+            <button class="btn" data-settype="N" ALERT="FAULT_EVENT" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.REC_FAULT_ALL">정류기 고장</button>
+            <button class="btn" data-settype="N" ALERT="INTERLOCK" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.LIMIT_ALARM_ALL">경보값 초과</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31CTM140" data-cb="Y" data-id="T3.DI.ALMEVT.HELPER_FAULT_ALL">HELPER</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31ENM040" data-cb="Y" data-id="T3.DI.LINEVT.Entry_Stand_By">ENTRY<br> STAND BY</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31CTM150" data-cb="Y" data-id="T3.DI.LINEVT.Center_Stand_By">CENTER<br> STAND BY</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31EXM080" data-cb="Y" data-id="T3.DI.LINEVT.Exit_Stand_By">EXIT<br> STAND BY</button>
+        </div>
+        <ul class="hd-info-speed">
+            <li>
+                <div class="title">ENTRY SPEED</div>
+                <div class="value"
+                     data-cb="Y"
+                     data-format='{"def_unit":" mpm"}'
+                     data-id="T3.AI._SPEED.NO1_BR_Entry_Actual_Speed">0 mpm</div>
+            </li>
+            <li>
+                <div class="title">LINE SPEED</div>
+                <div class="value"
+                     data-cb="Y"
+                     data-format='{"def_unit":" mpm"}'
+                     data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed">0 mpm</div>
+            </li>
+        </ul>
+    </div>
+    <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL &amp; (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li>LINE TRACKING</li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <!-- <li><p>ENTRY COIL CAR</p></li> -->
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PRE PLATING</p></li>
+              <li><p>POST PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li> 
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <!-- <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li> -->
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>            
+            <p class="mainmenu-title">HYDRAULIC</p>
+            <ul class="submenu-wrap">
+              <li><p>TP3 유압라인 (ENTRY)</p></li>
+              <li class="line-2"><p>TP3 유압라인<br> (CPC HYDRAULIC)</p></li>
+              <li class="line-2"><p>TP3 유압라인<br> (EXIT EPC HYDRAULIC)</p></li>
+              <li><p>TP3 유압라인 (EXIT)</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM / EVENT</p>
+            <ul class="submenu-wrap">
+              <li class="line-2"><p>SUMMARY ALARMM<br> (Real Time)</p></li>
+              <li><p>HISTORY ALARMS</p></li>
+              <li><p>HISTORY EVENTS</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+</header>
+            <main>
+                <div class="main-wrapper exit-o-wrapper" id="TP31EXM010-WRAPPER">
+
+
+		<div data-id="T3.AI.COLOR.Line_Tracking_TR1" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.AI.COLOR.Line_Tracking_TR2" data-settype="N" data-cb="Y"></div>
+
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.Exit_Control_Reel_Change_Auto"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.Exit_Control_Reel_Change_Manual"></div>
+
+
+		<div data-cb="Y" data-settype="N" data-id="T3.AO._SPEED.Snip_Shear_Speed_Select_HH"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.Snip_Shear_SPEED_SELECT_HH"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.AO._SPEED.Snip_Shear_Speed_Select_H"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.Snip_Shear_SPEED_SELECT_H"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.AO._SPEED.Snip_Shear_Speed_Select_M"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.Snip_Shear_SPEED_SELECT_M"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.AO._SPEED.Snip_Shear_Speed_Select_L"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.Snip_Shear_SPEED_SELECT_L"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.AO._SPEED.Snip_Shear_Speed_Select_LL"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.Snip_Shear_SPEED_SELECT_LL"></div>
+
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO1_TR_EPC_Auto"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO1_TR_EPC_Manual"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO1_TR_Stagger_On"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO1_TR_Stagger_Off"></div>
+
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO2_TR_EPC_Auto"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO2_TR_EPC_Manual"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO2_TR_Stagger_On"></div>
+		<div data-cb="Y" data-settype="N" data-id="T3.DO.SYSHMI.EPC_Control_NO2_TR_Stagger_Off"></div>
+
+
+		<div class="bg-line-wrap">
+			<!-- <img alt="" class="img-exit-o"> -->
+			<div class="line-box">
+				<div data-line-id="TR_251" class="ex-LINE_1 type3" data-length="930"></div>
+				<div data-line-id="TR_252" class="ex-LINE_2 type3"></div>
+				<div data-line-id="TR_253" class="ex-LINE_3 type3"></div>
+				<div data-line-id="TR_254" class="ex-LINE_4 type3"></div>
+				<div data-line-id="TR_255" class="ex-LINE_5 type3"></div>
+				<!-- <div data-line-id="TR_256" class="ex-LINE_6 type3" data-length="1000"></div> -->
+				<!-- new 퍼블 가는 선 -->
+				<!-- <div data-line-id="TR_321" class="ex-TR_1-1 type3"></div>
+				<div data-line-id="TR_322" class="ex-TR_1-2 type3"></div>
+				<div data-line-id="TR_323" class="ex-TR_1-3 type3"></div>
+				<div data-line-id="TR_324" class="ex-TR_1-4 type3"></div>
+				<div data-line-id="TR_325" class="ex-TR_1-5 type3"></div>
+				<div data-line-id="TR_325" class="ex-TR_1-6 type3"></div>
+				<div data-line-id="TR_311" class="ex-TR_2-1 type3"></div>
+				<div data-line-id="TR_312" class="ex-TR_2-2 type3"></div>
+				<div data-line-id="TR_313" class="ex-TR_2-3 type3"></div>
+				<div data-line-id="TR_314" class="ex-TR_2-4 type3"></div>
+				<div data-line-id="TR_315" class="ex-TR_2-5 type3"></div>
+				<div data-line-id="TR_316" class="ex-TR_2-6 type3"></div>
+				<div data-line-id="TR_317" class="ex-TR_2-7 type3"></div>
+				<div data-line-id="TR_318" class="ex-TR_2-8 type3" ></div> -->
+				<!-- new 퍼블 굵은 선 -->
+				<div data-line-id="TR_321" class="ex-TR_1-1_B type3"></div>
+				<div data-line-id="TR_322" class="ex-TR_1-2_B type3"></div>
+				<div data-line-id="TR_323" class="ex-TR_1-3_B type3"></div>
+				<div data-line-id="TR_324" class="ex-TR_1-4_B type3"></div>
+				<div data-line-id="TR_325" class="ex-TR_1-5_B type3"></div>
+				<div data-line-id="TR_325" class="ex-TR_1-6_B type3"></div>
+				<div data-line-id="TR_311" class="ex-TR_2-1_B type3"></div>
+				<div data-line-id="TR_312" class="ex-TR_2-2_B type3"></div>
+				<div data-line-id="TR_313" class="ex-TR_2-3_B type3"></div>
+				<div data-line-id="TR_314" class="ex-TR_2-4_B type3"></div>
+				<div data-line-id="TR_315" class="ex-TR_2-5_B type3"></div>
+				<div data-line-id="TR_316" class="ex-TR_2-6_B type3"></div>
+				<div data-line-id="TR_317" class="ex-TR_2-7_B type3"></div>
+				<div data-line-id="TR_318" class="ex-TR_2-8_B type3" ></div>
+			</div>
+		</div>
+		<!-- 기본 이미지에 대한 텍스트라벨 -->
+		<div class="img-label2 cl-data1" style="top:489px;left:1200px" data-id="T3.AO.COILNO.TR_1_COIL_No"></div>
+		<div class="img-label2 cl-data1" style="top:489px;left:1501px" data-id="T3.AO.COILNO.TR_2_COIL_No"></div>
+		<div class="img-label" style="top:525px;left:428px">#3 BRIDLE ROLL</div>
+		<div class="img-label" id="label" style="top:324px;left:750px">SNIP SHEAR</div>
+		<div class="img-label" style="top:201px;left:813px">FLYING WHEEL</div>
+		<div class="img-label" style="top:337.75px;left:960px">#1 EPC</div>
+		<div class="img-label" style="top:209px;left:1050px">#2-1 PINCH ROLL</div>
+		<div class="img-label" style="top:308px;left:1114px">#1-1 PINCH ROLL</div>
+		<div class="img-label" style="top:398px;left:1102px">#1 APRON</div>
+		<div class="img-label" style="top:296px;left:1263px">#2 EPC</div>
+		<div class="img-label" style="top:237px;left:1349px">#2-2 PINCH ROLL</div>
+		<div class="img-label" style="top:360px;left:1366px">#2 APRON</div>
+		<div class="img-label" style="top:421px;left:1292px">WRAP</div>
+		<div class="img-label" style="top:442px;left:1351px">RELEASE</div>
+		<div class="img-label" style="top:462px;left:1288px">#1 TR</div>
+		<div class="img-label" style="top:462px;left:1592px">#2 TR</div>
+		<div class="img-label" style="top:421px;left:1592px">WRAP</div>
+		<div class="img-label" style="top:442px;left:1652px">RELEASE</div>
+
+		<div class="img-label line-2" style="top:178px;left:637px">SNIP SHEAR<br> PINCH ROLL</div>
+
+
+		<!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
+		<!-- #3 BRIDLE ROLL -->
+		
+		<div class="ic-roll-54" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:460px;left:376px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-54" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:453px;left:442px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-54" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:461px;left:552px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-30" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:464px;left:511px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-18" data-format='{"type":"pinchRoll-e"}' moreUP="true" style="top:430px;left:460px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-18" data-format='{"type":"pinchRoll-e"}' moreUP="true" style="top:440px;left:569px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="sensor-box" style="top:414px;left:484px;">
+			<div class="ic-sensor-up" data-format='{"type":"upArrow-e"}' data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+			<div class="ic-sensor-down" data-format='{"type":"downArrow-e"}' data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		</div>
+		<div class="sensor-box" style="top:421px;left:593px;">
+			<div class="ic-sensor-up" data-format='{"type":"upArrow-e"}' data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+			<div class="ic-sensor-down" data-format='{"type":"downArrow-e"}' data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		</div>
+		<!-- SNIP SHEAR PINCH ROLL -->
+		
+		<div class="ic-roll-30" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:287px;left:654px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-30" data-format='{"type":"pinchRoll-e"}' style="top:234px;left:654px;" moreUP="true" data-id="T3.DI.NOREVT.Snip_Shear_PR"></div>
+		<div class="sensor-box" style="top:230px;left:691px;">
+			<div class="ic-sensor-up" data-format='{"type":"upArrow-e"}' data-id="T3.DI.NOREVT.Snip_Shear_PR"></div>
+			<div class="ic-sensor-down" data-format='{"type":"downArrow-e"}' data-id="T3.DI.NOREVT.Snip_Shear_PR"></div>
+		</div>
+		
+		<div class="ic-roll-18 run-r" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:288px;left:713px;" ></div>
+		<div class="ic-roll-18" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:266px;left:713px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-18" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:288px;left:713px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<!-- SNIP SHEAR -->
+		<div class="ic-snip3" id="snip" style="top:231px;left:767px;" data-format='{"type":"basic-e"}' data-id="T3.DI.LINEVT.SSPR_Run"></div>
+		<div class="ic-mark-m" id="mark" data-format='{"type":"basic-e"}' style="top:166px;left:773px;" data-id="T3.DI.INTLCK.Snip_Shear_AC_Motor"></div>
+		<div class="ic-wheel" id="wheel" data-format='{"type":"basic-e"}' style="top:193.5px;left:770px;" data-id="T3.DI.INTLCK.Snip_Shear_AC_Motor"></div>
+		<div class="ic-roll-30" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:267px;left:923px;" data-id="T3.DI.LINEVT.NO2_TR_Run"></div>
+		<!-- #1 EPC -->
+		<div class="ic-epc" style="top:287px;left:1008px;" data-format='{"type":"basic-e"}'></div>
+		<!-- #2-1 PINCH ROLL -->
+		<div class="ic-roll-16" data-format='{"type":"pinchRoll-e","roll-dir":"l-run"}' style="top:233px;left:1093px;" data-id="T3.DI.LINEVT.NO2_TR_Run"></div>
+		<div class="ic-roll-28" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:252px;left:1088px;" data-id="T3.DI.LINEVT.NO2_TR_Run"></div>
+		<div class="ic-bar1" style="top:342px;left:1123px;"></div>
+		<!-- #1-1 PINCH ROLL -->
+		<div class="ic-roll-16" data-format='{"type":"pinchRoll-e","roll-dir":"l-run"}' style="top:307px;left:1087px;" data-id="T3.DI.LINEVT.NO1_TR_Run"></div>
+		<div class="ic-roll-28" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:327px;left:1080px;" data-id="T3.DI.LINEVT.NO1_TR_Run"></div>
+		<div class="sensor-box" style="top:362px;left:1128px;">
+			<div class="ic-sensor-in stop" data-format='{"type":"upArrow-e"}' data-id="T3.DI.NOREVT.NO1_TR_Apron_Out"></div>
+			<div class="ic-sensor-out stop" data-format='{"type":"downArrow-e"}' data-id="T3.DI.NOREVT.NO1_TR_Apron_Out"></div>
+		</div>
+		<div class="ic-roll-16" data-format='{"type":"pinchRoll-e","roll-dir":"l-run"}' style="top:347px;left:1215px;" data-id="T3.DI.LINEVT.NO1_TR_Run"></div>
+		<div class="ic-roll-120" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:365px;left:1162px;" id="T3.DI.LINEVT.NO1_TR_Run" data-id="T3.DI.LINEVT.NO1_TR_Run"></div>
+		<div class="sensor-box" style="top:423px;left:1331px;">
+			<div class="ic-sensor-in stop" data-format='{"type":"upArrow-e"}' data-id="T3.DI.NOREVT.NO1_TR_Belt_Wrapper_Out"></div>
+			<div class="ic-sensor-out stop" data-format='{"type":"downArrow-e"}' data-id="T3.DI.NOREVT.NO1_TR_Belt_Wrapper_Out"></div>
+		</div>
+		<!-- <div class="sensor-box" style="top:423px;left:1324px;">
+          <div class="ic-sensor-in run"></div>
+          <div class="ic-sensor-out run"></div>
+        </div> -->
+		<!-- #2-2 PINCH ROLL -->
+		<div class="ic-epc" style="top:248.25px;left:1311px;" data-format='{"type":"basic-e"}'></div>
+		<div class="ic-roll-16" data-format='{"type":"pinchRoll-e","roll-dir":"l-run"}' style="top:266px;left:1360px;" data-id="T3.DI.LINEVT.NO2_TR_Run"></div>
+		<div class="ic-roll-28" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:285px;left:1352px;" data-id="T3.DI.LINEVT.NO2_TR_Run"></div>
+		<div class="sensor-box" style="top:310px;left:1391px;">
+			<div class="ic-sensor-in stop" data-format='{"type":"upArrow-e"}' data-id="T3.DI.NOREVT.NO2_TR_Apron_Out"></div>
+			<div class="ic-sensor-out stop" data-format='{"type":"downArrow-e"}' data-id="T3.DI.NOREVT.NO2_TR_Apron_Out"></div>
+		</div>
+		<div class="ic-bar2" style="top:318px;left:1413px;"></div>
+		<!-- #2 TR -->
+		<div class="ic-roll-120" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:365px;left:1463px;" data-id="T3.DI.LINEVT.NO2_TR_Run" id="T3.DI.LINEVT.NO2_TR_Run"></div>
+		<div class="ic-roll-16" data-format='{"type":"pinchRoll-e","roll-dir":"l-run"}' style="top:348px;left:1525px;" data-id="T3.DI.LINEVT.NO2_TR_Run"></div>
+		<div class="sensor-box" style="top:423px;left:1631px;">
+			<div class="ic-sensor-in stop" data-format='{"type":"upArrow-e"}' data-id="T3.DI.NOREVT.NO2_TR_Belt_Wrapper_Out"></div>
+			<div class="ic-sensor-out stop" data-format='{"type":"downArrow-e"}' data-id="T3.DI.NOREVT.NO2_TR_Belt_Wrapper_Out"></div>
+		</div>
+		<!-- <div class="sensor-box" style="top:423px;left:1624px;">
+          <div class="ic-sensor-in run"></div>
+          <div class="ic-sensor-out run"></div>
+        </div> -->
+
+		<!-- End 아이콘 배치 -->
+		<!-- 그리드 배치 ------------------------------------------------------->
+		<!-- #2-1 PINCH ROLL -->
+		<div class="list-grid gd-pinchroll" style="top:58px;left:952px;">
+			<div class="list-title">#2-1 PINCH ROLL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>전류 (A)</p>
+					<p>SPEED (mpm)</p>
+				</li>
+				<li class="data">
+					<p class="bd-dot top right left clbkgray">0</p>
+					<p class="bd-dot bottom right left clbkgray">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- CAM POSITION -->
+		<div class="list-grid gd-cam" style="top:58px;left:710px;">
+			<div class="list-title">CAM POSITION</div>
+			<ul class="list-data">
+				<li class="data">
+					<p class="t-center clbk" data-cb="Y" data-settype="N" data-id="T3.DI.NOREVT.Snip_Shear_NO2_TR_POS_LS203">#2 REEL -&gt; #1 REEL</p>
+					<p class="t-center clbk" data-cb="Y" data-settype="N" data-id="T3.DI.NOREVT.Snip_Shear_NO1_TR_POS_LS1202">#1 REEL -&gt; #2 REEL</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #2-2 PINCH ROLL -->
+		<div class="list-grid gd-pinchroll" style="top:222px;left:1490px;">
+			<div class="list-title">#2-2 PINCH ROLL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>전류 (A)</p>
+					<p>SPEED (mpm)</p>
+				</li>
+				<li class="data">
+					<p class="bd-dot top right left clbkgray">0</p>
+					<p class="bd-dot bottom right left clbkgray">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #1-1 PINCH ROLL -->
+		<div class="list-grid gd-pinchroll" style="top:429px;left:859px;">
+			<div class="list-title">#1-1 PINCH ROLL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>전류 (A)</p>
+					<p>SPEED (mpm)</p>
+				</li>
+				<li class="data">
+					<p class="bd-dot top right left clbkgray">0</p>
+					<p class="bd-dot bottom right left clbkgray">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #1#2 TR -->
+		<div class="list-grid gd-tr">
+			<ul class="list-data">
+				<li class="data-title">
+					<p></p>
+					<p>작업지시번호</p>
+					<p>투입원판번호</p>
+					<p>ACTUAL DIA (mm)</p>
+					<p>LENGTH (m)</p>
+					<p>TURN (T)</p>
+					<p>WEIGHT (TON)</p>
+					<p style="font-size:12.5px;">UNIT TENSION ADJ.(%)</p>
+					<p>운전상태</p>
+				</li>
+				<li class="data">
+					<p class="title underline" id="TR1_Header_pTag" modal-id="TP31EXS020">#1 TR</p>
+					<p class="t-center" data-id="T3.AO.PRODNO.TR_1_Product_No"></p>
+					<p class="t-center" data-id="T3.AO.COILNO.TR_1_COIL_No"></p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.DIAMET.NO1_TR_Actual_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.LENGTH.NO1_TR_Winding_LEN_A">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI._COUNT.NO1_TR_Winding_Turn_Count">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.__MASS.NO1_TR_Weight">0</p>
+					<p class="underline FineTune" data-format='{"type":"num"}'
+					   title="#1 UNIT TENSION 미세조정(%)" TR1="true"
+					   data-id="T3.AO.PERCEN.NO1_TR_Tension_RATIO">0</p>
+					<p class="t-center" data-cb="Y" data-format='{"type":"drive_cls"}' data-id="T3.DI.LINEVT.NO1_TR_Run">정지</p>
+				</li>
+				<li class="data">
+					<p class="title underline" id="TR2_Header_pTag" modal-id="TP31EXS030">#2 TR</p>
+					<p class="t-center" data-id="T3.AO.PRODNO.TR_2_Product_No"></p>
+					<p class="t-center" data-id="T3.AO.COILNO.TR_2_COIL_No"></p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.DIAMET.NO2_TR_Actual_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.LENGTH.NO2_TR_Winding_LEN_A">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI._COUNT.NO2_TR_Winding_Turn_Count">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.__MASS.NO2_TR_Weight">0</p>
+					<p class="underline FineTune" data-format='{"type":"num"}'
+					   title="#2 UNIT TENSION 미세조정(%)" TR2="true"
+					   data-id="T3.AO.PERCEN.NO2_TR_Tension_RATIO">0</p>
+					<p class="t-center" data-cb="Y" data-format='{"type":"drive_cls"}' data-id="T3.DI.LINEVT.NO2_TR_Run">정지</p>
+				</li>
+			</ul>
+			<div class="blank-m"></div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>MANDREL EXPAND</p>
+				</li>
+				<li class="data">
+					<p class="t-center" data-settype="N" data-cb="Y" id="NO1_TR_Mandral" data-id="T3.DI.LINEVT.NO1_TR_Mandrel_Expand">COLLAPSE</p>
+				</li>
+				<li class="data">
+					<p class="t-center" data-settype="N" data-cb="Y" id="NO2_TR_Mandral" data-id="T3.DI.LINEVT.NO2_TR_Mandrel_Expand">COLLAPSE</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #3 BRIDLE ROLL -->
+		<div class="list-grid gd-bridleroll" style="top:590px;left:270px;">
+			<div class="list-title">#3 BRIDLE ROLL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="title">구분</p>
+					<p>전류 (A)</p>
+					<p>SPEED (mpm)</p>
+					<p>진동값 (m/sec2)</p>
+					<p>온도 (°C)</p>
+				</li>
+				<li class="data">
+					<p class="title">#1 BR</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO3_Bridle_AC">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.ACCELE.NO3_BR_Entry_Roll_DC_Motor_VIBRATION_VAL">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.TEMPER.NO3_BR_Entry_Roll_DC_Motor_TEMP">0</p>
+				</li>
+				<li class="data">
+					<p class="title">#2 BR</p>
+					<p data-format='{"type":"num"}' class="bd-dot top left clbkgray">0</p>
+					<p data-format='{"type":"num"}' class="bd-dot bottom left clbkgray">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.ACCELE.NO3_BR_Center_Roll_DC_Motor_VIBRATION_VAL">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.TEMPER.NO3_BR_Center_Roll_DC_Motor_TEMP">0</p>
+				</li>
+				<li class="data">
+					<p class="title">#3 BR</p>
+					<p data-format='{"type":"num"}' class="bd-dot top right clbkgray">0</p>
+					<p data-format='{"type":"num"}' class="bd-dot bottom right clbkgray">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.ACCELE.NO3_BR_Exit_Roll_DC_Motor_VIBRATION_VAL">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.TEMPER.NO3_BR_Exit_Roll_DC_Motor_TEMP">0</p>
+				</li>
+			</ul>
+			<ul class="list-data list2">
+				<li class="data-title">
+					<p>운전상태</p>
+				</li>
+				<li class="data">
+					<p class="t-center" data-format='{"type":"drive_cls"}' data-id="T3.DI.LINEVT.NO3_BR_Run">정지</p>
+				</li>
+			</ul>
+		</div>
+		<!-- CHEMICAL -->
+		<div class="list-grid gd-chemical">
+			<div class="list-title">CHEMICAL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="title">구분</p>
+					<p>CHEMICAL Cr TANK (°C)</p>
+					<p>CHEMICAL D.O.R (°C)</p>
+					<p>CHEMICAL D.O.R STORAGE B (°C)</p>
+					<p>CHEMICAL DRUG OUT (°C)</p>
+					<p>CHEMICAL TREATMENT COOLING (°C)</p>
+				</li>
+				<li class="data">
+					<p class="title" >현재온도</p>
+					<p data-cb="Y" data-format='{"type":"num"}' data-id="T3.AI.TEMPER.CHEM_Treat_CR_Tank_TEMP">0</p>
+					<p data-cb="Y" data-format='{"type":"num"}' data-id="T3.AI.TEMPER.CHEM_Drug_Out_Rinse_TEMP">0</p>
+					<p data-cb="Y" data-format='{"type":"num"}' data-id="T3.AI.TEMPER.CHEM_Drug_Out_Rinse_Sotr_B_TEMP">0</p>
+					<p data-cb="Y" data-format='{"type":"num"}' data-id="T3.AI.TEMPER.CHEM_Drug_Out_TEMP">0</p>
+					<p data-cb="Y" data-format='{"type":"num"}' data-id="T3.AI.TEMPER.CHEM_TREAT_COOLING_TEMP">0</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list-grid gd-snip">
+			<div class="list-title underline" modal-id="TP31EXS070">SNIP SHEAR</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="span2">SV (mpm)</p>
+					<p>PV (mpm)</p>
+					<p>운전상태</p>
+				</li>
+				<li class="data">
+					<p class="t-center" id="SNIP MODE">H</p>
+					<p id="SNIP VALUE">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI._SPEED.Snip_Shear_Actual_Speed">0</p>
+					<p class="t-center bottom" data-format='{"type":"drive_cls"}' data-id="T3.DI.LINEVT.SSPR_Run">정지</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list-grid gd-apron" style="top:523px;left:859px;">
+			<div class="list-title">#1 APRON</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>SENSOR</p>
+					<p>CONVEYOR</p>
+				</li>
+				<li class="data">
+					<p class="t-center" data-cb="Y" id="APRON1" data-id="T3.DI.NOREVT.NO1_TR_Apron_Out">OUT</p>
+					<p class="t-center" data-format='{"type":"drive_cls"}' data-id="T3.DI.NOREVT.No1_Conveyor_Run">정지</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list-grid gd-apron" style="top:222px;left:1692px;">
+			<div class="list-title">#2 APRON</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>SENSOR</p>
+					<p>CONVEYOR</p>
+				</li>
+				<li class="data">
+					<p class="t-center" id="APRON2" data-cb="Y" data-id="T3.DI.NOREVT.NO2_TR_Apron_Out">OUT</p>
+					<p class="t-center" data-format='{"type":"drive_cls"}' data-id="T3.DI.NOREVT.No2_Conveyor_Run">정지</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list-grid gd-epc" style="top:316px;left:1692px;">
+			<div class="list-title underline" modal-id="TP31EXS060">#2 EPC</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>운전모드</p>
+					<p>STAGGER</p>
+				</li>
+				<li class="data">
+					<p class="t-center off" id="EPC2_MODE">수동</p>
+					<p class="t-center off" id="EPC2_STAGGER">OFF</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list-grid gd-epc" style="top:523px;left:1016px;">
+			<div class="list-title underline" modal-id="TP31EXS050">#1 EPC</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>운전모드</p>
+					<p>STAGGER</p>
+				</li>
+				<li class="data">
+					<p class="t-center off" id="EPC1_MODE">수동</p>
+					<p class="t-center off" id="EPC1_STAGGER">OFF</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list-grid gd-belt" style="top:523px;left:1634px;">
+			<div class="list-title">BELT WRAPPER WRAP</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="t-center">#1 TR SENSOR</p>
+					<p class="t-center">#2 TR SENSOR</p>
+				</li>
+				<li class="data">
+					<p class="t-center" data-cb="Y" id="TR1_Sensor" data-id="T3.DI.NOREVT.NO1_TR_Belt_Wrapper_Out">WRAP</p>
+					<p class="t-center" data-cb="Y" id="TR2_Sensor" data-id="T3.DI.NOREVT.NO2_TR_Belt_Wrapper_Out">WRAP</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="list-grid gd-simple" style="top:714px;left:623px;">
+			<ul class="list-data">
+				<li class="data">
+					
+					<p class="t-center clbk" modal-id="TP31EXS040">REEL CHANGE</p>
+					<p class="t-center off" id="Reel_Change">수동</p>
+				</li>
+				<li class="data">
+					<p class="title underline link" link="TP31EXM080">#1 TR -&gt; #2 TR</p>
+					<p class="t-center off" data-cb="Y" data-format='{"type":"normal_fault_cls"}' data-id="T3.DI.INTLCK.NO1_TR_Reel_Change">정상</p>
+				</li>
+				<li class="data">
+					<p class="title underline link" link="TP31EXM080">#2 TR -&gt; #1 TR</p>
+					<p class="t-center off" data-cb="Y" data-format='{"type":"normal_fault_cls"}' data-id="T3.DI.INTLCK.NO2_TR_Reel_Change">정상</p>
+				</li>
+				<li class="data">
+					<p class="title underline link" link="TP31EXM080">TR  REEL CHANGE</p>
+					<p class="t-center off" data-cb="Y" data-format='{"type":"normal_fault_cls"}' data-id="T3.DI.INTLCK.TR_Reel_Change">정상</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="gauge-wrap gauge2">
+			<div class="gauge-top-wrap">
+				<div class="gauge-title">LINE SPEED</div>
+			</div>
+			<div class="flex-row">
+				<div class="gauge-box-wrap">
+					<div class="gauge-box">
+						<!-- 눈금자 -->
+						<div class="img-graduation"></div>
+						<!-- 단위Text -->
+						<div class="unit-txt" style="top:39px;left:56px;">m/min</div>
+						<!-- 눈금자 숫자 Text -------------------->
+						<div class="grd-txt" style="top:71px;left:12px;">0</div>
+						<div class="grd-txt" style="top:55px;left:14px;">40</div>
+						<div class="grd-txt" style="top:38px;left:23px;">80</div>
+						<div class="grd-txt" style="top:25px;left:34px;">120</div>
+						<div class="grd-txt" style="top:13px;left:52px;">160</div>
+						<div class="grd-txt" style="top:4px;left:71px;">200</div>
+						<div class="grd-txt" style="top:13px;left:93px;">240</div>
+						<div class="grd-txt" style="top:25px;left:108px;">280</div>
+						<div class="grd-txt" style="top:38px;left:122px;">320</div>
+						<div class="grd-txt" style="top:55px;left:129px;">360</div>
+						<div class="grd-txt" style="top:71px;left:131px;">400</div>
+
+
+						<!-- 바늘 중심원 -->
+						<div class="ct-needle">
+							<div class="inside"></div>
+						</div>
+						<!-- 바늘 -->
+						<!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+						<div class="img-needle" id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed" style="transform: rotate(-90deg);"></div>
+
+					</div>
+					<div class="gauge-value"
+						 data-cb="Y" id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed_text" min="0" max="400" data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed"
+						 data-format='{"def_unit":" m/min"}'>0 m/min</div>
+				</div>
+				<ul class="gauge-right">
+					<li>
+						<div class="value-wrap line">
+							<p class="mark" data-format='{"type":"cls"}' data-id="T3.DI.LINEVT.Line_Speed_Select_H">H</p>
+							<p class="value" data-id="T3.AO._SPEED.Line_Speed_H_Set">0</p>
+						</div>
+					</li>
+					<li>
+						<div class="value-wrap line">
+							<p class="mark" data-format='{"type":"cls"}' data-id="T3.DI.LINEVT.Line_Speed_Select_M">M</p>
+							<p class="value" data-id="T3.AO._SPEED.Line_Speed_M_Set">0</p>
+						</div>
+					</li>
+					<li>
+						<div class="value-wrap line">
+							<p class="mark" data-format='{"type":"cls"}' data-id="T3.DI.LINEVT.Line_Speed_Select_L">L</p>
+							<p class="value" data-id="T3.AO._SPEED.Line_Speed_L_Set">0</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="gauge-wrap gauge1" style="top:10px;left:70px;">
+			<div class="gauge-top-wrap">
+				<div class="gauge-title">ENTRY SPEED</div>
+			</div>
+			<div class="gauge-box-wrap">
+				<div class="gauge-box">
+					<!-- 눈금자 -->
+					<div class="img-graduation"></div>
+					<!-- 단위Text -->
+					<div class="unit-txt" style="top:39px;left:56px;">m/min</div>
+					<!-- 눈금자 숫자 Text -------------------->
+					<div class="grd-txt" style="top:71px;left:12px;">0</div>
+					<div class="grd-txt" style="top:55px;left:14px;">40</div>
+					<div class="grd-txt" style="top:38px;left:23px;">80</div>
+					<div class="grd-txt" style="top:25px;left:34px;">120</div>
+					<div class="grd-txt" style="top:13px;left:52px;">160</div>
+					<div class="grd-txt" style="top:4px;left:71px;">200</div>
+					<div class="grd-txt" style="top:13px;left:93px;">240</div>
+					<div class="grd-txt" style="top:25px;left:108px;">280</div>
+					<div class="grd-txt" style="top:38px;left:122px;">320</div>
+					<div class="grd-txt" style="top:55px;left:129px;">360</div>
+					<div class="grd-txt" style="top:71px;left:131px;">400</div>
+
+
+					<!-- 바늘 중심원 -->
+					<div class="ct-needle">
+						<div class="inside"></div>
+					</div>
+					<!-- 바늘 -->
+					<!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+					<div class="img-needle" id="T3.AI._SPEED.NO1_BR_Entry_Actual_Speed" style="transform: rotate(-90deg);"></div>
+
+				</div>
+				<div class="gauge-value" data-cb="Y" data-id="T3.AI._SPEED.NO1_BR_Entry_Actual_Speed" min="0" max="400" data-format='{"def_unit":" m/min"}'
+					 id="T3.AI._SPEED.NO1_BR_Entry_Actual_Speed_text"><span>0</span> m/min</div>
+			</div>
+		</div>
+
+		<div class="gauge-wrap gauge1" style="top:191px;left:70px;">
+			<div class="gauge-top-wrap">
+				<div class="gauge-title">#3 BRIDLE ROLL TENSION</div>
+			</div>
+			<div class="gauge-box-wrap">
+				<div class="gauge-box">
+					<!-- 눈금자 -->
+					<div class="img-graduation"></div>
+					<!-- 단위Text -->
+					<div class="unit-txt" style="top:39px;left:75px;">A</div>
+					<!-- 눈금자 숫자 Text -------------------->
+					<div class="grd-txt" style="top:71px;left:12px;">-300</div>
+					<div class="grd-txt" style="top:55px;left:16px;">-240</div>
+					<div class="grd-txt" style="top:38px;left:25px;">-180</div>
+					<div class="grd-txt" style="top:25px;left:35px;">-120</div>
+					<div class="grd-txt" style="top:13px;left:52px;">-60</div>
+					<div class="grd-txt" style="top:4px;left:77px;">0</div>
+					<div class="grd-txt" style="top:13px;left:95px;">60</div>
+					<div class="grd-txt" style="top:25px;left:107px;">120</div>
+					<div class="grd-txt" style="top:38px;left:120px;">180</div>
+					<div class="grd-txt" style="top:55px;left:129px;">240</div>
+					<div class="grd-txt" style="top:71px;left:131px;">300</div>
+
+					<!-- 바늘 중심원 -->
+					<div class="ct-needle">
+						<div class="inside"></div>
+					</div>
+					<!-- 바늘 -->
+					<!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+					<div class="img-needle" id="T3.AI.AMPERE.NO3_Bridle_AC" style="transform: rotate(0deg);"></div>
+
+				</div>
+				<div class="gauge-value"
+					 data-cb="Y" id="T3.AI.AMPERE.NO3_Bridle_AC_text" data-id="T3.AI.AMPERE.NO3_Bridle_AC"
+					 data-format='{"def_unit":" A"}' min="-300" max="300"
+				>0 A</div>
+			</div>
+		</div>
+
+		<div class="gauge-wrap gauge1" style="top:10px;left:1450px;">
+			<div class="gauge-top-wrap">
+				<div class="gauge-title">#1 TR TENSION</div>
+			</div>
+			<div class="gauge-box-wrap">
+				<div class="gauge-box">
+					<!-- 눈금자 -->
+					<div class="img-graduation"></div>
+					<!-- 단위Text -->
+					<div class="unit-txt" style="top:39px;left:75px;">A</div>
+					<!-- 눈금자 숫자 Text -------------------->
+					<div class="grd-txt" style="top:71px;left:12px;">-500</div>
+					<div class="grd-txt" style="top:55px;left:14px;">-400</div>
+					<div class="grd-txt" style="top:38px;left:23px;">-300</div>
+					<div class="grd-txt" style="top:25px;left:34px;">-200</div>
+					<div class="grd-txt" style="top:13px;left:51px;">-100</div>
+					<div class="grd-txt" style="top:4px;left:77px;">0</div>
+					<div class="grd-txt" style="top:13px;left:93px;">100</div>
+					<div class="grd-txt" style="top:25px;left:108px;">200</div>
+					<div class="grd-txt" style="top:38px;left:122px;">300</div>
+					<div class="grd-txt" style="top:55px;left:129px;">400</div>
+					<div class="grd-txt" style="top:71px;left:131px;">500</div>
+
+					<!-- 바늘 중심원 -->
+					<div class="ct-needle">
+						<div class="inside"></div>
+					</div>
+					<!-- 바늘 -->
+					<!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+					<div class="img-needle" data-format='{"type":"num"}' id="T3.AI.AMPERE.NO1_TR_AC" style="transform: rotate(0deg);"></div>
+
+				</div>
+				<div class="gauge-value"
+					 data-cb="Y" id="T3.AI.AMPERE.NO1_TR_AC_text" data-id="T3.AI.AMPERE.NO1_TR_AC"
+					 min="-500" max="500" data-format='{"def_unit":" A"}'
+				>0 A</div>
+			</div>
+		</div>
+
+		<div class="gauge-wrap gauge1" style="top:10px;left:1650px;">
+			<div class="gauge-top-wrap">
+				<div class="gauge-title">#2 TR TENSION</div>
+			</div>
+			<div class="gauge-box-wrap">
+				<div class="gauge-box">
+					<!-- 눈금자 -->
+					<div class="img-graduation"></div>
+					<!-- 단위Text -->
+					<div class="unit-txt" style="top:39px;left:75px;">A</div>
+					<!-- 눈금자 숫자 Text -------------------->
+					<div class="grd-txt" style="top:71px;left:12px;">-500</div>
+					<div class="grd-txt" style="top:55px;left:14px;">-400</div>
+					<div class="grd-txt" style="top:38px;left:23px;">-300</div>
+					<div class="grd-txt" style="top:25px;left:34px;">-200</div>
+					<div class="grd-txt" style="top:13px;left:51px;">-100</div>
+					<div class="grd-txt" style="top:4px;left:77px;">0</div>
+					<div class="grd-txt" style="top:13px;left:93px;">100</div>
+					<div class="grd-txt" style="top:25px;left:108px;">200</div>
+					<div class="grd-txt" style="top:38px;left:122px;">300</div>
+					<div class="grd-txt" style="top:55px;left:129px;">400</div>
+					<div class="grd-txt" style="top:71px;left:131px;">500</div>
+
+					<!-- 바늘 중심원 -->
+					<div class="ct-needle">
+						<div class="inside"></div>
+					</div>
+					<!-- 바늘 -->
+					<!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+					<div class="img-needle" data-format='{"type":"num"}' id="T3.AI.AMPERE.NO2_TR_AC" style="transform: rotate(0deg);"></div>
+
+				</div>
+				<div class="gauge-value" data-cb="Y" id="T3.AI.AMPERE.NO2_TR_AC_text" data-id="T3.AI.AMPERE.NO2_TR_AC"
+					 data-format='{"def_unit":" A"}' min="-500" max="500">0 A</div>
+			</div>
+		</div>
+
+	</div>
+            </main>
+            <footer>
+    <div class="alarm-title-box" style="cursor:pointer" id="alram-box">ALARM</div>
+    <div class="alarm-data-box">
+        <div class="data-wrap">
+            <ul class="data-list">
+
+            </ul>
+        </div>
+    </div>
+    <button class="btn-legend" id="legend-box" alt="범례">
+        <img src="" class="ic-legend">
+        LEGEND
+    </button>
+</footer>
+    </div>
+    <div id="modal-layout">
+    </div>
+
+    <!-- PLC SERVER HIDDEN URL -->
+    <input type="hidden" id="_PLC_SERVER" value="${_PLC_SERVER?default('')}"/>
+    <input type="hidden" id="_USER_ID" value="${_USER_ID?default('')}"/>
+    </body>
+</html>

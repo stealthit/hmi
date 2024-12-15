@@ -3,7 +3,7 @@
 @import url("common.css");
 
 .pop-pump {
-   width: 400px;
+   width: 480px;
   //  height: 336px; 
    .list-grid {
     ul li {flex: 1;}
@@ -17,10 +17,10 @@
 }
 
 .pop-fluxing {
-  width: 520px;
+  width: 600px;
   // height: 576px; 
   .list-grid {
-    ul.list-data .data-title {width: 300px;}
+    ul.list-data .data-title {width: 350px;}
   }
 
   .popup-footer {
@@ -39,11 +39,11 @@
 }
 
 .pop-plating-rinse {
-  width: 550px;
+  width: 576px;
   // height: 576px; 
 
   .list-grid {
-   ul.list-data .data-title {width: 300px;}
+   ul.list-data .data-title {width: 330px;}
   }
 
   .popup-footer {
@@ -72,7 +72,25 @@
    }
 }
 
-.pop-TP31EXS060 {
+.pop-lbl-flatbutton {
+  display: flex;
+  width: 50px;
+  justify-content: center;
+  pointer-events : none;
+  cursor : pointer;
+  color: $cl_neutral_1;
+  gap: 3px;
+}
+
+.pop-lbl-flatbutton.on {
+  color: $cl_data_1;
+  background-color: $cl_neutral_6;
+}
+.pop-lbl-flatbutton.off {
+  color: $cl_neutral_1;
+}
+
+.pop-TP31EXS070 {
   width: 1105px;
   // height: 396px; 
   .list-grid {
@@ -341,14 +359,60 @@
 }
 
 .pop-TP31CTS050 {
-  width: 1095px;
+  width: 480px;
+  height: 450px;
+  .flex-row {
+    margin: 0;
+    .flex-col {flex: 1;}
+    & > .subCon {
+      height: 277px;
+      width: 475px;
+      .list-grid .list-data li p.button {
+        padding: 10px 24px;
+        gap: 10px;
+      }
+    }
+  }
+  .grid1 {
+    .list-data .data-title {width: 248px;}
+  }
+  .list-grid.grid2,.list-grid.grid3 { 
+    .list-data .data-title {width: 350px;}
+    .list-data li p.button {
+      padding: 10px 20px;
+      gap: 10px;
+    }
+  }
+  
+  .grid4 {
+    margin-top: 20px;
+    gap: 10px;
+    .data {
+      gap: 10px;
+      .tuning-box {background: $cl_neutral_6;border-top: none;padding: 0 !important;}
+    }
+  }
+  // .grid3 {
+  //   .list-data .data-title {width: 835px;}
+  // }
+  .popup-footer {
+    justify-content: center;
+    button {
+      // width: 105px;
+      flex: none;
+    }
+  }
+}
+
+.pop-TP31CTS160 {
+  width: 650px;
   height: 777px;
   .flex-row {
     margin: 0;
     .flex-col {flex: 1;}
     & > .subCon {
       height: 489px;
-      width: 475px;
+      width: 490px;
       .list-grid .list-data li p.button {
         padding: 10px 24px;
         gap: 10px;
@@ -516,7 +580,7 @@
 
 .pop-TP31EXS020 {
   width: 540px;
-  height: 982px;
+  height: 782px;
 
   .pop-title {margin-bottom: 10px;}
 
@@ -569,7 +633,8 @@
 }
 // MES 작업순서변경
 .pop-coil-sche1 {
-  width: 1266px;
+  // width: 1266px;
+  width: 1061px; /* 2024.11.05(화) GSK */
   // height: 696px;
   .pop-title {font-size: 20px !important;}
   .popup-body {
@@ -579,7 +644,7 @@
         table-layout: fixed;
         font-size: 20px;
         font-weight: 700;
-        tr {height: 60px;}
+        tr {height: 40px;}
         td {
           &.on {background: $cl_neutral_6;}
           font-weight: 400;
@@ -647,12 +712,14 @@
 
 // DUMMY COIL 생성
 .pop-coil-sche3 {
-  width: 1581px;
+  // width: 1581px;
+  width: 1341px;
   // height: 600px;
   .pop-title {font-size: 20px !important;}
   .popup-body {
     .table-wrap {
-      width: 1540px;
+      // width: 1540px;
+      width: 1301px;
       height: 304px;
       table {
         table-layout: fixed;
@@ -736,21 +803,28 @@
               color: $cl_neutral_6;
               font-weight: 400;
             }
-          }
-          th {
-            height: 90px;
-            border-top: none;
-            &:first-child{border-left: none;}
-            &:last-child{border-right: none;}
-          }
-          td {
-            &.on {background: $cl_neutral_6;}
-            font-weight: 400;
-            color: $cl_neutral_1;
-            background: $cl_neutral_5;
-            word-break: break-all;
-            &:last-child {border-right: none;}
-            &:first-child {border-left: none;}
+            th {
+              height: 90px;
+              border-top: none;
+              &:first-child{border-left: none;}
+              &:last-child{border-right: none;}
+            }
+            td {
+              &.on {background: $cl_neutral_6;}
+              font-weight: 400;
+              color: $cl_neutral_1;
+              background: $cl_neutral_5;
+              word-break: break-all;
+              &:last-child {
+                white-space: nowrap; /* 2024.10.31(목) GSK : 텍스트가 줄바꿈되지 않도록 설정 */
+                overflow: hidden; /* 2024.10.31(목) GSK : 넘치는 텍스트를 숨김 */
+                text-overflow: ellipsis; /* 2024.10.31(목) GSK : 넘치는 텍스트를 '...'으로 표시 */
+                padding-left: 5px; /* 2024.10.31(목) GSK : 왼쪽에 10px 패딩 추가 */
+                padding-right: 5px; /* 2024.10.31(목) GSK : 오른쪽에 10px 패딩 추가 */
+                border-right: none;
+              }
+              &:first-child {border-left: none;}
+            }
           }
         }
       }
@@ -879,16 +953,20 @@
 
 // COIL 위치 지정
 .pop-coil-sche7 {
-  width: 1880px;
+  width: 900px;
+  // width: 1880px;
   // height: 816px;
   .pop-title {font-size: 20px !important;}
   .popup-body {
     .table-wrap {
-      width: 1840px;
-      height: 600px;
-      overflow: overlay;
+      // width: 1840px;
+      // height: 600px;
+      // overflow: overlay;
+      width: 100%;
+      height: 200px;
       table {
-        width: 2412px;
+        width: 100%;
+        // width: 2412px;
         border-collapse: separate;
 	      border-spacing: 0;
         table-layout: fixed;
@@ -964,7 +1042,7 @@
 .flex-row {
   display: flex;
   gap: 10px;
-  margin: 10px 0;
+  // margin: 10px 0;
 }
 .flex-col {
   display: flex;

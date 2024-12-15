@@ -61,23 +61,28 @@
   background: #CCCCCC;
 }
 .line-trk-wrapper .table-wrap table tbody tr.sel-gr {
-  background: #008C3C;
-  color: #FFFFFF;
+  background: #53e08f;
+  color: #000000;
   font-weight: 400;
 }
 .line-trk-wrapper .table-wrap table tbody tr.sel-bl {
-  background: #0178D5;
-  color: #FFFFFF;
+  background: #56aff4;
+  color: #000000;
+  font-weight: 400;
+}
+.line-trk-wrapper .table-wrap table tbody tr.sel-wh {
+  background: #ffffff;
+  color: #000000;
   font-weight: 400;
 }
 .line-trk-wrapper .bg-line-wrap {
   top: 87px;
-  left: 44.5px;
+  left: 0px;
 }
 .line-trk-wrapper .bg-line-wrap .line-box {
   position: relative;
-  width: 1829px;
-  height: 252px;
+  width: 1920px;
+  height: 344px;
 }
 .line-trk-wrapper .bg-line2-wrap {
   top: 87px;
@@ -86,10 +91,10 @@
 .line-trk-wrapper .gd-reflow {
   top: 440px;
   left: 1109px;
-  width: 130px;
+  width: 150px;
 }
 .line-trk-wrapper .gd-reflow .list-data .data-title {
-  width: 70px;
+  width: 100px;
 }
 .line-trk-wrapper .gd-quenching {
   top: 374px;
@@ -357,19 +362,19 @@
 .center-o-wrapper .gd-reflow {
   top: 5px;
   left: 1388px;
-  width: 130px;
+  width: 150px;
 }
 .center-o-wrapper .gd-reflow .list-data .data-title {
-  width: 70px;
+  width: 100px;
 }
 .center-o-wrapper .gd-mini {
-  width: 200px;
+  width: 300px;
 }
 .center-o-wrapper .gd-mini p {
   justify-content: center !important;
 }
 .center-o-wrapper .gd-large {
-  width: 380px;
+  width: 370px;
 }
 .center-o-wrapper .gd-large p {
   justify-content: center !important;
@@ -388,6 +393,9 @@
 }
 .center-o-wrapper .table-box .table-wrap table tbody tr td {
   background: #CCCCCC;
+}
+.center-o-wrapper .table-box .table-wrap table tbody tr td.on {
+  background: #ffffff;
 }
 
 .center-i-wrapper {
@@ -458,12 +466,12 @@
   border-top: none;
 }
 .exit-o-wrapper .gd-chemical {
-  width: 294px;
+  width: 296px;
   top: 374px;
   left: 70px;
 }
 .exit-o-wrapper .gd-chemical .list-data .data-title {
-  width: 234px;
+  width: 232px;
 }
 .exit-o-wrapper .gd-snip {
   top: 374px;
@@ -585,6 +593,10 @@
 }
 .post-treatment-wrapper .list-grid .list-data li.data p.button button {
   width: 37px;
+}
+.post-treatment-wrapper .list-grid .list-data li.data p.button button.on {
+  text-align: center;
+  background-color: #ffffff;
 }
 .post-treatment-wrapper .gd-chemical .list-data li.data {
   flex: none;
@@ -795,10 +807,10 @@
 .chemical-qmsif-wrapper {
   padding: 60px;
   display: flex;
-  gap: 40px;
+  gap: 69px;
 }
 .chemical-qmsif-wrapper .flex-col {
-  width: 660px;
+  width: 450px;
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -809,7 +821,7 @@
   padding: 0 6px;
 }
 .chemical-qmsif-wrapper table tr td.on, .chemical-qmsif-wrapper table tr th.on {
-  background: #FFFFFF;
+  background: #CCCCCC;
   color: #002878;
 }
 .chemical-qmsif-wrapper table tr td:first-child, .chemical-qmsif-wrapper table tr th:first-child {
@@ -822,7 +834,7 @@
   border-right: none;
 }
 .chemical-qmsif-wrapper .density-table {
-  width: 1100px;
+  width: 1900px;
 }
 .chemical-qmsif-wrapper .density-table table tr td:nth-last-child(7), .chemical-qmsif-wrapper .density-table table tr td:nth-last-child(8) {
   text-align: left;
@@ -927,7 +939,7 @@
 }
 
 .setting-center-wrapper {
-  padding: 60px;
+  padding: 90px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -941,13 +953,6 @@
 .setting-center-wrapper .flex-row {
   display: flex;
   gap: 40px;
-}
-.setting-center-wrapper .flex-row:nth-child(2) {
-  justify-content: space-between;
-}
-.setting-center-wrapper .flex-row:last-child {
-  margin-top: 20px;
-  justify-content: center;
 }
 .setting-center-wrapper .flex-row:last-child button {
   width: 196px;
@@ -1059,7 +1064,7 @@
 }
 
 .setting-mcc-wrapper {
-  padding: 56px 50px;
+  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1108,6 +1113,9 @@
   font-weight: 700;
   color: #002878;
 }
+.setting-mcc-wrapper .setting-wrap .flex-row button.on {
+  background: #FFFFFF;
+}
 .setting-mcc-wrapper .mcc-con {
   width: 100%;
   display: flex;
@@ -1141,6 +1149,9 @@
   font-weight: 700;
   padding: 5px 6px;
 }
+.setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td:nth-child(3) {
+  color: #002878;
+}
 .setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td.on {
   background: #FFFFFF;
 }
@@ -1152,7 +1163,7 @@
   height: 30px;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap table tbody tr td:last-child {
-  padding: 3px 23px;
+  padding: 3px 3px;
 }
 .setting-mcc-wrapper .mcc-con .table-wrap table .f-row {
   display: flex;
@@ -1199,22 +1210,28 @@
   gap: 10px;
 }
 .setting-temper-wrapper .title-box {
-  width: 1432px;
+  width: 1588px;
   height: 28px;
 }
 .setting-temper-wrapper .temper-table {
   display: flex;
   gap: 10px;
-  width: 1432px;
+  width: 1588px;
 }
 .setting-temper-wrapper .temper-table table {
   flex: 1;
 }
-.setting-temper-wrapper .temper-table table tr:first-child th:first-child, .setting-temper-wrapper .temper-table table tr th:nth-child(4), .setting-temper-wrapper .temper-table table tr td:nth-child(4) {
+.setting-temper-wrapper .temper-table table .f-row {
+  display: flex;
+  height: 30px;
+  gap: 6px;
+}
+.setting-temper-wrapper .temper-table table tr:first-child th:first-child, .setting-temper-wrapper .temper-table table tr th:nth-child(5), .setting-temper-wrapper .temper-table table tr td:nth-child(5) {
   border-right: 2px solid #333333;
+  padding: 0 6px;
 }
 .setting-temper-wrapper .temper-table table tr th {
-  height: 39px;
+  height: 50px;
 }
 .setting-temper-wrapper .temper-table table tr th:first-child, .setting-temper-wrapper .temper-table table tr td:first-child {
   border-left: none;
@@ -1223,9 +1240,12 @@
   border-right: none;
 }
 .setting-temper-wrapper .temper-table table tr td {
-  height: 50px;
+  height: 40px;
   font-weight: 700;
   background: #CCCCCC;
+}
+.setting-temper-wrapper .temper-table table tr td.on {
+  background: #FEF546;
 }
 .setting-temper-wrapper .temper-table table tr td:nth-child(2) {
   text-align: left;
@@ -1236,7 +1256,7 @@
   padding-right: 6px;
   text-align: right;
 }
-.setting-temper-wrapper .temper-table table tr td:nth-child(4), .setting-temper-wrapper .temper-table table tr td:nth-child(5), .setting-temper-wrapper .temper-table table tr td:nth-child(6) {
+.setting-temper-wrapper .temper-table table tr td:nth-child(4), .setting-temper-wrapper .temper-table table tr td:nth-child(6), .setting-temper-wrapper .temper-table table tr td:nth-child(7) {
   text-align: right;
   color: #002878;
   text-decoration: underline;
@@ -1246,6 +1266,24 @@
 .setting-temper-wrapper .temper-table table tr td .btn-normal {
   color: #000000;
   height: 100%;
+}
+.setting-temper-wrapper .temper-table table tr td:nth-child(5) .flex-row button {
+  flex: 1;
+  height: 100%;
+  width: 70px;
+  border-radius: 3.12px;
+  border: 0.78px solid #999999;
+  background: #CCCCCC;
+  box-shadow: 0px -3.12px 3.12px 0px rgba(0, 0, 0, 0.2509803922) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #002878;
+}
+.setting-temper-wrapper .temper-table table tr td:nth-child(5) .flex-row button.on {
+  background: #FFFFFF;
 }
 
 .exit-interlock-wrapper {
@@ -1308,9 +1346,6 @@
 }
 .history-al-wrapper .dt-table-wrap tr.alarm2 td {
   background: #FEF546;
-}
-.history-al-wrapper .dt-table-wrap.scroll-table .dt-layout-row:last-child {
-  height: 0 !important;
 }
 .history-al-wrapper .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-head {
   border-bottom: 1px solid #666666;
@@ -1398,7 +1433,6 @@
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap {
   width: 100%;
-  max-height: 640px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1441,7 +1475,6 @@
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
   border-bottom: none;
-  overflow-x: hidden !important;
 }
 .coil-sche-wrapper .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body table tbody tr {
   height: 36px;
@@ -1499,7 +1532,7 @@
   gap: 10px;
 }
 .coil-sche-wrapper.default .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 542px !important;
+  max-height: 563px !important;
 }
 .coil-sche-wrapper.default .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body table tbody tr {
   height: 42px;
@@ -1518,7 +1551,7 @@
   max-height: 705px;
 }
 .coil-sche-wrapper.live .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 609px !important;
+  max-height: 625px !important;
 }
 .coil-sche-wrapper.live .bottom-btn-wrap {
   justify-content: flex-start;
@@ -1560,7 +1593,7 @@
   background: #E0E0E0;
 }
 .coil-sche-wrapper.perform .dt-table-wrap .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body, .coil-sche-wrapper.mes .dt-table-wrap .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 611px !important;
+  max-height: 642px !important;
 }
 .coil-sche-wrapper.perform.mes table tbody tr td:nth-child(3), .coil-sche-wrapper.mes.mes table tbody tr td:nth-child(3) {
   text-align: left !important;
@@ -1593,7 +1626,7 @@
   height: 47px;
 }
 .coil-sche-wrapper.not-oper .flex-row .select-data-wrap .dt-table-wrap.scroll-table .dt-container .dt-layout-table .dt-layout-full .dt-scroll .dt-scroll-body {
-  max-height: 620px !important;
+  max-height: 657px !important;
 }
 .coil-sche-wrapper.not-oper .flex-row .standard-wrap {
   width: 460px;
@@ -1649,7 +1682,7 @@
 }
 
 .cleaning-wrapper {
-  background: url(../assets/img_bg_cleaning.png);
+  background: url(../img/resources/img_bg_cleaning.png);
   width: 1920px;
   height: 820px;
   overflow: hidden;
@@ -1708,7 +1741,7 @@
 .tank-box-wrap.s112x93 {
   width: 112px;
   height: 93px;
-  background: url(../assets/img_tankbox_112x93.png);
+  background: url(../img/resources/img_tankbox_112x93.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1721,7 +1754,7 @@
 .tank-box-wrap.s234x142 {
   width: 236px;
   height: 146px;
-  background: url(../assets/img_tankbox_234x142.png);
+  background: url(../img/resources/img_tankbox_234x142.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1734,7 +1767,7 @@
 .tank-box-wrap.s221x80 {
   width: 227px;
   height: 86px;
-  background: url(../assets/img_tankbox_221x80.png);
+  background: url(../img/resources/img_tankbox_221x80.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1747,7 +1780,7 @@
 .tank-box-wrap.s220x116 {
   width: 222px;
   height: 120px;
-  background: url(../assets/img_tankbox_220x116.png);
+  background: url(../img/resources/img_tankbox_220x116.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1762,7 +1795,7 @@
 .tank-box-wrap.s93x52 {
   width: 95px;
   height: 56px;
-  background: url(../assets/img_tankbox_93x52.png);
+  background: url(../img/resources/img_tankbox_93x52.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1776,7 +1809,7 @@
 .tank-box-wrap.s1028x101 {
   width: 1034px;
   height: 107px;
-  background: url(../assets/img_tankbox_1028x101.png);
+  background: url(../img/resources/img_tankbox_1028x101.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1789,7 +1822,7 @@
 .tank-box-wrap.s168x80 {
   width: 174px;
   height: 86px;
-  background: url(../assets/img_tankbox_168x80.png);
+  background: url(../img/resources/img_tankbox_168x80.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1802,7 +1835,7 @@
 .tank-box-wrap.s144x110-1 {
   width: 150px;
   height: 113px;
-  background: url(../assets/img_tankbox_144x110_1.png);
+  background: url(../img/resources/img_tankbox_144x110_1.png);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1816,7 +1849,7 @@
 .tank-box-wrap.s144x110-2 {
   width: 150px;
   height: 113px;
-  background: url(../assets/img_tankbox_144x110_2.png);
+  background: url(../img/resources/img_tankbox_144x110_2.png);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1830,7 +1863,7 @@
 .tank-box-wrap.s144x110-3 {
   width: 150px;
   height: 113px;
-  background: url(../assets/img_tankbox_144x110_3.png);
+  background: url(../img/resources/img_tankbox_144x110_3.png);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1844,7 +1877,7 @@
 .tank-box-wrap.s408x163 {
   width: 410px;
   height: 167px;
-  background: url(../assets/img_tankbox_408x163.png);
+  background: url(../img/resources/img_tankbox_408x163.png);
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1857,7 +1890,7 @@
 }
 
 .pickling-wrapper {
-  background: url(../assets/img_bg_pickling.png);
+  background: url(../img/resources/img_bg_pickling.png);
   width: 1920px;
   height: 820px;
   overflow: hidden;
@@ -1868,7 +1901,8 @@
 }
 
 .fluxing-wrapper {
-  background: url(../assets/img_bg_fluxing.png);
+  background: url(../img/resources/img_bg_fluxing.png);
+  background-position-y: 6px;
   width: 1920px;
   height: 820px;
   overflow: hidden;
@@ -1879,7 +1913,7 @@
 }
 
 .plating-wrapper {
-  background: url(../assets/img_bg_plating.png);
+  background: url(../img/resources/img_bg_plating.png);
   width: 1920px;
   height: 820px;
   overflow: hidden;
@@ -1895,7 +1929,7 @@
   left: 1656px;
   width: 118px;
   height: 268px;
-  background: url(../assets/img_bottle.png);
+  background: url(../img/resources/img_bottle.png);
   mix-blend-mode: multiply;
 }
 .plating-wrapper .water-wrap {
@@ -1905,13 +1939,13 @@
   max-height: 113px;
   left: 1658px;
   bottom: 442px;
-  background: url(../assets/img_water_sheep.png);
+  background: url(../img/resources/img_water_sheep.png);
   background-size: auto;
   background-position: bottom;
 }
 
 .fume-wrapper {
-  background: url(../assets/img_bg_fume.png);
+  background: url(../img/resources/img_bg_fume.png);
   width: 1920px;
   height: 820px;
   overflow: hidden;
@@ -1926,7 +1960,7 @@
   width: 92px;
   height: 217px;
   top: 118px;
-  background: url(../assets/img_bottle_s.png);
+  background: url(../img/resources/img_bottle_s.png);
   mix-blend-mode: multiply;
 }
 .fume-wrapper .water-wrap {
@@ -1935,13 +1969,13 @@
   width: 87px;
   max-height: 96px;
   bottom: 488px;
-  background: url(../assets/img_water_sheep_s.png);
+  background: url(../img/resources/img_water_sheep_s.png);
   background-size: auto;
   background-position: bottom;
 }
 
 .quenching-wrapper {
-  background: url(../assets/img_bg_quenching.png);
+  background: url(../img/resources/img_bg_quenching.png);
   width: 1920px;
   height: 820px;
   overflow: hidden;
@@ -1952,7 +1986,7 @@
 }
 
 .chemical-wrapper {
-  background: url(../assets/img_bg_chemical.png);
+  background: url(../img/resources/img_bg_chemical.png);
   background-position: 0px center;
   background-size: auto;
   background-repeat: no-repeat;
@@ -1966,7 +2000,7 @@
 }
 
 .hyd-entry-wrapper {
-  background: url(../assets/img_hyd_ENTRY.png);
+  background: url(../img/resources/img_hyd_ENTRY.png);
   background-position: center 128px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -2003,7 +2037,7 @@
 }
 
 .hyd-cpc-wrapper {
-  background: url(../assets/img_CPC_HYDRAULIC.png);
+  background: url(../img/resources/img_CPC_HYDRAULIC.png);
   background-position: center 107px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -2054,7 +2088,7 @@
 }
 
 .hyd-epc-wrapper {
-  background: url(../assets/img_hyd_EPC.png);
+  background: url(../img/resources/img_hyd_EPC.png);
   background-position: center 87px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -2091,7 +2125,7 @@
 }
 
 .hyd-exit-wrapper {
-  background: url(../assets/img_hyd_EXIT.png);
+  background: url(../img/resources/img_hyd_EXIT.png);
   background-position: center 128px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -2128,7 +2162,7 @@
 }
 
 .leakage-wrapper {
-  background: url(../assets/img_leakage.png);
+  background: url(../img/resources/img_leakage.png);
   background-position: center 139px;
   background-size: auto;
   background-repeat: no-repeat;
@@ -2189,5 +2223,5 @@
   background: #FEF546;
 }
 .leakage-wrapper .info-box .data.fault .ic-leakage {
-  background: url(../assets/ic_leakage_fault.svg);
+  background: url(../img/resources/ic_leakage_fault.svg);
 }
