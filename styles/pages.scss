@@ -907,11 +907,12 @@
 
 // CENTER 제어기준 설정
 .setting-center-wrapper {
+  justify-content: space-between;
   .list-grid {
     position: relative;    
     .list-data li > * {height: 36px;}
   }
-  padding: 90px;
+  padding: 156px 60px 80px 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -923,7 +924,8 @@
     // }
     &:last-child {
       // margin-top: 20px;
-      // justify-content: center;
+      gap: 20px;
+      justify-content: center;
       button {
         width: 196px;
         height: 48px;
@@ -993,15 +995,27 @@
   .gd-chemical {
     width: 400px;
 
+    .title-box {
+      position: relative;
+      .btn-setting {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 56px;
+        height: 20px;
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        @include flex_center;
+        font-weight: 700;
+        font-size: 12px;
+      }
+    }
     .list-data li {flex: 1;}
     .ls-up {margin-top: 20px;}
   }
 
-  .gd-con {
-    width: 541px;
-    .list-data li {flex: 1;}
-    .list-data li p.title {height: 80px;}
-  }
+
 
 
   .gd-attach {

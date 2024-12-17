@@ -1,0 +1,1271 @@
+<!doctype html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+
+        <title>DEMO PAGE</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <link rel="stylesheet" href="./css/common.css"/>
+        <link rel="stylesheet" href="./css/pages.css"/>
+        <link rel="stylesheet" href="./css/popup.css"/>
+        <link rel="stylesheet" href="./css/datatables.css"/>
+        </#if>
+    </head>
+
+    <body>
+    <div class="wrapper" style="overflow: hidden">
+            <header>
+    <div class="header-topbar">
+        <div class="topbar-left">
+            <div class="grp-arrow">
+                <button class="btn-arrow pre"></button>
+                <button class="btn-arrow next"></button>
+            </div>
+            <img src="/assets/hmi/img/resources/img_cmp_logo.png" class="img-logo" alt="logo">
+            <div class="line-name">
+                <img src="" alt="" class="ic-loc-16">
+                TP3 LINE
+            </div>
+        </div>
+        <p class="topbar-menutext">
+            ${_HEADER_TITLE?default('')}
+        </p>
+        <div class="topbar-right">
+            <div class="datetime-wrap">
+                <p class="date">  월   일 (월)</p>
+                <p class="time">오전 00:00:00</p>
+            </div>
+            <!--<button class="btn-onoff"></button>-->
+        </div>
+    </div>
+    <div class="header-contents" id="HEADER-WRAPPER">
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.DO.SYSHMI.COIL_SCHEDULE_CHANGE"></div>
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_CURRENT"></div>
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_NEXT"></div>
+        <div class="hd-table-wrap">
+            <table>
+                <colgroup>
+                    <col width="60px">
+                    <col width="100px">
+                    <col width="100px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="80px">
+                    <col width="80px">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>작업지시번호</th>
+                    <th>투입원판번호</th>
+                    <th>TOP</th>
+                    <th>BOT</th>
+                    <th>도유량</th>
+                    <th>CHE.(UP)</th>
+                    <th>CHE.(DN)</th>
+                    <th>두께</th>
+                    <th>폭</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr id="curCoil">
+                    <td>현 재</td>
+                    <td style="text-align: center;" data-id="T3.AO.PRODNO.CURRENT_Product_No">-</td>
+                    <td style="text-align: center;" data-id="T3.AO.COILNO.CURRENT_COIL_No">-</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_Top_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_Bottom_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_AMT_OF_OIL">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_CHEM_Up_Colum">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_CHEM_Down_Colum">0</td>
+                    <td data-id="T3.AO.THICKN.CURRENT_PLATE_THICK">0</td>
+                    <td data-id="T3.AO._WIDTH.CURRENT_PLATE_WIDTH">0</td>
+                </tr>
+                <tr id="nextCoil">
+                    <td>다 음</td>
+                    <td style="text-align: center;" data-id="T3.AO.PRODNO.NEXT_1_Product_No">-</td>
+                    <td style="text-align: center;" data-id="T3.AO.COILNO.NEXT_1_COIL_No">-</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_Top_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_Bottom_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_AMT_OF_OIL">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_CHEM_Up_Colum">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_CHEM_Down_Colum">0</td>
+                    <td data-id="T3.AO.THICKN.NEXT_1_PLATE_THICK">0</td>
+                    <td data-id="T3.AO._WIDTH.NEXT_1_PLATE_WIDTH">0</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="hd-grp-btn">
+            <button class="btn" data-settype="N" ESTOP="true" data-cb="Y" data-id="T3.DO.SYSHMI.EMG_STOP">비상정지</button>
+            <button class="btn" data-settype="N" ALERT="FAULT_EVENT_LINE" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.LINE_FAULT_ALL">라인고장</button>
+            <button class="btn" data-settype="N" ALERT="FAULT_EVENT" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.REC_FAULT_ALL">정류기 고장</button>
+            <button class="btn" data-settype="N" ALERT="INTERLOCK" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.LIMIT_ALARM_ALL">경보값 초과</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31CTM140" data-cb="Y" data-id="T3.DI.ALMEVT.HELPER_FAULT_ALL">HELPER</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31ENM040" data-cb="Y" data-id="T3.DI.LINEVT.Entry_Stand_By">ENTRY<br> STAND BY</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31CTM150" data-cb="Y" data-id="T3.DI.LINEVT.Center_Stand_By">CENTER<br> STAND BY</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31EXM080" data-cb="Y" data-id="T3.DI.LINEVT.Exit_Stand_By">EXIT<br> STAND BY</button>
+        </div>
+        <ul class="hd-info-speed">
+            <li>
+                <div class="title">ENTRY SPEED</div>
+                <div class="value"
+                     data-cb="Y"
+                     data-format='{"def_unit":" mpm"}'
+                     data-id="T3.AI._SPEED.NO1_BR_Entry_Actual_Speed">0 mpm</div>
+            </li>
+            <li>
+                <div class="title">LINE SPEED</div>
+                <div class="value"
+                     data-cb="Y"
+                     data-format='{"def_unit":" mpm"}'
+                     data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed">0 mpm</div>
+            </li>
+        </ul>
+    </div>
+    <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL &amp; (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li>LINE TRACKING</li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <!-- <li><p>ENTRY COIL CAR</p></li> -->
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PRE PLATING</p></li>
+              <li><p>POST PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li> 
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <!-- <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li> -->
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>            
+            <p class="mainmenu-title">HYDRAULIC</p>
+            <ul class="submenu-wrap">
+              <li><p>TP3 유압라인 (ENTRY)</p></li>
+              <li class="line-2"><p>TP3 유압라인<br> (CPC HYDRAULIC)</p></li>
+              <li class="line-2"><p>TP3 유압라인<br> (EXIT EPC HYDRAULIC)</p></li>
+              <li><p>TP3 유압라인 (EXIT)</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM / EVENT</p>
+            <ul class="submenu-wrap">
+              <li class="line-2"><p>SUMMARY ALARMM<br> (Real Time)</p></li>
+              <li><p>HISTORY ALARMS</p></li>
+              <li><p>HISTORY EVENTS</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+</header>
+            <main>
+<div class="main-wrapper line-trk-wrapper" id="TP31LTM010-WRAPPER">
+
+		<div data-id="T3.DI.SYSHMI.LINE_STOP" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.DI.SYSHMI.DRIVE_STOP" data-settype="N" data-cb="Y"></div>
+
+		<div data-id="T3.DI.FLTEVT.NO1_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO2_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO3_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO4_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO5_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO6_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO7_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO8_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO9_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO10_BOT_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO1_Top_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO2_Top_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO3_Top_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO4_Top_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO5_Top_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO6_Top_Rec_FLT" data-cb="Y" data-settype="N"></div>
+		<div data-id="T3.DI.FLTEVT.NO7_Top_Rec_FLT" data-cb="Y" data-settype="N"></div>
+
+
+		<div data-id="T3.DI._ALARM.Quenching_TEMP_ALARM" data-settype="N" data-cb="Y"></div>
+
+		<div data-id="T3.DO.SYSHMI.COIL_SCHEDULE_CHANGE" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.AO.PRODNO.CURRENT_Product_No" data-settype="N" data-cb="Y"></div>
+
+		<div data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_CURRENT"></div>
+		<div data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_NEXT"></div>
+		<div data-settype="N" data-cb="Y" data-id="T3.AO.COILNO.CURRENT_COIL_POS"></div>
+		<div data-settype="N" data-cb="Y" data-id="T3.AO.COILNO.NEXT_COIL_POS"></div>
+
+		<!--
+		<div data-id="T3.DI.NOREVT.NO1_POR_Up_Path" data-settype="N" data-cb="N"></div>
+		<div data-id="T3.DI.NOREVT.NO2_POR_Up_Path" data-settype="N" data-cb="N"></div>
+		-->
+		<div data-id="T3.AO.COILNO.CURRENT_COIL_No" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.AO.COILNO.NEXT_1_COIL_No" data-settype="N" data-cb="Y"></div>
+
+		<div data-id="T3.DI.FELEVT.CHEM_Down_Rec_FLT" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.DI.FELEVT.CHEM_Up_Rec_FLT" data-settype="N" data-cb="Y"></div>
+
+		<div data-id="T3.AI.COLOR.Line_Tracking_TR1" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.AI.COLOR.Line_Tracking_TR2" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.AI.COLOR.Line_Tracking_POR1" data-settype="N" data-cb="Y"></div>
+		<div data-id="T3.AI.COLOR.Line_Tracking_POR2" data-settype="N" data-cb="Y"></div>
+
+		<div class="bg-line-wrap">
+			<div class="line-box">
+				<!-- new por,tr 퍼블 재적용 -->
+
+				<!-- new por,tr 퍼블 재적용 -->
+				<div class="l-POR_1_00"></div>
+				<div class="l-POR_1_01"></div>
+				<div class="l-POR_1_1_00"></div>
+				<div class="l-POR_1_02"></div>
+				<div class="l-POR_1_03"></div>
+				<div class="l-POR_2_0"></div>
+				<div class="l-POR_2_1"></div>
+				<div class="l-POR_2_ALL"></div>
+				<div class="l-TR_1_1"></div>
+				<div class="l-TR_1_2"></div>
+				<div class="l-TR_2_1"></div>
+				<div class="l-TR_2_2"></div>
+				<div class="l-TR_2_3"></div>
+				<div class="l-TR_2_4"></div>
+				<div class="l-TR_2_5"></div>
+
+				<!-- <div data-line-id="TR_11" data-line-dir="DOWN" class="l-POR_1-0"></div>
+				<div data-line-id="TR_11" data-line-dir="UP" class="l-POR_1-1"></div>
+				<div data-line-id="TR_12" class="l-POR_1-2"></div>
+				<div data-line-id="TR_13" class="l-POR_1-3"></div>
+				<div data-line-id="TR_14" class="l-POR_1-4"></div>
+				<div data-line-id="TR_15" class="l-POR_1-5" data-zindex="Y"></div>
+
+				<div data-line-id="TR_21" data-line-dir="UP" class="l-POR_2-0"></div>
+				<div data-line-id="TR_21" data-line-dir="DOWN" class="l-POR_2-1"></div>
+				<div data-line-id="TR_22" data-line-dir="DOWN" class="l-POR_2-2"></div>
+				<div data-line-id="TR_23" class="l-POR_2-3"></div>
+				<div data-line-id="TR_24" class="l-POR_2-4" data-zindex="Y"></div>
+
+				<div data-line-id="TR_320" class="l-TR_1-1"></div>
+				<div data-line-id="TR_321" class="l-TR_1-2"></div>
+				<div data-line-id="TR_322" class="l-TR_1-3"></div>
+				<div data-line-id="TR_323" class="l-TR_1-4"></div>
+				<div data-line-id="TR_311" class="l-TR_2-1"></div>
+				<div data-line-id="TR_312" class="l-TR_2-2"></div>
+				<div data-line-id="TR_313" class="l-TR_2-3"></div>
+				<div data-line-id="TR_314" class="l-TR_2-4"></div>
+				<div data-line-id="TR_315" class="l-TR_2-5"></div> -->
+
+				<div data-line-id="TR_100" class="l-LINE_1"></div>
+				<div data-line-id="TR_101" class="l-LINE_2" data-length="0"></div>
+				<div data-line-id="TR_102" class="l-LINE_3"></div>
+				<div data-line-id="TR_103" class="l-LINE_4"></div>
+				<div data-line-id="TR_104" class="l-LINE_5"></div>
+				<div data-line-id="TR_105" class="l-LINE_6"></div>
+				<div data-line-id="TR_106" class="l-LINE_7" data-tag-id="T3.DI.TRKING.Entry_Looper"></div>
+				<div data-line-id="TR_150" class="l-LINE_8"></div>
+				<div data-line-id="TR_151" class="l-LINE_9" data-length="400"></div>
+				<div data-line-id="TR_152" class="l-LINE_10"></div>
+				<div data-line-id="TR_153" class="l-LINE_11"></div>
+				<div data-line-id="TR_154" class="l-LINE_12"></div>
+				<div data-line-id="TR_155" class="l-LINE_13" data-tag-id="T3.DI.TRKING.NO2_Bridle_Roll"></div>
+				<div data-line-id="TR_156" class="l-LINE_14"></div>
+				<div data-line-id="TR_157" class="l-LINE_15"></div>
+				<div data-line-id="TR_158" class="l-LINE_16"></div>
+				<div data-line-id="TR_159" class="l-LINE_17"></div>
+				<div data-line-id="TR_160" class="l-LINE_18"></div>
+				<div data-line-id="TR_161" class="l-LINE_19" data-tag-id="T3.DI.TRKING.Cleaning"></div>
+				<div data-line-id="TR_162" class="l-LINE_20"></div>
+				<div data-line-id="TR_163" class="l-LINE_21"></div>
+				<div data-line-id="TR_164" class="l-LINE_22"></div>
+				<div data-line-id="TR_165" class="l-LINE_23"></div>
+				<div data-line-id="TR_166" class="l-LINE_24"></div>
+				<div data-line-id="TR_167" class="l-LINE_25"></div>
+				<div data-line-id="TR_168" class="l-LINE_26"></div>
+				<div data-line-id="TR_169" class="l-LINE_27"></div>
+				<div data-line-id="TR_170" class="l-LINE_28" data-tag-id="T3.DI.TRKING.Pickling"></div>
+				<div data-line-id="TR_171" class="l-LINE_29"></div>
+				<div data-line-id="TR_172" class="l-LINE_30"></div>
+				<div data-line-id="TR_173" class="l-LINE_31"></div>
+				<div data-line-id="TR_174" class="l-LINE_32"></div>
+				<div data-line-id="TR_175" class="l-LINE_33"></div>
+				<div data-line-id="TR_176" class="l-LINE_34" data-tag-id="T3.DI.TRKING.Pre_Plating"></div>
+				<div data-line-id="TR_177" class="l-LINE_35"></div>
+				<div data-line-id="TR_178" class="l-LINE_36" data-tag-id="T3.DI.TRKING.BOT_Plating_NO1"></div>
+				<div data-line-id="TR_179" class="l-LINE_37" data-tag-id="T3.DI.TRKING.BOT_Plating_NO2"></div>
+				<div data-line-id="TR_180" class="l-LINE_38" data-tag-id="T3.DI.TRKING.BOT_Plating_NO3"></div>
+				<div data-line-id="TR_181" class="l-LINE_39" data-tag-id="T3.DI.TRKING.BOT_Plating_NO4"></div>
+				<div data-line-id="TR_182" class="l-LINE_40" data-tag-id="T3.DI.TRKING.BOT_Plating_NO5"></div>
+				<div data-line-id="TR_183" class="l-LINE_41" data-tag-id="T3.DI.TRKING.BOT_Plating_NO6"></div>
+				<div data-line-id="TR_184" class="l-LINE_42" data-tag-id="T3.DI.TRKING.BOT_Plating_NO7"></div>
+				<div data-line-id="TR_185" class="l-LINE_43" data-tag-id="T3.DI.TRKING.BOT_Plating_NO8"></div>
+				<div data-line-id="TR_186" class="l-LINE_44" data-tag-id="T3.DI.TRKING.BOT_Plating_NO9"></div>
+				<div data-line-id="TR_187" class="l-LINE_45" data-tag-id="T3.DI.TRKING.BOT_Plating_NO10"></div>
+				<div data-line-id="TR_188" class="l-LINE_46"></div>
+				<div data-line-id="TR_189" class="l-LINE_47"></div>
+				<div data-line-id="TR_190" class="l-LINE_48"></div>
+				<div data-line-id="TR_191" class="l-LINE_49" data-tag-id="T3.DI.TRKING.Top_Plating_NO1"></div>
+				<div data-line-id="TR_192" class="l-LINE_50" data-tag-id="T3.DI.TRKING.Top_Plating_NO2"></div>
+				<div data-line-id="TR_193" class="l-LINE_51" data-tag-id="T3.DI.TRKING.Top_Plating_NO3"></div>
+				<div data-line-id="TR_194" class="l-LINE_52" data-tag-id="T3.DI.TRKING.Top_Plating_NO4"></div>
+				<div data-line-id="TR_195" class="l-LINE_53" data-tag-id="T3.DI.TRKING.Top_Plating_NO5"></div>
+				<div data-line-id="TR_196" class="l-LINE_54" data-tag-id="T3.DI.TRKING.Top_Plating_NO6"></div>
+				<div data-line-id="TR_197" class="l-LINE_55" data-tag-id="T3.DI.TRKING.Top_Plating_NO7"></div>
+				<div data-line-id="TR_198" class="l-LINE_56"></div>
+				<div data-line-id="TR_199" class="l-LINE_57"></div>
+				<div data-line-id="TR_200" class="l-LINE_58" data-length="700"></div>
+				<div data-line-id="TR_201" class="l-LINE_59"></div>
+				<div data-line-id="TR_202" class="l-LINE_60" data-tag-id="T3.DI.TRKING.Rinse"></div>
+				<div data-line-id="TR_203" class="l-LINE_61"></div>
+				<div data-line-id="TR_204" class="l-LINE_62"></div>
+				<div data-line-id="TR_205" class="l-LINE_63"></div>
+				<div data-line-id="TR_206" class="l-LINE_64" data-tag-id="T3.DI.TRKING.Fluxing"></div>
+				<div data-line-id="TR_207" class="l-LINE_65"></div>
+				<div data-line-id="TR_208" class="l-LINE_66"></div>
+				<div data-line-id="TR_209" class="l-LINE_67" data-tag-id="T3.DI.TRKING.Dryer"></div>
+				<div data-line-id="TR_210" class="l-LINE_68"></div>
+				<div data-line-id="TR_211" class="l-LINE_69"></div>
+				<div data-line-id="TR_212" class="l-LINE_70"></div>
+				<div data-line-id="TR_213" class="l-LINE_71"></div>
+				<div data-line-id="TR_214" class="l-LINE_72"></div>
+				<div data-line-id="TR_215" class="l-LINE_73"></div>
+				<div data-line-id="TR_216" class="l-LINE_74"></div>
+				<div data-line-id="TR_217" class="l-LINE_75"></div>
+				<div data-line-id="TR_218" class="l-LINE_76" data-tag-id="T3.DI.TRKING.Reflow"></div>
+				<div data-line-id="TR_219" class="l-LINE_77"></div>
+				<div data-line-id="TR_220" class="l-LINE_78"></div>
+				<div data-line-id="TR_221" class="l-LINE_79"></div>
+				<div data-line-id="TR_222" class="l-LINE_80"></div>
+				<div data-line-id="TR_223" class="l-LINE_81"></div>
+				<div data-line-id="TR_224" class="l-LINE_82"></div>
+				<div data-line-id="TR_225" class="l-LINE_83"></div>
+				<div data-line-id="TR_226" class="l-LINE_84"></div>
+				<div data-line-id="TR_227" class="l-LINE_85"></div>
+				<div data-line-id="TR_228" class="l-LINE_86"></div>
+				<div data-line-id="TR_229" class="l-LINE_87"></div>
+				<div data-line-id="TR_230" class="l-LINE_88"></div>
+				<div data-line-id="TR_231" class="l-LINE_89"></div>
+				<div data-line-id="TR_232" class="l-LINE_90" data-tag-id="T3.DI.TRKING.Chemical"></div>
+				<div data-line-id="TR_233" class="l-LINE_91"></div>
+				<div data-line-id="TR_234" class="l-LINE_92"></div>
+				<div data-line-id="TR_235" class="l-LINE_93"></div>
+				<div data-line-id="TR_236" class="l-LINE_94"></div>
+				<div data-line-id="TR_237" class="l-LINE_95"></div>
+				<div data-line-id="TR_238" class="l-LINE_96"></div>
+				<div data-line-id="TR_239" class="l-LINE_97"></div>
+				<div data-line-id="TR_240" class="l-LINE_98"></div>
+				<div data-line-id="TR_241" class="l-LINE_99"></div>
+				<div data-line-id="TR_242" class="l-LINE_100"></div>
+				<div data-line-id="TR_243" class="l-LINE_101"></div>
+				<div data-line-id="TR_244" class="l-LINE_102"></div>
+				<div data-line-id="TR_245" class="l-LINE_103"></div>
+				<div data-line-id="TR_246" class="l-LINE_104"></div>
+				<div data-line-id="TR_247" class="l-LINE_105" data-tag-id="T3.DI.TRKING.ES_Oilerl"></div>
+				<div data-line-id="TR_248" class="l-LINE_106"></div>
+				<div data-line-id="TR_249" class="l-LINE_107"></div>
+				<div data-line-id="TR_250" class="l-LINE_108"></div>
+				<div data-line-id="TR_251" class="l-LINE_109"></div>
+				<div data-line-id="TR_252" class="l-LINE_110"></div>
+				<div data-line-id="TR_253" class="l-LINE_111"></div>
+				<div data-line-id="TR_254" class="l-LINE_112"></div>
+				<div data-line-id="TR_255" class="l-LINE_113"></div>
+				<div data-line-id="TR_256" class="l-LINE_114" data-tag-id="T3.DI.TRKING.NO3_Bridle_Roll"></div>
+				<div data-line-id="TR_257" class="l-LINE_115"></div>
+				<div data-line-id="TR_258" class="l-LINE_116"></div>
+				<div data-line-id="TR_259" class="l-LINE_117"></div>
+				<div data-line-id="TR_260" class="l-LINE_118"></div>
+				<div data-line-id="TR_261" class="l-LINE_119" data-length="1000"></div>
+
+			</div>
+		</div>
+
+		<div class="ic-trk-CLEANING1 fault" data-format='{"type":"fault_img_cls"}' data-id="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT" style="top: 235px;left: 530px; cursor:unset !important;"></div>
+		<div class="ic-trk-CLEANING2 fault" data-format='{"type":"fault_img_cls"}' data-id="T3.DI.FLTEVT.NO2_Cleaning_Rec_FLT" style="top: 235px;left: 587px; cursor:unset !important;"></div>
+		<div class="ic-trk-CL-RINSE fault" style="top: 235px;left: 671px; cursor:unset !important;"></div>
+		<div class="ic-trk-PICKLING fault" style="top: 235px;left: 739px; cursor:unset !important;"></div>
+		<div class="ic-trk-PK-RINSE fault" style="top: 170px;left: 825px; cursor:unset !important;"></div>
+		<div class="ic-trk-PT-RINSE1 fault" style="top: 93px;left: 968px; cursor:unset !important;"></div>
+		<div class="ic-trk-PT-RINSE2 fault" style="top: 93px;left: 1047px; cursor:unset !important;"></div>
+		<div class="ic-trk-FLUXING fault" style="top: 93px;left: 1085px; cursor:unset !important;"></div>
+		<div class="ic-trk-REFLOW fault" style="top: 87px;left: 1359px; cursor:unset !important;"></div>
+		<div class="ic-trk-QUENCHING fault" style="top: 254px;left: 1379px; cursor:unset !important;"></div>
+		<div class="ic-trk-CHEMICAL fault" style="top: 270px;left: 1470px; cursor:unset !important;"></div>
+		<div class="ic-trk-CHEMICAL fault" style="top: 270px;left: 1490px; cursor:unset !important;"></div>
+		<div class="ic-trk-CHEMICAL fault" style="top: 270px;left: 1510px; cursor:unset !important;"></div>
+		<div class="ic-trk-box1 fault" style="top: 208px;left: 1516px; cursor:unset !important;"></div>
+		<!-- Start 아이콘 배치 클래스 stop,run-r,run-l,fault 추가시 상태 아이콘 변경 ------->
+		<!-- #1 POR -->
+		<!--<div class="ic-roll-40" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:297px;left:25px;" data-id="T3.DI.LINEVT.NO1_POR_Run"></div>-->
+		<!--<div class="ic-roll-40" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:297px;left:103px;" data-id="T3.DI.LINEVT.NO2_POR_Run"></div>-->
+
+		<div class="ic-roll-40" data-cb="Y" data-settype="N" style="top:292px;left:18px;" data-id="T3.DI.LINEVT.NO1_POR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"pinchRoll-e"}' style="top:284px;left:79px;" data-id="T3.DI.NOREVT.NO1_PR_Open_px"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:292px;left:79px;" data-id="T3.DI.LINEVT.NO1_POR_Run"></div>
+		<div class="ic-roll-6 move-up1" data-cb="N" data-format='{"type":"pinchRoll-e","roll-dir":"l-run"}' style="top:289px;left:161px;" data-id="T3.DI.LINEVT.NO1_POR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:292px;left:159px;" data-id="T3.DI.LINEVT.NO1_POR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:300px;left:204px;" data-id="T3.DI.LINEVT.NO1_POR_Run"></div>
+		<div class="ic-roll-40" data-cb="Y" data-settype="N" style="top:292px;left:107px;" data-id="T3.DI.LINEVT.NO2_POR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:318px;left:156px;" data-id="T3.DI.LINEVT.NO2_POR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"pinchRoll-e"}' style="top:303px;left:168px;" data-id="T3.DI.LINEVT.NO2_POR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:311px;left:169px;" data-id="T3.DI.LINEVT.NO2_POR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:308px;left:194px;" data-id="T3.DI.LINEVT.NO2_POR_Run"></div>
+
+		<div class="ic-roll-40" data-cb="Y" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:277px;left:1779px;" data-id="T3.DI.LINEVT.NO1_TR_Run"></div>
+		<div class="ic-roll-40" data-cb="Y" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:277px;left:1846px;" data-id="T3.DI.LINEVT.NO2_TR_Run"></div>
+
+		<div class="ic-roll-18" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:311px;left:229px;" data-id="T3.DI.LINEVT.NO1BR_Run"></div>
+		<div class="ic-roll-18" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:308px;left:252px;" data-id="T3.DI.LINEVT.NO1BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"pinchRoll-e"}' style="top:300px;left:258px;" data-id="T3.DI.LINEVT.NO1BR_Run"></div>
+
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:317px;left:276px;" data-id="T3.DI.LINEVT.NO1BR_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:224px;left:289px;" data-id="T3.DI.LINEVT.NO1BR_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:224px;left:305px;" data-id="T3.DI.LINEVT.NO1BR_Run"></div>
+
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:227px;left:442px;" data-id="T3.DI.LINEVT.NO2_BR_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:227px;left:457px;" data-id="T3.DI.LINEVT.NO2_BR_Run"></div>
+		<div class="ic-roll-8" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:264px;left:470px;" data-id="T3.DI.LINEVT.NO2_BR_Run"></div>
+		<div class="ic-roll-18" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:251px;left:484px;" data-id="T3.DI.LINEVT.NO2_BR_Run"></div>
+		<div class="ic-roll-18" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:254px;left:507px;" data-id="T3.DI.LINEVT.NO2_BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"pinchRoll-e"}' style="top:243px;left:490px;" data-id="T3.DI.NOREVT.NO2_Bridle_HD_Roll_Close"></div>
+
+
+
+
+
+
+
+
+<!--#1 CLEANING-->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:252px;left:537px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:243px;left:555px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:243px;left:572px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:240px;left:535px;"></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:251px;left:553px;"></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:251px;left:570px;"></div>
+<!--		#2 CLEANING-->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:243px;left:654px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:251px;left:596px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:251px;left:631px;" ></div>
+		<div class="ic-roll-8 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:251px;left:653px;" ></div>
+
+<!--		CLEANING RINSE-->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:243px;left:677px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:243px;left:722px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:252px;left:677px;" ></div>
+		<div class="ic-roll-8 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:251px;left:721px;" ></div>
+<!--		PLCKLING-->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:243px;left:808px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:251px;left:747px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:251px;left:785px;" ></div>
+		<div class="ic-roll-8 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:251px;left:807px;" ></div>
+
+<!--		PLCKLING RINSE-->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:183px;left:897px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:183px;left:905px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:251px;left:833px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:251px;left:889px;" ></div>
+
+<!--		BETWEEN-->
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:112px;left:905px;"></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:112px;left:920px;"></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:238px;left:932px;"></div>
+		<!-- BOTTOM PLATING -->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:243px;left:968px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:250px;left:968px;"></div>
+
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO1_BOT_Rec_RUNMODE" name="NO1_BOT" style="top:243px;left:996px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO2_BOT_Rec_RUNMODE" name="NO2_BOT" style="top:243px;left:1024px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO3_BOT_Rec_RUNMODE" name="NO3_BOT" style="top:243px;left:1052px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO4_BOT_Rec_RUNMODE" name="NO4_BOT" style="top:243px;left:1080px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO5_BOT_Rec_RUNMODE" name="NO5_BOT" style="top:243px;left:1108px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO6_BOT_Rec_RUNMODE" name="NO6_BOT" style="top:243px;left:1136px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO7_BOT_Rec_RUNMODE" name="NO7_BOT" style="top:243px;left:1164px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO8_BOT_Rec_RUNMODE" name="NO8_BOT" style="top:243px;left:1192px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO9_BOT_Rec_RUNMODE" name="NO9_BOT" style="top:243px;left:1220px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO10_BOT_Rec_RUNMODE" name="NO10_BOT" style="top:243px;left:1248px;"></div>
+
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO1_BOT_Rec_RUNMODE" name="NO1_BOT" style="top:250px;left:996px;"></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO2_BOT_Rec_RUNMODE" name="NO2_BOT" style="top:250px;left:1024px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO3_BOT_Rec_RUNMODE" name="NO3_BOT" style="top:250px;left:1052px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO4_BOT_Rec_RUNMODE" name="NO4_BOT" style="top:250px;left:1080px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO5_BOT_Rec_RUNMODE" name="NO5_BOT" style="top:250px;left:1108px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO6_BOT_Rec_RUNMODE" name="NO6_BOT" style="top:250px;left:1136px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO7_BOT_Rec_RUNMODE" name="NO7_BOT" style="top:250px;left:1164px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO8_BOT_Rec_RUNMODE" name="NO8_BOT" style="top:250px;left:1192px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO9_BOT_Rec_RUNMODE" name="NO9_BOT" style="top:250px;left:1220px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO10_BOT_Rec_RUNMODE" name="NO10_BOT" style="top:250px;left:1248px;" ></div>
+
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:239px;left:1275px;"></div>
+		<!-- TOP PLATING -->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:185px;left:1277px;"></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:193px;left:1275px;"></div>
+
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO7_Top_Rec_RUNMODE" name="NO7_Top" style="top:185px;left:1080px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO6_Top_Rec_RUNMODE" name="NO6_Top" style="top:185px;left:1108px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO5_Top_Rec_RUNMODE" name="NO5_Top" style="top:185px;left:1136px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO4_Top_Rec_RUNMODE" name="NO4_Top" style="top:185px;left:1164px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO3_Top_Rec_RUNMODE" name="NO3_Top" style="top:185px;left:1192px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO2_Top_Rec_RUNMODE" name="NO2_Top" style="top:185px;left:1220px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' data-id="T3.DO.SYSHMI.NO1_Top_Rec_RUNMODE" name="NO1_Top" style="top:185px;left:1248px;"></div>
+
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO7_Top_Rec_RUNMODE" name="NO7_Top" style="top:193px;left:1080px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO6_Top_Rec_RUNMODE" name="NO6_Top" style="top:193px;left:1108px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO5_Top_Rec_RUNMODE" name="NO5_Top" style="top:193px;left:1136px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO4_Top_Rec_RUNMODE" name="NO4_Top" style="top:193px;left:1164px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO3_Top_Rec_RUNMODE" name="NO3_Top" style="top:193px;left:1192px;" ></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO2_Top_Rec_RUNMODE" name="NO2_Top" style="top:193px;left:1220px;"></div>
+		<div class="ic-roll-6 plating-roll" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-l"}' data-id="T3.DO.SYSHMI.NO1_Top_Rec_RUNMODE" name="NO1_Top" style="top:193px;left:1248px;" ></div>
+
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:185px;left:1052px;"></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:193px;left:1052px;"></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:181px;left:956px;"></div>
+
+		<!-- PLATING RINSE -->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:111px;left:948px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:109px;left:956px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:104px;left:1035px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:112px;left:1033px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:104px;left:1065px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:112px;left:1063px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:112px;left:972px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:112px;left:1012px;" ></div>
+
+		<!-- FLUXING -->
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:104px;left:1148px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:112px;left:1146px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:112px;left:1090px;" ></div>
+		<div class="ic-roll-14 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:112px;left:1125px;" ></div>
+
+		<!-- BETWEEN -->
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:112px;left:1301px;" ></div>
+		<div class="ic-roll-6" data-cb="N" style="top:114px;left:1313px;"></div>
+		<div class="ic-roll-4" data-cb="N" style="top:115px;left:1320px;"></div>
+		<div class="ic-roll-4" data-cb="N" style="top:115px;left:1325px;"></div>
+
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:199px;left:1313px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:199px;left:1327px;" ></div>
+		<div class="ic-roll-12 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:111px;left:1338px;" ></div>
+		<div class="ic-roll-12 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:231px;left:1352px;" ></div>
+		<div class="ic-roll-6" data-cb="N" style="top:235px;left:1344px;"></div>
+		<div class="ic-roll-4" data-cb="N" style="top:236px;left:1339px;"></div>
+		<div class="ic-roll-4" data-cb="N" style="top:236px;left:1334px;"></div>
+		<!--		REFLOW-->
+		<div class="ic-roll-15 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:94px;left:1367px;" ></div>
+		<!-- QUENCHING -->
+		<div class="ic-roll-12 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:266px;left:1384px;" ></div>
+		<div class="ic-roll-12 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:230px;left:1398px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:233px;left:1390px;" ></div>
+		<div class="ic-roll-7 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:254px;left:1412px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:111px;left:1422px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:111px;left:1435px;" ></div>
+		<!-- CHEMICAL -->
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:220px;left:1447px;" ></div>
+		<div class="ic-roll-11 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:232px;left:1462px;" ></div>
+		<div class="ic-roll-8 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:296px;left:1475px;" ></div>
+		<div class="ic-roll-8 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:296px;left:1495px;" ></div>
+		<div class="ic-roll-8 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:296px;left:1515px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:232px;left:1484px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:232px;left:1504px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:234px;left:1475px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:234px;left:1496px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:216px;left:1517px;" ></div>
+		<div class="ic-roll-6 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:216px;left:1525px;" ></div>
+		<!-- #2,#3 AIR DRYER -->
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:110px;left:1525px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:110px;left:1538px;" ></div>
+		<!-- PIN HOLE DETECTOR -->
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:306px;left:1547px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:306px;left:1567px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:159px;left:1578px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:159px;left:1594px;" ></div>
+		<div class="ic-roll-10 line-roll" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:283px;left:1607px;" ></div>
+
+		<!-- #3 BRIDLE ROLL -->
+		<div class="ic-roll-18" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:303px;left:1638px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-18" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-r"}' style="top:296px;left:1658px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-18" data-cb="N" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:303px;left:1693px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"pinchRoll-e","roll-dir":"run-l"}' style="top:288px;left:1664px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:300px;left:1681.5px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"pinchRoll-e","roll-dir":"run-r"}' style="top:295px;left:1698px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+
+		<!-- SNIP SHEAR -->
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"pinchRoll-e","roll-dir":"run-l"}' style="top:257px;left:1707px;" data-id="T3.DI.NOREVT.Snip_Shear_PR"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:257px;left:1724px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:265px;left:1705px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:265px;left:1724px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:259px;left:1752px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:257px;left:1766px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:267px;left:1830px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:271px;left:1766px;" data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+
+		<!-- #2 CPC -->
+		<div class="ic-cpc2" data-cb="N" data-format='{"type":"basic-e"}' style="top:135px;left:926px;"></div>
+
+		<div class="ic-air-dryer" data-cb="N" data-format='{"type":"basic-e"}' style="top:103px;left:1220px;"></div>
+		<div class="ic-air-dryer2" data-cb="N" data-format='{"type":"basic-e"}' style="top:126px;left:1516px;"></div>
+		<div class="ic-air-dryer2" data-cb="N" data-format='{"type":"basic-e"}' style="top:126px;left:1539px;"></div>
+
+		<!-- WELDER -->
+		<div class="ic-welder" data-cb="N" data-format='{"type":"basic-e"}' style="top:292px;left:219px;"></div>
+		<div class="ic-cpc" data-cb="N" data-format='{"type":"basic-e"}' style="top:244px;left:459.05px;"></div>
+		<div class="ic-pinhole" data-cb="N" data-format='{"type":"basic-e"}' style="top:314px;left:1560px;" data-id="T3.DI.DISPLY.NO1_Pin_Hole_Detector"></div>
+		<div class="ic-esoiler" data-cb="N" data-format='{"type":"basic-e"}' style="top:179px;left:1574px;" data-id="T3.DO.SYSHMI.ES_Oiler_RUNMODE"></div>
+		<div class="ic-tgcwg" data-cb="N" data-format='{"type":"basic-e"}' style="top:289px;left:1624px;"></div>
+		<div class="ic-tgcwg" data-cb="N" data-format='{"type":"basic-e"}' style="top:289px;left:1630px;"></div>
+		<div class="ic-snip" data-cb="N" data-format='{"type":"basic-e","roll-dir":"run-r"}' style="top:249px;left:1735px;" data-id="T3.DI.LINEVT.SSPR_Run"></div>
+		<!-- PLATING -->
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:981px;" name="NO1_BOT" data-id="T3.DO.SYSHMI.NO1_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1010px;" name="NO2_BOT" data-id="T3.DO.SYSHMI.NO2_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1038px;" name="NO3_BOT" data-id="T3.DO.SYSHMI.NO3_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1066px;" name="NO4_BOT" data-id="T3.DO.SYSHMI.NO4_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1094px;" name="NO5_BOT" data-id="T3.DO.SYSHMI.NO5_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1122px;" name="NO6_BOT" data-id="T3.DO.SYSHMI.NO6_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1150px;" name="NO7_BOT" data-id="T3.DO.SYSHMI.NO7_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1178px;" name="NO8_BOT" data-id="T3.DO.SYSHMI.NO8_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1206px;" name="NO9_BOT" data-id="T3.DO.SYSHMI.NO9_BOT_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:247px;left:1234px;" name="NO10_BOT" data-id="T3.DO.SYSHMI.NO10_BOT_Rec_RUNMODE"></div>
+
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:189px;left:1066px;" name="NO1_Top" data-id="T3.DO.SYSHMI.NO7_Top_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:189px;left:1094px;" name="NO2_Top" data-id="T3.DO.SYSHMI.NO6_Top_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:189px;left:1122px;" name="NO3_Top" data-id="T3.DO.SYSHMI.NO5_Top_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:189px;left:1150px;" name="NO4_Top" data-id="T3.DO.SYSHMI.NO4_Top_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:189px;left:1178px;" name="NO5_Top" data-id="T3.DO.SYSHMI.NO3_Top_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:189px;left:1206px;" name="NO6_Top" data-id="T3.DO.SYSHMI.NO2_Top_Rec_RUNMODE"></div>
+		<div class="ic-plating" data-cb="Y" data-format='{"type":"basic-e"}' style="top:189px;left:1234px;" name="NO7_Top" data-id="T3.DO.SYSHMI.NO1_Top_Rec_RUNMODE"></div>
+
+		<!-- TENSION LOOP -->
+		<div class="img-trk-loop-box" style="top: 133px;left: 324px;"></div>
+		<div class="img-trk-loop-top-bar" style="top: 131px;left: 311.5px;"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:121px;left:318px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-6" data-cb="N" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:121px;left:433px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:316px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:327px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:338px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:349px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:360px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:371px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:383px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:394px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:405px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:416px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-roll-10" data-cb="N" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:431px;" data-id="T3.DI.LINEVT.ELT_Run"></div>
+		<div class="ic-cam1-up" style="top:314px;left:1526px;"></div>
+		<div class="ic-cam1-down" style="top:98px;left:1549px;"></div>
+		<div class="ic-wpd-s" style="top:165px;left:433px;"></div>
+
+		<!-- loop ------>
+		<!-- loop-box 의 height 260px기준 1%는 2.6px로 계산 이동 -->
+		<div class="loop-box-wrapper" id="loop-box-wrapper" style="height: 260px">
+			<div class="loop-box">
+				<div class="line-box">
+					<!-- cl-type2:blue cl-type3:green cl-type4:white -->
+
+					<!-- 라인 전체 처리인 경우  -->
+					<!-- <img alt="" class="img-loop-line  cl-type2"> -->
+
+					<!--
+					<img class="svg-line-loop1" id="lt-hidden-elem1"/>
+					<img class="svg-line-loop2" id="lt-hidden-elem2"/>
+					<img class="svg-line-loop3" id="lt-hidden-elem3"/>
+					<img class="svg-line-loop4" id="lt-hidden-elem4"/>
+					<img class="svg-line-loop5" id="lt-hidden-elem5"/>
+					<img class="svg-line-loop6" id="lt-hidden-elem6"/>
+					<img class="svg-line-loop7" id="lt-hidden-elem7"/>
+					<img class="svg-line-loop8" id="lt-hidden-elem8"/>
+					<img class="svg-line-loop9" id="lt-hidden-elem9"/>
+					<img class="svg-line-loop10" id="lt-hidden-elem10"/>
+					<img class="svg-line-loop11" id="lt-hidden-elem11"/>
+					<img class="svg-line-loop12" id="lt-hidden-elem12"/>
+					<img class="svg-line-loop13" id="lt-hidden-elem13"/>
+					<img class="svg-line-loop14" id="lt-hidden-elem14"/>
+					<img class="svg-line-loop15" id="lt-hidden-elem15"/>
+					<img class="svg-line-loop16" id="lt-hidden-elem16"/>
+					<img class="svg-line-loop17" id="lt-hidden-elem17"/>
+					<img class="svg-line-loop18" id="lt-hidden-elem18"/>
+					<img class="svg-line-loop19" id="lt-hidden-elem19"/>
+					<img class="svg-line-loop20" id="lt-hidden-elem20"/>
+					-->
+					<!-- 개별 라인 처리인 경우 -->
+					
+					<img data-line-id="TR_111" class="svg-line-loop1" data-anim="moveon" data-anim-target="lt-hidden-elem1">
+					<img data-line-id="TR_112" class="svg-line-loop2" data-anim="moveon" data-anim-target="lt-hidden-elem2">
+					<img data-line-id="TR_113" class="svg-line-loop3" data-anim="moveon" data-anim-target="lt-hidden-elem3">
+					<img data-line-id="TR_114" class="svg-line-loop4" data-anim="moveon" data-anim-target="lt-hidden-elem4">
+					<img data-line-id="TR_115" class="svg-line-loop5" data-anim="moveon" data-anim-target="lt-hidden-elem5">
+					<img data-line-id="TR_116" class="svg-line-loop6" data-anim="moveon" data-anim-target="lt-hidden-elem6">
+					<img data-line-id="TR_117" class="svg-line-loop7" data-anim="moveon" data-anim-target="lt-hidden-elem7">
+					<img data-line-id="TR_118" class="svg-line-loop8" data-anim="moveon" data-anim-target="lt-hidden-elem8">
+					<img data-line-id="TR_119" class="svg-line-loop9" data-anim="moveon" data-anim-target="lt-hidden-elem9">
+					<img data-line-id="TR_120" class="svg-line-loop10" data-anim="moveon" data-anim-target="lt-hidden-elem10">
+					<img data-line-id="TR_121" class="svg-line-loop11" data-anim="moveon" data-anim-target="lt-hidden-elem11">
+					<img data-line-id="TR_122" class="svg-line-loop12" data-anim="moveon" data-anim-target="lt-hidden-elem12">
+					<img data-line-id="TR_123" class="svg-line-loop13" data-anim="moveon" data-anim-target="lt-hidden-elem13">
+					<img data-line-id="TR_124" class="svg-line-loop14" data-anim="moveon" data-anim-target="lt-hidden-elem14">
+					<img data-line-id="TR_125" class="svg-line-loop15" data-anim="moveon" data-anim-target="lt-hidden-elem15">
+					<img data-line-id="TR_126" class="svg-line-loop16" data-anim="moveon" data-anim-target="lt-hidden-elem16">
+					<img data-line-id="TR_127" class="svg-line-loop17" data-anim="moveon" data-anim-target="lt-hidden-elem17">
+					<img data-line-id="TR_128" class="svg-line-loop18" data-anim="moveon" data-anim-target="lt-hidden-elem18">
+					<img data-line-id="TR_129" class="svg-line-loop19" data-anim="moveon" data-anim-target="lt-hidden-elem19">
+					<img data-line-id="TR_130" class="svg-line-loop20" data-anim="moveon" data-anim-target="lt-hidden-elem20">
+										
+					<!-------------------------------------->
+				</div>
+				<div class="roll-base-bar">
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:0;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:11px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:22px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:33px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:44px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:55px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:66px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:77px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:88px;"></div>
+					<div class="ic-roll-10" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.ELT_Run" style="top:0;left:99px;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="img-trk-loop-main" style="top: 409px;left: 317px;"></div>
+		<div class="ic-trk-loop-head" data-format='{"type":"basic-e"}' data-id="T3.DI.LINEVT.ELT_Run" style="top: 419px;left: 373px;"></div>
+
+		<div class="img-label" style="top:343px;left:24px">#1 POR</div>
+		<div class="img-label" style="top:343px;left:102px">#2 POR</div>
+		<div class="img-label" style="top:271px;left:198px">WELDER</div>
+		<div class="img-label" style="top:346px;left:206px">#1 BRIDLE ROLL</div>
+		<div class="img-label" style="top:105px;left:336px">TENSION LOOP</div>
+		<div class="img-label" style="top:159px;left:453px">WPD</div>
+		<div class="img-label" style="top:223px;left:472px">#1 CPC</div>
+		<div class="img-label" style="top:275px;left:751px">PICKLING</div>
+		<div class="img-label" style="top:130px;left:847px">#2 CPC</div>
+		<div class="img-label" style="top:133px;left:977px">PLATING RINSE</div>
+		<div class="img-label" style="top:133px;left:1098px">FLUXING</div>
+		<div class="img-label" style="top:133px;left:1201px">#1 AIR DRYER</div>
+		<div class="img-label" style="top:163px;left:1108px">TOP PLATING</div>
+		<div class="img-label" style="top:286px;left:1059px">BOTTOM PLATING</div>
+		<div class="img-label" style="top:264px;left:977px">B1</div>
+		<div class="img-label" style="top:264px;left:1006px">B2</div>
+		<div class="img-label" style="top:264px;left:1033px">B3</div>
+		<div class="img-label" style="top:264px;left:1062px">B4</div>
+		<div class="img-label" style="top:264px;left:1090px">B5</div>
+		<div class="img-label" style="top:264px;left:1118px">B6</div>
+		<div class="img-label" style="top:264px;left:1147px">B7</div>
+		<div class="img-label" style="top:264px;left:1174px">B8</div>
+		<div class="img-label" style="top:264px;left:1201px">B9</div>
+		<div class="img-label" style="top:264px;left:1226px">B10</div>
+		<div class="img-label" style="top:206px;left:1230px">T1</div>
+		<div class="img-label" style="top:206px;left:1202px">T2</div>
+		<div class="img-label" style="top:206px;left:1174px">T3</div>
+		<div class="img-label" style="top:206px;left:1147px">T4</div>
+		<div class="img-label" style="top:206px;left:1119px">T5</div>
+		<div class="img-label" style="top:206px;left:1090px">T6</div>
+		<div class="img-label" style="top:206px;left:1063px">T7</div>
+		<div class="img-label" style="top:62px;left:1351px">REFLOW</div>
+		<div class="img-label" style="top:313px;left:1352px">QUENCHING</div>
+		<div class="ic-wpd-s" style="top:158px;left:1438px;"></div>
+		<div class="img-label" style="top:153px;left:1457px">WPD</div>
+		<div class="img-label" style="top:313px;left:1460px">CHEMICAL</div>
+		<div class="img-label" style="top:332px;left:1518px">SDD</div>
+		<div class="img-label" style="top:90px;left:1570px">SDD</div>
+		<div class="img-label" style="top:192px;left:1609px">E.S OILER</div>
+		<div class="img-label" style="top:266px;left:1613px">T.G</div>
+		<div class="img-label" style="top:266px;left:1639px">C.W.G</div>
+		<div class="img-label" style="top:321px;left:1623px">#3 BRIDLE ROLL</div>
+		<div class="img-label" style="top:222px;left:1707px">SNIP SHEAR</div>
+		<div class="img-label" style="top:335px;left:1785px">#1 TR</div>
+		<div class="img-label" style="top:335px;left:1848px">#2 TR</div>
+
+		<div class="img-label line-2" style="top:275px;left:442px">#2<br> BRIDLE ROLL</div>
+		<div class="img-label line-2" style="top:275px;left:526px">#1<br> CLEANING</div>
+		<div class="img-label line-2" style="top:275px;left:597px">#2<br> CLEANING</div>
+		<div class="img-label line-2" style="top:275px;left:672px">CLEANING<br> RINSE</div>
+		<div class="img-label line-2" style="top:275px;left:840px">PICKLING<br> RINSE</div>
+		<div class="img-label line-2" style="top:324px;left:1550px">PIN HOLE<br> DETECTOR</div>
+		<div class="img-label line-2" style="top:113px;left:1467px">#2 AIR<br> DRYER</div>
+		<div class="img-label line-2" style="top:116px;left:1562px">#3 AIR<br> DRYER</div>
+
+
+
+
+
+		<!-- 롤아이콘 배치 -->
+		<!-- animation 롤아이콘인 경우 on class 추가시 동작 -->
+		<!-- <div class="test-rotate on"></div> -->
+
+		<!-- 그리드 배치 ------------------------------------------------------->
+		<!--일반 그리드는 ul-li 구문으로 처리  (type1, type2,.....)-->
+		<!-- REFLOW -->
+		<div class="list-grid type1 gd-reflow" style="border-right:1px solid #999999;">
+			<div class="list-title">REFLOW</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>전압 (V)</p>
+					<p>전류 (KA)</p>
+				</li>
+				<li class="data">
+					<p data-format='{"type":"num"}' data-id="T3.AI.__VOLT.Reflow_Conduction_AV">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.AMPERE.Reflow_Conduction_2nd_AC">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- QUENCHING -->
+		<div class="list-grid type1 gd-quenching">
+			<div class="list-title">QUENCHING</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>현재온도 (°C)</p>
+				</li>
+				<li class="data">
+					<p data-cb="Y" data-id="T3.AI.TEMPER.Quenching_TEMP">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- BOTTOM PLATING -->
+		<div class="list-grid type1 gd-bottom-plating">
+			<div class="list-title">BOTTOM PLATING</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>전류 (KA)</p>
+				</li>
+				<li class="data">
+					<p data-id="T3.AI.AMPERE.BOT_Rec_Total_AC"
+					   data-format='{"type":"num"}'
+					>0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- TOP PLATING -->
+		<div class="list-grid type1 gd-top-plating">
+			<div class="list-title">TOP PLATING</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>전류 (KA)</p>
+				</li>
+				<li class="data">
+					<p data-id="T3.AI.AMPERE.Top_Rec_Total_AC"
+					   data-format='{"type":"num"}'
+					>0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- LOOP POSITION -->
+		<div class="list-grid type1 gd-loop-position">
+			<div class="list-title">LOOP POSITION</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p>위치 (%)</p>
+				</li>
+				<li class="data">
+					<p data-cb="Y"
+							data-id="T3.AI.PERCEN.Loop_Position"
+					   data-format='{"def_unit":"%","type":"num"}'
+					>0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #1 BRIDLE ROLL -->
+		<div class="list-grid gd-bridle-roll" style="top:128px; left:12px;">
+			<div class="list-title">#1 BRIDLE ROLL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="title">구분</p>
+					<p>전류 (A)</p>
+					<p>SPEED (mpm)</p>
+				</li>
+				<li class="data">
+					<p class="title">#1 BR</p>
+					<p data-id="T3.AI.AMPERE.NO1_Bridle_AC">0</p>
+					<p data-id="T3.AI._SPEED.NO1_Bridle_Actual_Speed">0</p>
+				</li>
+				<li class="data">
+					<p class="title">#2 BR</p>
+					<p class="bd-dot top left right clbkgray">0</p>
+					<p class="bd-dot bottom left right clbkgray">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #2 BRIDLE ROLL -->
+		<div class="list-grid gd-bridle-roll" style="top:440px; left:476px;">
+			<div class="list-title">#2 BRIDLE ROLL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="title">구분</p>
+					<p>전류 (A)</p>
+					<p>SPEED (mpm)</p>
+				</li>
+				<li class="data">
+					<p class="title">#1 BR</p>
+					<p data-id="T3.AI.AMPERE.NO2_Bridle_AC">0</p>
+					<p data-id="T3.AI._SPEED.NO2_Bridle_Actual_Speed">0</p>
+				</li>
+				<li class="data">
+					<p class="title">#2 BR</p>
+					<p class="bd-dot top left right clbkgray">0</p>
+					<p class="bd-dot bottom left right clbkgray">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #3 BRIDLE ROLL -->
+		<div class="list-grid gd-bridle-roll num3" style="top:10px; left:1607px;">
+			<div class="list-title">#3 BRIDLE ROLL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="title">구분</p>
+					<p>전류 (A)</p>
+					<p>SPEED (mpm)</p>
+				</li>
+				<li class="data">
+					<p class="title">#1 BR</p>
+					<p data-id="T3.AI.AMPERE.NO3_Bridle_AC">0</p>
+					<p data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed">0</p>
+				</li>
+				<li class="data">
+					<p class="title">#2 BR</p>
+					<p class="bd-dot top left clbkgray">0</p>
+					<p class="bd-dot bottom left clbkgray">0</p>
+				</li>
+				<li class="data">
+					<p class="title">#3 BR</p>
+					<p class="bd-dot top right clbkgray">0</p>
+					<p class="bd-dot bottom right clbkgray">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #2 CLEANING -->
+		<div class="list-grid gd-cleaning">
+			<div class="list-title">#2 CLEANING</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="title">전류 (KA)</p>
+				</li>
+				<li class="data">
+					<p class="title" style="text-decoration-line:none; pointer-events:none;">#1 정류기</p>
+					<p style="justify-content: flex-end !important;" data-id="T3.AI.AMPERE.NO1_Cleaning_REC_AC">0</p>
+				</li>
+				<li class="data">
+					<p class="title" style="text-decoration-line:none; pointer-events:none;">#2 정류기</p>
+					<p style="justify-content: flex-end !important;;" data-id="T3.AI.AMPERE.NO2_Cleaning_REC_AC" data-format='{"type":"num"}'>0</p>
+				</li>
+			</ul>
+		</div>
+		<!--#1,2 POR -->
+		<div class="list-grid gd-por">
+			<ul class="list-data">
+				<li class="data-title">
+					<p></p>
+					<p>투입원판번호</p>
+					<p>ACTUAL DIA (mm)</p>
+					<p>INITIAL DIA (mm)</p>
+					<p>MIN DIA (mm)</p>
+					<p>감속시작길이 (m)</p>
+					<p>TENSION (%)</p>
+				</li>
+				<li class="data">
+					<p class="title" id="POR1_title">#1 POR</p>
+					<p class="t-center" data-id="T3.AO.COILNO.POR_1_COIL_No"></p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.DIAMET.NO1_Pay_Off_Reel_Actual_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AO.DIAMET.NO1_POR_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AO.DIAMET.NO1POR_Min_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AO.LENGTH.NO1POR_START_DELC_LEN">0</p>
+					<p data-id="T3.AO.PERCEN.NO1_Pay_Off_Reel_Tension_Set">0</p>
+				</li>
+				<li class="data">
+					<p class="title" id="POR2_title">#2 POR</p>
+					<p class="t-center" data-id="T3.AO.COILNO.POR_2_COIL_No"></p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.DIAMET.NO2_Pay_Off_Reel_Actual_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AO.DIAMET.NO2_POR_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AO.DIAMET.NO2POR_Min_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AO.LENGTH.NO2POR_START_DELC_LEN">0</p>
+					<p data-id="T3.AO.PERCEN.NO2_Pay_Off_Reel_Tension_Set">0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- LINE & MCC -->
+		<div class="list-grid gd-line-mcc">
+			<ul class="list-data">
+				<li class="data">
+					<p class="title">LINE &amp; MCC</p>
+					<p class="t-center" data-id="T3.DI._ALARM.LINE_MCC_FLT"
+					   data-format='{"type":"normal_fault_cls"}'
+					>정상</p>
+				</li>
+				<li class="data">
+					<p class="title">도금액</p>
+					<p class="t-center" data-id="T3.DO.SYSHMI.PLATING_CHECK"
+					   data-format='{"type":"normal_fault_cls"}'
+					>정상</p>
+				</li>
+			</ul>
+		</div>
+		<!-- CHEMICAL -->
+		<div class="list-grid gd-chemical">
+			<div class="list-title">CHEMICAL</div>
+			<ul class="list-data">
+				<li class="data-title">
+					<p class="title">전류 (KA)</p>
+				</li>
+				<li class="data">
+					<p class="title">UP</p>
+					<p data-id="T3.AI.AMPERE.Up_CHEM_REC_AC"
+					   data-format='{"type":"num"}'>0</p>
+				</li>
+				<li class="data">
+					<p class="title">DOWN</p>
+					<p data-id="T3.AI.AMPERE.Down_CHEM_REC_AC"
+					   data-format='{"type":"num"}'>0</p>
+				</li>
+			</ul>
+		</div>
+		<!-- #1,2 TR -->
+		<div class="list-grid gd-tr">
+			<ul class="list-data">
+				<li class="data-title">
+					<p></p>
+					<p>투입원판번호</p>
+					<p>ACTUAL DIA (mm)</p>
+					<p>LENGTH(m)</p>
+					<p>TURN(T)</p>
+					<p>WEIGHT(TON)</p>
+					<p>TENSION (%)</p>
+				</li>
+				<li class="data">
+					<p class="title" id="TR1_title">#1 TR</p>
+					<p class="t-center" data-id="T3.AO.COILNO.TR_1_COIL_No"></p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.DIAMET.NO1_TR_Actual_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.LENGTH.NO1_TR_Winding_LEN_A">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI._COUNT.NO1_TR_Winding_Turn_Count">0</p>
+					<p data-id="T3.AI.__MASS.NO1_TR_Weight">0</p>
+					<p data-id="T3.AO.PERCEN.NO1_TR_Tension_RATIO">0</p>
+				</li>
+				<li class="data">
+					<p class="title" id="TR2_title">#2 TR</p>
+					<p class="t-center" data-id="T3.AO.COILNO.TR_2_COIL_No"></p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.DIAMET.NO2_TR_Actual_Dia">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI.LENGTH.NO2_TR_Winding_LEN_A">0</p>
+					<p data-format='{"type":"num"}' data-id="T3.AI._COUNT.NO2_TR_Winding_Turn_Count">0</p>
+					<p data-id="T3.AI.__MASS.NO2_TR_Weight">0</p>
+					<p data-id="T3.AO.PERCEN.NO2_TR_Tension_RATIO">0</p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="table-wrap" style="top:645px;left:12px;">
+			<table>
+				<colgroup>
+					<col width="56px">
+					<col width="80px">
+					<col width="80px">
+					<col width="113px">
+					<col width="140px">
+					<col width="140px">
+					<col width="110px">
+					<col width="110px">
+					<col width="80px">
+					<col width="95px">
+					<col width="95px">
+					<col width="80px">
+					<col width="80px">
+					<col width="95px">
+					<col width="80px">
+					<col width="80px">
+					<col width="80px">
+					<col width="237px">
+					<col width="65px">
+				</colgroup>
+				<thead>
+				<tr>
+					<th>구분</th>
+					<th>MES 순번</th>
+					<th>투입 순서</th>
+					<th>위치</th>
+					<th>작업지시번호</th>
+					<th>투입원판번호</th>
+					<th>TOP 부착량</th>
+					<th>BOTTOM 부착량</th>
+					<th>도유량</th>
+					<th>CHE.(UP)</th>
+					<th>CHE.(DOWN)</th>
+					<th>두께</th>
+					<th>폭</th>
+					<th>COIL길이</th>
+					<th>투입중량</th>
+					<th>단중</th>
+					<th>조도</th>
+					<th>고객사명</th>
+					<th>비고</th>
+				</tr>
+				</thead>
+				<tbody id="table_Body">
+				<tr class="tr_0">
+					<td>현재</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr class="tr_1">
+					<td>다음</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>-</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+            </main>
+            <footer>
+    <div class="alarm-title-box" style="cursor:pointer" id="alram-box">ALARM</div>
+    <div class="alarm-data-box">
+        <div class="data-wrap">
+            <ul class="data-list">
+
+            </ul>
+        </div>
+    </div>
+    <button class="btn-legend" id="legend-box" alt="범례">
+        <img src="" class="ic-legend">
+        LEGEND
+    </button>
+</footer>
+    </div>
+    <div id="modal-layout">
+    </div>
+
+    <!-- PLC SERVER HIDDEN URL -->
+    <input type="hidden" id="_PLC_SERVER" value="${_PLC_SERVER?default('')}"/>
+    <input type="hidden" id="_USER_ID" value="${_USER_ID?default('')}"/>
+    </body>
+</html>

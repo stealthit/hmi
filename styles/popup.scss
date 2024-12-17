@@ -1039,6 +1039,40 @@
   }
 }
 
+.pop-setting-center {
+  min-width: 1105px;
+  min-height: 666px;
+
+  .flex-col {
+    gap: 20px;
+  }
+  .gd-con {
+    width: 1065px;
+    .list-data li {
+      flex: 1;
+      p.title {height: 60px;}
+      p:last-child {padding-right: 8px;}
+    }
+  }
+  .table-wrap {
+    table {
+      tr td, tr th {
+        font-weight: 700;
+        background: $cl_neutral_5;
+        &:first-child {border-left: none;}
+        &:last-child {border-right: none;}
+      }
+      
+      tr {
+        height: 60px;        
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+  }
+}
+
 .flex-row {
   display: flex;
   gap: 10px;

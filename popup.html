@@ -96,7 +96,10 @@
     <button onclick="openPopup2('pop-msg2')">확인,닫기</button> 
     <button onclick="openPopup1('pop-cleaning')">정류기 팝업</button>
   </div>
-
+  <h2>제어설정 - 상수설정 팝업</h2>
+  <div class="popup-button-group">
+    <button onclick="openPopup1('pop-setting-center')">상수설정 팝업</button> 
+  </div>
   <!-- popup Background -->
   <div id="bg-popup1"></div>
   <div id="bg-popup2"></div>
@@ -2271,6 +2274,96 @@
       <button onclick='closePopup1(event)'>취소</button>
     </div> 
   </div>
+  
+  <!-- center 제어설정 - 상수설정 팝업 -->
+  <div class="popup-wrap pop-setting-center">
+    <div class="popup-header">
+      <button class="btn-close" onclick='closePopup1(event)'></button>
+    </div>
+    <div class="popup-body">
+      <div class="flex-col">
+        <div class="list-grid gd-con">   
+          <div class="pop-title">CONDUCTION 제어 상수</div>
+          <ul class="list-data">
+            <li class="data">
+              <p class="title">단위 중량</p>
+              <p class="underline">7,850</p>
+            </li>   
+            <li class="data">
+              <p class="title">비열</p>
+              <p class="underline">7,850</p>
+            </li>  
+            <li class="data">
+              <p class="title">K1</p>
+              <p class="underline">7,850</p>
+            </li>  
+            <li class="data">
+              <p class="title">K2</p>
+              <p class="underline">7,850</p>
+            </li>  
+            <li class="data">
+              <p class="title">C/D 출력 Gain</p>
+              <p class="underline">0.776</p>
+            </li>             
+          </ul>        
+        </div>       
+        <div class="table-wrap">
+          <div class="pop-title">PLATING 상수</div>
+          <table>
+            <colgroup>
+              <col width="150px">
+              <col width="100px">
+              <col width="100px">              
+              <col width="178px">
+              <col width="193px">              
+              <col width="172px">
+              <col width="172px">
+            </colgroup>
+            <thead>
+              <tr>
+                <th rowspan="2">구분</th>
+                <th colspan="2">폭/두께</th>
+                <th colspan="4">부착량</th>                                
+              </tr>
+              <tr>
+                <th>판폭</th>
+                <th>두께</th>
+                <th>TOP PLATING</th>
+                <th>BOTTOM PLATING</th>
+                <th>CHEMICAL (DOWN)</th>
+                <th>CHEMICAL (UP)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center">MIN (mm)</td>                  
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>    
+              <tr>
+                <td>MAX (mm)</td>                  
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>    
+            </tbody>
+          </table>
+        </div>                   
+      </div>     
+    </div>
+    <div class="popup-footer">
+      <button class="btn-normal" onclick="openPopup2('pop-msg')">확인</button>
+      <button onclick='closePopup1(event)'>닫기</button>
+    </div> 
+  </div>
+
 </body>
 <!-- <script src="./scripts/script.js"></script> -->
 <script>
