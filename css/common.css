@@ -950,8 +950,8 @@ input[type=datetime-local]:valid::before {
   height: 2px;
 }
 .list-grid.gd-position {
-  top: 273px;
-  left: 1449px;
+  top: 256px;
+  left: 1434px;
   width: 225px;
   border: 1px dashed #002878;
 }
@@ -10677,8 +10677,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .e-POR_1-0 {
   position: absolute;
   width: 256px;
-  height: 157px;
-  top: 106px;
+  height: 156px;
+  top: 115px;
   left: 0px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_1_0.png);
   z-index: 99;
@@ -10697,7 +10697,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 256px;
   height: 77px;
-  top: 106px;
+  top: 115px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_1.png);
   z-index: 99;
 }
@@ -10715,7 +10715,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 51px;
   height: 22px;
-  top: 106px;
+  top: 115px;
   left: 256px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_2.png);
   z-index: 99;
@@ -10734,7 +10734,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 30px;
   height: 23px;
-  top: 106px;
+  top: 115px;
   left: 306px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_3.png);
   z-index: 99;
@@ -10753,7 +10753,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 76px;
   height: 23px;
-  top: 106px;
+  top: 115px;
   left: 335px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_4.png);
   z-index: 99;
@@ -10772,7 +10772,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 67px;
   height: 23px;
-  top: 106px;
+  top: 115px;
   left: 410px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_5.png);
   z-index: 99;
@@ -10791,8 +10791,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 40px;
   height: 68px;
-  top: 103.6px;
-  left: 472.6px;
+  top: 112.4px;
+  left: 472.2px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_6.png);
   z-index: 99;
 }
@@ -10810,7 +10810,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 85px;
   height: 105px;
-  top: 103px;
+  top: 112px;
   left: 512px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_7.png);
   z-index: 99;
@@ -10829,7 +10829,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 38px;
   height: 21px;
-  top: 188px;
+  top: 197px;
   left: 597px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_8.png);
   z-index: 99;
@@ -10848,7 +10848,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 137px;
   height: 59px;
-  top: 188px;
+  top: 197px;
   left: 635px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_1_9.png);
   z-index: 99;
@@ -10867,7 +10867,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 157px;
   height: 140px;
-  top: 153px;
+  top: 158px;
   left: 324px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_2_2_0.png);
   z-index: 99;
@@ -10886,7 +10886,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 157px;
   height: 60px;
-  top: 153px;
+  top: 158px;
   left: 324px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_2_0.png);
   z-index: 99;
@@ -10905,7 +10905,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 22px;
   height: 60px;
-  top: 153px;
+  top: 158px;
   left: 481px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_2_1.png);
   z-index: 99;
@@ -10924,7 +10924,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 58px;
   height: 60px;
-  top: 149px;
+  top: 158px;
   left: 502px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_2_2.png);
   z-index: 99;
@@ -10943,7 +10943,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 37px;
   height: 60px;
-  top: 149px;
+  top: 158px;
   left: 560px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_2_3.png);
   z-index: 99;
@@ -10962,7 +10962,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 38px;
   height: 21px;
-  top: 188px;
+  top: 197px;
   left: 597px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_2_4.png);
   z-index: 99;
@@ -10981,8 +10981,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 137px;
   height: 59px;
-  top: 188px;
-  left: 635px;
+  top: 197px;
+  left: 634px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/POR_2_5.png);
   z-index: 99;
 }
@@ -11000,7 +11000,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 171px;
   height: 26px;
-  top: 246px;
+  top: 255px;
   left: 635px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_1.png);
   z-index: 99;
@@ -11017,9 +11017,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .e-LINE_2 {
   position: absolute;
-  width: 35px;
+  width: 34px;
   height: 124px;
-  top: 148px;
+  top: 157px;
   left: 806px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_2.png);
   z-index: 99;
@@ -11038,8 +11038,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 37px;
   height: 44px;
-  top: 148px;
-  left: 841px;
+  top: 157px;
+  left: 840px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_3.png);
   z-index: 99;
 }
@@ -11057,8 +11057,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 46px;
   height: 193px;
-  top: -1px;
-  left: 878px;
+  top: 8px;
+  left: 877px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_4.png);
   z-index: 99;
 }
@@ -11076,8 +11076,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 45px;
   height: 193px;
-  top: -3px;
-  left: 924px;
+  top: 9px;
+  left: 923px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_5.png);
   z-index: 99;
 }
@@ -11095,7 +11095,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 27px;
   height: 66px;
-  top: 15px;
+  top: 22px;
   left: 1344px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_6.png);
   z-index: 99;
@@ -11114,7 +11114,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 27px;
   height: 111px;
-  top: 81px;
+  top: 88px;
   left: 1344px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_7.png);
   z-index: 99;
@@ -11133,7 +11133,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 38px;
   height: 48px;
-  top: 144px;
+  top: 151px;
   left: 1371px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_8.png);
   z-index: 99;
@@ -11150,9 +11150,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .e-LINE_9 {
   position: absolute;
-  width: 35px;
+  width: 34px;
   height: 98px;
-  top: 144px;
+  top: 151px;
   left: 1409px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_9.png);
   z-index: 99;
@@ -11169,9 +11169,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .e-LINE_10 {
   position: absolute;
-  width: 35px;
+  width: 34px;
   height: 71px;
-  top: 242px;
+  top: 249px;
   left: 1409px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_10.png);
   z-index: 99;
@@ -11190,8 +11190,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 116px;
   height: 17px;
-  top: 296px;
-  left: 1444px;
+  top: 303px;
+  left: 1443px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_11.png);
   z-index: 99;
 }
@@ -11209,8 +11209,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 117px;
   height: 17px;
-  top: 296px;
-  left: 1560px;
+  top: 303px;
+  left: 1559px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_12.png);
   z-index: 99;
 }
@@ -11228,8 +11228,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 144px;
   height: 17px;
-  top: 296px;
-  left: 1677px;
+  top: 303px;
+  left: 1676px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_13.png);
   z-index: 99;
 }
@@ -11247,8 +11247,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 144px;
   height: 53px;
-  top: 243px;
-  left: 1678px;
+  top: 250px;
+  left: 1676.7px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_14.png);
   z-index: 99;
 }
@@ -11266,8 +11266,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 232px;
   height: 25px;
-  top: 218px;
-  left: 1678.5px;
+  top: 225px;
+  left: 1677.5px;
   background: url(../img/resources/ENTRY/ENTO_LINE_BK/LINE_15.png);
   z-index: 99;
 }
@@ -11285,7 +11285,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 10px;
   height: 76px;
-  top: 241px;
+  top: 243.2px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_1.png);
   z-index: 99;
 }
@@ -11301,9 +11301,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_2 {
   position: absolute;
-  width: 67px;
-  height: 23px;
-  top: 294px;
+  width: 94px;
+  height: 46px;
+  top: 273px;
   left: 10px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_2.png);
   z-index: 99;
@@ -11320,10 +11320,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_3 {
   position: absolute;
-  width: 48px;
-  height: 20px;
+  width: 73px;
+  height: 11px;
   top: 262px;
-  left: 35px;
+  left: 10px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_3.png);
   z-index: 99;
 }
@@ -11340,7 +11340,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_4 {
   position: absolute;
   width: 39px;
-  height: 20px;
+  height: 11px;
   top: 262px;
   left: 83px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_4.png);
@@ -11359,7 +11359,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_5 {
   position: absolute;
   width: 32px;
-  height: 20px;
+  height: 11px;
   top: 262px;
   left: 122px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_5.png);
@@ -11378,7 +11378,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_6 {
   position: absolute;
   width: 28px;
-  height: 20px;
+  height: 11px;
   top: 262px;
   left: 154px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_6.png);
@@ -11397,7 +11397,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_7 {
   position: absolute;
   width: 43px;
-  height: 46px;
+  height: 43px;
   top: 262px;
   left: 182px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_7.png);
@@ -11416,7 +11416,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_8 {
   position: absolute;
   width: 73px;
-  height: 46px;
+  height: 43px;
   top: 262px;
   left: 225px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_8.png);
@@ -11435,7 +11435,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_9 {
   position: absolute;
   width: 33px;
-  height: 46px;
+  height: 43px;
   top: 262px;
   left: 298px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_9.png);
@@ -11454,7 +11454,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_10 {
   position: absolute;
   width: 39px;
-  height: 27px;
+  height: 25px;
   top: 262px;
   left: 331px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_10.png);
@@ -11473,7 +11473,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_11 {
   position: absolute;
   width: 58px;
-  height: 27px;
+  height: 25px;
   top: 262px;
   left: 370px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_11.png);
@@ -11492,7 +11492,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_12 {
   position: absolute;
   width: 49px;
-  height: 45px;
+  height: 42px;
   top: 262px;
   left: 428px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_12.png);
@@ -11511,7 +11511,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_13 {
   position: absolute;
   width: 69px;
-  height: 45px;
+  height: 42px;
   top: 262px;
   left: 477px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_13.png);
@@ -11530,7 +11530,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_14 {
   position: absolute;
   width: 33px;
-  height: 45px;
+  height: 42px;
   top: 262px;
   left: 546px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_14.png);
@@ -11549,7 +11549,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_15 {
   position: absolute;
   width: 49px;
-  height: 45px;
+  height: 42px;
   top: 262px;
   left: 579px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_15.png);
@@ -11568,7 +11568,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_16 {
   position: absolute;
   width: 80px;
-  height: 45px;
+  height: 42px;
   top: 262px;
   left: 628px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_16.png);
@@ -11587,7 +11587,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_17 {
   position: absolute;
   width: 22px;
-  height: 45px;
+  height: 42px;
   top: 262px;
   left: 708px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_17.png);
@@ -11606,8 +11606,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_18 {
   position: absolute;
   width: 22px;
-  height: 49px;
-  top: 213px;
+  height: 52px;
+  top: 210px;
   left: 708px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_18.png);
   z-index: 99;
@@ -11626,7 +11626,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 22px;
   height: 49px;
-  top: 164px;
+  top: 161px;
   left: 708px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_19.png);
   z-index: 99;
@@ -11645,7 +11645,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 22px;
   height: 66px;
-  top: 98px;
+  top: 95px;
   left: 708px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_20.png);
   z-index: 99;
@@ -11664,7 +11664,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 22px;
   height: 78px;
-  top: 20px;
+  top: 17px;
   left: 708px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_21.png);
   z-index: 99;
@@ -11683,7 +11683,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 23px;
   height: 19px;
-  top: 20px;
+  top: 17px;
   left: 730px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_22.png);
   z-index: 99;
@@ -11700,9 +11700,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_23 {
   position: absolute;
-  width: 16px;
+  width: 20px;
   height: 60px;
-  top: 20px;
+  top: 17px;
   left: 753px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_23.png);
   z-index: 99;
@@ -11721,7 +11721,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 19px;
   height: 60px;
-  top: 80px;
+  top: 77px;
   left: 753px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_24.png);
   z-index: 99;
@@ -11740,7 +11740,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 19px;
   height: 60px;
-  top: 140px;
+  top: 137px;
   left: 753px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_25.png);
   z-index: 99;
@@ -11759,7 +11759,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 19px;
   height: 78px;
-  top: 200px;
+  top: 197px;
   left: 753px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_26.png);
   z-index: 99;
@@ -11778,7 +11778,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 26px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 772px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_27.png);
   z-index: 99;
@@ -11797,7 +11797,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 798px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_28.png);
   z-index: 99;
@@ -11816,7 +11816,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 834px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_29.png);
   z-index: 99;
@@ -11835,7 +11835,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 38px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 870px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_30.png);
   z-index: 99;
@@ -11854,7 +11854,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 35px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 908px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_31.png);
   z-index: 99;
@@ -11873,7 +11873,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 943px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_32.png);
   z-index: 99;
@@ -11892,7 +11892,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 979px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_33.png);
   z-index: 99;
@@ -11911,7 +11911,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 1015px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_34.png);
   z-index: 99;
@@ -11930,7 +11930,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 35px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 1051px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_35.png);
   z-index: 99;
@@ -11949,7 +11949,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 1086px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_36.png);
   z-index: 99;
@@ -11968,7 +11968,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 1122px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_37.png);
   z-index: 99;
@@ -11987,7 +11987,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 27px;
   height: 12px;
-  top: 266px;
+  top: 263px;
   left: 1158px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_38.png);
   z-index: 99;
@@ -12006,7 +12006,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 19px;
   height: 113px;
-  top: 165px;
+  top: 162px;
   left: 1185px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_39.png);
   z-index: 99;
@@ -12025,7 +12025,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 27px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 1158px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_40.png);
   z-index: 99;
@@ -12044,7 +12044,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 1122px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_41.png);
   z-index: 99;
@@ -12063,7 +12063,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 1086px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_42.png);
   z-index: 99;
@@ -12082,7 +12082,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 1050px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_43.png);
   z-index: 99;
@@ -12101,7 +12101,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 35px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 1015px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_44.png);
   z-index: 99;
@@ -12120,7 +12120,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 979px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_45.png);
   z-index: 99;
@@ -12139,7 +12139,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 943px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_46.png);
   z-index: 99;
@@ -12158,7 +12158,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 907px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_47.png);
   z-index: 99;
@@ -12177,7 +12177,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 50px;
   height: 14px;
-  top: 165px;
+  top: 162px;
   left: 857px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_48.png);
   z-index: 99;
@@ -12194,10 +12194,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_49 {
   position: absolute;
-  width: 57px;
+  width: 55px;
   height: 14px;
-  top: 165px;
-  left: 800px;
+  top: 162px;
+  left: 802px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_49.png);
   z-index: 99;
 }
@@ -12213,9 +12213,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_50 {
   position: absolute;
-  width: 16px;
+  width: 18px;
   height: 69px;
-  top: 110px;
+  top: 107px;
   left: 784px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_50.png);
   z-index: 99;
@@ -12232,9 +12232,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_51 {
   position: absolute;
-  width: 16px;
+  width: 18px;
   height: 90px;
-  top: 20px;
+  top: 17px;
   left: 784px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_51.png);
   z-index: 99;
@@ -12251,10 +12251,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_52 {
   position: absolute;
-  width: 37px;
+  width: 33px;
   height: 46px;
-  top: 20px;
-  left: 800px;
+  top: 17px;
+  left: 802px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_52.png);
   z-index: 99;
 }
@@ -12270,10 +12270,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_53 {
   position: absolute;
-  width: 63px;
+  width: 65px;
   height: 46px;
-  top: 20px;
-  left: 837px;
+  top: 17px;
+  left: 835px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_53.png);
   z-index: 99;
 }
@@ -12291,7 +12291,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 33px;
   height: 46px;
-  top: 20px;
+  top: 17px;
   left: 900px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_54.png);
   z-index: 99;
@@ -12308,9 +12308,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_55 {
   position: absolute;
-  width: 57px;
+  width: 56px;
   height: 46px;
-  top: 20px;
+  top: 17px;
   left: 933px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_55.png);
   z-index: 99;
@@ -12329,8 +12329,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 44px;
   height: 46px;
-  top: 20px;
-  left: 990px;
+  top: 17px;
+  left: 989px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_56.png);
   z-index: 99;
 }
@@ -12346,10 +12346,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_57 {
   position: absolute;
-  width: 67px;
+  width: 69px;
   height: 46px;
-  top: 20px;
-  left: 1034px;
+  top: 17px;
+  left: 1033px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_57.png);
   z-index: 99;
 }
@@ -12367,8 +12367,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 36px;
   height: 46px;
-  top: 20px;
-  left: 1101px;
+  top: 17px;
+  left: 1102px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_58.png);
   z-index: 99;
 }
@@ -12384,10 +12384,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_59 {
   position: absolute;
-  width: 93px;
+  width: 92px;
   height: 46px;
-  top: 20px;
-  left: 1137px;
+  top: 17px;
+  left: 1138px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_59.png);
   z-index: 99;
 }
@@ -12405,7 +12405,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 20px;
   height: 89px;
-  top: 20px;
+  top: 17px;
   left: 1230px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_60.png);
   z-index: 99;
@@ -12424,7 +12424,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 20px;
   height: 98px;
-  top: 109px;
+  top: 106px;
   left: 1230px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_61.png);
   z-index: 99;
@@ -12443,7 +12443,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 23px;
   height: 10px;
-  top: 197px;
+  top: 194px;
   left: 1250px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_62.png);
   z-index: 99;
@@ -12462,7 +12462,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 21px;
   height: 98px;
-  top: 109px;
+  top: 106px;
   left: 1273px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_63.png);
   z-index: 99;
@@ -12481,7 +12481,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 21px;
   height: 65px;
-  top: 44px;
+  top: 41px;
   left: 1273px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_64.png);
   z-index: 99;
@@ -12500,7 +12500,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 24px;
   height: 65px;
-  top: 44px;
+  top: 41px;
   left: 1294px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_65.png);
   z-index: 99;
@@ -12519,7 +12519,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 24px;
   height: 70px;
-  top: 109px;
+  top: 106px;
   left: 1294px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_66.png);
   z-index: 99;
@@ -12538,7 +12538,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 24px;
   height: 88px;
-  top: 179px;
+  top: 176px;
   left: 1294px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_67.png);
   z-index: 99;
@@ -12557,7 +12557,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 27px;
   height: 88px;
-  top: 179px;
+  top: 176px;
   left: 1318px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_68.png);
   z-index: 99;
@@ -12576,7 +12576,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 27px;
   height: 88px;
-  top: 91px;
+  top: 88px;
   left: 1318px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_69.png);
   z-index: 99;
@@ -12595,7 +12595,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 27px;
   height: 76px;
-  top: 15px;
+  top: 12px;
   left: 1318px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_70.png);
   z-index: 99;
@@ -12612,9 +12612,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_71 {
   position: absolute;
-  width: 27px;
+  width: 26px;
   height: 76px;
-  top: 15px;
+  top: 12px;
   left: 1345px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_71.png);
   z-index: 99;
@@ -12631,9 +12631,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_72 {
   position: absolute;
-  width: 27px;
+  width: 26px;
   height: 88px;
-  top: 91px;
+  top: 88px;
   left: 1345px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_72.png);
   z-index: 99;
@@ -12650,9 +12650,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_73 {
   position: absolute;
-  width: 27px;
+  width: 26px;
   height: 141px;
-  top: 179px;
+  top: 176px;
   left: 1345px;
   gap: 0px;
   opacity: 0px;
@@ -12671,10 +12671,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_74 {
   position: absolute;
-  width: 22px;
+  width: 23px;
   height: 90px;
-  top: 230px;
-  left: 1372px;
+  top: 227px;
+  left: 1371px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_74.png);
   z-index: 99;
 }
@@ -12692,7 +12692,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 19px;
   height: 61px;
-  top: 230px;
+  top: 227px;
   left: 1394px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_75.png);
   z-index: 99;
@@ -12711,7 +12711,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 18px;
   height: 61px;
-  top: 230px;
+  top: 227px;
   left: 1413px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_76.png);
   z-index: 99;
@@ -12730,7 +12730,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 18px;
   height: 99px;
-  top: 131px;
+  top: 128px;
   left: 1413px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_77.png);
   z-index: 99;
@@ -12749,7 +12749,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 18px;
   height: 89px;
-  top: 42px;
+  top: 39px;
   left: 1413px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_78.png);
   z-index: 99;
@@ -12768,7 +12768,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 21px;
   height: 16px;
-  top: 42px;
+  top: 39px;
   left: 1431px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_79.png);
   z-index: 99;
@@ -12785,9 +12785,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_80 {
   position: absolute;
-  width: 19px;
+  width: 20px;
   height: 58px;
-  top: 42px;
+  top: 39px;
   left: 1452px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_80.png);
   z-index: 99;
@@ -12804,9 +12804,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_81 {
   position: absolute;
-  width: 19px;
+  width: 20px;
   height: 97px;
-  top: 100px;
+  top: 97px;
   left: 1452px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_81.png);
   z-index: 99;
@@ -12825,8 +12825,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 29px;
   height: 12px;
-  top: 185px;
-  left: 1471px;
+  top: 182px;
+  left: 1472px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_82.png);
   z-index: 99;
 }
@@ -12842,10 +12842,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_83 {
   position: absolute;
-  width: 18px;
+  width: 19px;
   height: 97px;
-  top: 185px;
-  left: 1500px;
+  top: 182px;
+  left: 1501px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_83.png);
   z-index: 99;
 }
@@ -12861,10 +12861,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_84 {
   position: absolute;
-  width: 18px;
+  width: 17px;
   height: 97px;
-  top: 185px;
-  left: 1518px;
+  top: 182px;
+  left: 1520px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_84.png);
   z-index: 99;
 }
@@ -12880,10 +12880,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_85 {
   position: absolute;
-  width: 19px;
+  width: 18px;
   height: 97px;
-  top: 185px;
-  left: 1536px;
+  top: 182px;
+  left: 1537px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_85.png);
   z-index: 99;
 }
@@ -12899,9 +12899,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_86 {
   position: absolute;
-  width: 16px;
+  width: 17px;
   height: 97px;
-  top: 185px;
+  top: 182px;
   left: 1555px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_86.png);
   z-index: 99;
@@ -12918,10 +12918,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_87 {
   position: absolute;
-  width: 18px;
+  width: 19px;
   height: 97px;
-  top: 185px;
-  left: 1571px;
+  top: 182px;
+  left: 1572px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_87.png);
   z-index: 99;
 }
@@ -12939,8 +12939,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 18px;
   height: 99px;
-  top: 183px;
-  left: 1589px;
+  top: 180px;
+  left: 1591px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_88.png);
   z-index: 99;
 }
@@ -12958,8 +12958,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 18px;
   height: 139px;
-  top: 44px;
-  left: 1589px;
+  top: 41px;
+  left: 1591px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_89.png);
   z-index: 99;
 }
@@ -12975,10 +12975,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_90 {
   position: absolute;
-  width: 23px;
+  width: 22px;
   height: 10px;
-  top: 44px;
-  left: 1607px;
+  top: 41px;
+  left: 1609px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_90.png);
   z-index: 99;
 }
@@ -12996,8 +12996,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 20px;
   height: 139px;
-  top: 44px;
-  left: 1630px;
+  top: 41px;
+  left: 1631px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_91.png);
   z-index: 99;
 }
@@ -13015,8 +13015,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 20px;
   height: 104px;
-  top: 183px;
-  left: 1630px;
+  top: 180px;
+  left: 1631px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_92.png);
   z-index: 99;
 }
@@ -13034,8 +13034,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 17px;
   height: 10px;
-  top: 277px;
-  left: 1650px;
+  top: 274px;
+  left: 1651px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_93.png);
   z-index: 99;
 }
@@ -13051,10 +13051,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_94 {
   position: absolute;
-  width: 18px;
+  width: 16px;
   height: 10px;
-  top: 277px;
-  left: 1667px;
+  top: 274px;
+  left: 1668px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_94.png);
   z-index: 99;
 }
@@ -13070,10 +13070,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_95 {
   position: absolute;
-  width: 18px;
+  width: 21px;
   height: 114px;
-  top: 173px;
-  left: 1685px;
+  top: 170px;
+  left: 1684px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_95.png);
   z-index: 99;
 }
@@ -13089,10 +13089,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_96 {
   position: absolute;
-  width: 18px;
+  width: 21px;
   height: 84px;
-  top: 89px;
-  left: 1685px;
+  top: 86px;
+  left: 1684px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_96.png);
   z-index: 99;
 }
@@ -13108,10 +13108,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_97 {
   position: absolute;
-  width: 23px;
+  width: 22px;
   height: 16px;
-  top: 89px;
-  left: 1703px;
+  top: 86px;
+  left: 1705px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_97.png);
   z-index: 99;
 }
@@ -13129,8 +13129,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 20px;
   height: 84px;
-  top: 89px;
-  left: 1726px;
+  top: 86px;
+  left: 1727px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_98.png);
   z-index: 99;
 }
@@ -13147,9 +13147,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_99 {
   position: absolute;
   width: 20px;
-  height: 114px;
-  top: 173px;
-  left: 1726px;
+  height: 104px;
+  top: 170px;
+  left: 1727px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_99.png);
   z-index: 99;
 }
@@ -13166,9 +13166,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .c-LINE_100 {
   position: absolute;
   width: 20px;
-  height: 22px;
-  top: 265px;
-  left: 1746px;
+  height: 12px;
+  top: 262px;
+  left: 1747px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_100.png);
   z-index: 99;
 }
@@ -13184,10 +13184,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_101 {
   position: absolute;
-  width: 17px;
-  height: 22px;
-  top: 265px;
-  left: 1766px;
+  width: 8px;
+  height: 12px;
+  top: 262px;
+  left: 1767px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_101.png);
   z-index: 99;
 }
@@ -13203,10 +13203,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_102 {
   position: absolute;
-  width: 24px;
-  height: 22px;
-  top: 265px;
-  left: 1783px;
+  width: 9px;
+  height: 12px;
+  top: 262px;
+  left: 1775px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_102.png);
   z-index: 99;
 }
@@ -13222,10 +13222,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_103 {
   position: absolute;
-  width: 40px;
-  height: 28px;
-  top: 265px;
-  left: 1807px;
+  width: 76px;
+  height: 41px;
+  top: 262px;
+  left: 1784px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_103.png);
   z-index: 99;
 }
@@ -13241,10 +13241,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_104 {
   position: absolute;
-  width: 96px;
-  height: 18px;
-  top: 293px;
-  left: 1807px;
+  width: 137px;
+  height: 21px;
+  top: 303px;
+  left: 1783.6px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_104.png);
   z-index: 99;
 }
@@ -13260,10 +13260,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .c-LINE_105 {
   position: absolute;
-  width: 73px;
-  height: 85px;
-  top: 208px;
-  left: 1847px;
+  width: 61px;
+  height: 111px;
+  top: 192px;
+  left: 1858.5px;
   background: url(../img/resources/CENTER/CENTER_BK/LINE_105.png);
   z-index: 99;
 }
@@ -14495,9 +14495,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_01 {
   position: absolute;
-  width: 144px;
-  height: 40px;
-  top: 283px;
+  width: 155px;
+  height: 23px;
+  top: 293px;
   left: 136px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_01.png);
   z-index: 99;
@@ -14515,9 +14515,9 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .pre-LINE_02 {
   position: absolute;
   width: 102px;
-  height: 40px;
-  top: 283px;
-  left: 280px;
+  height: 23px;
+  top: 293px;
+  left: 291px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_02.png);
   z-index: 99;
 }
@@ -14533,10 +14533,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_03 {
   position: absolute;
-  width: 102px;
-  height: 40px;
-  top: 283px;
-  left: 382px;
+  width: 89px;
+  height: 24px;
+  top: 293px;
+  left: 393px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_03.png);
   z-index: 99;
 }
@@ -14552,10 +14552,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_04 {
   position: absolute;
-  width: 75px;
-  height: 83px;
-  top: 283px;
-  left: 484px;
+  width: 81px;
+  height: 73px;
+  top: 293px;
+  left: 481px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_04.png);
   z-index: 99;
 }
@@ -14571,10 +14571,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_05 {
   position: absolute;
-  width: 38px;
+  width: 52px;
   height: 20px;
   top: 345px;
-  left: 559px;
+  left: 561px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_05.png);
   z-index: 99;
 }
@@ -14593,7 +14593,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 16px;
   height: 20px;
   top: 345px;
-  left: 597px;
+  left: 613px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_06.png);
   z-index: 99;
 }
@@ -14612,7 +14612,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 16px;
   height: 20px;
   top: 345px;
-  left: 613px;
+  left: 629px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_07.png);
   z-index: 99;
 }
@@ -14631,7 +14631,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 16px;
   height: 20px;
   top: 345px;
-  left: 629.5px;
+  left: 645px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_08.png);
   z-index: 99;
 }
@@ -14650,7 +14650,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 16px;
   height: 20px;
   top: 345px;
-  left: 645px;
+  left: 661px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_09.png);
   z-index: 99;
 }
@@ -14669,7 +14669,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 16px;
   height: 20px;
   top: 345px;
-  left: 661px;
+  left: 677px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_10.png);
   z-index: 99;
 }
@@ -14688,7 +14688,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 16px;
   height: 20px;
   top: 345px;
-  left: 677px;
+  left: 693px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_11.png);
   z-index: 99;
 }
@@ -14704,10 +14704,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_12 {
   position: absolute;
-  width: 16px;
+  width: 11px;
   height: 20px;
   top: 345px;
-  left: 693px;
+  left: 709px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_12.png);
   z-index: 99;
 }
@@ -14723,10 +14723,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_13 {
   position: absolute;
-  width: 38px;
+  width: 27px;
   height: 36px;
-  top: 329px;
-  left: 709px;
+  top: 330px;
+  left: 720px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_13.png);
   z-index: 99;
 }
@@ -14743,8 +14743,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .pre-LINE_14 {
   position: absolute;
   width: 63px;
-  height: 86px;
-  top: 279px;
+  height: 73px;
+  top: 293px;
   left: 747px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_14.png);
   z-index: 99;
@@ -14761,10 +14761,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_15 {
   position: absolute;
-  width: 117px;
+  width: 130px;
   height: 22px;
-  top: 292px;
-  left: 810px;
+  top: 293px;
+  left: 809px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_15.png);
   z-index: 99;
 }
@@ -14782,8 +14782,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 70px;
   height: 22px;
-  top: 292px;
-  left: 927px;
+  top: 293px;
+  left: 938px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_16.png);
   z-index: 99;
 }
@@ -14801,8 +14801,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 76px;
   height: 22px;
-  top: 292px;
-  left: 997px;
+  top: 293px;
+  left: 1008px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_17.png);
   z-index: 99;
 }
@@ -14818,10 +14818,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_18 {
   position: absolute;
-  width: 74px;
+  width: 62px;
   height: 22px;
-  top: 292px;
-  left: 1073px;
+  top: 293px;
+  left: 1084px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_18.png);
   z-index: 99;
 }
@@ -14837,10 +14837,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_19 {
   position: absolute;
-  width: 92px;
+  width: 104px;
   height: 73px;
-  top: 292px;
-  left: 1147px;
+  top: 293px;
+  left: 1146px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_19.png);
   z-index: 99;
 }
@@ -14858,8 +14858,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   position: absolute;
   width: 137px;
   height: 23px;
-  top: 342px;
-  left: 1239px;
+  top: 343px;
+  left: 1250px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_20.png);
   z-index: 99;
 }
@@ -14875,10 +14875,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_21 {
   position: absolute;
-  width: 59px;
+  width: 49px;
   height: 69px;
-  top: 296px;
-  left: 1376px;
+  top: 297px;
+  left: 1387px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_21.png);
   z-index: 99;
 }
@@ -14894,10 +14894,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_22 {
   position: absolute;
-  width: 92px;
-  height: 69px;
-  top: 296px;
-  left: 1435px;
+  width: 93px;
+  height: 64px;
+  top: 301px;
+  left: 1436px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_22.png);
   z-index: 99;
 }
@@ -14913,10 +14913,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_23 {
   position: absolute;
-  width: 189px;
+  width: 185px;
   height: 22px;
   top: 343px;
-  left: 1527px;
+  left: 1529px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_23.png);
   z-index: 99;
 }
@@ -14932,10 +14932,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 
 .pre-LINE_24 {
   position: absolute;
-  width: 46px;
+  width: 50px;
   height: 162px;
   top: 203px;
-  left: 1716px;
+  left: 1714px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_24.png);
   z-index: 99;
 }
@@ -14954,7 +14954,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 46px;
   height: 103px;
   top: 100px;
-  left: 1716px;
+  left: 1718px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_25.png);
   z-index: 99;
 }
@@ -14973,7 +14973,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 46px;
   height: 20px;
   top: 80px;
-  left: 1716px;
+  left: 1718px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_26.png);
   z-index: 99;
 }
@@ -14992,7 +14992,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   width: 46px;
   height: 53px;
   top: 27px;
-  left: 1716px;
+  left: 1718px;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_27.png);
   z-index: 99;
 }
@@ -15009,8 +15009,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 .pre-LINE_28 {
   position: absolute;
   width: 46px;
-  height: 27px;
-  left: 1716px;
+  height: 32px;
+  left: 1718px;
   top: 0;
   background: url(../img/resources/PRE-TREATMENT/PRE-TREATMENT_BK/LINE_28.png);
   z-index: 99;
@@ -15212,6 +15212,14 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   content: url(../img/resources/img_arr_data2_d.png);
   width: 29px;
   height: 110px;
+}
+
+.img-sensor {
+  position: absolute;
+  content: url(../img/resources/img_sensor.png);
+  width: 60px;
+  height: 52px;
+  z-index: 100;
 }
 
 .l-POR_1_00 {
@@ -15499,8 +15507,10 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   background: url(../img/resources/LTO/LTO_LINE_WH/POR/TR_2_5.png);
 }
 
-[class^=l-LINE], [class^=e-POR_], [class^=l-TR_] {
-  background-repeat: no-repeat;
+[class^=l-LINE], [class^=e-POR_],
+[class^=l-TR_], [class^=pre-LINE_],
+[class^=c-LINE_] {
+  background-repeat: no-repeat !important;
 }
 
 .line-loop1 {

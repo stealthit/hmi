@@ -1,0 +1,1591 @@
+<!doctype html>
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+
+        <title>DEMO PAGE</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <link rel="stylesheet" href="./css/common.css"/>
+        <link rel="stylesheet" href="./css/pages.css"/>
+        <link rel="stylesheet" href="./css/popup.css"/>
+        <link rel="stylesheet" href="./css/datatables.css"/>
+        </#if>
+    </head>
+
+    <body>
+    <div class="wrapper" style="overflow: hidden">
+            <header>
+    <div class="header-topbar">
+        <div class="topbar-left">
+            <div class="grp-arrow">
+                <button class="btn-arrow pre"></button>
+                <button class="btn-arrow next"></button>
+            </div>
+            <img src="/assets/hmi/img/resources/img_cmp_logo.png" class="img-logo" alt="logo">
+            <div class="line-name">
+                <img src="" alt="" class="ic-loc-16">
+                TP3 LINE
+            </div>
+        </div>
+        <p class="topbar-menutext">
+            ${_HEADER_TITLE?default('')}
+        </p>
+        <div class="topbar-right">
+            <div class="datetime-wrap">
+                <p class="date">  월   일 (월)</p>
+                <p class="time">오전 00:00:00</p>
+            </div>
+            <!--<button class="btn-onoff"></button>-->
+        </div>
+    </div>
+    <div class="header-contents" id="HEADER-WRAPPER">
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.DO.SYSHMI.COIL_SCHEDULE_CHANGE"></div>
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_CURRENT"></div>
+        <div style="display: none" data-settype="N" data-cb="Y" data-id="T3.AI.COLOR.Line_Tracking_NEXT"></div>
+        <div class="hd-table-wrap">
+            <table>
+                <colgroup>
+                    <col width="60px">
+                    <col width="100px">
+                    <col width="100px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="60px">
+                    <col width="80px">
+                    <col width="80px">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th></th>
+                    <th>작업지시번호</th>
+                    <th>투입원판번호</th>
+                    <th>TOP</th>
+                    <th>BOT</th>
+                    <th>도유량</th>
+                    <th>CHE.(UP)</th>
+                    <th>CHE.(DN)</th>
+                    <th>두께</th>
+                    <th>폭</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr id="curCoil">
+                    <td>현 재</td>
+                    <td style="text-align: center;" data-id="T3.AO.PRODNO.CURRENT_Product_No">-</td>
+                    <td style="text-align: center;" data-id="T3.AO.COILNO.CURRENT_COIL_No">-</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_Top_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_Bottom_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_AMT_OF_OIL">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_CHEM_Up_Colum">0</td>
+                    <td data-id="T3.AO.__MASS.CURRENT_CHEM_Down_Colum">0</td>
+                    <td data-id="T3.AO.THICKN.CURRENT_PLATE_THICK">0</td>
+                    <td data-id="T3.AO._WIDTH.CURRENT_PLATE_WIDTH">0</td>
+                </tr>
+                <tr id="nextCoil">
+                    <td>다 음</td>
+                    <td style="text-align: center;" data-id="T3.AO.PRODNO.NEXT_1_Product_No">-</td>
+                    <td style="text-align: center;" data-id="T3.AO.COILNO.NEXT_1_COIL_No">-</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_Top_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_Bottom_Rectifier_COATING_WEIGHT">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_AMT_OF_OIL">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_CHEM_Up_Colum">0</td>
+                    <td data-id="T3.AO.__MASS.NEXT_1_CHEM_Down_Colum">0</td>
+                    <td data-id="T3.AO.THICKN.NEXT_1_PLATE_THICK">0</td>
+                    <td data-id="T3.AO._WIDTH.NEXT_1_PLATE_WIDTH">0</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="hd-grp-btn">
+            <button class="btn" data-settype="N" ESTOP="true" data-cb="Y" data-id="T3.DO.SYSHMI.EMG_STOP">비상정지</button>
+            <button class="btn" data-settype="N" ALERT="FAULT_EVENT_LINE" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.LINE_FAULT_ALL">라인고장</button>
+            <button class="btn" data-settype="N" ALERT="FAULT_EVENT" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.REC_FAULT_ALL">정류기 고장</button>
+            <button class="btn" data-settype="N" ALERT="INTERLOCK" link="TP31AEM010" data-cb="Y" data-id="T3.DI.ALMEVT.LIMIT_ALARM_ALL">경보값 초과</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31CTM140" data-cb="Y" data-id="T3.DI.ALMEVT.HELPER_FAULT_ALL">HELPER</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31ENM040" data-cb="Y" data-id="T3.DI.LINEVT.Entry_Stand_By">ENTRY<br> STAND BY</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31CTM150" data-cb="Y" data-id="T3.DI.LINEVT.Center_Stand_By">CENTER<br> STAND BY</button>
+            <button class="btn" data-settype="N" QUICK="true" link="TP31EXM080" data-cb="Y" data-id="T3.DI.LINEVT.Exit_Stand_By">EXIT<br> STAND BY</button>
+        </div>
+        <ul class="hd-info-speed">
+            <li>
+                <div class="title">ENTRY SPEED</div>
+                <div class="value"
+                     data-cb="Y"
+                     data-format='{"def_unit":" mpm"}'
+                     data-id="T3.AI._SPEED.NO1_BR_Entry_Actual_Speed">0 mpm</div>
+            </li>
+            <li>
+                <div class="title">LINE SPEED</div>
+                <div class="value"
+                     data-cb="Y"
+                     data-format='{"def_unit":" mpm"}'
+                     data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed">0 mpm</div>
+            </li>
+        </ul>
+    </div>
+    <nav>
+        <ul class="menu-wrap">
+          <li>
+            <p class="mainmenu-title">SCHEDULE</p>
+            <ul class="submenu-wrap">
+              <li><p>COIL SCHEDULE</p></li>
+              <li><p>COIL SCHEDULE LIVE</p></li>
+              <li><p>COIL &amp; (LOT) 작업 실적</p></li>
+              <li><p>COIL Schedule 종합 현황</p></li>
+              <li><p>MES I/F 현황</p></li>
+              <li><p>비가동 실적 현황</p></li>
+            </ul>
+          </li>
+          <li>LINE TRACKING</li>
+          <li>
+            <p class="mainmenu-title">ENTRY</p>
+            <ul class="submenu-wrap">
+              <li><p>ENTRY OVERVIEW</p></li>
+              <!-- <li><p>ENTRY COIL CAR</p></li> -->
+              <li><p>ENTRY INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CENTER</p>
+            <ul class="submenu-wrap">
+              <li><p>CENTER OVERVIEW</p></li>
+              <li><p>PRE PLATING</p></li>
+              <li><p>POST PLATING</p></li>
+              <li><p>CENTER HELPER 제어</p></li>
+              <li><p>CENTER INTERLOCK</p></li>
+              <li><p>RECTIFIER PRESET</p></li>
+              <li><p>CENTER 제어기준설정</p></li>
+              <li><p>MCC 운전설정</p></li>
+              <li><p>CENTER 온도 설정</p></li>
+            </ul>
+          </li> 
+          <li>
+            <p class="mainmenu-title">EXIT</p>
+            <ul class="submenu-wrap">
+              <li><p>EXIT OVERVIEW</p></li>
+              <!-- <li class="line-2"><p>EXIT COIL CAR & <br>TRANSFER CAR</p></li> -->
+              <li><p>EXIT INTERLOCK</p></li>
+            </ul>
+          </li>
+          <li>            
+            <p class="mainmenu-title">HYDRAULIC</p>
+            <ul class="submenu-wrap">
+              <li><p>TP3 유압라인 (ENTRY)</p></li>
+              <li class="line-2"><p>TP3 유압라인<br> (CPC HYDRAULIC)</p></li>
+              <li class="line-2"><p>TP3 유압라인<br> (EXIT EPC HYDRAULIC)</p></li>
+              <li><p>TP3 유압라인 (EXIT)</p></li>
+            </ul>
+          </li>
+          <li>
+            <p class="mainmenu-title">CHEMICAL</p>
+            <ul class="submenu-wrap">
+              <li><p>약품 관리</p></li>
+              <li><p>PRE-TREATMENT</p></li>
+              <li><p>POST-TREATMENT</p></li>
+              <li><p>누액 감지</p></li>
+            </ul>
+          </li>
+          <li>POWER LINE</li>
+          <li>
+            <p class="mainmenu-title">ALARM / EVENT</p>
+            <ul class="submenu-wrap">
+              <li class="line-2"><p>SUMMARY ALARMM<br> (Real Time)</p></li>
+              <li><p>HISTORY ALARMS</p></li>
+              <li><p>HISTORY EVENTS</p></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+</header>
+            <main>
+    <div class="main-wrapper center-o-wrapper" id="TP31CTM010-WRAPPER">
+
+        <div data-id="T3.DI.SYSHMI.LINE_STOP" data-settype="N" data-cb="Y"></div>
+        <div data-id="T3.DI.SYSHMI.DRIVE_STOP" data-settype="N" data-cb="Y"></div>
+
+        <div data-id="T3.DO.SYSHMI.Line_Speed_SETUP_H" data-settype="N" data-cb="Y"></div>
+        <div data-id="T3.DO.SYSHMI.Line_Speed_SETUP_M" data-settype="N" data-cb="Y"></div>
+        <div data-id="T3.DO.SYSHMI.Line_Speed_SETUP_L" data-settype="N" data-cb="Y"></div>
+
+        <div data-id="T3.DI.LINEVT.Line_Mode_Select_Man" data-cb="Y" data-settype="N"></div>
+        <div data-id="T3.DI.LINEVT.Line_Mode_Select_Auto" data-cb="Y" data-settype="N"></div>
+        <div data-id="T3.DI.LINEVT.Line_Mode_Select_CPU" data-cb="Y" data-settype="N"></div>
+
+        <div data-id="T3.DI.FELEVT.CHEM_Down_Rec_FLT" data-settype="N" data-cb="Y"></div>
+        <div data-id="T3.DI.FELEVT.CHEM_Up_Rec_FLT" data-settype="N" data-cb="Y"></div>
+
+        <div data-id="T3.DO.SYSHMI.NO1_Cleaning_Rectifier_BACKWARD" data-settype="N" data-cb="Y"></div>
+        <div data-id="T3.DO.SYSHMI.NO1_Cleaning_Rectifier_FORWARD" data-settype="N" data-cb="Y"></div>
+        <div data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_BACKWARD" data-settype="N" data-cb="Y"></div>
+        <div data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_FORWARD" data-settype="N" data-cb="Y"></div>
+
+        <div data-settype="N" data-cb="Y" data-id="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT"></div>
+        <div data-settype="N" data-cb="Y" data-id="T3.DI.FLTEVT.NO2_Cleaning_Rec_FLT"></div>
+
+        <div class="bg-line-wrap">
+            <!-- <img alt="" class="img-center-o"> -->
+            <div class="line-box">
+                <div data-line-id="TR_101" class="c-LINE_1" data-length="400"></div>
+                <div data-line-id="TR_102" class="c-LINE_2"></div>
+                <div data-line-id="TR_103" class="c-LINE_3"></div>
+                <div data-line-id="TR_104" class="c-LINE_4"></div>
+                <div data-line-id="TR_105" class="c-LINE_5"></div>
+                <div data-line-id="TR_106" class="c-LINE_6"></div>
+                <div data-line-id="TR_107" class="c-LINE_7"></div>
+                <div data-line-id="TR_108" class="c-LINE_8"></div>
+                <div data-line-id="TR_109" class="c-LINE_9"></div>
+                <div data-line-id="TR_110" class="c-LINE_10"></div>
+                <div data-line-id="TR_111" class="c-LINE_11"></div>
+                <div data-line-id="TR_112" class="c-LINE_12"></div>
+                <div data-line-id="TR_113" class="c-LINE_13"></div>
+                <div data-line-id="TR_114" class="c-LINE_14"></div>
+                <div data-line-id="TR_115" class="c-LINE_15"></div>
+                <div data-line-id="TR_116" class="c-LINE_16"></div>
+                <div data-line-id="TR_117" class="c-LINE_17"></div>
+                <div data-line-id="TR_118" class="c-LINE_18"></div>
+                <div data-line-id="TR_119" class="c-LINE_19"></div>
+                <div data-line-id="TR_120" class="c-LINE_20"></div>
+                <div data-line-id="TR_121" class="c-LINE_21"></div>
+                <div data-line-id="TR_122" class="c-LINE_22"></div>
+                <div data-line-id="TR_123" class="c-LINE_23"></div>
+                <div data-line-id="TR_124" class="c-LINE_24"></div>
+                <div data-line-id="TR_125" class="c-LINE_25"></div>
+                <div data-line-id="TR_126" class="c-LINE_26"></div>
+                <div data-line-id="TR_127" class="c-LINE_27"></div>
+                <div data-line-id="TR_128" class="c-LINE_28"></div>
+                <div data-line-id="TR_129" class="c-LINE_29"></div>
+                <div data-line-id="TR_130" class="c-LINE_30"></div>
+                <div data-line-id="TR_131" class="c-LINE_31"></div>
+                <div data-line-id="TR_132" class="c-LINE_32"></div>
+                <div data-line-id="TR_133" class="c-LINE_33"></div>
+                <div data-line-id="TR_134" class="c-LINE_34"></div>
+                <div data-line-id="TR_135" class="c-LINE_35"></div>
+                <div data-line-id="TR_136" class="c-LINE_36"></div>
+                <div data-line-id="TR_137" class="c-LINE_37"></div>
+                <div data-line-id="TR_138" class="c-LINE_38"></div>
+                <div data-line-id="TR_139" class="c-LINE_39"></div>
+                <div data-line-id="TR_140" class="c-LINE_40"></div>
+                <div data-line-id="TR_141" class="c-LINE_41"></div>
+                <div data-line-id="TR_142" class="c-LINE_42"></div>
+                <div data-line-id="TR_143" class="c-LINE_43"></div>
+                <div data-line-id="TR_144" class="c-LINE_44"></div>
+                <div data-line-id="TR_145" class="c-LINE_45"></div>
+                <div data-line-id="TR_146" class="c-LINE_46"></div>
+                <div data-line-id="TR_147" class="c-LINE_47"></div>
+                <div data-line-id="TR_148" class="c-LINE_48"></div>
+                <div data-line-id="TR_149" class="c-LINE_49"></div>
+                <div data-line-id="TR_150" class="c-LINE_50"></div>
+                <div data-line-id="TR_151" class="c-LINE_51" data-length="700"></div>
+                <div data-line-id="TR_152" class="c-LINE_52"></div>
+                <div data-line-id="TR_153" class="c-LINE_53"></div>
+                <div data-line-id="TR_154" class="c-LINE_54"></div>
+                <div data-line-id="TR_155" class="c-LINE_55"></div>
+                <div data-line-id="TR_156" class="c-LINE_56"></div>
+                <div data-line-id="TR_157" class="c-LINE_57"></div>
+                <div data-line-id="TR_158" class="c-LINE_58"></div>
+                <div data-line-id="TR_159" class="c-LINE_59"></div>
+                <div data-line-id="TR_160" class="c-LINE_60"></div>
+                <div data-line-id="TR_161" class="c-LINE_61"></div>
+                <div data-line-id="TR_162" class="c-LINE_62"></div>
+                <div data-line-id="TR_163" class="c-LINE_63"></div>
+                <div data-line-id="TR_164" class="c-LINE_64"></div>
+                <div data-line-id="TR_165" class="c-LINE_65"></div>
+                <div data-line-id="TR_166" class="c-LINE_66"></div>
+                <div data-line-id="TR_167" class="c-LINE_67"></div>
+                <div data-line-id="TR_168" class="c-LINE_68"></div>
+                <div data-line-id="TR_169" class="c-LINE_69"></div>
+                <div data-line-id="TR_170" class="c-LINE_70"></div>
+                <div data-line-id="TR_171" class="c-LINE_71"></div>
+                <div data-line-id="TR_172" class="c-LINE_72"></div>
+                <div data-line-id="TR_173" class="c-LINE_73"></div>
+                <div data-line-id="TR_174" class="c-LINE_74"></div>
+                <div data-line-id="TR_175" class="c-LINE_75"></div>
+                <div data-line-id="TR_176" class="c-LINE_76"></div>
+                <div data-line-id="TR_177" class="c-LINE_77"></div>
+                <div data-line-id="TR_178" class="c-LINE_78"></div>
+                <div data-line-id="TR_179" class="c-LINE_79"></div>
+                <div data-line-id="TR_180" class="c-LINE_80"></div>
+                <div data-line-id="TR_181" class="c-LINE_81"></div>
+                <div data-line-id="TR_182" class="c-LINE_82"></div>
+                <div data-line-id="TR_183" class="c-LINE_83"></div>
+                <div data-line-id="TR_184" class="c-LINE_84"></div>
+                <div data-line-id="TR_185" class="c-LINE_85"></div>
+                <div data-line-id="TR_186" class="c-LINE_86"></div>
+                <div data-line-id="TR_187" class="c-LINE_87"></div>
+                <div data-line-id="TR_188" class="c-LINE_88"></div>
+                <div data-line-id="TR_189" class="c-LINE_89"></div>
+                <div data-line-id="TR_190" class="c-LINE_90"></div>
+                <div data-line-id="TR_191" class="c-LINE_91"></div>
+                <div data-line-id="TR_192" class="c-LINE_92"></div>
+                <div data-line-id="TR_193" class="c-LINE_93"></div>
+                <div data-line-id="TR_194" class="c-LINE_94"></div>
+                <div data-line-id="TR_195" class="c-LINE_95"></div>
+                <div data-line-id="TR_196" class="c-LINE_96"></div>
+                <div data-line-id="TR_197" class="c-LINE_97"></div>
+                <div data-line-id="TR_198" class="c-LINE_98"></div>
+                <div data-line-id="TR_199" class="c-LINE_99"></div>
+                <div data-line-id="TR_200" class="c-LINE_100"></div>
+                <div data-line-id="TR_201" class="c-LINE_101"></div>
+                <div data-line-id="TR_202" class="c-LINE_102"></div>
+                <div data-line-id="TR_203" class="c-LINE_103"></div>
+                <div data-line-id="TR_204" class="c-LINE_104"></div>
+                <div data-line-id="TR_205" class="c-LINE_105" data-length="1000"></div>
+
+
+                <!--*** HIDDEN TR LAYOUT FOR SYNC OVERVIEW -->
+                <div data-line-id="TR_320" style="display: none;"></div>
+                <div data-line-id="TR_321" style="display: none;"></div>
+                <div data-line-id="TR_322" style="display: none;"></div>
+                <div data-line-id="TR_323" style="display: none;"></div>
+                <div data-line-id="TR_311" style="display: none;"></div>
+                <div data-line-id="TR_312" style="display: none;"></div>
+                <div data-line-id="TR_313" style="display: none;"></div>
+                <div data-line-id="TR_314" style="display: none;"></div>
+                <div data-line-id="TR_315" style="display: none;"></div>
+                <!-- HIDDEN TR LAYOUT FOR SYNC OVERVIEW -->
+            </div>
+        </div>
+        <!-------------------------->
+        
+        <div class="ic-center-CLEANING1 fault" data-format='{"type":"fault_img_cls"}'
+             style="top: 356px;left: 104px; cursor:unset !important;" data-id="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT"></div>
+        <div class="ic-center-CLEANING2 fault" data-format='{"type":"fault_img_cls"}'
+             style="top: 356px;left: 205px; cursor:unset !important;" data-id="T3.DI.FLTEVT.NO2_Cleaning_Rec_FLT"></div>
+        <div class="ic-center-CL-RINSE fault" style="top: 356px;left: 351px; cursor:unset !important;"></div>
+        <div class="ic-center-PICKLING fault" style="top: 356px;left: 451px; cursor:unset !important;"></div>
+        <div class="ic-center-PK-RINSE fault" style="top: 256px;left: 597px; cursor:unset !important;"></div>
+        <div class="ic-center-ENCLOSURE2 fault" style="top: 108px;left: 773px; cursor:unset !important;"></div>
+        <div class="ic-center-PT-RINSE1 fault" style="top: 108px;left: 822px; cursor:unset !important;"></div>
+        <div class="ic-center-PT-RINSE2 fault" style="top: 108px;left: 949px; cursor:unset !important;"></div>
+        <div class="ic-center-FLUXING fault" style="top: 108px;left: 1015px; cursor:unset !important;"></div>
+        <div class="ic-center-ENCLOSURE1 fault" style="top: 259px;left: 1168px; cursor:unset !important;"></div>
+        <div class="ic-center-REFLOW fault" style="top: 117px;left: 1319px; cursor:unset !important;"></div>
+        <div class="ic-center-QUENCHING fault" data-id="T3.DI._ALARM.Quenching_TEMP_ALARM"
+             data-settype="N" data-cb="Y" style="top: 384px;left: 1353px; cursor:unset !important;"></div>
+        <div class="ic-center-CHEMICAL fault" style="top: 334px;left: 1502px; cursor:unset !important;"></div>
+        <div class="ic-center-CHEMICAL fault" style="top: 334px;left: 1538px; cursor:unset !important;"></div>
+        <div class="ic-center-CHEMICAL fault" style="top: 334px;left: 1573px; cursor:unset !important;"></div>
+        <div class="ic-center-box1 fault" style="top: 273px;left: 1583px;"></div>
+        <!-- 기본 이미지에 대한 텍스트라벨 -->
+        <div class="img-label" style="top:427px;left:7px">#2 BRIDLE ROLL</div>
+        <div class="img-label" style="top:336px;left:113px">#1 CLEANING</div>
+        <div class="img-label" style="top:336px;left:231px">#2 CLEANING</div>
+        <div class="img-label" style="top:336px;left:347px">CLEANING RINSE</div>
+        <div class="img-label" style="top:336px;left:494px">PICKLING</div>
+        <div class="img-label" style="top:336px;left:596px">PICKLING RINSE</div>
+        <div class="img-label" style="top:182px;left:667px">#2 CPC</div>
+        <div class="img-label" style="top:89px;left:745px">#2 ENCLOSURE</div>
+        <div class="img-label" style="top:89px;left:873px">PLATING RINSE</div>
+        <div class="img-label" style="top:89px;left:1056px">FLUXING</div>
+        <div class="img-label" style="top:89px;left:1147px">#1 AIR DRYER</div>
+        <div class="img-label" style="top:243px;left:1009px">TOP PLATING</div>
+        <div class="img-label" style="top:429px;left:929px">BOTTOM PLATING</div>
+        <div class="img-label" style="top:404px;left:1169px">#1 ENCLOSURE</div>
+        <div class="img-label" style="top:404px;left:810px">B1</div>
+        <div class="img-label" style="top:404px;left:846px">B2</div>
+        <div class="img-label" style="top:404px;left:882px">B3</div>
+        <div class="img-label" style="top:404px;left:918px">B4</div>
+        <div class="img-label" style="top:404px;left:954px">B5</div>
+        <div class="img-label" style="top:404px;left:990px">B6</div>
+        <div class="img-label" style="top:404px;left:1026px">B7</div>
+        <div class="img-label" style="top:404px;left:1062px">B8</div>
+        <div class="img-label" style="top:404px;left:1098px">B9</div>
+        <div class="img-label" style="top:404px;left:1130px">B10</div>
+        <div class="img-label" style="top:304px;left:918px">T7</div>
+        <div class="img-label" style="top:304px;left:954px">T6</div>
+        <div class="img-label" style="top:304px;left:988px">T5</div>
+        <div class="img-label" style="top:304px;left:1026px">T4</div>
+        <div class="img-label" style="top:304px;left:1061px">T3</div>
+        <div class="img-label" style="top:304px;left:1098px">T2</div>
+        <div class="img-label" style="top:304px;left:1134px">T1</div>
+        <div class="img-label" style="top:118px;left:1241px">전면마카</div>
+        <div class="img-label" style="top:350px;left:1227px">전면마카</div>
+        <div class="img-label" style="top:96px;left:1319px">REFLOW</div>
+        <div class="img-label" style="top:441px;left:1334px">QUENCHING</div>
+        <div class="img-label" style="top:198px;left:1480px">WPD</div>
+        <div class="img-label" style="top:403px;left:1522px">CHEMICAL</div>
+        <div class="img-label" style="top:138px;left:1669px">SDD</div>
+        <div class="img-label" style="top:396px;left:1591px">SDD</div>
+        <div class="img-label" style="top:346px;left:1756px">T.G</div>
+        <div class="img-label" style="top:346px;left:1787px">C.W.G</div>
+        <div class="img-label" style="top:432px;left:1805px">#3 BRIDLE ROLL</div>
+
+        <div class="img-label line-2" style="top:161px;left:1537px">#2 AIR<br> DRYER</div>
+        <div class="img-label line-2" style="top:160px;left:1660px">#3 AIR<br> DRYER</div>
+        <div class="img-label line-2" style="top:264px;left:1649px">E.S<br> OILER</div>
+        <div class="img-label line-2" style="top:408px;left:1637px">PIN HOLE<br> DETECTOR</div>
+
+        <!-- Start 아이콘 배치 클래스 stop,r-run,l-run,fault 추가시 상태 아이콘 변경 ------->
+        <!-- #2 BRIDLE ROLL -->
+        <div class="sensor-box" style="top:354px;left:13px;">
+            <div class="ic-center-sensor-up stop" data-format='{"type":"upArrow-e"}'
+                 data-id="T3.DI.NOREVT.NO2_Bridle_HD_Roll_Close"></div>
+            <div class="ic-center-sensor-down stop" data-format='{"type":"downArrow-e"}'
+                 data-id="T3.DI.NOREVT.NO2_Bridle_HD_Roll_Close"></div>
+        </div>
+        <div class="ic-roll-18" data-format='{"type":"roll-e","roll-dir":"l-run"}' data-id="T3.DI.LINEVT.NO2_BR_Run"
+             style="top:405px;left:3px;"></div>
+        <div class="ic-roll-10" data-format='{"type":"pinchRoll-e","roll-dir":"run-r"}'
+             data-id="T3.DI.NOREVT.NO2_Bridle_HD_Roll_Close" style="top:369px;left:33px;"></div>
+        <div class="ic-roll-30" data-format='{"type":"roll-e","roll-dir":"run-r"}' data-id="T3.DI.LINEVT.NO2_BR_Run"
+             style="top:383px;left:25.5px;"></div>
+        <div class="ic-roll-30" data-format='{"type":"roll-e","roll-dir":"run-l"}' data-id="T3.DI.LINEVT.NO2_BR_Run"
+             style="top:391px;left:63px;"></div>
+        <div class="ic-roll-18 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:360px;left:73px;"></div>
+        <!-- #1 CLEANING -->
+        <div class="ic-roll-16 line-roll" style="top:362px;left:114px;" name="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}' ></div>
+        <div class="ic-roll-16 line-roll" style="top:382px;left:146px;" name="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:382px;left:174px;" name="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:382px;left:117px;" name="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:369px;left:149px;" name="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:369px;left:177px;" name="T3.DI.FLTEVT.NO1_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <!-- #2 CLEANING -->
+        <div class="ic-roll-24 line-roll" style="top:382px;left:212px;" name="T3.DI.FLTEVT.NO2_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-24 line-roll" style="top:382px;left:283px;" name="T3.DI.FLTEVT.NO2_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:369px;left:324px;" name="T3.DI.FLTEVT.NO2_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:382px;left:321px;" name="T3.DI.FLTEVT.NO2_Cleaning_Rec_FLT" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <!-- CLEANING RINSE -->
+        <div class="ic-roll-10 line-roll" style="top:369px;left:363px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}' ></div>
+        <div class="ic-roll-10 line-roll" style="top:382px;left:363px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}' ></div>
+        <div class="ic-roll-10 line-roll" style="top:369px;left:418px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}' ></div>
+        <div class="ic-roll-16 line-roll" style="top:382px;left:415px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <!-- PICKLING -->
+        <div class="ic-roll-24 line-roll" style="top:382px;left:460px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}' ></div>
+        <div class="ic-roll-24 line-roll" style="top:382px;left:532px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}' ></div>
+        <div class="ic-roll-16 line-roll" style="top:384px;left:570px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}' ></div>
+        <div class="ic-roll-10 line-roll" style="top:371px;left:573px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <!-- PICKLING RINSE -->
+        <div class="ic-roll-24 line-roll" style="top:382px;left:614px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-24 line-roll" style="top:381px;left:693px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:267px;left:707px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:267px;left:720px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <!-- #2 CPC -->
+        <div class="ic-roll-18 line-roll" style="top:138px;left:720px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}' ></div>
+        <div class="ic-roll-18 line-roll" style="top:138px;left:742px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}' ></div>
+        <div class="ic-cpc2-2" style="top:183px;left:752px;"></div>
+        <!-- #2 ENCLOSURE -->
+        <div class="ic-roll-18 line-roll" style="top:135px;left:791px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-18 line-roll" style="top:260px;left:790px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:138px;left:777px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <!-- PLATING RINSE -->
+        <div class="ic-roll-24 line-roll" style="top:139px;left:823px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-24 line-roll" style="top:139px;left:886px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:136px;left:925px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:124px;left:926px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:137px;left:980px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:124px;left:983px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <!-- FLUXING -->
+        <div class="ic-roll-24 line-roll" style="top:138px;left:1021px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-24 line-roll" style="top:138px;left:1088px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:137px;left:1127px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-10 line-roll" style="top:124px;left:1130px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <!-- #1 AIR DRYER -->
+        <div class="ic-air-dryer-2" style="top:122px;left:1155.77px;"></div>
+        <div class="ic-roll-16 line-roll" style="top:137px;left:1220px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-10" style="top:140px;left:1239px;"></div>
+        <div class="ic-roll-8" style="top:141px;left:1250px;"></div>
+        <div class="ic-roll-8" style="top:141px;left:1259px;"></div>
+        <div class="ic-roll-16 line-roll" style="top:292px;left:1240px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:292px;left:1263px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-22 line-roll" style="top:157px;left:1281.5px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-22 line-roll" style="top:346px;left:1305px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-10" style="top:353px;left:1293px;"></div>
+        <div class="ic-roll-8" style="top:354px;left:1284px;"></div>
+        <div class="ic-roll-8" style="top:354px;left:1275px;"></div>
+        <!-- #1 ENCLOSURE -->
+        <div class="ic-roll-11 line-roll" style="top:266px;left:1178px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-18 line-roll" style="top:281px;left:1173px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-18 line-roll" style="top:361px;left:1173px;" data-cb="N"
+             data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <!-- TOP PLATING -->
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" style="top:272px;left:1136px;"
+             data-id="T3.DO.SYSHMI.NO1_Top_Rec_RUNMODE" name="NO1_Top"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" style="top:272px;left:1100px;"
+             data-id="T3.DO.SYSHMI.NO2_Top_Rec_RUNMODE" name="NO2_Top"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" style="top:272px;left:1064px;"
+             data-id="T3.DO.SYSHMI.NO3_Top_Rec_RUNMODE" name="NO3_Top"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" style="top:272px;left:1028px;"
+             data-id="T3.DO.SYSHMI.NO4_Top_Rec_RUNMODE" name="NO4_Top"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" style="top:272px;left:992px;"
+             data-id="T3.DO.SYSHMI.NO5_Top_Rec_RUNMODE" name="NO5_Top"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" style="top:272px;left:956px;"
+             data-id="T3.DO.SYSHMI.NO6_Top_Rec_RUNMODE" name="NO6_Top"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" style="top:272px;left:920px;"
+             data-id="T3.DO.SYSHMI.NO7_Top_Rec_RUNMODE" name="NO7_Top"></div>
+
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO1_Top_Rec_RUNMODE" name="NO1_Top" style="top:266px;left:1150px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO2_Top_Rec_RUNMODE" name="NO2_Top" style="top:266px;left:1116px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO3_Top_Rec_RUNMODE" name="NO3_Top" style="top:266px;left:1081px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO4_Top_Rec_RUNMODE" name="NO4_Top" style="top:266px;left:1045px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO5_Top_Rec_RUNMODE" name="NO5_Top" style="top:266px;left:1009px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO6_Top_Rec_RUNMODE" name="NO6_Top" style="top:266px;left:973px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO7_Top_Rec_RUNMODE" name="NO7_Top" style="top:266px;left:938px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}' style="top:266px;left:902px;"
+             ></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO1_Top_Rec_RUNMODE" name="NO1_Top" style="top:279px;left:1150px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO2_Top_Rec_RUNMODE" name="NO2_Top" style="top:279px;left:1116px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO3_Top_Rec_RUNMODE" name="NO3_Top" style="top:279px;left:1081px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO4_Top_Rec_RUNMODE" name="NO4_Top" style="top:279px;left:1045px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO5_Top_Rec_RUNMODE" name="NO5_Top" style="top:279px;left:1009px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO6_Top_Rec_RUNMODE" name="NO6_Top" style="top:279px;left:973px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO7_Top_Rec_RUNMODE" name="NO7_Top" style="top:279px;left:938px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"roll-e","roll-dir":"run-l"}' style="top:279px;left:902px;"
+             data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+
+        <!-- BOTTOM PLATING -->
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO10_BOT"
+             data-id="T3.DO.SYSHMI.NO10_BOT_Rec_RUNMODE" style="top:373px;left:1136px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO9_BOT"
+             data-id="T3.DO.SYSHMI.NO9_BOT_Rec_RUNMODE" style="top:373px;left:1100px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO8_BOT"
+             data-id="T3.DO.SYSHMI.NO8_BOT_Rec_RUNMODE" style="top:373px;left:1064px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO7_BOT"
+             data-id="T3.DO.SYSHMI.NO7_BOT_Rec_RUNMODE" style="top:373px;left:1028px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO6_BOT"
+             data-id="T3.DO.SYSHMI.NO6_BOT_Rec_RUNMODE" style="top:373px;left:992px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO5_BOT"
+             data-id="T3.DO.SYSHMI.NO5_BOT_Rec_RUNMODE" style="top:373px;left:956px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO4_BOT"
+             data-id="T3.DO.SYSHMI.NO4_BOT_Rec_RUNMODE" style="top:373px;left:920px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO3_BOT"
+             data-id="T3.DO.SYSHMI.NO3_BOT_Rec_RUNMODE" style="top:373px;left:884px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO2_BOT"
+             data-id="T3.DO.SYSHMI.NO2_BOT_Rec_RUNMODE" style="top:373px;left:848px;"></div>
+        <div class="ic-plating-2" data-format='{"type":"basic-e"}' data-cb="Y" name="NO1_BOT"
+             data-id="T3.DO.SYSHMI.NO1_BOT_Rec_RUNMODE" style="top:373px;left:812px;"></div>
+
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO10_BOT_Rec_RUNMODE" name="NO10_BOT" style="top:367px;left:1150px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO9_BOT_Rec_RUNMODE" name="NO9_BOT" style="top:367px;left:1116px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO8_BOT_Rec_RUNMODE" name="NO8_BOT" style="top:367px;left:1081px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO7_BOT_Rec_RUNMODE" name="NO7_BOT" style="top:367px;left:1045px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO6_BOT_Rec_RUNMODE" name="NO6_BOT" style="top:367px;left:1009px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO5_BOT_Rec_RUNMODE" name="NO5_BOT" style="top:367px;left:973px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO4_BOT_Rec_RUNMODE" name="NO4_BOT" style="top:367px;left:938px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO3_BOT_Rec_RUNMODE" name="NO3_BOT" style="top:367px;left:902px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO2_BOT_Rec_RUNMODE" name="NO2_BOT" style="top:367px;left:864px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-l"}'
+             data-id="T3.DO.SYSHMI.NO1_BOT_Rec_RUNMODE" name="NO1_BOT" style="top:367px;left:829px;"></div>
+        <div class="ic-roll-11 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}'style="top:367px;left:793px;"></div>
+
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO10_BOT_Rec_RUNMODE" name="NO10_BOT" style="top:381px;left:1150px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO9_BOT_Rec_RUNMODE" name="NO9_BOT" style="top:381px;left:1116px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO8_BOT_Rec_RUNMODE" name="NO8_BOT" style="top:381px;left:1081px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO7_BOT_Rec_RUNMODE" name="NO7_BOT" style="top:381px;left:1045px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO6_BOT_Rec_RUNMODE" name="NO6_BOT" style="top:381px;left:1009px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO5_BOT_Rec_RUNMODE" name="NO5_BOT" style="top:381px;left:973px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO4_BOT_Rec_RUNMODE" name="NO4_BOT" style="top:381px;left:938px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO3_BOT_Rec_RUNMODE" name="NO3_BOT" style="top:381px;left:902px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO2_BOT_Rec_RUNMODE" name="NO2_BOT" style="top:381px;left:864px;"></div>
+        <div class="ic-roll-11 plating-roll" data-format='{"type":"basic-e","roll-dir":"run-r"}'
+             data-id="T3.DO.SYSHMI.NO1_BOT_Rec_RUNMODE" name="NO1_BOT" style="top:381px;left:829px;"></div>
+        <div class="ic-roll-11 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:381px;left:793px;"></div>
+        <div class="ic-roll-18 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:360px;left:762px;"></div>
+
+        <!-- QUENCHING -->
+        <div class="ic-roll-20 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:401px;left:1359.3px;"></div>
+        <div class="ic-roll-20 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:348px;left:1382px;"></div>
+        <div class="ic-roll-10 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:353px;left:1369px;"></div>
+        <div class="ic-roll-12 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:379px;left:1405px;"></div>
+        <div class="ic-roll-26 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:128px;left:1330px;"></div>
+        <div class="ic-roll-16 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:158px;left:1421px;"></div>
+        <div class="ic-roll-16 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:158px;left:1442px;"></div>
+        <div class="ic-roll-16 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:281px;left:1462px;"></div>
+
+        <!-- CHEMICAL -->
+        <div class="ic-roll-14 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:301px;left:1493px;"></div>
+        <div class="ic-roll-14 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:301px;left:1528.8px;"></div>
+        <div class="ic-roll-14 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:301px;left:1563.8px;"></div>
+        <div class="ic-roll-12 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:374px;left:1511.8px;"></div>
+        <div class="ic-roll-12 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:374px;left:1547px;"></div>
+        <div class="ic-roll-12 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:374px;left:1582px;"></div>
+        <div class="ic-roll-10 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:303px;left:1514px;"></div>
+        <div class="ic-roll-10 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:303px;left:1549px;"></div>
+        <div class="ic-roll-10 line-roll" data-format='{"type":"roll-e","roll-dir":"l-run"}' style="top:285px;left:1585px;"></div>
+        <div class="ic-roll-10 line-roll" data-format='{"type":"roll-e","roll-dir":"r-run"}' style="top:285px;left:1598px;"></div>
+
+        <div class="ic-air-dryer2-2" style="top:186px;left:1582px;"></div>
+        <div class="ic-air-dryer2-2" style="top:186px;left:1625px;"></div>
+        <div class="ic-roll-16 line-roll" style="top:157px;left:1598px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:157px;left:1621px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <!-- PIN HOLE DETECTOR -->
+        <div class="ic-roll-16 line-roll" style="top:373px;left:1641px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:373px;left:1676px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-pinhole-2 stop" style="top:384px;left:1660.5px;"></div>
+        <div class="ic-esoiler2" style="top:237px;left:1688px;" data-format='{"type":"basic-e"}'
+             data-id="T3.DO.SYSHMI.ES_Oiler_RUNMODE"></div>
+        <div class="ic-roll-16 line-roll" style="top:205px;left:1695px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <div class="ic-roll-16 line-roll" style="top:205px;left:1717px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'></div>
+        <!-- T.G C.W.G -->
+        <div class="ic-roll-16 line-roll" style="top:361px;left:1737px;" data-format='{"type":"roll-e","roll-dir":"l-run"}'></div>
+        <div class="ic-plating-2 stop" style="top:366px;left:1759px;"></div>
+        <div class="ic-plating-2 stop" style="top:366px;left:1776px;"></div>
+        <div class="ic-roll-30" style="top:394px;left:1788px;" data-format='{"type":"roll-e","roll-dir":"run-l"}'
+             data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-30" style="top:382px;left:1823px;" data-format='{"type":"roll-e","roll-dir":"run-r"}'
+             data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-30" style="top:394px;left:1883px;" data-format='{"type":"roll-e","roll-dir":"run-l"}'
+             data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-10" style="top:367px;left:1833px;"
+             data-format='{"type":"pinchRoll-e","roll-dir":"run-l"}'
+             data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-10" style="top:379px;left:1893px;"
+             data-format='{"type":"pinchRoll-e","roll-dir":"run-r"}'
+             data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="ic-roll-18" style="top:387px;left:1862px;" data-format='{"type":"roll-e","roll-dir":"r-run"}'
+             data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        <div class="sensor-box" style="top:349px;left:1848px;">
+            <div class="ic-center-sensor-up" data-format='{"type":"upArrow-e"}'
+                 data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+            <div class="ic-center-sensor-down" data-format='{"type":"downArrow-e"}'
+                 data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        </div>
+        <div class="sensor-box" style="top:349px;left:1905px;">
+            <div class="ic-center-sensor-up" data-format='{"type":"upArrow-e"}'
+                 data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+            <div class="ic-center-sensor-down" data-format='{"type":"downArrow-e"}'
+                 data-id="T3.DI.LINEVT.NO3_BR_Run"></div>
+        </div>
+        <div class="ic-wpd" style="top:200px;left:1446px;"></div>
+        <div class="ic-cam2-up" style="top:384px;left:1612px;"></div>
+        <div class="ic-cam2-down" style="top:139px;left:1640px;"></div>
+
+        <!-- 그리드 배치 ------------------------------------------------------->
+        <!-- PLATING 농도 -->
+        <div class="list-grid gd-enc" style="top:5px;left:520px;">
+            <div class="list-title">PLATING 농도</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p>Sn+2 (g/L)</p>
+                    <p>F (g/L)</p>
+                    <p>Mol비</p>
+                    <p>PH (PH)</p>
+                    <p>DYH-A (g/L)</p>
+                    <p>황혈염 (g/L)</p>
+                    <p>NaCl (g/L)</p>
+                </li>
+                <li class="data">
+                    <p data-id="T3.AI.__CHEM.PLATING_SN2" class="clbk">0.0</p>
+                    <p data-id="T3.AI.__CHEM.PLATING_F" class="clbk">1.0</p>
+                    <p data-id="T3.AI.__CHEM.PLATING_M" class="clbk">2.0</p>
+                    <p data-id="T3.AI.__CHEM.PLATING_PH" class="clbk">3.0</p>
+                    <p data-id="T3.AI.__CHEM.PLATING_DYHA" class="clbk">4.0</p>
+                    <p data-id="T3.AI.__CHEM.PLATING_YBC" class="clbk">5.0</p>
+                    <p data-id="T3.AI.__CHEM.PLATING_NACL" class="clbk">6.0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- #2 ENCLOSURE -->
+        <div class="list-grid gd-enc" style="top:5px;left:697px;">
+            <div class="list-title underline" modal-id="TP31CTS090">#2 ENCLOSURE</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p class="clbkgray bd-dot top left bottom">농도 (mg/kg)</p>
+                </li>
+                <li class="data">
+                    <p class="clbkgray bd-dot top right bottom">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- PLATING RINSE -->
+        <div class="list-grid gd-enc" style="top:5px;left:855px;">
+            <div class="list-title underline" modal-id="TP31CTS100">PLATING RINSE</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p>농도 (PH)</p>
+                    <p>온도 (°C)</p>
+                </li>
+                <li class="data">
+                    <p data-id="T3.AI.__CHEM.PLATING_PH" class="clbk">0</p>
+                    <p data-cb="Y" alram-id="T3.DI._ALARM.Plating_Rinse_TEMP_ALARM"
+                       data-id="T3.AI.TEMPER.Plating_Rinse_TEMP">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- FLUXING -->
+        <div class="list-grid gd-enc" style="top:5px;left:1013px;width: 120px;">
+            <div class="list-title underline" modal-id="TP31CTS110">FLUXING</div>
+            <ul class="list-data">
+                <li class="data-title" style="width: 66px;">
+                    <p>농도 (g/L)</p>
+                    <p>온도 (°C)</p>
+                </li>
+                <li class="data">
+                    <p data-id="T3.AI.__CHEM.FLUX_ND" class="clbk">0</p>
+                    <p data-format='{"type":"num"}' data-cb="Y" alram-id="T3.DI._ALARM.Fluxing_TEMP_ALARM"
+                       data-id="T3.AI.TEMPER.Fluxing_TEMP">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- #1 AIR DRYER -->
+        <div class="list-grid gd-enc" style="top:5px;left:1147px;">
+            <div class="list-title underline" modal-id="TP31CTS040">#1 AIR DRYER</div>
+            <ul class="list-data">
+                <li class="data-title" style="width: 66px;">
+                    <p>온도 (°C)</p>
+                </li>
+                <li class="data">
+                    <p data-format='{"type":"num"}' data-cb="Y" alram-id="T3.DI._ALARM.NO1_Air_Dryer_TEMP_ALARM"
+                       data-id="T3.AI.TEMPER.NO1_Air_Dryer_TEMP">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- #2 AIR DRYER -->
+        <div class="list-grid gd-enc" style="top:5px;left:1557px;">
+            <div class="list-title underline" modal-id="TP31CTS041">#2 AIR DRYER</div>
+            <ul class="list-data">
+                <li class="data-title" style="width: 65px;">
+                    <p>온도 (°C)</p>
+                </li>
+                <li class="data">
+                    <p data-format='{"type":"num"}' data-cb="Y" alram-id="T3.DI._ALARM.NO2_Air_Dryer_TEMP_ALARM"
+                       data-id="T3.AI.TEMPER.NO2_Air_Dryer_TEMP">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- #3 AIR DRYER -->
+        <div class="list-grid gd-enc" style="top:66px;left:1557px;">
+            <div class="list-title underline" modal-id="TP31CTS042">#3 AIR DRYER</div>
+            <ul class="list-data">
+                <li class="data-title" style="width: 65px;">
+                    <p>온도 (°C)</p>
+                </li>
+                <li class="data">
+                    <p data-format='{"type":"num"}' data-cb="Y" alram-id="T3.DI._ALARM.NO3_Air_Dryer_TEMP_ALARM"
+                       data-id="T3.AI.TEMPER.NO3_Air_Dryer_TEMP">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- #1 ENCLOSURE -->
+        <div class="list-grid gd-enc" style="top:463px;left:1146px;">
+            <div class="list-title underline" modal-id="TP31CTS080">#1 ENCLOSURE</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p class="clbkgray bd-dot top left bottom">농도 (mg/kg)</p>
+                    
+                </li>
+                <li class="data">
+                    <p class="clbkgray bd-dot top right bottom">0</p>
+                    
+                </li>
+            </ul>
+        </div>
+        <!-- #2 BRIDLE ROLL -->
+        <div class="list-grid gd-bridle-roll" style="top:463px; left:10px;">
+            <div class="list-title">#2 BRIDLE ROLL</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p class="title">구분</p>
+                    <p>전류 (A)</p>
+                    <p>SPEED (mpm)</p>
+                </li>
+                <li class="data">
+                    <p class="title">#1 BR</p>
+                    <p data-id="T3.AI.AMPERE.NO2_Bridle_AC">0</p>
+                    <p data-id="T3.AI._SPEED.NO2_Bridle_Actual_Speed">0</p>
+                </li>
+                <li class="data">
+                    <p class="title">#2 BR</p>
+                    <p class="bd-dot top left right clbkgray">0</p>
+                    <p class="bd-dot bottom left right clbkgray">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- QUENCHING -->
+        <div class="list-grid gd-quenching">
+            <div class="list-title underline" modal-id="TP31CTS160">QUENCHING</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p>온도 (°C)</p>
+                    <p>운전상태</p>
+                    <p>온도제어</p>
+                </li>
+                <li class="data">
+                    <p data-cb="Y" alram-id="T3.DI._ALARM.Quenching_TEMP_ALARM" data-id="T3.AI.TEMPER.Quenching_TEMP">
+                        0</p>
+                    <p class="button" style="gap:3px;" data-settype="N" data-cb="Y" data-id="T3.DO.SYSHMI.Quenching_TEMP_CONTROL">
+                        <button
+                                class="btn-normal Quenching" data-sendval="false">정지
+                        </button>
+                        <button
+                                class="btn-normal Quenching" data-sendval="true">운전
+                        </button>
+                    </p>
+                    <p class="button" style="gap:3px;" data-settype="N" data-cb="Y" data-id="T3.DO.SYSHMI.Quenching_RUNMODE_SETUP">
+                        <button
+                                class="btn-normal Quenching" data-sendval="false">가열
+                        </button>
+                        <button
+                                class="btn-normal Quenching" data-sendval="true">냉각
+                        </button>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!-- CHEMICAL TREATMENT COOLING -->
+        <div class="list-grid gd-enc" style="top:463px;left:1450px;">
+            <div class="list-title">화학처리 냉각</div>
+            <ul class="list-data">
+                <li class="data-title" style="width: 66px;">
+                    <p>온도 (°C)</p>
+                </li>
+                <li class="data">
+                    <p data-format='{"type":"num"}' class="curVal" data-cb="Y"
+                       alram-id="T3.DI._ALARM.CHEM_TREAT_COOLING_TEMP_ALARM"
+                       data-id="T3.AI.TEMPER.CHEM_TREAT_COOLING_TEMP">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- REFLOW -->
+        <div class="list-grid type1 gd-reflow">
+            <div class="list-title underline" modal-id="TP31CTS050">REFLOW</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p>전압 (V)</p>
+                    <p>전류 (KA)</p>
+                    <p>미세조정 (%)</p>
+                </li>
+                <li class="data">
+                    <p data-format='{"type":"num"}' data-id="T3.AI.__VOLT.Reflow_Conduction_AV">0</p>
+                    <p data-format='{"type":"num"}' data-id="T3.AI.AMPERE.Reflow_Conduction_2nd_AC">0</p>
+                    <p class="underline FineTune"
+                       title="REFLOW 미세조정 (%)"
+                       min="50" max="150"
+                       data-id="T3.AO.PERCEN.Reflow_Conduction_FINE_TUNE">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- E.S OILER -->
+        <div class="list-grid gd-oiler">
+            <div class="list-title underline" modal-id="TP31CTS060">E.S OILER</div>
+            <ul class="list-data">
+                <li class="data-title" style="width:102px;">
+                    <p>설정값 (㎎/㎡)</p>
+                    <p>현재값 (㎎/㎡)</p>
+                    <p>미세조정 (%)</p>
+                    <p>OILER 운전상태</p>
+                </li>
+                <li class="data">
+                    <p data-id="T3.AI.__MASS.ES_Oiler_OIL_WEIGHT_SETUP">0</p>
+                    <p data-id="T3.AI.__MASS.ES_Oiler_CURRENT_VAL">0</p>
+                    <p class="underline FineTune" min="0" max="100"
+                       title="E.S OILER 미세조정 (%)"
+                       data-id="T3.AO.PERCEN.ES_Oiler_FINE_TUNE">0</p>
+                    <p data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.ES_Oiler_RUNMODE">정지</p>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="list-grid gd-bridle-roll num3" style="top:463px; left:1597px;">
+            <div class="list-title">#3 BRIDLE ROLL</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p class="title">구분</p>
+                    <p>전류 (A)</p>
+                    <p>SPEED (mpm)</p>
+                </li>
+                <li class="data">
+                    <p class="title">#1 BR</p>
+                    <p data-id="T3.AI.AMPERE.NO3_Bridle_AC">0</p>
+                    <p data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed">0</p>
+                </li>
+                <li class="data">
+                    <p class="title">#2 BR</p>
+                    <p class="bd-dot top left clbkgray">0</p>
+                    <p class="bd-dot bottom left clbkgray">0</p>
+                </li>
+                <li class="data">
+                    <p class="title">#3 BR</p>
+                    <p class="bd-dot top right clbkgray">0</p>
+                    <p class="bd-dot bottom right clbkgray">0</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- #2 CLEANING #1 정류기 -->
+        <div class="list-grid gd-cleaning" style="top:182px; left:21px;">
+            <ul class="list-data">
+                <li class="data-title">
+                    <p class="title"></p>
+                    <p>전류 (A)</p>
+                    <p>운전상태</p>
+                    <p>운전모드</p>
+                    <p>방향선택</p>
+                </li>
+                <li class="data">
+                    <p class="title underline" modal-id="TP31CTS120">#2 CLEANING #1 정류기</p>
+                    <p data-format='{"type":"digit3"}' data-id="T3.AI.AMPERE.NO1_Cleaning_REC_AC">0</p>
+                    
+                    
+                    <p data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO1_Cleaning_Rectifier_RUNMODE">운전</p>
+                    <p data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO1_Cleaning_Rectifier_AUTOMODE">수동</p>
+                    <p id="NO1_Dir">역</p>
+                </li>
+                <li class="data">
+                    <p class="title underline" modal-id="TP31CTS130">#2 CLEANING #2 정류기</p>
+                    <p data-format='{"type":"digit3"}' data-id="T3.AI.AMPERE.NO2_Cleaning_REC_AC">0</p>
+                    <p data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_RUNMODE">운전</p>
+                    <p data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_AUTOMODE">자동</p>
+                    <p id="NO2_Dir">정</p>
+                </li>
+            </ul>
+        </div>
+
+        
+        <!-- #2 CLEANING #1 정류기 -->
+        <div class="cleaning-wrap" style="top: 182px;left: 220px;">
+            <div class="title-box">#2 CLEANING #2 정류기</div>
+            <div class="cleaning-box">
+                <button class="btn-normal" data-format='{"type":"drive_cls"}'
+                        data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_RUNMODE">정지
+                </button>
+                <button class="btn-normal" data-format='{"type":"auto_cls"}'
+                        data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_AUTOMODE">수동
+                </button>
+                <button class="btn-normal" data-settype="N" data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_BACKWARD">역
+                </button>
+                <button class="btn-normal" data-settype="N" data-id="T3.DO.SYSHMI.NO2_Cleaning_Rectifier_FORWARD">정
+                </button>
+                <div class="value-box" style="text-decoration: unset; cursor:unset;">
+					<span class="underline keypad" data-sendtype=2 tar-data-id="T3.AO.AMPERE.NO2_Cleaning_REC_AC_SETUP"
+                          max="10000"
+                          data-id="T3.AI.AMPERE.NO2_Cleaning_REC_AC">0</span>&nbsp;KA
+                </div>
+                
+            </div>
+        </div>
+        <!-- TOP PLATING -->
+        <div class="list-grid gd-plating" style="top:463px; left:270px;">
+            <div class="list-title">TOP PLATING</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p>전류 (K/A)</p>
+                    <p>미세조정 (%)</p>
+                </li>
+                <li class="data">
+                    <p data-format='{"type":"num"}' data-id="T3.AI.AMPERE.Top_Rec_Total_AC">0</p>
+                    <p class="underline FineTune"
+                       title="TOP PLATING 미세조정 (%)"
+                       data-sendtype=2 min="50" max="150"
+                       data-id="T3.AO.PERCEN.Top_Palting_FINE_TUNE">0</p>
+                </li>
+            </ul>
+        </div>
+        <!-- BOTTOM PLATING -->
+        <div class="list-grid gd-plating" style="top:463px; left:430px;">
+            <div class="list-title">BOTTOM PLATING</div>
+            <ul class="list-data">
+                <li class="data-title">
+                    <p>전류 (K/A)</p>
+                    <p>미세조정 (%)</p>
+                </li>
+                <li class="data">
+                    <p data-format='{"type":"num"}' data-id="T3.AI.AMPERE.BOT_Rec_Total_AC">0</p>
+                    <p class="underline FineTune" min="50" max="150"
+                       title="BOTTOM PLATING 미세조정 (%)"
+                       data-id="T3.AO.PERCEN.Bottom_Palting_FINE_TUNE">0</p>
+                </li>
+            </ul>
+        </div>
+
+        <button class="btn-large quick"
+                style="font-size: 20px; height: 115px; width: 100px; position: absolute;
+                    top: 462px; left: 650px; display: flex;
+                    justify-content: center; align-items: center;
+                    border-radius: 3.12px; background: #CCCCCC;
+                    border: 0.78px solid #999999;
+                    box-shadow: 0px -3.12px 3.12px 0px rgba(0, 0, 0, 0.2509803922) inset; color: #000000; font-weight:bold;"
+                data-settype="N" data-cb="Y" data-id="T3.DO.SYSHMI.NORMAL_STOP">
+            N-STOP
+        </button>
+        <div class="main-button-box" style="top: 530px;left: 759px; gap: 16px">
+            
+            
+            
+            <button class="btn-large quick" driveCheck="true" data-settype="N" data-cb="Y"
+                    data-id="T3.DO.SYSHMI.MANUAL_TRACKING">수동 트래킹
+            </button>
+            <button class="btn-large quick" driveCheck="true" data-settype="N" data-cb="Y"
+                    data-id="T3.DO.SYSHMI.COAT_WT_CONV">부착량 변환
+            </button>
+            <button class="btn-large quick" driveCheck="true" data-settype="N" data-cb="Y"
+                    data-id="T3.DO.SYSHMI.Plating_Production_Start">부착량 유지
+            </button>
+        </div>
+        
+        <div class="list-grid gd-mini" style="top:463px; left:760px;">
+            <ul class="list-data">
+                <li class="data">
+                    <p class="title">LINE 운전상태</p>
+                    <p data-settype="N" data-cb="Y" id="T3.DI.LINEVT.Line_Mode_Select_Man">라인수동</p>
+                </li>
+                <li class="data">
+                    <p class="title">LINE &amp; MCC</p>
+                    <p data-format='{"type":"normal_fault_cls"}' data-id="T3.DI._ALARM.LINE_MCC_FLT">정상</p>
+                </li>
+                <li class="data">
+                    <p class="title">도금액</p>
+                    <p data-format='{"type":"normal_fault_cls"}' data-id="T3.DO.SYSHMI.PLATING_CHECK">정상</p>
+                </li>
+            </ul>
+        </div>
+        <!-- CHEMICAL UP -->
+        <div class="list-grid gd-large" style="top:586px; left:1540px;">
+            <div class="list-title underline" modal-id="TP31CTS140">CHEMICAL UP</div>
+            <ul class="list-data">
+                <li class="data">
+                    <p class="title">전류 (KA)</p>
+                    <p data-id="T3.AI.AMPERE.Up_CHEM_REC_AC">0.00</p>
+                </li>
+                <li class="data">
+                    <p class="title">전압 (V)</p>
+                    <p data-id="T3.AI.__VOLT.Up_CHEM_Rec_AV">0.00</p>
+                </li>
+                <li class="data">
+                    <p class="title">미세조정 (%)</p>
+                    <p class="underline FineTune"
+                       min="50" max="150"
+                       title="CHEMICAL UP 미세조정 (%)"
+                       data-id="T3.AO.PERCEN.Up_CHEM_Rec_FINE_TUNE">0</p>
+                </li>
+                <li class="data">
+                    <p class="title">운전모드</p>
+                    <p data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.Up_CHEM_Rectifier_RUNMODE">정지</p>
+                </li>
+                <li class="data">
+                    <p class="title">운전상태</p>
+                    <p data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.Up_CHEM_Rectifier_AUTOMODE">수동</p>
+                </li>
+            </ul>
+        </div>
+
+        
+        
+        <!-- CHEMICAL DOWN -->
+        <div class="list-grid gd-large" style="top:700px; left:1540px;">
+            <div class="list-title underline" modal-id="TP31CTS150">CHEMICAL DOWN</div>
+            <ul class="list-data">
+                <li class="data">
+                    <p class="title">전류 (KA)</p>
+                    <p data-id="T3.AI.AMPERE.Down_CHEM_REC_AC">0.00</p>
+                </li>
+                <li class="data">
+                    <p class="title">전압 (V)</p>
+                    <p data-id="T3.AI.__VOLT.Down_CHEM_AV">0.00</p>
+                </li>
+                <li class="data">
+                    <p class="title">미세조정 (%)</p>
+                    <p class="underline FineTune"
+                       min="50" max="150"
+                       title="CHEMICAL DOWN 미세조정 (%)"
+                       data-id="T3.AO.PERCEN.Down_CHEM_Rec_FINE_TUNE">0</p>
+                </li>
+                <li class="data">
+                    <p class="title">운전모드</p>
+                    <p data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.Down_CHEM_Rectifier_RUNMODE">정지</p>
+
+                </li>
+                <li class="data">
+                    <p class="title">운전상태</p>
+                    <p data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.Down_CHEM_Rectifier_AUTOMODE">수동</p>
+                </li>
+            </ul>
+        </div>
+        
+
+        <div class="gauge-wrap gauge2">
+            <div class="gauge-top-wrap">
+                <div class="gauge-title">LINE SPEED</div>
+            </div>
+            <div class="flex-row">
+                <div class="gauge-box-wrap">
+                    <div class="gauge-box">
+                        <!-- 눈금자 -->
+                        <div class="img-graduation"></div>
+                        <!-- 단위Text -->
+                        <div class="unit-txt" style="top:39px;left:56px;">m/min</div>
+                        <!-- 눈금자 숫자 Text -------------------->
+                        <div class="grd-txt" style="top:71px;left:12px;">0</div>
+                        <div class="grd-txt" style="top:55px;left:14px;">40</div>
+                        <div class="grd-txt" style="top:38px;left:23px;">80</div>
+                        <div class="grd-txt" style="top:25px;left:34px;">120</div>
+                        <div class="grd-txt" style="top:13px;left:52px;">160</div>
+                        <div class="grd-txt" style="top:4px;left:71px;">200</div>
+                        <div class="grd-txt" style="top:13px;left:93px;">240</div>
+                        <div class="grd-txt" style="top:25px;left:108px;">280</div>
+                        <div class="grd-txt" style="top:38px;left:122px;">320</div>
+                        <div class="grd-txt" style="top:55px;left:129px;">360</div>
+                        <div class="grd-txt" style="top:71px;left:131px;">400</div>
+
+
+                        <!-- 바늘 중심원 -->
+                        <div class="ct-needle">
+                            <div class="inside"></div>
+                        </div>
+                        <!-- 바늘 -->
+                        <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+                        <div class="img-needle" id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed" min="0"
+                             max="400" style="transform: rotate(-90deg);"></div>
+
+                    </div>
+                    <div data-format='{"type":"num","def_unit":" m/min"}' data-cb="Y"
+                         data-id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed"
+                         id="T3.AI._SPEED.NO3_Bridle_Actual_Speed_EQ_Line_Speed_text" class="gauge-value"><span>0</span>
+                        m/min
+                    </div>
+                </div>
+                <ul class="gauge-right">
+                    <li>
+                        <div class="value-wrap line2">
+                            <button class="btn-normal modeBtn" data-format='{"type":"cls"}'
+                                    data-id="T3.DI.LINEVT.Line_Speed_Select_H" mode="H"><p class="mark">H</p></button>
+                            <div class="v-line"></div>
+                            
+                            <p class="value underline keypad" data-sendtype=2 max="300" title="LINE SPEED H"
+                               data-id="T3.AO._SPEED.Line_Speed_H_Set">0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-wrap line2">
+                            <button class="btn-normal modeBtn" data-format='{"type":"cls"}'
+                                    data-id="T3.DI.LINEVT.Line_Speed_Select_M" mode="M"><p class="mark">M</p></button>
+                            <div class="v-line"></div>
+                            
+                            <p class="value underline keypad" data-sendtype=2 max="300" title="LINE SPEED M"
+                               data-id="T3.AO._SPEED.Line_Speed_M_Set">0</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-wrap line2">
+                            <button class="btn-normal modeBtn" data-format='{"type":"cls"}'
+                                    data-id="T3.DI.LINEVT.Line_Speed_Select_L" mode="L"><p class="mark">L</p></button>
+                            <div class="v-line"></div>
+                            
+                            <p class="value underline keypad" data-sendtype=2 max="300" title="LINE SPEED L"
+                               data-id="T3.AO._SPEED.Line_Speed_L_Set">0</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="gauge-wrap gauge1">
+            <div class="gauge-top-wrap">
+                <div class="gauge-title underline FineTune"
+                     title="#2 BR 미세조정 (%)"
+                     data-id="T3.AO.PERCEN.Line_Tension_NO2_Bridle"
+                     data-settype="N"
+                     min="0" max="100">#2 BRIDLE ROLL TENSION
+                </div>
+            </div>
+            <div class="gauge-box-wrap">
+                <div class="gauge-box">
+                    <!-- 눈금자 -->
+                    <div class="img-graduation"></div>
+                    <!-- 단위Text -->
+                    <div class="unit-txt" style="top:39px;left:75px;">A</div>
+                    <!-- 눈금자 숫자 Text -------------------->
+                    <div class="grd-txt" style="top:71px;left:12px;">-300</div>
+                    <div class="grd-txt" style="top:55px;left:16px;">-240</div>
+                    <div class="grd-txt" style="top:38px;left:25px;">-180</div>
+                    <div class="grd-txt" style="top:25px;left:35px;">-120</div>
+                    <div class="grd-txt" style="top:13px;left:52px;">-60</div>
+                    <div class="grd-txt" style="top:4px;left:77px;">0</div>
+                    <div class="grd-txt" style="top:13px;left:95px;">60</div>
+                    <div class="grd-txt" style="top:25px;left:107px;">120</div>
+                    <div class="grd-txt" style="top:38px;left:120px;">180</div>
+                    <div class="grd-txt" style="top:55px;left:129px;">240</div>
+                    <div class="grd-txt" style="top:71px;left:131px;">300</div>
+
+                    <!-- 바늘 중심원 -->
+                    <div class="ct-needle">
+                        <div class="inside"></div>
+                    </div>
+                    <!-- 바늘 -->
+                    <!-- 각도는 눈금자 시작 기준 -90deg ~ 90deg 개발시 계산하여 변경 -->
+                    <div class="img-needle" id="T3.AI.AMPERE.NO2_Bridle_AC" min="-300" max="300"
+                         style="transform: rotate(0deg);"></div>
+
+                </div>
+                <div class="gauge-value" data-cb="Y" data-format='{"type":"num","def_unit":" A"}'
+                     id="T3.AI.AMPERE.NO2_Bridle_AC_text" data-id="T3.AI.AMPERE.NO2_Bridle_AC"><span></span>0 A
+                </div>
+            </div>
+        </div>
+
+        <div class="table-box" style="top: 586px;left: 10px;">
+            <ul class="row-title">
+                <li>구분</li>
+                <li>전류밀도 (A/d㎡)</li>
+                <li>전압 현재값 (V)</li>
+                <li>전류 현재값 (A)</li>
+                <li>전류 설정값 (A)</li>
+                <li>운전모드</li>
+                <li>운전상태</li>
+            </ul>
+            <div class="table-wrap">
+                <!-- 컬럼 선택영역은 left값으로 이동 가능 col*80px 씩 이동 가능(** TOP 정류기 테이블은 802px+col*80px) 로 계산 -->
+                <!-- ex) BOTTOM 정류기 3번 컬럼 선택시 left:240px; -->
+                
+
+                <table>
+                    <colgroup>
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="underline" modal-id="TP31CTS020" colspan="11">BOTTOM 정류기 (RECTIFIER)</th>
+                    </tr>
+                    <tr>
+                        <th>합계 (KA)</th>
+                        <th>#1</th>
+                        <th>#2</th>
+                        <th>#3</th>
+                        <th>#4</th>
+                        <th>#5</th>
+                        <th>#6</th>
+                        <th>#7</th>
+                        <th>#8</th>
+                        <th>#9</th>
+                        <th>#10</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY"></td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_1">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_2">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_3">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_4">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_5">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_6">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_7">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_8">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_9">0</td>
+                        <td data-id="T3.AI.DENSIT.Bottom_Rec_CURRENT_DENSITY_10">0</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td data-id="T3.AI.__VOLT.NO1_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO2_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO3_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO4_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO5_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO6_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO7_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO8_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO9_Bottom_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO10_Bottom_REC_VOLT">0</td>
+                    </tr>
+                    <tr>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.BOT_Rec_Total_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO1_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO2_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-cb="Y" data-id="T3.AI.AMPERE.NO3_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO4_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO5_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO6_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO7_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO8_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO9_BOT_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO10_BOT_REC_AC">0</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO1_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO2_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO3_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO4_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO5_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO6_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO7_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO8_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO9_Bottom_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO10_Bottom_REC_Setting_Current">0</td>
+                    </tr>
+                    <tr>
+                        <td class="off"></td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO1_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO2_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO3_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO4_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO5_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO6_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO7_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO8_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO9_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO10_BOT_Rec_AUTOMODE">
+                            수동
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="off"></td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO1_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO2_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO3_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO4_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO5_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO6_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO7_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO8_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO9_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO10_BOT_Rec_RUNMODE">
+                            정지
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <colgroup>
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                        <col width="73.5px">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th class="underline" modal-id="TP31CTS020" colspan="11">TOP 정류기 (RECTIFIER)</th>
+                    </tr>
+                    <tr>
+                        <th>합계 (KA)</th>
+                        <th>#7</th>
+                        <th>#6</th>
+                        <th>#5</th>
+                        <th>#4</th>
+                        <th>#3</th>
+                        <th>#2</th>
+                        <th>#1</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.Top_Rec_CURRENT_DENSITY"></td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.TOP_Rec_CURRENT_DENSITY_7">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.TOP_Rec_CURRENT_DENSITY_6">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.TOP_Rec_CURRENT_DENSITY_5">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.TOP_Rec_CURRENT_DENSITY_4">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.TOP_Rec_CURRENT_DENSITY_3">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.TOP_Rec_CURRENT_DENSITY_2">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.DENSIT.TOP_Rec_CURRENT_DENSITY_1">0</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td data-id="T3.AI.__VOLT.NO7_Top_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO6_Top_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO5_Top_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO4_Top_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO3_Top_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO2_Top_REC_VOLT">0</td>
+                        <td data-id="T3.AI.__VOLT.NO1_Top_REC_VOLT">0</td>
+                    </tr>
+                    <tr>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.Top_Rec_Total_AC"></td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO7_Top_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO6_Top_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO5_Top_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO4_Top_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO3_Top_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO2_Top_REC_AC">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO1_Top_REC_AC">0</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO7_Top_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO6_Top_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO5_Top_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO4_Top_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO3_Top_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO2_Top_REC_Setting_Current">0</td>
+                        <td data-format='{"type":"num"}' data-id="T3.AI.AMPERE.NO1_Top_REC_Setting_Current">0</td>
+                    </tr>
+                    <tr>
+                        <td class="off"></td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO7_Top_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO6_Top_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO5_Top_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO4_Top_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO3_Top_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO2_Top_Rec_AUTOMODE">
+                            수동
+                        </td>
+                        <td class="off" data-format='{"type":"auto_cls"}' data-id="T3.DO.SYSHMI.NO1_Top_Rec_AUTOMODE">
+                            수동
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="off"></td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO7_Top_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO6_Top_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO5_Top_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO4_Top_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO3_Top_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO2_Top_Rec_RUNMODE">
+                            정지
+                        </td>
+                        <td class="off" data-format='{"type":"drive_cls"}' data-id="T3.DO.SYSHMI.NO1_Top_Rec_RUNMODE">
+                            정지
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+            </main>
+            <footer>
+    <div class="alarm-title-box" style="cursor:pointer" id="alram-box">ALARM</div>
+    <div class="alarm-data-box">
+        <div class="data-wrap">
+            <ul class="data-list">
+
+            </ul>
+        </div>
+    </div>
+    <button class="btn-legend" id="legend-box" alt="범례">
+        <img src="" class="ic-legend">
+        LEGEND
+    </button>
+</footer>
+    </div>
+    <div id="modal-layout">
+    </div>
+
+    <!-- PLC SERVER HIDDEN URL -->
+    <input type="hidden" id="_PLC_SERVER" value="${_PLC_SERVER?default('')}"/>
+    <input type="hidden" id="_USER_ID" value="${_USER_ID?default('')}"/>
+    </body>
+</html>

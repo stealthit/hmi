@@ -323,6 +323,7 @@
   position: relative;
   width: 1919px;
   height: 333px;
+  margin-top: 5px;
 }
 .center-o-wrapper .gauge1 {
   z-index: 2;
@@ -939,7 +940,8 @@
 }
 
 .setting-center-wrapper {
-  padding: 90px;
+  justify-content: space-between;
+  padding: 156px 60px 80px 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -953,6 +955,10 @@
 .setting-center-wrapper .flex-row {
   display: flex;
   gap: 40px;
+}
+.setting-center-wrapper .flex-row:last-child {
+  gap: 20px;
+  justify-content: center;
 }
 .setting-center-wrapper .flex-row:last-child button {
   width: 196px;
@@ -1010,20 +1016,29 @@
 .setting-center-wrapper .gd-chemical {
   width: 400px;
 }
+.setting-center-wrapper .gd-chemical .title-box {
+  position: relative;
+}
+.setting-center-wrapper .gd-chemical .title-box .btn-setting {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 56px;
+  height: 20px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 12px;
+}
 .setting-center-wrapper .gd-chemical .list-data li {
   flex: 1;
 }
 .setting-center-wrapper .gd-chemical .ls-up {
   margin-top: 20px;
-}
-.setting-center-wrapper .gd-con {
-  width: 541px;
-}
-.setting-center-wrapper .gd-con .list-data li {
-  flex: 1;
-}
-.setting-center-wrapper .gd-con .list-data li p.title {
-  height: 80px;
 }
 .setting-center-wrapper .gd-attach {
   width: 660px;
