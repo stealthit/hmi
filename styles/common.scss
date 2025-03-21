@@ -713,6 +713,12 @@ input[type='datetime-local']:valid::before {
   text-underline-offset: 4px;
   cursor: pointer;
 }
+.no-bottom {
+  border-bottom: none !important;
+}
+.no-top {
+  border-top: none !important;
+}
 // list-grid -   ------------------------
 // list-grid와 data-title 의 width 는 직접 적용해야 함.
 .list-grid {
