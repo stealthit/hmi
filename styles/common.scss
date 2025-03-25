@@ -3201,7 +3201,7 @@ button.btn-normal{
   content: url(#{$imgPath}img_CENTER_HELPER.png);
   width: 1880px;
   height: 300px;
-  object-fit: none;
+  object-fit: contain;
   margin-top: -4px;
 }
 .img-hyd-entry {

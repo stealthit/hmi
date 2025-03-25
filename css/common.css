@@ -3248,8 +3248,8 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
   content: url(../img/resources/img_CENTER_HELPER.png);
   width: 1880px;
   height: 300px;
-  -o-object-fit: none;
-     object-fit: none;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin-top: -4px;
 }
 
