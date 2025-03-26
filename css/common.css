@@ -3245,7 +3245,7 @@ button.btn-normal:hover, button.btn-normal.on:hover, button.btn-normal.off:hover
 }
 
 .img-center-helper {
-  content: url(../img/resources/img_CENTER_HELPER.png);
+  content: url(../img/resources/img_CENTER_HELPER.svg);
   width: 1880px;
   height: 300px;
   -o-object-fit: contain;
