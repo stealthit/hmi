@@ -4994,6 +4994,10 @@ z-index: 100;
 .ic-roll-30 {
   @include create_ic_roll(30); 
 }
+.ic-roll-30_1 {
+  @include create_ic_roll(29); 
+  background-size: cover !important;
+}
 .ic-roll-28 {
   @include create_ic_roll(28); 
 }
@@ -5023,6 +5027,10 @@ z-index: 100;
 }
 .ic-roll-18 {
   @include create_ic_roll(18); 
+}
+.ic-roll-18_1 {
+  @include create_ic_roll(17); 
+  background-size: cover !important;
 }
 .ic-roll-17 {
   @include create_ic_roll(17); 
@@ -5086,6 +5094,9 @@ z-index: 100;
   background: url(#{$imgPath}ic_COIL_type5_14.svg);
 }
 .ic-roll-30.type5 {
+  background: url(#{$imgPath}ic_COIL_type5_30.svg);
+}
+.ic-roll-30_1.type5 {
   background: url(#{$imgPath}ic_COIL_type5_30.svg);
 }
 .ic-roll-40.type2 {
